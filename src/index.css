@@ -1044,3 +1044,342 @@ body {
   font-size: 0.85rem;
   text-align: right;
 }
+
+/* =========================================
+   MODULE SELECTOR (Hub)
+   ========================================= */
+
+.module-selector {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+
+.module-selector__hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.module-selector__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  background: var(--primary);
+  color: var(--accent);
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-md);
+}
+
+.module-selector__title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.module-selector__subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.module-selector__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Module Card */
+.module-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  background: var(--mod-bg, #fff);
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.25s ease;
+  width: 100%;
+  font-family: var(--font-body);
+  position: relative;
+  overflow: hidden;
+}
+
+.module-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid var(--mod-border, var(--accent));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.module-card:hover:not(:disabled)::before {
+  opacity: 1;
+}
+
+.module-card:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.module-card:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.module-card--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(0.3);
+}
+
+.module-card__icon-wrap {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: var(--shadow-sm);
+  color: var(--mod-color, var(--accent));
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.module-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.module-card__name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.module-card__desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.module-card__arrow {
+  flex-shrink: 0;
+  color: var(--mod-color, var(--accent));
+  display: flex;
+  align-items: center;
+}
+
+.module-card__soon {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--border);
+  color: var(--text-muted);
+  padding: 0.25rem 0.6rem;
+  border-radius: 50px;
+}
+
+/* Header Back Button */
+.header-back-btn {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0.45rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+
+.header-back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Make header relative so back button is positioned inside it */
+.header {
+  position: relative;
+}
+
+/* =========================================
+   CAREER FILTER
+   ========================================= */
+
+.career-filter {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  padding: 1.25rem 1.5rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.career-filter__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.career-filter__label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.career-filter__clear {
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s;
+  font-family: var(--font-body);
+}
+
+.career-filter__clear:hover {
+  background: #fff7ed;
+}
+
+/* Career chip grid */
+.career-filter__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.career-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem 0.45rem 0.65rem;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: white;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.career-chip:hover {
+  border-color: var(--career-color);
+  color: var(--career-color);
+  background: var(--career-bg);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.career-chip--active {
+  border-color: var(--career-color);
+  background: var(--career-bg);
+  color: var(--career-color);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--career-color) 20%, transparent);
+}
+
+.career-chip__icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.career-chip__name {
+  line-height: 1;
+}
+
+/* Category legend */
+.career-filter__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.career-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.career-legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--legend-color);
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .career-filter__grid {
+    gap: 0.4rem;
+  }
+
+  .career-chip {
+    font-size: 0.76rem;
+    padding: 0.4rem 0.7rem 0.4rem 0.55rem;
+  }
+
+  .career-filter__legend {
+    gap: 0.5rem 1rem;
+  }
+}
+
+/* Career count badge */
+.career-filter__count {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 50px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+}

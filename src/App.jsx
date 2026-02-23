@@ -22,6 +22,8 @@ import CongressList from './components/CongressList'
 import CongressTable from './components/CongressTable'
 import Timeline from './components/Timeline'
 import Charts from './components/Charts'
+import ModuleSelector, { MODULES } from './components/ModuleSelector'
+import CareerFilter, { CAREERS } from './components/CareerFilter'
 
 ChartJS.register(
     CategoryScale,
@@ -36,14 +38,16 @@ ChartJS.register(
     Filler
 )
 
-function App() {
+// ─── Módulo: Congresos ────────────────────────────────────────────────────────
+function CongressosModule({ onBack }) {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
     const [activeTab, setActiveTab] = useState('cards')
+    const [selectedCareers, setSelectedCareers] = useState([])
     const initialFilters = {
         search: '',
         country: '',
-        categoria: '',
+        categorias: [],
         linea: '',
         sublinea: '',
         modality: '',
@@ -51,6 +55,20 @@ function App() {
     }
     const [filters, setFilters] = useState(initialFilters)
     const [taxonomy, setTaxonomy] = useState({})
+
+    // Toggle carrera seleccionada (multi-select)
+    const handleCareerSelect = (careerId) => {
+        if (!careerId) {
+            // Limpiar toda la selección
+            setSelectedCareers([])
+        } else {
+            setSelectedCareers(prev =>
+                prev.includes(careerId)
+                    ? prev.filter(id => id !== careerId)   // deseleccionar
+                    : [...prev, careerId]                   // agregar
+            )
+        }
+    }
 
     // Load Data
     useEffect(() => {
@@ -124,7 +142,8 @@ function App() {
 
         const matchesCountry = !filters.country || event.pais === filters.country
 
-        const matchesCategoria = !filters.categoria || (event.categoria && event.categoria.includes(filters.categoria))
+        const matchesCategoria = filters.categorias.length === 0 ||
+            filters.categorias.some(cat => event.categoria?.includes(cat))
         const matchesLinea = !filters.linea || (event.linea && event.linea.includes(filters.linea))
         const matchesSublinea = !filters.sublinea || (event.sublinea && event.sublinea.includes(filters.sublinea))
 
@@ -135,7 +154,14 @@ function App() {
             (filters.indexation === 'IEEE' && event.isIEEE) ||
             (filters.indexation === 'WoS' && event.isWoS)
 
-        return matchesSearch && matchesCountry && matchesCategoria && matchesLinea && matchesSublinea && matchesModality && matchesIndexation
+        // Multi-select de carreras
+        const selectedCategories = selectedCareers
+            .map(id => CAREERS.find(c => c.id === id)?.categoria)
+            .filter(Boolean)
+        const matchesCareer = selectedCategories.length === 0 ||
+            selectedCategories.some(cat => event.categoria?.includes(cat))
+
+        return matchesSearch && matchesCountry && matchesCategoria && matchesLinea && matchesSublinea && matchesModality && matchesIndexation && matchesCareer
     })
 
 
@@ -145,14 +171,14 @@ function App() {
     // Categorias: all top-level keys from taxonomy
     const uniqueCategorias = Object.keys(taxonomy).sort()
 
-    // Lineas: strictly from taxonomy[categoria] if selected
-    const uniqueLineas = filters.categoria && taxonomy[filters.categoria]
-        ? Object.keys(taxonomy[filters.categoria]).sort()
+    // Lineas: union of lineas from ALL selected categories
+    const uniqueLineas = filters.categorias.length > 0
+        ? [...new Set(filters.categorias.flatMap(cat => taxonomy[cat] ? Object.keys(taxonomy[cat]) : []))].sort()
         : []
 
-    // Sublineas: strictly from taxonomy[categoria][linea] if both selected
-    const uniqueSublineas = filters.categoria && filters.linea && taxonomy[filters.categoria]?.[filters.linea]
-        ? taxonomy[filters.categoria][filters.linea]
+    // Sublineas: from the linea if selected (look across all selected categories)
+    const uniqueSublineas = filters.linea
+        ? [...new Set(filters.categorias.flatMap(cat => taxonomy[cat]?.[filters.linea] || []))]
         : []
 
     // Stats
@@ -163,26 +189,29 @@ function App() {
         scopus: filteredEvents.filter(e => e.isScopus).length
     }
 
-    const handleResetFilters = () => {
-        setFilters(initialFilters);
-    }
-
     if (loading) return <div className="loader"><div className="spinner"></div></div>
 
     return (
         <>
-            <Header />
+            <Header onBack={onBack} moduleName="Congresos Científicos" />
             <Stats stats={stats} />
 
             <div className="container">
+                <CareerFilter
+                    selectedCareers={selectedCareers}
+                    onSelect={handleCareerSelect}
+                />
+
                 <Filters
                     filters={filters}
-                    setFilters={setFilters}
+                    setFilters={(newFilters) => {
+                        setFilters(newFilters)
+                    }}
                     countries={countries}
                     categorias={uniqueCategorias}
                     lineas={uniqueLineas}
                     sublineas={uniqueSublineas}
-                    onReset={handleResetFilters}
+                    onReset={() => { setFilters(initialFilters); setSelectedCareers([]) }}
                 />
 
                 <div className="tabs">
@@ -246,6 +275,29 @@ function App() {
             </div>
         </>
     )
+}
+
+// ─── App Root: Hub de Módulos ─────────────────────────────────────────────────
+function App() {
+    const [activeModule, setActiveModule] = useState(null) // null = Hub selector
+
+    // Para añadir un nuevo módulo en el futuro:
+    // 1. Crea su componente (ej: RevistasModule)
+    // 2. Agrega un objeto a MODULES en ModuleSelector.jsx
+    // 3. Agrega un case aquí abajo
+    const renderModule = () => {
+        const handleBack = () => setActiveModule(null)
+        switch (activeModule) {
+            case 'congresos':
+                return <CongressosModule onBack={handleBack} />
+            // case 'revistas':
+            //     return <RevistasModule onBack={handleBack} />
+            default:
+                return <ModuleSelector onSelectModule={setActiveModule} />
+        }
+    }
+
+    return renderModule()
 }
 
 export default App
