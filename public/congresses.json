@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalCongresses": 14,
-    "lastUpdated": "2026-02-19 15:59:38",
+    "totalCongresses": 16,
+    "lastUpdated": "2026-02-24 11:22:36",
     "version": "2.1"
   },
   "taxonomy": {
@@ -194,7 +194,7 @@
     },
     {
       "id": 4,
-      "evento": "BICA 2026",
+      "evento": "BICA ",
       "nombreCompleto": "17th Annual International Conference on Biologically Inspired Cognitive Architectures",
       "disciplina": "Inteligencia Artificial; Creatividad y Razonamiento de Metas en Sistemas Artificiales; Inteligencia Corporizada y Ambiental; Capacidades Lingüísticas y Competencia Social en IA; Aprendizaje por Lectura, Observación, Razonamiento y Analogía; Mecanismos Robustos y Escalables de Aprendizaje Automático; Aprendizaje Autorregulado, Autoorganizado y Metaaprendizaje; Emociones en IA y Modelos BICA; Pruebas y Métricas para BICA en el Contexto del BICA Challenge; IA Ética, Confiable y Explicable; Ciberseguridad y BICA; Percepción, Razonamiento, Toma de Decisiones y Acción en BICA; Cognición Naturaleza–Artificial Combinada; Comparación de Formas de Aprendizaje y Memoria; Teoría de la Mente y Memoria Episódica y Autobiográfica; Introspección, Metacognición y Autoconciencia en BICA; Modelos de Aprendizaje y Memoria: Robustez, Flexibilidad y Transferibilidad; Lenguaje Natural y Cognición; Marcos Unificadores y Arquitecturas Cognitivas\n\nSistemas Mixto‑Iniciativa inspirados en el cerebro y la mente; Inteligencia Social y Emocional en Agentes Artificiales; BICA en Tecnologías Educativas y Tutoría; Modelos BICA del Yo para Percepción y Acción; Representación y Procesamiento de Emociones; Personajes Virtuales, Personalidades Artificiales y Compatibilidad Humana; Modelado Basado en Agentes de Fenómenos Sociales Inteligentes; Procesamiento Natural y Artificial de Información; Mecanismos Cognitivos y de Aprendizaje Informados por Neurociencia; Correlatos Neuronales de Procesos Cognitivos y Metacognitivos; Sistemas Neuromórficos Robustos y Escalables; Mecanismos Fisiológicos de Formación y Reconsolidación de Memoria; Representación del Conocimiento Conceptual y Contextual en Sistemas Neuronales\n\nBases Matemáticas para BICA; Substratos Alternativos para BICA (materiales inteligentes, neuromórficos, cuánticos y biocomputación); Enfoques Evolutivos, Sistémicos y Educativos para BICA; Preguntas Fundamentales en Investigación BICA; Cognitive Decathlon y Grandes Desafíos del BICA; Masa Crítica para un Aprendiz Universal de Nivel Humano; Métricas y Evaluación para el BICA Challenge",
       "categoria": [
@@ -227,7 +227,7 @@
     },
     {
       "id": 5,
-      "evento": "IBERAMIA 2026",
+      "evento": "IBERAMIA ",
       "nombreCompleto": "19th Ibero-American Conference on Artificial Intelligence",
       "disciplina": "Inteligencia Artificial Fundamental; Agentes Inteligentes; Robótica; Entornos Inteligentes; Aprendizaje Automático; Ciencia de Datos; Modelos Generativos; Procesamiento del Lenguaje Natural; Comunicación e Interacción Persona‑Máquina; Inteligencia Artificial para la Sociedad; Ética en Inteligencia Artificial; Sostenibilidad y Tecnología Responsable; Aplicaciones de Inteligencia Artificial; Transferencia Tecnológica en IA",
       "categoria": [
@@ -260,7 +260,7 @@
     },
     {
       "id": 6,
-      "evento": "WS-AI4CCAM 2026",
+      "evento": "WS-AI4CCAM ",
       "nombreCompleto": "World Symposium on Artificial Intelligence for Climate Change Adaptation and Mitigation",
       "disciplina": "Industria 5.0 y Manufactura Verde; Inteligencia Artificial para Modelos Climáticos; Inteligencia Artificial Experiencial y Herramientas Digitales para Adaptación Climática; Políticas e Instituciones para la Promoción de la IA; Eficiencia Energética y Optimización de Operaciones con IA; Alianzas Público‑Privadas para el Uso y Transferencia de Tecnología en IA; Evaluación del Impacto de la IA en el Cambio Climático; Monitoreo de Eventos Climáticos Extremos y Gestión del Riesgo con IA; Educación Climática Basada en Datos y Ciencia Ciudadana potenciada por IA; Análisis Asistido por IA de Interacciones Océano‑Atmósfera; Teleconexiones Climáticas Modeladas con IA",
       "categoria": [
@@ -295,7 +295,7 @@
     },
     {
       "id": 7,
-      "evento": "IoTBDS 2026",
+      "evento": "IoTBDS ",
       "nombreCompleto": "11th International Conference on Internet of Things and Big Data Systems",
       "disciplina": "Seguridad en IA e IoT; Detección de amenazas con IA en IoT; Edge AI para seguridad en IoT; Blockchain e IA para IoT; Privacidad y ética en IoT con IA; Seguridad impulsada por IA para IoT; Analítica avanzada e inteligencia en Big Data; Gestión de datos masivos; Modelado y experimentación en Big Data; Tecnologías y plataformas de Big Data; Redes y análisis social; Ingeniería de datos para Big Data; Algoritmos y metodologías de Big Data; Big Data como servicio (BDaaS); Marcos de software y procesamiento de datos; Health Informatics as a Service (HIaaS); Servicios y aplicaciones IoT; Seguridad como servicio (SECaaS); Servicios emergentes basados en datos; Aplicaciones IoT para salud, manufactura, energía y transporte; Smart cities y sistemas inteligentes IoT; Ética y privacidad en aplicaciones IoT; Arquitecturas IoT seguras; Redes de sensores y diagnóstico remoto; Gestión de transporte y movilidad inteligente; Arquitectura de software y middleware IoT; Dispositivos inteligentes y sistemas de recomendación; Protocolos de comunicación IoT; Comunicaciones máquina‑a‑máquina (M2M); Eficiencia energética en IoT; Ingeniería de software para IoT; Machine Learning y Deep Learning para IoT; Analítica de datos en IoT; Tecnologías y plataformas IoT; Sistemas embebidos y sensores; Conectividad e infraestructura IoT; Edge Computing; Integración IoT con AI/ML; Seguridad en redes IoT; Privacidad en IoT; Gestión de identidades y acceso; Criptografía avanzada; Modelos de confianza para IoT y Big Data; Cumplimiento normativo y ética en sistemas conectados",
       "categoria": [
@@ -323,13 +323,13 @@
       "pais": "España",
       "modalidad": "Hibrido",
       "deadline": "2026-02-24",
-      "deadlineStatus": "urgent",
+      "deadlineStatus": "passed",
       "publicacion": "Springer CCIS (Scopus, WoS)",
       "enlace": "iotbds.scitevents.org"
     },
     {
       "id": 8,
-      "evento": "HCII 2026 (HCI International)",
+      "evento": "HCII",
       "nombreCompleto": "28th International Conference on Human-Computer Interaction",
       "disciplina": "Teorías y Métodos de HCI; Diseño de Interacción; UX y Usabilidad; Diseño de Servicios y Design Thinking; Investigación de Usuarios; Métodos y Técnicas de Evaluación; Interfaces de Usuario Multimodales; Interfaces Adaptativas y Personalizadas; Inteligencia Artificial Generativa en HCI; Robots, Androides, Avatares y Humanos Virtuales; Tecnologías de Percepción y Sensado; Análisis de Imágenes y Drones; Conducción Autónoma; Simbiosis Humano‑Tecnología; IA Centrada en Humanos (HCAI); Inteligencia Artificial Explicable (XAI); Derechos de Propiedad Intelectual en Interfaces; Interacción VR; Interacción AR; Interacción MR; Interacción XR; Metaverso; Sistemas de Transporte del Futuro; Sistemas Médicos del Futuro; Interfaces Cerebro‑Computador (BCI); Privacidad y Seguridad en Línea; Anonimato y Protección de Datos; Sostenibilidad y SDGs en HCI; Ética y Filosofía de la Interacción; Reconocimiento de Emociones; Bienestar y Calidad de Vida; Accesibilidad y Acceso Universal; Interacción para Discapacidad; Interacción para Personas Mayores; Interacción para Niños; Internacionalización y Localización; Diversidad Cultural, Género e Inclusión en HCI; Creatividad y Educación; e‑Learning; Aprendizaje a Distancia; Diseño de Juegos; Gamificación; e‑Sports; Ciencias del Deporte; HCI y Psicología; HCI y Sociología; HCI y Antropología; Trabajo Remoto y Productividad; e‑Government; Voto Electrónico; HCI para Gobernanza Ética; Crímenes Digitales y Conflictos; Desigualdad Social y Económica en HCI",
       "categoria": [
@@ -360,7 +360,7 @@
     },
     {
       "id": 9,
-      "evento": "COMIA 2026",
+      "evento": "COMIA ",
       "nombreCompleto": "XVIII Congreso Mexicano de Inteligencia Artificial",
       "disciplina": "Sistemas expertos y sistemas basados en conocimiento; Representación, adquisición y manejo del conocimiento; Sistemas multi-agente e IA distribuida; Organizaciones inteligentes; Inteligencia artificial generativa; Procesamiento del lenguaje natural; Interfaces inteligentes: multimedia y realidad virtual; Visión por computadora y procesamiento de imágenes; Inteligencia computacional; Aprendizaje automático y reconocimiento de patrones; Incertidumbre y razonamiento; Demostración de teoremas automatizada; Robótica; Planificación y programación; Sistemas inteligentes híbridos; Bioinformática y aplicaciones médicas; Cuestiones metodológicas y filosóficas de la IA; Sistemas de tutorías inteligentes; Minería de datos; Aplicaciones con inteligencia artificial\n\n",
       "categoria": [
@@ -393,7 +393,7 @@
     },
     {
       "id": 10,
-      "evento": "CIbSE 2026",
+      "evento": "CIbSE ",
       "nombreCompleto": "XXIX Ibero-American Conference on Software Engineering",
       "disciplina": "Aplicación de la inteligencia artificial a la ingeniería de software; LLMs y modelos fundacionales en ingeniería de software; Ingeniería de software continua (Desarrollo Ágil, DevOps, Entrega Continua, Integración Continua); Ingeniería de software basada en la comunidad (código abierto, crowdsourcing); Detección de vulnerabilidades para mejorar la seguridad del software; Calidad de software, modelos de calidad y gestión de la deuda técnica; Sostenibilidad del software e Ingeniería de Software Verde; Ingeniería de software para dominios estratégicos (agricultura, aviación, ciudades inteligentes, etc.); Minería de repositorios de software y analítica de software; Modelado del software e ingeniería dirigida por modelos; Aspectos humanos y sociales de la ingeniería de software; Confidencialidad, integridad, privacidad, equidad y justicia; Informes de experiencias industriales en ingeniería de software; Métodos de investigación en ingeniería de software",
       "categoria": [
@@ -426,7 +426,7 @@
     },
     {
       "id": 11,
-      "evento": "CONESCAPAN 2026",
+      "evento": "CONESCAPAN ",
       "nombreCompleto": "IEEE Convention of Central America and Panama",
       "disciplina": "Gestión y control de recursos energéticos distribuidos; Integración de energías renovables y redes inteligentes; Estabilidad del sistema eléctrico y control de voltaje; Microredes y sistemas de almacenamiento de energía; Medición inteligente y gestión del lado de la demanda; Transmisión HVDC; Electrónica de potencia para energías renovables; Diseño de máquinas eléctricas para energía renovable; Fiabilidad de la red; Seguridad ciberfísica en sistemas de potencia; Física y modelado de dispositivos electrónicos; Nanoelectrónica y tecnologías de gigaescala; Electrónica flexible, impresa y orgánica; Circuitos analógicos, digitales y mixtos; Diseño VLSI/ULSI y SoC/NoC; FPGA avanzados; Microsistemas MEMS/NEMS y sensores integrados; Circuitos RF y microondas; IoT y electrónica embebida; Electrónica de potencia y conversión energética; Control y sistemas ciberfísicos; Microrredes y sostenibilidad energética; Procesamiento de señales en hardware para IA; Arquitecturas de hardware para IA; Automatización del diseño electrónico (EDA); Pruebas y confiabilidad de circuitos; Circuitos tolerantes a fallas; Sistemas electrónicos para comunicaciones; Circuitos para aplicaciones científicas e industriales; Inteligencia artificial y aprendizaje automático; Procesamiento de lenguaje natural; IoT y sistemas embebidos; Ciberseguridad; Realidad aumentada y realidad virtual; Computación en la nube; Software libre; Ingeniería de software; Sistemas distribuidos y arquitecturas emergentes; Computación de alto rendimiento; Blockchain; IA aplicada a salud; Procesamiento de señales biomédicas; Procesamiento de imágenes biomédicas; Sensores biomédicos; Sistemas portátiles de monitoreo; Neuroingeniería; Interfaces cerebro‑computador",
       "categoria": [
@@ -491,7 +491,7 @@
     },
     {
       "id": 13,
-      "evento": "SBGames 2026",
+      "evento": "SBGames ",
       "nombreCompleto": "Simpósio Brasileiro de Jogos e Entretenimento Digital",
       "disciplina": "Arte de juegos; Animación e ilustración; Concept art; Modelado 2D y 3D; Diseño visual y UI/UX; Motion graphics para juegos; Narrativa visual y storytelling; Diseño de juegos; Diseño de niveles; Diseño sonoro y música para juegos; Estudios culturales del videojuego; Juegos y sociedad; Comunidades de jugadores; Representación, diversidad e inclusión; Preservación e historia de los juegos; Estudios de eSports; Comunidades modders y creadores; Juegos educativos; Gamificación; Juegos serios para aprendizaje; Evaluación de juegos educativos; Juegos en educación básica; Juegos en educación superior; Juegos como recurso pedagógico; Desarrollo y producción de videojuegos; Emprendimiento en videojuegos; Mercados y modelos de negocio; Gestión de equipos y pipelines; Publicación y distribución; Marketing y comunidades; Inteligencia Artificial en videojuegos; Aprendizaje automático en juegos; Animación procedural; Física computacional; Motores de juego y rendering; Shaders; Procesamiento de imágenes; Realidad virtual; Realidad aumentada; Juegos multijugador y redes; Juegos en la nube; Optimización y rendimiento; Seguridad y anti-cheat; Juegos para la salud y la rehabilitación; Juegos serios en medicina; Biofeedback; Sensores para salud; Juegos terapéuticos; Juegos para bienestar",
       "categoria": [
@@ -553,6 +553,72 @@
       "deadlineStatus": "future",
       "publicacion": "Scopus",
       "enlace": "https://apwg.org/events/ecrime2026/"
+    },
+    {
+      "id": 15,
+      "evento": "ECKM",
+      "nombreCompleto": "27th European Conference on Knowledge Management (ECKM 2026)",
+      "disciplina": "Creación de conocimiento; Conocimiento tácito y explícito; Prácticas de compartición del conocimiento; Sistemas de gestión del conocimiento (KMS); Plataformas y herramientas de KM; Inteligencia Artificial aplicada a la gestión del conocimiento; Big Data y analítica de conocimiento; Aprendizaje organizacional; Organizaciones que aprenden; Gestión de la innovación; Comunidades de práctica; Gestión del conocimiento como ventaja competitiva; Desarrollo de estrategias de KM; Gestión del capital intelectual; Gestión del conocimiento en administración pública; Gestión del conocimiento en educación; Gestión del conocimiento en salud; Cultura organizacional y KM; Barreras culturales a la gestión del conocimiento; Liderazgo y KM; Gestión del cambio en iniciativas de KM; Ética en la gestión del conocimiento; Sostenibilidad y KM; Transformación digital y KM; Globalización y KM; Integración de KM con otras disciplinas; Evolución del rol del gestor de conocimiento; IA agentiva y KM; KM para planificación estratégica; Gestión del conocimiento y sucesión en empresas familiares; Impacto de la IA generativa en la gestión del conocimiento; Recuperación del conocimiento organizacional en la era post‑verdad",
+      "categoria": [
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
+      ],
+      "linea": [
+        "Gestión del conocimiento",
+        "Inteligencia artificial y computación avanzada",
+        "Transformación digital"
+      ],
+      "sublinea": [
+        "Aprendizaje organizacional",
+        "Gestión del capital intelectual",
+        "Inteligencia de negocios",
+        "Internet de las cosas (IoT)",
+        "Sistemas autónomos y robótica"
+      ],
+      "fechaInicio": "2026-09-03",
+      "fechaFin": "2026-09-04",
+      "lugar": "Roma",
+      "ciudad": "Roma",
+      "pais": "Italia",
+      "modalidad": "Híbrido",
+      "deadline": "2026-03-04",
+      "deadlineStatus": "urgent",
+      "publicacion": "Scopus",
+      "enlace": "https://www.academic-conferences.org/conferences/eckm/"
+    },
+    {
+      "id": 16,
+      "evento": "ICSBT",
+      "nombreCompleto": "23 rd ICSBT International Conference on Smart Business Technologies (ICSBT 2026)",
+      "disciplina": "Transformación digital; Empresas inteligentes; Sistemas empresariales inteligentes; Plataformas IoT para negocios; Arquitecturas cloud-native; Fabricación inteligente; Innovación basada en tecnologías inteligentes; IA para pronósticos; Analítica predictiva; Sistemas de soporte a la decisión; Experiencia del cliente basada en IA; IA explicable; IA responsable; Gobernanza ética de IA; Inteligencia de decisiones; Analítica avanzada para estrategia; Blockchain para negocios; Blockchain para finanzas; Finanzas descentralizadas (DeFi); Monedas digitales de bancos centrales (CBDCs); Smart contracts; Ciberseguridad financiera; Cumplimiento regulatorio digital; Identidad digital; Confianza digital; Tecnologías verdes; Analíticas ESG; Trazabilidad de carbono; Innovación urbana sostenible; Energía inteligente; Modelos sostenibles basados en datos; Optimización; Analítica de operaciones; Cadenas de suministro inteligentes; Benchmarking del desempeño; Tecnologías estratégicas para operaciones; Planificación cuantitativa",
+      "categoria": [
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
+      ],
+      "linea": [
+        "Economía digital",
+        "Innovación empresarial",
+        "Transformación digital",
+        "Ética, gobernanza y responsabilidad social"
+      ],
+      "sublinea": [
+        "Fintech y servicios financieros",
+        "Modelos de negocio digitales",
+        "Tecnologías emergentes",
+        "Transformación organizacional",
+        "Ética y gobernanza"
+      ],
+      "fechaInicio": "2026-07-19",
+      "fechaFin": "2026-07-20",
+      "lugar": "Vila Galé Porto Hotel",
+      "ciudad": "Porto",
+      "pais": "Portugal",
+      "modalidad": "Híbrido",
+      "deadline": "2026-03-03",
+      "deadlineStatus": "urgent",
+      "publicacion": "Scopus",
+      "enlace": "https://icsbt.scitevents.org/"
     }
   ]
 }
