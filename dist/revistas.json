@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "totalRevistas": 17,
+    "publishers": 13,
+    "disciplinas": 15,
+    "lastUpdated": "2026-02-24 16:08:02",
+    "version": "1.0"
+  },
+  "revistas": [
+    {
+      "id": 1,
+      "journal": "Scientific Data",
+      "issn": null,
+      "eissn": "2052-4463",
+      "publisher": "Nature Research",
+      "enfoque": "Data descriptors / datasets across disciplines",
+      "disciplinas": [
+        "Social Sciences",
+        "Computer Science",
+        "Decision Sciences",
+        "Mathematics"
+      ],
+      "sitioWeb": "https://www.nature.com/sdata/"
+    },
+    {
+      "id": 2,
+      "journal": "GigaScience",
+      "issn": null,
+      "eissn": "2047-217X",
+      "publisher": "Oxford University Press",
+      "enfoque": "Large-scale life/biomed datasets + reproducible analyses",
+      "disciplinas": [
+        "Medicine",
+        "Computer Science"
+      ],
+      "sitioWeb": "https://academic.oup.com/gigascience"
+    },
+    {
+      "id": 3,
+      "journal": "Database: The Journal of Biological Databases and Curation",
+      "issn": null,
+      "eissn": "1758-0463",
+      "publisher": "Oxford University Press",
+      "enfoque": "Biological databases + curation / database research",
+      "disciplinas": [
+        "Computer Science",
+        "Biochemistry, Genetics and Molecular Biology",
+        "Agricultural and Biological Sciences"
+      ],
+      "sitioWeb": "https://academic.oup.com/database"
+    },
+    {
+      "id": 4,
+      "journal": "Earth System Science Data",
+      "issn": "1866-3508",
+      "eissn": "1866-3516",
+      "publisher": "Copernicus Publications",
+      "enfoque": "Publication of research data sets (Earth system)",
+      "disciplinas": [
+        "Earth and Planetary Sciences"
+      ],
+      "sitioWeb": "https://www.earth-system-science-data.net/"
+    },
+    {
+      "id": 5,
+      "journal": "Geoscience Data Journal",
+      "issn": null,
+      "eissn": "2049-6060",
+      "publisher": "John Wiley & Sons Inc.",
+      "enfoque": "Formal publication of geoscience datasets",
+      "disciplinas": [
+        "Earth and Planetary Sciences"
+      ],
+      "sitioWeb": "https://rmets.onlinelibrary.wiley.com/journal/20496060"
+    },
+    {
+      "id": 6,
+      "journal": "Biodiversity Data Journal",
+      "issn": "1314-2836",
+      "eissn": "1314-2828",
+      "publisher": "Pensoft Publishers",
+      "enfoque": "Biodiversity data publishing (occurrences, traits, checklists, etc.)",
+      "disciplinas": [
+        "Agricultural and Biological Sciences",
+        "Environmental Science"
+      ],
+      "sitioWeb": "https://bdj.pensoft.net/"
+    },
+    {
+      "id": 7,
+      "journal": "Journal of Chemical & Engineering Data",
+      "issn": "0021-9568",
+      "eissn": "1520-5134",
+      "publisher": "American Chemical Society",
+      "enfoque": "Experimental/compiled chemical & engineering property data",
+      "disciplinas": [
+        "Chemical Engineering",
+        "Chemistry"
+      ],
+      "sitioWeb": "https://pubs.acs.org/journal/jceaax"
+    },
+    {
+      "id": 8,
+      "journal": "Journal of Physical and Chemical Reference Data",
+      "issn": "0047-2689",
+      "eissn": "1529-7845",
+      "publisher": "American Institute of Physics",
+      "enfoque": "Critically evaluated physical/chemical reference data",
+      "disciplinas": [
+        "Chemistry",
+        "Physics and Astronomy"
+      ],
+      "sitioWeb": "https://pubs.aip.org/aip/jpr"
+    },
+    {
+      "id": 9,
+      "journal": "Atomic Data and Nuclear Data Tables",
+      "issn": "0092-640X",
+      "eissn": "1090-2090",
+      "publisher": "Elsevier Inc.",
+      "enfoque": "Compilations of atomic/nuclear physics data tables",
+      "disciplinas": [
+        "Physics and Astronomy"
+      ],
+      "sitioWeb": "https://www.sciencedirect.com/journal/atomic-data-and-nuclear-data-tables"
+    },
+    {
+      "id": 10,
+      "journal": "Nuclear Data Sheets",
+      "issn": "0090-3752",
+      "eissn": "1095-9904",
+      "publisher": "Academic Press Inc.",
+      "enfoque": "Evaluated nuclear structure & decay data (ENSDF-based)",
+      "disciplinas": [
+        "Physics and Astronomy"
+      ],
+      "sitioWeb": "https://www.sciencedirect.com/journal/nuclear-data-sheets"
+    },
+    {
+      "id": 11,
+      "journal": "Data in Brief",
+      "issn": null,
+      "eissn": "2352-3409",
+      "publisher": "Elsevier Inc.",
+      "enfoque": "Short data articles describing datasets (multidisciplinary)",
+      "disciplinas": [
+        "Multidisciplinary (datasets)"
+      ],
+      "sitioWeb": "https://www.sciencedirect.com/journal/data-in-brief"
+    },
+    {
+      "id": 12,
+      "journal": "Data Science Journal",
+      "issn": "1683-1470",
+      "eissn": null,
+      "publisher": "Ubiquity Press",
+      "enfoque": "Data practices and publication of data-related research outputs",
+      "disciplinas": [
+        "Computer Science"
+      ],
+      "sitioWeb": "https://datascience.codata.org/"
+    },
+    {
+      "id": 13,
+      "journal": "Data Intelligence",
+      "issn": "2096-7004",
+      "eissn": "2641-435X",
+      "publisher": "Science Press",
+      "enfoque": "Data-enabled technologies; data science; may include data-centric publications",
+      "disciplinas": [
+        "Computer Science",
+        "Social Sciences"
+      ],
+      "sitioWeb": "https://www.sciengine.com/DI/home"
+    },
+    {
+      "id": 14,
+      "journal": "Research Data Journal for the Humanities and Social Sciences",
+      "issn": null,
+      "eissn": "2452-3666",
+      "publisher": "Brill Academic Publishers",
+      "enfoque": "Data papers for humanities and social sciences datasets",
+      "disciplinas": [
+        "Arts and Humanities",
+        "Social Sciences",
+        "Computer Science"
+      ],
+      "sitioWeb": "https://researchdatajournal.org/"
+    },
+    {
+      "id": 15,
+      "journal": "Journal of Open Humanities Data",
+      "issn": null,
+      "eissn": "2059-481X",
+      "publisher": "Ubiquity Press",
+      "enfoque": "Data papers describing humanities datasets/techniques for reuse",
+      "disciplinas": [
+        "Arts and Humanities",
+        "Social Sciences",
+        "Computer Science"
+      ],
+      "sitioWeb": "https://openhumanitiesdata.metajnl.com/"
+    },
+    {
+      "id": 16,
+      "journal": "Journal of Open Psychology Data",
+      "issn": null,
+      "eissn": "2050-9863",
+      "publisher": "Ubiquity Press",
+      "enfoque": "Data papers in psychology (datasets + reuse-oriented documentation)",
+      "disciplinas": [
+        "Psychology"
+      ],
+      "sitioWeb": "https://openpsychologydata.metajnl.com/"
+    },
+    {
+      "id": 17,
+      "journal": "Chemical Data Collections",
+      "issn": null,
+      "eissn": "2405-8300",
+      "publisher": "Elsevier B.V.",
+      "enfoque": "Publication outlet for chemical datasets and reusable research data",
+      "disciplinas": [
+        "Chemistry"
+      ],
+      "sitioWeb": "https://www.sciencedirect.com/journal/chemical-data-collections"
+    }
+  ],
+  "facets": {
+    "publishers": [
+      "Academic Press Inc.",
+      "American Chemical Society",
+      "American Institute of Physics",
+      "Brill Academic Publishers",
+      "Copernicus Publications",
+      "Elsevier B.V.",
+      "Elsevier Inc.",
+      "John Wiley & Sons Inc.",
+      "Nature Research",
+      "Oxford University Press",
+      "Pensoft Publishers",
+      "Science Press",
+      "Ubiquity Press"
+    ],
+    "enfoques": [
+      "Biodiversity data publishing (occurrences, traits, checklists, etc.)",
+      "Biological databases + curation / database research",
+      "Compilations of atomic/nuclear physics data tables",
+      "Critically evaluated physical/chemical reference data",
+      "Data descriptors / datasets across disciplines",
+      "Data papers describing humanities datasets/techniques for reuse",
+      "Data papers for humanities and social sciences datasets",
+      "Data papers in psychology (datasets + reuse-oriented documentation)",
+      "Data practices and publication of data-related research outputs",
+      "Data-enabled technologies; data science; may include data-centric publications",
+      "Evaluated nuclear structure & decay data (ENSDF-based)",
+      "Experimental/compiled chemical & engineering property data",
+      "Formal publication of geoscience datasets",
+      "Large-scale life/biomed datasets + reproducible analyses",
+      "Publication of research data sets (Earth system)",
+      "Publication outlet for chemical datasets and reusable research data",
+      "Short data articles describing datasets (multidisciplinary)"
+    ],
+    "disciplinas": [
+      "Agricultural and Biological Sciences",
+      "Arts and Humanities",
+      "Biochemistry, Genetics and Molecular Biology",
+      "Chemical Engineering",
+      "Chemistry",
+      "Computer Science",
+      "Decision Sciences",
+      "Earth and Planetary Sciences",
+      "Environmental Science",
+      "Mathematics",
+      "Medicine",
+      "Multidisciplinary (datasets)",
+      "Physics and Astronomy",
+      "Psychology",
+      "Social Sciences"
+    ]
+  }
+}
