@@ -62,6 +62,7 @@ const postEvent = (payload) => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body,
+        credentials: 'omit',
         keepalive: true,
     }).catch(() => {})
 }
