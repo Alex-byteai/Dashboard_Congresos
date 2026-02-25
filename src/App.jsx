@@ -13,6 +13,7 @@ import {
     Filler
 } from 'chart.js'
 import { LayoutGrid, Table, Calendar, PieChart } from 'lucide-react'
+import { trackEvent, trackPageView } from './analytics'
 
 // Components
 import Header from './components/Header'
@@ -54,6 +55,7 @@ function App() {
 
     // Load Data
     useEffect(() => {
+        trackPageView({ page: 'dashboard_congresos' })
         fetch('/congresses.json')
             .then(res => res.json())
             .then(jsonData => {
@@ -75,10 +77,12 @@ function App() {
                 })
                 setData(processed)
                 setLoading(false)
+                trackEvent('data_loaded', { total_events: processed.length })
             })
             .catch(err => {
                 console.error("Error loading data:", err)
                 setLoading(false)
+                trackEvent('data_load_error')
             })
     }, [])
 
@@ -113,7 +117,6 @@ function App() {
         return date.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })
     }
 
-
     // Filter Logic
     const filteredEvents = data.filter(event => {
         const searchLower = filters.search.toLowerCase()
@@ -137,7 +140,6 @@ function App() {
 
         return matchesSearch && matchesCountry && matchesCategoria && matchesLinea && matchesSublinea && matchesModality && matchesIndexation
     })
-
 
     // Unique values for select options
     const countries = [...new Set(data.map(e => e.pais).filter(Boolean))].sort()
@@ -167,6 +169,11 @@ function App() {
         setFilters(initialFilters);
     }
 
+    const handleTabChange = (tab) => {
+        setActiveTab(tab)
+        trackEvent('tab_change', { tab })
+    }
+
     if (loading) return <div className="loader"><div className="spinner"></div></div>
 
     return (
@@ -188,28 +195,28 @@ function App() {
                 <div className="tabs">
                     <button
                         className={`tab ${activeTab === 'cards' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('cards')}
+                        onClick={() => handleTabChange('cards')}
                     >
                         <LayoutGrid size={18} />
                         Tarjetas
                     </button>
                     <button
                         className={`tab ${activeTab === 'table' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('table')}
+                        onClick={() => handleTabChange('table')}
                     >
                         <Table size={18} />
                         Tabla
                     </button>
                     <button
                         className={`tab ${activeTab === 'timeline' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('timeline')}
+                        onClick={() => handleTabChange('timeline')}
                     >
                         <Calendar size={18} />
                         Timeline
                     </button>
                     <button
                         className={`tab ${activeTab === 'stats' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('stats')}
+                        onClick={() => handleTabChange('stats')}
                     >
                         <PieChart size={18} />
                         Estadísticas

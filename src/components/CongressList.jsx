@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, MapPin, Clock, GraduationCap, ExternalLink, AlertCircle, SearchX } from 'lucide-react';
+import { trackEvent } from '../analytics'
 
 export default function CongressList({ events, getUrgencyClass, getUrgencyText }) {
     if (events.length === 0) {
@@ -78,7 +79,16 @@ export default function CongressList({ events, getUrgencyClass, getUrgencyText }
                     </div>
 
                     {event.enlace && (
-                        <a href={`https://${event.enlace.replace(/^https?:\/\//, '')}`} target="_blank" rel="noopener noreferrer" className="event-link">
+                        <a
+                            href={`https://${event.enlace.replace(/^https?:\/\//, '')}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="event-link"
+                            onClick={() => {
+                                const url = `https://${event.enlace.replace(/^https?:\/\//, '')}`
+                                trackEvent('outbound_click', { event_id: event.id, url })
+                            }}
+                        >
                             Visitar Sitio Web
                             <ExternalLink size={16} />
                         </a>

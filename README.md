@@ -166,6 +166,67 @@ dashboard_lcr/
 
 ```
 
+## 📈 Analítica (visitas + eventos)
+
+Este proyecto incluye un backend opcional para recolectar eventos (page views, filtros, búsquedas, clicks a enlaces externos).
+
+### Frontend (Vite/React)
+
+Configura la variable de entorno:
+
+```
+VITE_ANALYTICS_URL=https://TU-SERVICIO-ANALYTICS.onrender.com
+```
+
+Si `VITE_ANALYTICS_URL` no está definida, el tracking no envía datos (no rompe el dashboard).
+
+### Backend (Render)
+
+El backend vive en `analytics-backend/` y expone:
+
+- `POST /collect`
+- `GET /health`
+- `GET /stats/overview`
+- `GET /stats/timeseries`
+- `GET /stats/top-events`
+
+Variables de entorno requeridas en Render:
+
+```
+DATABASE_URL=postgres://...
+CORS_ORIGIN=https://TU-DOMINIO-DEL-DASHBOARD
+PGSSL=true
+```
+
+Opcional (recomendado) para proteger las rutas `/stats/*`:
+
+```
+STATS_TOKEN=un-token-largo
+```
+
+Si defines `STATS_TOKEN`, llama a `/stats/*` con:
+
+- Header `Authorization: Bearer <token>`
+- o header `x-api-key: <token>`
+
+Notas:
+
+- `CORS_ORIGIN` puede ser una lista separada por comas si tienes varios dominios.
+- En Render, crea una base de datos Postgres y usa su `DATABASE_URL`.
+
+### Dashboard de métricas (React separado)
+
+Existe una app React independiente en `metrics-dashboard/` para visualizar las métricas consumiendo `/stats/*` del backend.
+
+Variables de entorno (Render / build):
+
+```
+VITE_ANALYTICS_URL=https://TU-SERVICIO-ANALYTICS.onrender.com
+VITE_STATS_TOKEN=un-token-largo
+```
+
+`VITE_STATS_TOKEN` es opcional (solo si configuraste `STATS_TOKEN` en el backend).
+
 ## 🎯 Próximos Pasos
 
 Para mejorar aún más el dashboard, considera:

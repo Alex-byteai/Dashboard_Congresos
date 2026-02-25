@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink, AlertCircle, SearchX } from 'lucide-react';
+import { trackEvent } from '../analytics'
 
 export default function CongressTable({ events, getUrgencyClass, getUrgencyText }) {
     if (events.length === 0) {
@@ -80,6 +81,10 @@ export default function CongressTable({ events, getUrgencyClass, getUrgencyText 
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="table-link"
+                                            onClick={() => {
+                                                const url = `https://${event.enlace.replace(/^https?:\/\//, '')}`
+                                                trackEvent('outbound_click', { event_id: event.id, url })
+                                            }}
                                         >
                                             Visitar <ExternalLink size={14} />
                                         </a>
