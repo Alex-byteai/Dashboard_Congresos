@@ -19,7 +19,7 @@ export default function CongresosModule({ onBack }) {
         search: '',
         country: '',
         categorias: [],
-        linea: '',
+        lineas: [],
         sublinea: '',
         modality: '',
         indexation: ''
@@ -28,16 +28,30 @@ export default function CongresosModule({ onBack }) {
     const [taxonomy, setTaxonomy] = useState({})
 
     const handleCareerSelect = (careerId) => {
+        let newCareers = []
         if (!careerId) {
-            setSelectedCareers([])
+            newCareers = []
         } else {
-            setSelectedCareers(prev =>
-                prev.includes(careerId)
-                    ? prev.filter(id => id !== careerId)
-                    : [...prev, careerId]
-            )
+            newCareers = selectedCareers.includes(careerId)
+                ? selectedCareers.filter(id => id !== careerId)
+                : [...selectedCareers, careerId]
         }
+
+        setSelectedCareers(newCareers)
+
+        // Sync categories based on selected careers
+        const derivedCats = [...new Set(newCareers
+            .map(id => CAREERS.find(c => c.id === id)?.categoria)
+            .filter(Boolean))]
+
+        setFilters(prev => ({
+            ...prev,
+            categorias: derivedCats,
+            lineas: [], // Reset lines when changing careers for UX consistency
+            sublinea: ''
+        }))
     }
+
 
     useEffect(() => {
         fetch('/congresses.json')
@@ -108,7 +122,8 @@ export default function CongresosModule({ onBack }) {
 
         const matchesCategoria = filters.categorias.length === 0 ||
             filters.categorias.some(cat => event.categoria?.includes(cat))
-        const matchesLinea = !filters.linea || (event.linea && event.linea.includes(filters.linea))
+        const matchesLinea = !filters.lineas?.length ||
+            filters.lineas.some(l => event.linea?.includes(l))
         const matchesSublinea = !filters.sublinea || (event.sublinea && event.sublinea.includes(filters.sublinea))
 
         const matchesModality = !filters.modality || event.modalidad === filters.modality
@@ -135,8 +150,8 @@ export default function CongresosModule({ onBack }) {
         ? [...new Set(filters.categorias.flatMap(cat => taxonomy[cat] ? Object.keys(taxonomy[cat]) : []))].sort()
         : []
 
-    const uniqueSublineas = filters.linea
-        ? [...new Set(filters.categorias.flatMap(cat => taxonomy[cat]?.[filters.linea] || []))]
+    const uniqueSublineas = filters.lineas?.length > 0
+        ? [...new Set(filters.lineas.flatMap(l => filters.categorias.flatMap(cat => taxonomy[cat]?.[l] || [])))]
         : []
 
     const stats = {
@@ -161,13 +176,11 @@ export default function CongresosModule({ onBack }) {
 
                 <Filters
                     filters={filters}
-                    setFilters={(newFilters) => {
-                        setFilters(newFilters)
-                    }}
+                    setFilters={setFilters}
                     countries={countries}
-                    categorias={uniqueCategorias}
                     lineas={uniqueLineas}
                     sublineas={uniqueSublineas}
+                    activeCategoryLabels={filters.categorias}
                     onReset={() => { setFilters(initialFilters); setSelectedCareers([]) }}
                 />
 

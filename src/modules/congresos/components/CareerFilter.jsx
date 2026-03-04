@@ -1,8 +1,10 @@
+import { useState, useEffect } from 'react';
 import {
     Briefcase, Building2, Radio, Calculator, Scale,
     TrendingUp, Leaf, HardHat, Factory, Monitor,
-    Cpu, Megaphone, Globe, Brain
+    Cpu, Megaphone, Globe, Brain, ChevronDown, ChevronUp
 } from 'lucide-react';
+
 
 export const CAREERS = [
     { id: 'administracion', label: 'Administración', icon: Briefcase, categoria: 'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO' },
@@ -29,11 +31,38 @@ const CATEGORY_COLOR = {
 };
 
 export default function CareerFilter({ selectedCareers, onSelect }) {
+    // State for collapsible categories
+    const [expandedCats, setExpandedCats] = useState([]);
+
+    // Group careers by category
+    const groupedCareers = Object.keys(CATEGORY_COLOR).reduce((acc, cat) => {
+        acc[cat] = CAREERS.filter(c => c.categoria === cat);
+        return acc;
+    }, {});
+
+    // Effect to auto-expand categories that have selected careers
+    useEffect(() => {
+        const catsWithSelection = Object.entries(groupedCareers)
+            .filter(([cat, careers]) => careers.some(c => selectedCareers.includes(c.id)))
+            .map(([cat]) => cat);
+
+        if (catsWithSelection.length > 0) {
+            setExpandedCats(prev => [...new Set([...prev, ...catsWithSelection])]);
+        }
+    }, [selectedCareers]);
+
+    const toggleCat = (cat) => {
+
+        setExpandedCats(prev =>
+            prev.includes(cat) ? prev.filter(c => c !== cat) : [...prev, cat]
+        );
+    }
+
     return (
         <div className="career-filter">
             <div className="career-filter__header">
                 <span className="career-filter__label">
-                    Filtrar por carrera
+                    Filtrado por Carrera y Área Temática
                     {selectedCareers.length > 0 && (
                         <span className="career-filter__count">{selectedCareers.length} seleccionada{selectedCareers.length > 1 ? 's' : ''}</span>
                     )}
@@ -44,38 +73,46 @@ export default function CareerFilter({ selectedCareers, onSelect }) {
                     </button>
                 )}
             </div>
-            <div className="career-filter__grid">
-                {CAREERS.map((career) => {
-                    const Icon = career.icon;
-                    const colors = CATEGORY_COLOR[career.categoria] || { color: '#f78e1e', bg: '#fff7ed' };
-                    const isActive = selectedCareers.includes(career.id);
+
+            <div className="career-filter__groups">
+                {Object.entries(groupedCareers).map(([cat, careers]) => {
+                    const colors = CATEGORY_COLOR[cat];
+                    const isExpanded = expandedCats.includes(cat);
+
                     return (
-                        <button
-                            key={career.id}
-                            className={`career-chip ${isActive ? 'career-chip--active' : ''}`}
-                            style={{
-                                '--career-color': colors.color,
-                                '--career-bg': colors.bg,
-                            }}
-                            onClick={() => onSelect(career.id)}
-                            title={career.categoria}
-                        >
-                            <span className="career-chip__icon">
-                                <Icon size={18} strokeWidth={1.8} />
-                            </span>
-                            <span className="career-chip__name">{career.label}</span>
-                        </button>
+                        <div key={cat} className={`career-group ${isExpanded ? 'career-group--expanded' : ''}`} style={{ '--group-color': colors.color }}>
+                            <button className="career-group__title-btn" onClick={() => toggleCat(cat)}>
+                                <h4 className="career-group__title">{cat}</h4>
+                                <span className="career-group__icon">
+                                    {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                                </span>
+                            </button>
+
+                            <div className="career-group__grid">
+                                {careers.map((career) => {
+                                    const Icon = career.icon;
+                                    const isActive = selectedCareers.includes(career.id);
+                                    return (
+                                        <button
+                                            key={career.id}
+                                            className={`career-chip ${isActive ? 'career-chip--active' : ''}`}
+                                            style={{
+                                                '--career-color': colors.color,
+                                                '--career-bg': colors.bg,
+                                            }}
+                                            onClick={() => onSelect(career.id)}
+                                        >
+                                            <span className="career-chip__icon">
+                                                <Icon size={16} strokeWidth={2} />
+                                            </span>
+                                            <span className="career-chip__name">{career.label}</span>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </div>
                     );
                 })}
-            </div>
-
-            <div className="career-filter__legend">
-                {Object.entries(CATEGORY_COLOR).map(([cat, { color, bg }]) => (
-                    <span key={cat} className="career-legend-item" style={{ '--legend-color': color, '--legend-bg': bg }}>
-                        <span className="career-legend-dot" />
-                        {cat}
-                    </span>
-                ))}
             </div>
         </div>
     );

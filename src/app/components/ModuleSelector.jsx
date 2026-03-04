@@ -19,14 +19,16 @@ export const MODULES = [
         color: '#6366f1',
         bgGradient: 'linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%)',
         borderColor: '#6366f1',
-        available: true,
+        available: false,
     },
 ];
 
 export default function ModuleSelector({ onSelectModule }) {
     return (
         <div className="module-selector">
+            <div className="module-selector__bg"></div>
             <div className="module-selector__hero">
+
                 <div className="module-selector__logo">
                     <FlaskConical size={36} strokeWidth={1.5} />
                 </div>

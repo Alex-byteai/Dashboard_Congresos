@@ -1,105 +1,114 @@
 import React from 'react';
 import { Search, RotateCcw, ChevronDown, X } from 'lucide-react';
 
-export default function Filters({ filters, setFilters, countries, categorias, lineas, sublineas, onReset }) {
+// Color matching for active chips bar
+const CAT_COLORS = {
+    'INNOVACIÓN Y TECNOLOGÍA DIGITAL': { color: '#0ea5e9' },
+    'DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE': { color: '#10b981' },
+    'SOCIEDAD Y COMPORTAMIENTO HUMANO': { color: '#6366f1' },
+    'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO': { color: '#f78e1e' },
+}
 
-    const toTitleCase = (str) => str
-        .toLowerCase()
-        .split(' ')
-        .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-        .join(' ')
+export default function Filters({ filters, setFilters, countries, lineas, onReset, activeCategoryLabels = [] }) {
 
-    const handleCategoriaChange = (e) => {
-        setFilters({ ...filters, categoria: e.target.value, linea: '', sublinea: '' })
+    const toggleLinea = (linea) => {
+        const current = filters.lineas || []
+        const isSelected = current.includes(linea)
+        const newLineas = isSelected
+            ? current.filter(l => l !== linea)
+            : [...current, linea]
+        setFilters({ ...filters, lineas: newLineas, sublinea: '' })
     }
 
-    const handleLineaChange = (e) => {
-        setFilters({ ...filters, linea: e.target.value, sublinea: '' })
-    }
-
-    const activeFilters = [
+    const activeOtherFilters = [
         filters.country && { key: 'country', label: filters.country },
-        filters.categoria && { key: 'categoria', label: toTitleCase(filters.categoria) },
-        filters.linea && { key: 'linea', label: filters.linea },
         filters.modality && { key: 'modality', label: filters.modality },
         filters.indexation && { key: 'indexation', label: filters.indexation },
     ].filter(Boolean)
 
-    const removeFilter = (key) => {
-        const reset = { ...filters, [key]: '' }
-        if (key === 'categoria') { reset.linea = ''; reset.sublinea = '' }
-        if (key === 'linea') { reset.sublinea = '' }
-        setFilters(reset)
-    }
+    const removeFilter = (key) => setFilters({ ...filters, [key]: '' })
 
-    const hasAnyFilter = filters.search || activeFilters.length > 0
+    const hasAnyFilter =
+        filters.search ||
+        filters.categorias.length > 0 ||
+        (filters.lineas || []).length > 0 ||
+        activeOtherFilters.length > 0
 
     return (
         <div className="filters">
+
+            {/* Central Search + Reset Actions */}
             <div className="filters-top-row">
                 <div className="search-wrapper">
-                    <Search size={16} className="search-icon" />
+                    <Search size={18} className="search-icon" />
                     <input
                         type="text"
                         className="search-input"
-                        placeholder="Buscar congreso, disciplina…"
+                        placeholder="Busca por nombre de congreso, tema o disciplina..."
                         value={filters.search}
                         onChange={e => setFilters({ ...filters, search: e.target.value })}
                     />
                     {filters.search && (
-                        <button className="search-clear" onClick={() => setFilters({ ...filters, search: '' })} title="Limpiar">
+                        <button className="search-clear" onClick={() => setFilters({ ...filters, search: '' })}>
                             <X size={14} />
                         </button>
                     )}
                 </div>
-
                 {hasAnyFilter && (
                     <button className="btn-reset" onClick={onReset}>
                         <RotateCcw size={14} />
-                        Limpiar todo
+                        Reiniciar filtros
                     </button>
                 )}
             </div>
 
+            {/* Research Lines — Progressive Disclosure: Only show if Categories are active */}
+            {filters.categorias.length > 0 && lineas.length > 0 && (
+                <div className="career-filter career-filter--inline">
+                    <div className="career-filter__header">
+                        <span className="career-filter__label">Líneas de Especialización</span>
+                        {(filters.lineas || []).length > 0 && (
+                            <button className="career-filter__clear"
+                                onClick={() => setFilters({ ...filters, lineas: [], sublinea: '' })}>
+                                Limpiar líneas
+                            </button>
+                        )}
+                    </div>
+                    <div className="career-filter__grid">
+                        {lineas.map(linea => {
+                            const isActive = (filters.lineas || []).includes(linea)
+                            return (
+                                <button
+                                    key={linea}
+                                    className={`career-chip ${isActive ? 'career-chip--active' : ''}`}
+                                    style={{ '--career-color': '#475569', '--career-bg': '#f1f5f9' }}
+                                    onClick={() => toggleLinea(linea)}
+                                >
+                                    <span className="career-chip__name">{linea}</span>
+                                </button>
+                            )
+                        })}
+                    </div>
+                </div>
+            )}
+
+            {/* Standard Context Selectors */}
             <div className="filters-selects">
                 <div className="filter-select-group">
-                    <label>Categoría</label>
-                    <div className="select-wrapper">
-                        <select value={filters.categoria} onChange={handleCategoriaChange}>
-                            <option value="">Todas las categorías</option>
-                            {categorias.map(c => <option key={c} value={c}>{toTitleCase(c)}</option>)}
-                        </select>
-                        <ChevronDown size={14} className="select-chevron" />
-                    </div>
-                </div>
-
-                <div className="filter-select-group">
-                    <label>Línea de investigación</label>
-                    <div className={`select-wrapper ${!filters.categoria ? 'disabled' : ''}`}>
-                        <select value={filters.linea} onChange={handleLineaChange} disabled={!filters.categoria}>
-                            <option value="">Todas las líneas</option>
-                            {lineas.map(l => <option key={l} value={l}>{l}</option>)}
-                        </select>
-                        <ChevronDown size={14} className="select-chevron" />
-                    </div>
-                </div>
-
-                <div className="filter-select-group">
-                    <label>País</label>
+                    <label>Ubicación</label>
                     <div className="select-wrapper">
                         <select value={filters.country} onChange={e => setFilters({ ...filters, country: e.target.value })}>
-                            <option value="">Todos los países</option>
+                            <option value="">Cualquier país</option>
                             {countries.map(c => <option key={c} value={c}>{c}</option>)}
                         </select>
                         <ChevronDown size={14} className="select-chevron" />
                     </div>
                 </div>
-
                 <div className="filter-select-group">
-                    <label>Modalidad</label>
+                    <label>Asistencia</label>
                     <div className="select-wrapper">
                         <select value={filters.modality} onChange={e => setFilters({ ...filters, modality: e.target.value })}>
-                            <option value="">Todas</option>
+                            <option value="">Cualquier modalidad</option>
                             <option value="Presencial">Presencial</option>
                             <option value="Hibrido">Híbrido</option>
                             <option value="Virtual">Virtual</option>
@@ -107,24 +116,46 @@ export default function Filters({ filters, setFilters, countries, categorias, li
                         <ChevronDown size={14} className="select-chevron" />
                     </div>
                 </div>
-
                 <div className="filter-select-group">
                     <label>Indexación</label>
                     <div className="select-wrapper">
                         <select value={filters.indexation} onChange={e => setFilters({ ...filters, indexation: e.target.value })}>
-                            <option value="">Todas</option>
+                            <option value="">Cualquier índice</option>
                             <option value="Scopus">Scopus</option>
-                            <option value="WoS">WoS</option>
+                            <option value="WoS">Web of Science</option>
                         </select>
                         <ChevronDown size={14} className="select-chevron" />
                     </div>
                 </div>
             </div>
 
-            {activeFilters.length > 0 && (
+            {/* Active Filters Summary Bar */}
+            {hasAnyFilter && (
                 <div className="active-chips">
-                    <span className="chips-label">Activos:</span>
-                    {activeFilters.map(f => (
+                    <span className="chips-label">Filtros aplicados:</span>
+
+                    {/* Visual indicators for selected Categories (derived from Careers) */}
+                    {activeCategoryLabels.map(cat => {
+                        const color = CAT_COLORS[cat]?.color || '#f78e1e'
+                        return (
+                            <span key={cat} className="filter-chip"
+                                style={{ borderColor: color, color: color, fontWeight: 700 }}>
+                                {cat}
+                            </span>
+                        )
+                    })}
+
+                    {/* Lines */}
+                    {(filters.lineas || []).map(l => (
+                        <span key={l} className="filter-chip"
+                            style={{ borderColor: '#475569', color: '#475569' }}>
+                            {l}
+                            <button onClick={() => toggleLinea(l)} style={{ background: '#475569' }}><X size={11} /></button>
+                        </span>
+                    ))}
+
+                    {/* Standard Selectors */}
+                    {activeOtherFilters.map(f => (
                         <span key={f.key} className="filter-chip">
                             {f.label}
                             <button onClick={() => removeFilter(f.key)}><X size={11} /></button>
@@ -133,5 +164,5 @@ export default function Filters({ filters, setFilters, countries, categorias, li
                 </div>
             )}
         </div>
-    );
+    )
 }
