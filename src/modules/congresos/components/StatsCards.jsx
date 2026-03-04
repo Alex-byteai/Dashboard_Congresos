@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Users, MapPin, BookOpen } from 'lucide-react';
+import { Calendar, Users, MapPin } from 'lucide-react';
 
 export default function Stats({ stats }) {
     return (
@@ -25,13 +25,6 @@ export default function Stats({ stats }) {
                     </div>
                     <div className="stat-value">{stats.countries}</div>
                     <div className="stat-label">Países</div>
-                </div>
-                <div className="stat-card">
-                    <div className="stat-icon">
-                        <BookOpen size={28} />
-                    </div>
-                    <div className="stat-value">{stats.scopus}</div>
-                    <div className="stat-label">Indexados Scopus</div>
                 </div>
             </div>
         </div>

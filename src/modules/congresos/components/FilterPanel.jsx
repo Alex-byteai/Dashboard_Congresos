@@ -66,7 +66,7 @@ export default function Filters({ filters, setFilters, countries, lineas, onRese
             {filters.categorias.length > 0 && lineas.length > 0 && (
                 <div className="career-filter career-filter--inline">
                     <div className="career-filter__header">
-                        <span className="career-filter__label">Líneas de Especialización</span>
+                        <span className="career-filter__label">Líneas de Investigación</span>
                         {(filters.lineas || []).length > 0 && (
                             <button className="career-filter__clear"
                                 onClick={() => setFilters({ ...filters, lineas: [], sublinea: '' })}>
@@ -105,24 +105,13 @@ export default function Filters({ filters, setFilters, countries, lineas, onRese
                     </div>
                 </div>
                 <div className="filter-select-group">
-                    <label>Asistencia</label>
+                    <label>Modalidad</label>
                     <div className="select-wrapper">
                         <select value={filters.modality} onChange={e => setFilters({ ...filters, modality: e.target.value })}>
                             <option value="">Cualquier modalidad</option>
                             <option value="Presencial">Presencial</option>
                             <option value="Hibrido">Híbrido</option>
                             <option value="Virtual">Virtual</option>
-                        </select>
-                        <ChevronDown size={14} className="select-chevron" />
-                    </div>
-                </div>
-                <div className="filter-select-group">
-                    <label>Indexación</label>
-                    <div className="select-wrapper">
-                        <select value={filters.indexation} onChange={e => setFilters({ ...filters, indexation: e.target.value })}>
-                            <option value="">Cualquier índice</option>
-                            <option value="Scopus">Scopus</option>
-                            <option value="WoS">Web of Science</option>
                         </select>
                         <ChevronDown size={14} className="select-chevron" />
                     </div>
