@@ -3,7 +3,6 @@ import { Bar, Doughnut, Line } from 'react-chartjs-2'
 
 export default function Charts({ data }) {
 
-    // Chart Helpers
     const getCountData = (key) => {
         const counts = {}
         data.forEach(e => {
@@ -16,7 +15,7 @@ export default function Charts({ data }) {
             datasets: [{
                 label: 'Eventos',
                 data: sorted.map(i => i[1]),
-                backgroundColor: '#f78e1e', // ULima Orange
+                backgroundColor: '#f78e1e',
                 borderRadius: 4
             }]
         }
@@ -76,7 +75,6 @@ export default function Charts({ data }) {
         }
     }
 
-    // Common Options
     const commonOptions = {
         responsive: true,
         maintainAspectRatio: false,
@@ -97,7 +95,6 @@ export default function Charts({ data }) {
         }
     }
 
-    // Helper Component
     const ChartCard = ({ title, subtitle, children }) => (
         <div className="chart-card">
             <div className="chart-header">

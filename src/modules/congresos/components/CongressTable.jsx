@@ -1,6 +1,6 @@
 import React from 'react';
 import { ExternalLink, AlertCircle, SearchX } from 'lucide-react';
-import { trackEvent } from '../analytics'
+import { trackEvent } from '../../../analytics'
 
 export default function CongressTable({ events, getUrgencyClass, getUrgencyText }) {
     if (events.length === 0) {

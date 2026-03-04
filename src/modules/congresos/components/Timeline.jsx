@@ -4,14 +4,12 @@ import { Clock, MapPin } from 'lucide-react';
 export default function Timeline({ events, getUrgencyClass }) {
     if (events.length === 0) return null;
 
-    // 1. Sort events by start date
     const sortedEvents = [...events].sort((a, b) => {
         if (!a.fechaInicio) return 1
         if (!b.fechaInicio) return -1
         return new Date(a.fechaInicio) - new Date(b.fechaInicio)
     })
 
-    // 2. Group by month
     const grouped = sortedEvents.reduce((groups, event) => {
         const m = event.month || 'Fecha por confirmar'
         if (!groups[m]) groups[m] = []
@@ -19,7 +17,6 @@ export default function Timeline({ events, getUrgencyClass }) {
         return groups
     }, {})
 
-    // Sort Month Groups
     const sortedGroupKeys = Object.keys(grouped).sort((a, b) => {
         if (a === 'Fecha por confirmar') return 1
         if (b === 'Fecha por confirmar') return -1

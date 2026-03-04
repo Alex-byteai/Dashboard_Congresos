@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalCongresses": 15,
-    "lastUpdated": "2026-02-18 15:58:05",
+    "totalCongresses": 14,
+    "lastUpdated": "2026-02-19 15:59:38",
     "version": "2.1"
   },
   "taxonomy": {
@@ -120,12 +120,7 @@
       "deadline": "2026-02-16",
       "deadlineStatus": "passed",
       "publicacion": "Actas LACCEI (Scopus)",
-      "enlace": "http://laccei.org/laccei2026/",
-      "coordinates": {
-        "city": "Santiago",
-        "lat": -33.4489,
-        "lon": -70.6693
-      }
+      "enlace": "http://laccei.org/laccei2026/"
     },
     {
       "id": 2,
@@ -161,54 +156,10 @@
       "deadline": "2026-06-28",
       "deadlineStatus": "future",
       "publicacion": "Scopus",
-      "enlace": "ticec.cedia.edu.ec",
-      "coordinates": {
-        "city": "Quito",
-        "lat": -0.1807,
-        "lon": -78.4678
-      }
+      "enlace": "ticec.cedia.edu.ec"
     },
     {
       "id": 3,
-      "evento": "CISTI",
-      "nombreCompleto": "21st Iberian Conference on Information Systems and Technologies",
-      "disciplina": "Sistemas de Información; Tecnologías de la Información; Metodologías de Desarrollo de Sistemas; Sistemas y Tecnologías Multimedia; Gestión del Conocimiento; Sistemas de Apoyo a la Decisión; Inteligencia de Negocios; Big Data; Almacenes de Datos; Minería de Datos; Inteligencia Artificial; Aprendizaje Automático; Redes Neuronales; Sistemas Expertos; Procesamiento de Lenguaje Natural; Visión por Computador; Procesamiento de Imágenes; Reconocimiento de Patrones; Sistemas Multiagente; Internet de las Cosas (IoT); Computación en la Nube; Computación en el Borde; Sistemas Distribuidos; Redes de Computadores; Seguridad en Redes; Ciberseguridad; Criptografía; Blockchain; Educación Digital; Tecnologías Educativas; Interacción Humano-Computador; Realidad Virtual; Realidad Aumentada; Sistemas Empresariales; ERP; Gestión de Procesos de Negocio; Transformación Digital; Gobierno Electrónico; Comercio Electrónico; Negocios Digitales; Computación Móvil; Ingeniería de Software; Ingeniería de Requisitos; Calidad de Software; Pruebas y Validación; Gestión de Proyectos TI; Bases de Datos; Recuperación de Información; Sistemas de Información Geográfica (SIG); Sistemas de Información en Salud; Bioinformática; Robótica; Automatización; Sistemas Embebidos; Ciudades Inteligentes; Redes Eléctricas Inteligentes; Sostenibilidad en TIC; Ética en TIC",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
-      "linea": [
-        "Ciudades inteligentes y sostenibles",
-        "Gestión del conocimiento",
-        "Inteligencia artificial y computación avanzada",
-        "Transformación digital"
-      ],
-      "sublinea": [
-        "Gestión inteligente de recursos",
-        "Inteligencia de negocios",
-        "Internet de las cosas (IoT)",
-        "Sistemas autónomos y robótica",
-        "Tecnologías emergentes"
-      ],
-      "fechaInicio": "2026-06-17",
-      "fechaFin": "2026-06-20",
-      "lugar": "University of Santiago de Compostela",
-      "ciudad": "Santiago de Compostela",
-      "pais": "España",
-      "modalidad": "Hibrido",
-      "deadline": "2026-02-24",
-      "deadlineStatus": "urgent",
-      "publicacion": "Springer LNNS / ITMA (Scopus, WoS)",
-      "enlace": "cisti.eu",
-      "coordinates": {
-        "city": "Santiago de Compostela",
-        "lat": 42.8782,
-        "lon": -8.5448
-      }
-    },
-    {
-      "id": 4,
       "evento": "WorldCIST",
       "nombreCompleto": "14th World Conference on Information Systems and Technologies",
       "disciplina": "Gestión de la Información y del Conocimiento; Modelos Organizacionales y Sistemas de Información; Modelado de Software y Sistemas; Arquitecturas, Aplicaciones y Herramientas de Software; Sistemas y Aplicaciones Multimedia; Redes de Computadores, Movilidad y Sistemas Pervasivos; Sistemas Inteligentes y de Apoyo a la Decisión; Analítica de Big Data y Aplicaciones; Interacción Humano–Computador; Ética, Computación y Seguridad; Informática en Salud; Tecnologías de la Información en Educación; Tecnologías para Aplicaciones Biomédicas; Tecnologías de la Información en Radiocomunicaciones",
@@ -239,15 +190,10 @@
       "deadline": "2025-12-16",
       "deadlineStatus": "passed",
       "publicacion": "Scopus",
-      "enlace": "worldcist.org",
-      "coordinates": {
-        "lat": 38.7223,
-        "lon": -9.1393,
-        "city": "Lisboa"
-      }
+      "enlace": "worldcist.org"
     },
     {
-      "id": 5,
+      "id": 4,
       "evento": "BICA 2026",
       "nombreCompleto": "17th Annual International Conference on Biologically Inspired Cognitive Architectures",
       "disciplina": "Inteligencia Artificial; Creatividad y Razonamiento de Metas en Sistemas Artificiales; Inteligencia Corporizada y Ambiental; Capacidades Lingüísticas y Competencia Social en IA; Aprendizaje por Lectura, Observación, Razonamiento y Analogía; Mecanismos Robustos y Escalables de Aprendizaje Automático; Aprendizaje Autorregulado, Autoorganizado y Metaaprendizaje; Emociones en IA y Modelos BICA; Pruebas y Métricas para BICA en el Contexto del BICA Challenge; IA Ética, Confiable y Explicable; Ciberseguridad y BICA; Percepción, Razonamiento, Toma de Decisiones y Acción en BICA; Cognición Naturaleza–Artificial Combinada; Comparación de Formas de Aprendizaje y Memoria; Teoría de la Mente y Memoria Episódica y Autobiográfica; Introspección, Metacognición y Autoconciencia en BICA; Modelos de Aprendizaje y Memoria: Robustez, Flexibilidad y Transferibilidad; Lenguaje Natural y Cognición; Marcos Unificadores y Arquitecturas Cognitivas\n\nSistemas Mixto‑Iniciativa inspirados en el cerebro y la mente; Inteligencia Social y Emocional en Agentes Artificiales; BICA en Tecnologías Educativas y Tutoría; Modelos BICA del Yo para Percepción y Acción; Representación y Procesamiento de Emociones; Personajes Virtuales, Personalidades Artificiales y Compatibilidad Humana; Modelado Basado en Agentes de Fenómenos Sociales Inteligentes; Procesamiento Natural y Artificial de Información; Mecanismos Cognitivos y de Aprendizaje Informados por Neurociencia; Correlatos Neuronales de Procesos Cognitivos y Metacognitivos; Sistemas Neuromórficos Robustos y Escalables; Mecanismos Fisiológicos de Formación y Reconsolidación de Memoria; Representación del Conocimiento Conceptual y Contextual en Sistemas Neuronales\n\nBases Matemáticas para BICA; Substratos Alternativos para BICA (materiales inteligentes, neuromórficos, cuánticos y biocomputación); Enfoques Evolutivos, Sistémicos y Educativos para BICA; Preguntas Fundamentales en Investigación BICA; Cognitive Decathlon y Grandes Desafíos del BICA; Masa Crítica para un Aprendiz Universal de Nivel Humano; Métricas y Evaluación para el BICA Challenge",
@@ -277,15 +223,10 @@
       "deadline": "2026-04-15",
       "deadlineStatus": "upcoming",
       "publicacion": "Scopus",
-      "enlace": "bicaai.org",
-      "coordinates": {
-        "lat": 0,
-        "lon": 0,
-        "city": "Guadalajara"
-      }
+      "enlace": "bicaai.org"
     },
     {
-      "id": 6,
+      "id": 5,
       "evento": "IBERAMIA 2026",
       "nombreCompleto": "19th Ibero-American Conference on Artificial Intelligence",
       "disciplina": "Inteligencia Artificial Fundamental; Agentes Inteligentes; Robótica; Entornos Inteligentes; Aprendizaje Automático; Ciencia de Datos; Modelos Generativos; Procesamiento del Lenguaje Natural; Comunicación e Interacción Persona‑Máquina; Inteligencia Artificial para la Sociedad; Ética en Inteligencia Artificial; Sostenibilidad y Tecnología Responsable; Aplicaciones de Inteligencia Artificial; Transferencia Tecnológica en IA",
@@ -315,15 +256,10 @@
       "deadline": "2026-05-31",
       "deadlineStatus": "future",
       "publicacion": "Springer LNAI, Scopus, DBLP",
-      "enlace": "https://www.iberamia.org/iberamia2026/",
-      "coordinates": {
-        "lat": 0,
-        "lon": 0,
-        "city": "Asunción"
-      }
+      "enlace": "https://www.iberamia.org/iberamia2026/"
     },
     {
-      "id": 7,
+      "id": 6,
       "evento": "WS-AI4CCAM 2026",
       "nombreCompleto": "World Symposium on Artificial Intelligence for Climate Change Adaptation and Mitigation",
       "disciplina": "Industria 5.0 y Manufactura Verde; Inteligencia Artificial para Modelos Climáticos; Inteligencia Artificial Experiencial y Herramientas Digitales para Adaptación Climática; Políticas e Instituciones para la Promoción de la IA; Eficiencia Energética y Optimización de Operaciones con IA; Alianzas Público‑Privadas para el Uso y Transferencia de Tecnología en IA; Evaluación del Impacto de la IA en el Cambio Climático; Monitoreo de Eventos Climáticos Extremos y Gestión del Riesgo con IA; Educación Climática Basada en Datos y Ciencia Ciudadana potenciada por IA; Análisis Asistido por IA de Interacciones Océano‑Atmósfera; Teleconexiones Climáticas Modeladas con IA",
@@ -355,15 +291,10 @@
       "deadline": "2026-03-05",
       "deadlineStatus": "urgent",
       "publicacion": "Springer(Scopus)",
-      "enlace": "https://www.haw-hamburg.de/en/university/newsroom/news-details/news/news/show/world-symposium-on-artificial-intelligence-for-climate-change-adaptation-and-mitigation-ws-ai4ccam/",
-      "coordinates": {
-        "lat": -23.5505,
-        "lon": -46.6333,
-        "city": "São Paulo"
-      }
+      "enlace": "https://www.haw-hamburg.de/en/university/newsroom/news-details/news/news/show/world-symposium-on-artificial-intelligence-for-climate-change-adaptation-and-mitigation-ws-ai4ccam/"
     },
     {
-      "id": 8,
+      "id": 7,
       "evento": "IoTBDS 2026",
       "nombreCompleto": "11th International Conference on Internet of Things and Big Data Systems",
       "disciplina": "Seguridad en IA e IoT; Detección de amenazas con IA en IoT; Edge AI para seguridad en IoT; Blockchain e IA para IoT; Privacidad y ética en IoT con IA; Seguridad impulsada por IA para IoT; Analítica avanzada e inteligencia en Big Data; Gestión de datos masivos; Modelado y experimentación en Big Data; Tecnologías y plataformas de Big Data; Redes y análisis social; Ingeniería de datos para Big Data; Algoritmos y metodologías de Big Data; Big Data como servicio (BDaaS); Marcos de software y procesamiento de datos; Health Informatics as a Service (HIaaS); Servicios y aplicaciones IoT; Seguridad como servicio (SECaaS); Servicios emergentes basados en datos; Aplicaciones IoT para salud, manufactura, energía y transporte; Smart cities y sistemas inteligentes IoT; Ética y privacidad en aplicaciones IoT; Arquitecturas IoT seguras; Redes de sensores y diagnóstico remoto; Gestión de transporte y movilidad inteligente; Arquitectura de software y middleware IoT; Dispositivos inteligentes y sistemas de recomendación; Protocolos de comunicación IoT; Comunicaciones máquina‑a‑máquina (M2M); Eficiencia energética en IoT; Ingeniería de software para IoT; Machine Learning y Deep Learning para IoT; Analítica de datos en IoT; Tecnologías y plataformas IoT; Sistemas embebidos y sensores; Conectividad e infraestructura IoT; Edge Computing; Integración IoT con AI/ML; Seguridad en redes IoT; Privacidad en IoT; Gestión de identidades y acceso; Criptografía avanzada; Modelos de confianza para IoT y Big Data; Cumplimiento normativo y ética en sistemas conectados",
@@ -394,15 +325,10 @@
       "deadline": "2026-02-24",
       "deadlineStatus": "urgent",
       "publicacion": "Springer CCIS (Scopus, WoS)",
-      "enlace": "iotbds.scitevents.org",
-      "coordinates": {
-        "lat": 40.4168,
-        "lon": -3.7038,
-        "city": "Madrid"
-      }
+      "enlace": "iotbds.scitevents.org"
     },
     {
-      "id": 9,
+      "id": 8,
       "evento": "HCII 2026 (HCI International)",
       "nombreCompleto": "28th International Conference on Human-Computer Interaction",
       "disciplina": "Teorías y Métodos de HCI; Diseño de Interacción; UX y Usabilidad; Diseño de Servicios y Design Thinking; Investigación de Usuarios; Métodos y Técnicas de Evaluación; Interfaces de Usuario Multimodales; Interfaces Adaptativas y Personalizadas; Inteligencia Artificial Generativa en HCI; Robots, Androides, Avatares y Humanos Virtuales; Tecnologías de Percepción y Sensado; Análisis de Imágenes y Drones; Conducción Autónoma; Simbiosis Humano‑Tecnología; IA Centrada en Humanos (HCAI); Inteligencia Artificial Explicable (XAI); Derechos de Propiedad Intelectual en Interfaces; Interacción VR; Interacción AR; Interacción MR; Interacción XR; Metaverso; Sistemas de Transporte del Futuro; Sistemas Médicos del Futuro; Interfaces Cerebro‑Computador (BCI); Privacidad y Seguridad en Línea; Anonimato y Protección de Datos; Sostenibilidad y SDGs en HCI; Ética y Filosofía de la Interacción; Reconocimiento de Emociones; Bienestar y Calidad de Vida; Accesibilidad y Acceso Universal; Interacción para Discapacidad; Interacción para Personas Mayores; Interacción para Niños; Internacionalización y Localización; Diversidad Cultural, Género e Inclusión en HCI; Creatividad y Educación; e‑Learning; Aprendizaje a Distancia; Diseño de Juegos; Gamificación; e‑Sports; Ciencias del Deporte; HCI y Psicología; HCI y Sociología; HCI y Antropología; Trabajo Remoto y Productividad; e‑Government; Voto Electrónico; HCI para Gobernanza Ética; Crímenes Digitales y Conflictos; Desigualdad Social y Económica en HCI",
@@ -430,15 +356,10 @@
       "deadline": "2026-03-30",
       "deadlineStatus": "upcoming",
       "publicacion": "Springer LNCS (Scopus, WoS)",
-      "enlace": "2026.hci.international/hci",
-      "coordinates": {
-        "lat": 0,
-        "lon": 0,
-        "city": "Montreal"
-      }
+      "enlace": "2026.hci.international/hci"
     },
     {
-      "id": 10,
+      "id": 9,
       "evento": "COMIA 2026",
       "nombreCompleto": "XVIII Congreso Mexicano de Inteligencia Artificial",
       "disciplina": "Sistemas expertos y sistemas basados en conocimiento; Representación, adquisición y manejo del conocimiento; Sistemas multi-agente e IA distribuida; Organizaciones inteligentes; Inteligencia artificial generativa; Procesamiento del lenguaje natural; Interfaces inteligentes: multimedia y realidad virtual; Visión por computadora y procesamiento de imágenes; Inteligencia computacional; Aprendizaje automático y reconocimiento de patrones; Incertidumbre y razonamiento; Demostración de teoremas automatizada; Robótica; Planificación y programación; Sistemas inteligentes híbridos; Bioinformática y aplicaciones médicas; Cuestiones metodológicas y filosóficas de la IA; Sistemas de tutorías inteligentes; Minería de datos; Aplicaciones con inteligencia artificial\n\n",
@@ -468,15 +389,10 @@
       "deadline": "2026-04-01",
       "deadlineStatus": "upcoming",
       "publicacion": "Springer CCIS (Scopus) + memorias del congreso",
-      "enlace": "comia.com.mx",
-      "coordinates": {
-        "lat": 0,
-        "lon": 0,
-        "city": "Cuernavaca"
-      }
+      "enlace": "comia.com.mx"
     },
     {
-      "id": 11,
+      "id": 10,
       "evento": "CIbSE 2026",
       "nombreCompleto": "XXIX Ibero-American Conference on Software Engineering",
       "disciplina": "Aplicación de la inteligencia artificial a la ingeniería de software; LLMs y modelos fundacionales en ingeniería de software; Ingeniería de software continua (Desarrollo Ágil, DevOps, Entrega Continua, Integración Continua); Ingeniería de software basada en la comunidad (código abierto, crowdsourcing); Detección de vulnerabilidades para mejorar la seguridad del software; Calidad de software, modelos de calidad y gestión de la deuda técnica; Sostenibilidad del software e Ingeniería de Software Verde; Ingeniería de software para dominios estratégicos (agricultura, aviación, ciudades inteligentes, etc.); Minería de repositorios de software y analítica de software; Modelado del software e ingeniería dirigida por modelos; Aspectos humanos y sociales de la ingeniería de software; Confidencialidad, integridad, privacidad, equidad y justicia; Informes de experiencias industriales en ingeniería de software; Métodos de investigación en ingeniería de software",
@@ -506,15 +422,10 @@
       "deadline": "2026-02-06",
       "deadlineStatus": "passed",
       "publicacion": "Scopus",
-      "enlace": "https://conf.researchr.org/home/cibse-2026",
-      "coordinates": {
-        "lat": 0,
-        "lon": 0,
-        "city": "Santo Domingo"
-      }
+      "enlace": "https://conf.researchr.org/home/cibse-2026"
     },
     {
-      "id": 12,
+      "id": 11,
       "evento": "CONESCAPAN 2026",
       "nombreCompleto": "IEEE Convention of Central America and Panama",
       "disciplina": "Gestión y control de recursos energéticos distribuidos; Integración de energías renovables y redes inteligentes; Estabilidad del sistema eléctrico y control de voltaje; Microredes y sistemas de almacenamiento de energía; Medición inteligente y gestión del lado de la demanda; Transmisión HVDC; Electrónica de potencia para energías renovables; Diseño de máquinas eléctricas para energía renovable; Fiabilidad de la red; Seguridad ciberfísica en sistemas de potencia; Física y modelado de dispositivos electrónicos; Nanoelectrónica y tecnologías de gigaescala; Electrónica flexible, impresa y orgánica; Circuitos analógicos, digitales y mixtos; Diseño VLSI/ULSI y SoC/NoC; FPGA avanzados; Microsistemas MEMS/NEMS y sensores integrados; Circuitos RF y microondas; IoT y electrónica embebida; Electrónica de potencia y conversión energética; Control y sistemas ciberfísicos; Microrredes y sostenibilidad energética; Procesamiento de señales en hardware para IA; Arquitecturas de hardware para IA; Automatización del diseño electrónico (EDA); Pruebas y confiabilidad de circuitos; Circuitos tolerantes a fallas; Sistemas electrónicos para comunicaciones; Circuitos para aplicaciones científicas e industriales; Inteligencia artificial y aprendizaje automático; Procesamiento de lenguaje natural; IoT y sistemas embebidos; Ciberseguridad; Realidad aumentada y realidad virtual; Computación en la nube; Software libre; Ingeniería de software; Sistemas distribuidos y arquitecturas emergentes; Computación de alto rendimiento; Blockchain; IA aplicada a salud; Procesamiento de señales biomédicas; Procesamiento de imágenes biomédicas; Sensores biomédicos; Sistemas portátiles de monitoreo; Neuroingeniería; Interfaces cerebro‑computador",
@@ -544,15 +455,10 @@
       "deadline": "2026-06-08",
       "deadlineStatus": "future",
       "publicacion": "Scopus",
-      "enlace": "https://r9.ieee.org/costarica/conescapan-2026-call-for-papers/",
-      "coordinates": {
-        "lat": 0,
-        "lon": 0,
-        "city": "San jose"
-      }
+      "enlace": "https://r9.ieee.org/costarica/conescapan-2026-call-for-papers/"
     },
     {
-      "id": 13,
+      "id": 12,
       "evento": "CIDIP/ICPME 2026",
       "nombreCompleto": "30th International Congress on Project Management and Engineering",
       "disciplina": "Dirección y Gestión de Proyectos; Ingeniería Civil y Urbanismo. Construcción y Arquitectura; Ingeniería de Producto y Procesos. Diseño Industrial; Ingeniería Ambiental y Gestión de Recursos Naturales; Eficiencia Energética y Energías Renovables; Desarrollo Rural y Proyectos de Cooperación al Desarrollo; Tecnologías de Información y Comunicaciones (TIC). Ingeniería del Software; Gestión de Riesgos y Seguridad; Innovación en Dirección e Ingeniería de Proyectos. Educación; Buenas Prácticas y Casos de Empresa",
@@ -581,15 +487,10 @@
       "deadline": "2026-01-16",
       "deadlineStatus": "passed",
       "publicacion": "Actas indexadas en Scopus",
-      "enlace": "https://congresos.aeipro.com/",
-      "coordinates": {
-        "lat": 40.4168,
-        "lon": -3.7038,
-        "city": "Madrid"
-      }
+      "enlace": "https://congresos.aeipro.com/"
     },
     {
-      "id": 14,
+      "id": 13,
       "evento": "SBGames 2026",
       "nombreCompleto": "Simpósio Brasileiro de Jogos e Entretenimento Digital",
       "disciplina": "Arte de juegos; Animación e ilustración; Concept art; Modelado 2D y 3D; Diseño visual y UI/UX; Motion graphics para juegos; Narrativa visual y storytelling; Diseño de juegos; Diseño de niveles; Diseño sonoro y música para juegos; Estudios culturales del videojuego; Juegos y sociedad; Comunidades de jugadores; Representación, diversidad e inclusión; Preservación e historia de los juegos; Estudios de eSports; Comunidades modders y creadores; Juegos educativos; Gamificación; Juegos serios para aprendizaje; Evaluación de juegos educativos; Juegos en educación básica; Juegos en educación superior; Juegos como recurso pedagógico; Desarrollo y producción de videojuegos; Emprendimiento en videojuegos; Mercados y modelos de negocio; Gestión de equipos y pipelines; Publicación y distribución; Marketing y comunidades; Inteligencia Artificial en videojuegos; Aprendizaje automático en juegos; Animación procedural; Física computacional; Motores de juego y rendering; Shaders; Procesamiento de imágenes; Realidad virtual; Realidad aumentada; Juegos multijugador y redes; Juegos en la nube; Optimización y rendimiento; Seguridad y anti-cheat; Juegos para la salud y la rehabilitación; Juegos serios en medicina; Biofeedback; Sensores para salud; Juegos terapéuticos; Juegos para bienestar",
@@ -619,15 +520,10 @@
       "deadline": "2026-08-01",
       "deadlineStatus": "future",
       "publicacion": "Scopus",
-      "enlace": "https://sbgames.org/sbgames2026/",
-      "coordinates": {
-        "lat": -23.5505,
-        "lon": -46.6333,
-        "city": "São Paulo"
-      }
+      "enlace": "https://sbgames.org/sbgames2026/"
     },
     {
-      "id": 15,
+      "id": 14,
       "evento": "eCrime",
       "nombreCompleto": "eCrime Researchers Summit (eCrime 2026)",
       "disciplina": "IA como herramienta para el cibercrimen; Polimorfismo avanzado de malware mediante IA; Generación automática de spear-phishing; Reconocimiento automatizado para ataques; Co-pilotos criminales y crimebots; Bandas híbridas humano-IA; Reducción de barreras de entrada al cibercrimen con IA; Agentes defensivos de IA; Ataques adversariales contra modelos de IA; Ataques contra sistemas de machine learning; Envenenamiento de datos; Jailbreaks y manipulación de LLMs; Diseño de defensas para IA; Seguridad de sistemas de IA; Protección frente a algoritmos criminales de IA; Resiliencia frente a desinformación contra modelos; Sistemas autónomos y semi-autónomos de defensa; Ataques a sistemas ciber-físicos; Secuestro y weaponización de drones; Uso criminal de robots industriales; Ataques a sistemas médicos asistidos por IA; Abuso de IoT doméstico y comercial; Ataques a vehículos autónomos y robots de entrega; Riesgos emergentes de IA contra personas; IA para targeting y manipulación psicológica; Ataques contra infraestructura crítica mediante IA; Diseño de entornos multi-agente para ciberseguridad; Sistemas multi-agente para resiliencia; Ingeniería social potenciada por IA; Plataformas híbridas humano-agente para fraude; Políticas y regulación del cibercrimen; Legislación sobre IA criminal y defensiva; Regulación de sistemas ciber-físicos; Marcos normativos contra el cibercrimen potenciado por IA",
@@ -656,12 +552,7 @@
       "deadline": "2026-05-30",
       "deadlineStatus": "future",
       "publicacion": "Scopus",
-      "enlace": "https://apwg.org/events/ecrime2026/",
-      "coordinates": {
-        "city": "Lisboa",
-        "lat": 38.7223,
-        "lon": -9.1393
-      }
+      "enlace": "https://apwg.org/events/ecrime2026/"
     }
   ]
 }

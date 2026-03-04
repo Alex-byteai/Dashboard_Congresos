@@ -1,6 +1,6 @@
 import React from 'react';
 import { Calendar, MapPin, Clock, GraduationCap, ExternalLink, AlertCircle, SearchX } from 'lucide-react';
-import { trackEvent } from '../analytics'
+import { trackEvent } from '../../../analytics'
 
 export default function CongressList({ events, getUrgencyClass, getUrgencyText }) {
     if (events.length === 0) {
@@ -45,7 +45,6 @@ export default function CongressList({ events, getUrgencyClass, getUrgencyText }
                         <div className="meta-item" style={{ alignItems: 'flex-start' }}>
                             <GraduationCap size={18} className="meta-icon" style={{ marginTop: '4px', flexShrink: 0 }} />
 
-                            {/* Carousel Container */}
                             <div className="tags-carousel" style={{ marginTop: '0' }}>
                                 <div className="tags-track">
                                     {event.categoria && event.categoria.length > 0

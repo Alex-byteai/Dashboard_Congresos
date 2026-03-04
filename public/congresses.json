@@ -1,7 +1,7 @@
 {
   "metadata": {
     "totalCongresses": 16,
-    "lastUpdated": "2026-02-24 11:22:36",
+    "lastUpdated": "2026-03-04 11:43:46",
     "version": "2.1"
   },
   "taxonomy": {
@@ -254,7 +254,7 @@
       "pais": "Paraguay",
       "modalidad": "Presencial",
       "deadline": "2026-05-31",
-      "deadlineStatus": "future",
+      "deadlineStatus": "upcoming",
       "publicacion": "Springer LNAI, Scopus, DBLP",
       "enlace": "https://www.iberamia.org/iberamia2026/"
     },
@@ -354,7 +354,7 @@
       "pais": "Canada",
       "modalidad": "Hibrido",
       "deadline": "2026-03-30",
-      "deadlineStatus": "upcoming",
+      "deadlineStatus": "urgent",
       "publicacion": "Springer LNCS (Scopus, WoS)",
       "enlace": "2026.hci.international/hci"
     },
@@ -387,7 +387,7 @@
       "pais": "Mexico",
       "modalidad": "Presencial",
       "deadline": "2026-04-01",
-      "deadlineStatus": "upcoming",
+      "deadlineStatus": "urgent",
       "publicacion": "Springer CCIS (Scopus) + memorias del congreso",
       "enlace": "comia.com.mx"
     },
@@ -550,7 +550,7 @@
       "pais": "Portugal",
       "modalidad": "Presencial",
       "deadline": "2026-05-30",
-      "deadlineStatus": "future",
+      "deadlineStatus": "upcoming",
       "publicacion": "Scopus",
       "enlace": "https://apwg.org/events/ecrime2026/"
     },
@@ -582,7 +582,7 @@
       "pais": "Italia",
       "modalidad": "Híbrido",
       "deadline": "2026-03-04",
-      "deadlineStatus": "urgent",
+      "deadlineStatus": "passed",
       "publicacion": "Scopus",
       "enlace": "https://www.academic-conferences.org/conferences/eckm/"
     },
@@ -616,7 +616,7 @@
       "pais": "Portugal",
       "modalidad": "Híbrido",
       "deadline": "2026-03-03",
-      "deadlineStatus": "urgent",
+      "deadlineStatus": "passed",
       "publicacion": "Scopus",
       "enlace": "https://icsbt.scitevents.org/"
     }
