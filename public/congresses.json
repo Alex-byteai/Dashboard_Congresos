@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalCongresses": 16,
-    "lastUpdated": "2026-03-04 11:43:46",
+    "totalCongresses": 17,
+    "lastUpdated": "2026-03-05 15:50:45",
     "version": "2.1"
   },
   "taxonomy": {
@@ -289,7 +289,7 @@
       "pais": "Brasil",
       "modalidad": "Presencial",
       "deadline": "2026-03-05",
-      "deadlineStatus": "urgent",
+      "deadlineStatus": "passed",
       "publicacion": "Springer(Scopus)",
       "enlace": "https://www.haw-hamburg.de/en/university/newsroom/news-details/news/news/show/world-symposium-on-artificial-intelligence-for-climate-change-adaptation-and-mitigation-ws-ai4ccam/"
     },
@@ -619,6 +619,38 @@
       "deadlineStatus": "passed",
       "publicacion": "Scopus",
       "enlace": "https://icsbt.scitevents.org/"
+    },
+    {
+      "id": 17,
+      "evento": "CLEI ",
+      "nombreCompleto": "52nd Latin American Computing Conference",
+      "disciplina": "Ingeniería de software; Análisis de software; Testing de software; Calidad de software; Mantenimiento y evolución de sistemas; Minería y análisis de repositorios de código; Ingeniería de software para IA; Teoría de la computación; Aspectos humanos de la ingeniería de software; Ciencia de datos; Big Data; Investigación de operaciones; IA y procesamiento de lenguaje natural; IA y representación del conocimiento; Razonamiento formal en IA; IA y ética; Sesgos en algoritmos de IA; IA explicable; IA centrada en humanos; IA en salud; IA en biología y química; IA en vehículos autónomos; IA en finanzas; IA en educación; IA y cambio climático; IA en ciberseguridad; Gobernanza y regulación de la IA; IA en entretenimiento; IA e investigación operativa; IA en industria 4.0; IA y simulación; Interacción persona-computadora; Computación de alto rendimiento; Bioinformática; Quimioinformática; Aplicaciones en la industria; Aplicaciones en gobierno; Aplicaciones en sociedad; Internet de las cosas; Blockchain; Cloud computing; Edge computing; Cómputo de altas prestaciones; Tolerancia a fallas; Redes de comunicación; Ciberseguridad; Realidad virtual; Realidad aumentada; Ecosistemas digitales; Integrabilidad; Innovación en ecosistemas digitales; Industria 4.0; Educación interdisciplinaria en informática; Cursos introductorios de computación; Didáctica de la informática; Problemáticas y estrategias de enseñanza; Herramientas y experiencias educativas; Modelos universidad-empresa; Aspectos humanos en la educación informática",
+      "categoria": [
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
+      ],
+      "linea": [
+        "Gestión del conocimiento",
+        "Inteligencia artificial y computación avanzada",
+        "Transformación digital"
+      ],
+      "sublinea": [
+        "Inteligencia de negocios",
+        "Internet de las cosas (IoT)",
+        "Procesamiento de lenguaje natural",
+        "Sistemas autónomos y robótica",
+        "Tecnologías emergentes"
+      ],
+      "fechaInicio": "2026-09-07",
+      "fechaFin": "2026-07-11",
+      "lugar": "Centro Citibanamex",
+      "ciudad": "Ciudad de México",
+      "pais": "Mexico",
+      "modalidad": "Presencial",
+      "deadline": "2026-03-29",
+      "deadlineStatus": "urgent",
+      "publicacion": "IEEE, Scopus",
+      "enlace": "https://clei.org/"
     }
   ]
 }
