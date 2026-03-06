@@ -22,7 +22,8 @@ export default function CongresosModule({ onBack }) {
         lineas: [],
         sublinea: '',
         modality: '',
-        indexation: ''
+        indexation: '',
+        onlyActive: true // Default to true for better UX
     }
     const [filters, setFilters] = useState(initialFilters)
     const [taxonomy, setTaxonomy] = useState({})
@@ -139,7 +140,9 @@ export default function CongresosModule({ onBack }) {
         const matchesCareer = selectedCategories.length === 0 ||
             selectedCategories.some(cat => event.categoria?.includes(cat))
 
-        return matchesSearch && matchesCountry && matchesCategoria && matchesLinea && matchesSublinea && matchesModality && matchesIndexation && matchesCareer
+        const matchesDeadline = !filters.onlyActive || (event.deadlineDays !== null && event.deadlineDays >= 0)
+
+        return matchesSearch && matchesCountry && matchesCategoria && matchesLinea && matchesSublinea && matchesModality && matchesIndexation && matchesCareer && matchesDeadline
     })
 
     const countries = [...new Set(data.map(e => e.pais).filter(Boolean))].sort()

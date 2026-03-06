@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, RotateCcw, ChevronDown, X } from 'lucide-react';
+import { Search, RotateCcw, ChevronDown, X, MapPin, Globe, Clock, CheckCircle2, Circle, Activity } from 'lucide-react';
 
 // Color matching for active chips bar
 const CAT_COLORS = {
@@ -24,6 +24,7 @@ export default function Filters({ filters, setFilters, countries, lineas, onRese
         filters.country && { key: 'country', label: filters.country },
         filters.modality && { key: 'modality', label: filters.modality },
         filters.indexation && { key: 'indexation', label: filters.indexation },
+        filters.onlyActive && { key: 'onlyActive', label: 'Solo vigentes' },
     ].filter(Boolean)
 
     const removeFilter = (key) => setFilters({ ...filters, [key]: '' })
@@ -95,26 +96,53 @@ export default function Filters({ filters, setFilters, countries, lineas, onRese
             {/* Standard Context Selectors */}
             <div className="filters-selects">
                 <div className="filter-select-group">
-                    <label>Ubicación</label>
+                    <label>
+                        <MapPin size={14} />
+                        Ubicación
+                    </label>
                     <div className="select-wrapper">
                         <select value={filters.country} onChange={e => setFilters({ ...filters, country: e.target.value })}>
                             <option value="">Cualquier país</option>
                             {countries.map(c => <option key={c} value={c}>{c}</option>)}
                         </select>
-                        <ChevronDown size={14} className="select-chevron" />
+                        <Globe size={14} className="select-chevron" />
                     </div>
                 </div>
-                <div className="filter-select-group">
-                    <label>Modalidad</label>
-                    <div className="select-wrapper">
-                        <select value={filters.modality} onChange={e => setFilters({ ...filters, modality: e.target.value })}>
-                            <option value="">Cualquier modalidad</option>
-                            <option value="Presencial">Presencial</option>
-                            <option value="Hibrido">Híbrido</option>
-                            <option value="Virtual">Virtual</option>
-                        </select>
-                        <ChevronDown size={14} className="select-chevron" />
+
+                <div className="filter-select-group filter-select-group--chips">
+                    <label>
+                        <Activity size={14} />
+                        Modalidad
+                    </label>
+                    <div className="modality-chips">
+                        {['Presencial', 'Hibrido', 'Virtual'].map(m => (
+                            <button
+                                key={m}
+                                className={`modality-chip ${filters.modality === m ? 'modality-chip--active' : ''}`}
+                                onClick={() => setFilters({ ...filters, modality: filters.modality === m ? '' : m })}
+                            >
+                                {m}
+                            </button>
+                        ))}
                     </div>
+                </div>
+
+                <div className="filter-select-group filter-select-group--toggle">
+                    <label>
+                        <Clock size={14} />
+                        Deadline
+                    </label>
+                    <button
+                        className={`deadline-toggle ${filters.onlyActive ? 'deadline-toggle--active' : ''}`}
+                        onClick={() => setFilters({ ...filters, onlyActive: !filters.onlyActive })}
+                    >
+                        <div className="deadline-toggle__track">
+                            <div className="deadline-toggle__thumb">
+                                {filters.onlyActive ? <CheckCircle2 size={10} /> : <Circle size={10} />}
+                            </div>
+                        </div>
+                        <span className="deadline-toggle__label">Solo vigentes</span>
+                    </button>
                 </div>
             </div>
 

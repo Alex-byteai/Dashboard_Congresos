@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalCongresses": 17,
-    "lastUpdated": "2026-03-05 15:50:45",
+    "totalCongresses": 20,
+    "lastUpdated": "2026-03-06 09:51:41",
     "version": "2.1"
   },
   "taxonomy": {
@@ -651,6 +651,105 @@
       "deadlineStatus": "urgent",
       "publicacion": "IEEE, Scopus",
       "enlace": "https://clei.org/"
+    },
+    {
+      "id": 18,
+      "evento": "IEEE LAMC 2026",
+      "nombreCompleto": "6th IEEE MTT-S Latin America Microwave Conference",
+      "disciplina": "Componentes pasivos; Circuitos pasivos; Componentes planar y no planar; Filtros; Multiplexores; Dispositivos sintonizables; Metamateriales; RFICs; MMICs; Amplificadores de potencia; Técnicas de linealización; Circuitos de bajo ruido; Generación de señales; Conversión de señales; Control de señales; Modelado lineal; Modelado no lineal; Técnicas de medición; Sistemas de microondas; Front-ends; Aplicaciones ISM; Sistemas de navegación; Sistemas inteligentes de transporte; Sensores; Imagenología; Transmisión inalámbrica de energía; Comunicaciones terrestres; Comunicaciones vehiculares; Comunicaciones satelitales; Comunicaciones indoor; Comunicaciones inalámbricas; Comunicaciones celulares; Antenas activas; Antenas pasivas; Arreglos de fase; Antenas integradas; Antenas MIMO; Antenas digitales; Beamforming; Antenas inteligentes; Integridad de señal; Integridad de potencia; Interferencia electromagnética; Compatibilidad electromagnética; Interconexiones de alta velocidad; Validación post-silicio; Redes de distribución de potencia; Simulación RF; Mediciones RF; Modelado surrogate; Space mapping; Reducción de orden de modelos; Machine learning para RF; Diseño estadístico; Optimización electromagnética; Optimización multifísica; Teoría electromagnética; Técnicas numéricas en dominio del tiempo; Técnicas numéricas en dominio de frecuencia",
+      "categoria": [
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
+      ],
+      "linea": [
+        "Experiencia digital humana",
+        "Inteligencia artificial y computación avanzada",
+        "Tecnología y ecosistemas",
+        "Transformación digital"
+      ],
+      "sublinea": [
+        "Diseño de interfaces adaptativas",
+        "Diseño y construcción virtual",
+        "Internet de las cosas (IoT)",
+        "Materiales avanzados",
+        "Sistemas autónomos y robótica"
+      ],
+      "fechaInicio": "2026-12-09",
+      "fechaFin": "2026-12-11",
+      "lugar": "Centro de Convenciones",
+      "ciudad": "Buenos Aires",
+      "pais": "Argentina",
+      "modalidad": "Presencial",
+      "deadline": "2026-08-03",
+      "deadlineStatus": "future",
+      "publicacion": "IEEE Xplore, Scopus",
+      "enlace": "https://lamc-ieee.org/"
+    },
+    {
+      "id": 19,
+      "evento": "ACIT",
+      "nombreCompleto": "16th International Conference on Advanced Computer Information Technologies (ACIT’2026)",
+      "disciplina": "Inteligencia Computacional y Modelado Matemático; Información en Economía y Gestión; Ciberseguridad; Sistemas de Información y Sistemas Computacionales Especializados; Inteligencia Artificial y Sistemas Cognitivos; Tecnologías de la Información en la Educación",
+      "categoria": [
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
+      ],
+      "linea": [
+        "Bienestar y desarrollo humano",
+        "Gestión del conocimiento",
+        "Inteligencia artificial y computación avanzada",
+        "Transformación digital"
+      ],
+      "sublinea": [
+        "Educación, desarrollo cognitivo y socioafectivo",
+        "Inteligencia de negocios",
+        "Internet de las cosas (IoT)",
+        "Machine learning y deep learning",
+        "Sistemas autónomos y robótica"
+      ],
+      "fechaInicio": "2026-09-02",
+      "fechaFin": "2026-09-04",
+      "lugar": "Tomas Bata University in Zlín",
+      "ciudad": "Zlín",
+      "pais": "República Checa",
+      "modalidad": "Híbrido",
+      "deadline": "2026-04-05",
+      "deadlineStatus": "urgent",
+      "publicacion": "Scopus, WoS",
+      "enlace": "https://www.acit.tech/"
+    },
+    {
+      "id": 20,
+      "evento": "ECMLG 2026",
+      "nombreCompleto": "22nd European Conference on Management, Leadership and Governance)",
+      "disciplina": "Liderazgo transformacional; Liderazgo transaccional; Liderazgo servicial; Cultura organizacional y liderazgo; Gestión estratégica; Formulación de estrategias; Implementación estratégica; Agilidad organizacional; Adaptabilidad empresarial; Transformación digital; Tecnología aplicada a la gestión; Inteligencia Artificial en la toma de decisiones; Analítica de datos en management; Automatización organizacional; Sostenibilidad organizacional; Responsabilidad Social Corporativa; Liderazgo ético; Equipos multiculturales; Gestión intercultural; Comunicación intercultural; Innovación organizacional; Gestión del cambio; Cultura de innovación; Comportamiento organizacional; Dinámicas de equipo; Motivación y compromiso; Productividad y desempeño; Gobernanza corporativa; Liderazgo en entornos digitales; Tendencias emergentes en liderazgo y gestión",
+      "categoria": [
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
+      ],
+      "linea": [
+        "Gestión del conocimiento",
+        "Innovación empresarial",
+        "Ética, gobernanza y responsabilidad social"
+      ],
+      "sublinea": [
+        "Aprendizaje organizacional",
+        "Gestión de la innovación",
+        "Gestión del capital intelectual",
+        "Transformación organizacional",
+        "Ética y gobernanza"
+      ],
+      "fechaInicio": "2026-11-05",
+      "fechaFin": "2026-11-06",
+      "lugar": "Universidade Portucalense",
+      "ciudad": "Porto",
+      "pais": "Portugal",
+      "modalidad": "Hibrido",
+      "deadline": "2026-04-15",
+      "deadlineStatus": "upcoming",
+      "publicacion": "Scopus, WoS",
+      "enlace": "https://www.academic-conferences.org/conferences/ecmlg/"
     }
   ]
 }
