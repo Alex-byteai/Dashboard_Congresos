@@ -17,7 +17,7 @@ export default function RevistasModule({ onBack }) {
     const initialFilters = {
         search: '',
         publisher: '',
-        enfoque: '',
+        tipo: '',
         disciplina: ''
     }
     const [filters, setFilters] = useState(initialFilters)
@@ -27,7 +27,7 @@ export default function RevistasModule({ onBack }) {
             .then(res => res.json())
             .then(jsonData => {
                 setRevistas(jsonData.revistas || [])
-                setFacets(jsonData.facets || { publishers: [], enfoques: [], disciplinas: [] })
+                setFacets(jsonData.facets || { publishers: [], tipos: [], disciplinas: [] })
                 setLoading(false)
             })
             .catch(err => {
@@ -47,10 +47,10 @@ export default function RevistasModule({ onBack }) {
                 r.enfoque?.toLowerCase().includes(q)
 
             const matchesPublisher = !filters.publisher || r.publisher === filters.publisher
-            const matchesEnfoque = !filters.enfoque || r.enfoque === filters.enfoque
+            const matchesTipo = !filters.tipo || r.tipo === filters.tipo
             const matchesDisciplina = !filters.disciplina || (r.disciplinas || []).includes(filters.disciplina)
 
-            return matchesSearch && matchesPublisher && matchesEnfoque && matchesDisciplina
+            return matchesSearch && matchesPublisher && matchesTipo && matchesDisciplina
         })
     }, [filters, revistas])
 
@@ -74,7 +74,7 @@ export default function RevistasModule({ onBack }) {
                     filters={filters}
                     setFilters={setFilters}
                     publishers={facets.publishers || []}
-                    enfoques={facets.enfoques || []}
+                    tipos={facets.tipos || []}
                     disciplinas={facets.disciplinas || []}
                     onReset={() => setFilters(initialFilters)}
                 />

@@ -1626,6 +1626,24 @@ body {
   background: white;
 }
 
+.stat-card--revistas {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem !important;
+  text-align: left !important;
+}
+
+.stat-card--revistas .stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card--revistas .stat-value {
+  margin-bottom: 0 !important;
+  line-height: 1.2;
+}
+
 /* ─── Fase 5 Filter Refinements ──────────────────────────────────── */
 .filter-select-group label {
   display: flex;
@@ -1709,7 +1727,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #94a3b8;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .deadline-toggle--active .deadline-toggle__thumb {

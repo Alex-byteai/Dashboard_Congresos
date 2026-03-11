@@ -13,7 +13,7 @@
       "issn": null,
       "eissn": "2052-4463",
       "publisher": "Nature Research",
-      "enfoque": "Data descriptors / datasets across disciplines",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Social Sciences",
         "Computer Science",
@@ -28,7 +28,7 @@
       "issn": null,
       "eissn": "2047-217X",
       "publisher": "Oxford University Press",
-      "enfoque": "Large-scale life/biomed datasets + reproducible analyses",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Medicine",
         "Computer Science"
@@ -41,7 +41,7 @@
       "issn": null,
       "eissn": "1758-0463",
       "publisher": "Oxford University Press",
-      "enfoque": "Biological databases + curation / database research",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Computer Science",
         "Biochemistry, Genetics and Molecular Biology",
@@ -55,7 +55,7 @@
       "issn": "1866-3508",
       "eissn": "1866-3516",
       "publisher": "Copernicus Publications",
-      "enfoque": "Publication of research data sets (Earth system)",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Earth and Planetary Sciences"
       ],
@@ -67,7 +67,7 @@
       "issn": null,
       "eissn": "2049-6060",
       "publisher": "John Wiley & Sons Inc.",
-      "enfoque": "Formal publication of geoscience datasets",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Earth and Planetary Sciences"
       ],
@@ -79,7 +79,7 @@
       "issn": "1314-2836",
       "eissn": "1314-2828",
       "publisher": "Pensoft Publishers",
-      "enfoque": "Biodiversity data publishing (occurrences, traits, checklists, etc.)",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Agricultural and Biological Sciences",
         "Environmental Science"
@@ -92,7 +92,7 @@
       "issn": "0021-9568",
       "eissn": "1520-5134",
       "publisher": "American Chemical Society",
-      "enfoque": "Experimental/compiled chemical & engineering property data",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Chemical Engineering",
         "Chemistry"
@@ -105,7 +105,7 @@
       "issn": "0047-2689",
       "eissn": "1529-7845",
       "publisher": "American Institute of Physics",
-      "enfoque": "Critically evaluated physical/chemical reference data",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Chemistry",
         "Physics and Astronomy"
@@ -118,7 +118,7 @@
       "issn": "0092-640X",
       "eissn": "1090-2090",
       "publisher": "Elsevier Inc.",
-      "enfoque": "Compilations of atomic/nuclear physics data tables",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Physics and Astronomy"
       ],
@@ -130,7 +130,7 @@
       "issn": "0090-3752",
       "eissn": "1095-9904",
       "publisher": "Academic Press Inc.",
-      "enfoque": "Evaluated nuclear structure & decay data (ENSDF-based)",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Physics and Astronomy"
       ],
@@ -142,7 +142,7 @@
       "issn": null,
       "eissn": "2352-3409",
       "publisher": "Elsevier Inc.",
-      "enfoque": "Short data articles describing datasets (multidisciplinary)",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Multidisciplinary (datasets)"
       ],
@@ -154,7 +154,7 @@
       "issn": "1683-1470",
       "eissn": null,
       "publisher": "Ubiquity Press",
-      "enfoque": "Data practices and publication of data-related research outputs",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Computer Science"
       ],
@@ -166,7 +166,7 @@
       "issn": "2096-7004",
       "eissn": "2641-435X",
       "publisher": "Science Press",
-      "enfoque": "Data-enabled technologies; data science; may include data-centric publications",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Computer Science",
         "Social Sciences"
@@ -179,7 +179,7 @@
       "issn": null,
       "eissn": "2452-3666",
       "publisher": "Brill Academic Publishers",
-      "enfoque": "Data papers for humanities and social sciences datasets",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Arts and Humanities",
         "Social Sciences",
@@ -193,7 +193,7 @@
       "issn": null,
       "eissn": "2059-481X",
       "publisher": "Ubiquity Press",
-      "enfoque": "Data papers describing humanities datasets/techniques for reuse",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Arts and Humanities",
         "Social Sciences",
@@ -207,7 +207,7 @@
       "issn": null,
       "eissn": "2050-9863",
       "publisher": "Ubiquity Press",
-      "enfoque": "Data papers in psychology (datasets + reuse-oriented documentation)",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Psychology"
       ],
@@ -219,7 +219,7 @@
       "issn": null,
       "eissn": "2405-8300",
       "publisher": "Elsevier B.V.",
-      "enfoque": "Publication outlet for chemical datasets and reusable research data",
+      "tipo": "Data Journal",
       "disciplinas": [
         "Chemistry"
       ],
@@ -242,24 +242,9 @@
       "Science Press",
       "Ubiquity Press"
     ],
-    "enfoques": [
-      "Biodiversity data publishing (occurrences, traits, checklists, etc.)",
-      "Biological databases + curation / database research",
-      "Compilations of atomic/nuclear physics data tables",
-      "Critically evaluated physical/chemical reference data",
-      "Data descriptors / datasets across disciplines",
-      "Data papers describing humanities datasets/techniques for reuse",
-      "Data papers for humanities and social sciences datasets",
-      "Data papers in psychology (datasets + reuse-oriented documentation)",
-      "Data practices and publication of data-related research outputs",
-      "Data-enabled technologies; data science; may include data-centric publications",
-      "Evaluated nuclear structure & decay data (ENSDF-based)",
-      "Experimental/compiled chemical & engineering property data",
-      "Formal publication of geoscience datasets",
-      "Large-scale life/biomed datasets + reproducible analyses",
-      "Publication of research data sets (Earth system)",
-      "Publication outlet for chemical datasets and reusable research data",
-      "Short data articles describing datasets (multidisciplinary)"
+    "tipos": [
+      "Data Journal",
+      "Research Journal"
     ],
     "disciplinas": [
       "Agricultural and Biological Sciences",
