@@ -62,7 +62,7 @@ export default function CareerFilter({ selectedCareers, onSelect }) {
         <div className="career-filter">
             <div className="career-filter__header">
                 <span className="career-filter__label">
-                    Filtrado por Carrera y Área Temática
+                    Filtrado por Carrera y Categoría Temática
                     {selectedCareers.length > 0 && (
                         <span className="career-filter__count">{selectedCareers.length} seleccionada{selectedCareers.length > 1 ? 's' : ''}</span>
                     )}
