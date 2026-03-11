@@ -5,26 +5,32 @@ export default function RevistasStatsCards({ stats }) {
     return (
         <div className="stats-bar">
             <div className="stats-container">
-                <div className="stat-card">
-                    <div className="stat-icon">
-                        <BookOpen size={28} />
+                <div className="stat-card stat-card--revistas">
+                    <div className="stat-icon" style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)', color: '#0ea5e9' }}>
+                        <BookOpen size={24} />
                     </div>
-                    <div className="stat-value">{stats.total}</div>
-                    <div className="stat-label">Total Revistas</div>
+                    <div className="stat-info">
+                        <div className="stat-value">{stats.total}</div>
+                        <div className="stat-label">Revistas Indexadas</div>
+                    </div>
                 </div>
-                <div className="stat-card">
-                    <div className="stat-icon">
-                        <Building2 size={28} />
+                <div className="stat-card stat-card--revistas">
+                    <div className="stat-icon" style={{ background: 'linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)', color: '#f78e1e' }}>
+                        <Building2 size={24} />
                     </div>
-                    <div className="stat-value">{stats.publishers}</div>
-                    <div className="stat-label">Publishers</div>
+                    <div className="stat-info">
+                        <div className="stat-value">{stats.publishers}</div>
+                        <div className="stat-label">Editoriales</div>
+                    </div>
                 </div>
-                <div className="stat-card">
-                    <div className="stat-icon">
-                        <Layers size={28} />
+                <div className="stat-card stat-card--revistas">
+                    <div className="stat-icon" style={{ background: 'linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%)', color: '#6366f1' }}>
+                        <Layers size={24} />
                     </div>
-                    <div className="stat-value">{stats.disciplinas}</div>
-                    <div className="stat-label">Disciplinas</div>
+                    <div className="stat-info">
+                        <div className="stat-value">{stats.disciplinas}</div>
+                        <div className="stat-label">Disciplinas</div>
+                    </div>
                 </div>
             </div>
         </div>

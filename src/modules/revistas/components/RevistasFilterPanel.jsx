@@ -1,11 +1,11 @@
 import React from 'react';
-import { Search, RotateCcw, ChevronDown, X } from 'lucide-react';
+import { Search, RotateCcw, ChevronDown, X, BookOpen, Layers, Target, Activity } from 'lucide-react';
 
-export default function RevistasFilterPanel({ filters, setFilters, publishers, enfoques, disciplinas, onReset }) {
+export default function RevistasFilterPanel({ filters, setFilters, publishers, tipos, disciplinas, onReset }) {
 
     const activeFilters = [
         filters.publisher && { key: 'publisher', label: filters.publisher },
-        filters.enfoque && { key: 'enfoque', label: filters.enfoque },
+        filters.tipo && { key: 'tipo', label: filters.tipo },
         filters.disciplina && { key: 'disciplina', label: filters.disciplina },
     ].filter(Boolean)
 
@@ -16,19 +16,19 @@ export default function RevistasFilterPanel({ filters, setFilters, publishers, e
     const hasAnyFilter = filters.search || activeFilters.length > 0
 
     return (
-        <div className="filters">
+        <div className="filters filters--revistas">
             <div className="filters-top-row">
                 <div className="search-wrapper">
-                    <Search size={16} className="search-icon" />
+                    <Search size={18} className="search-icon" />
                     <input
                         type="text"
                         className="search-input"
-                        placeholder="Buscar revista, ISSN, publisher…"
+                        placeholder="Buscar por nombre de revista, editorial o ISSN..."
                         value={filters.search}
                         onChange={e => setFilters({ ...filters, search: e.target.value })}
                     />
                     {filters.search && (
-                        <button className="search-clear" onClick={() => setFilters({ ...filters, search: '' })} title="Limpiar">
+                        <button className="search-clear" onClick={() => setFilters({ ...filters, search: '' })}>
                             <X size={14} />
                         </button>
                     )}
@@ -37,17 +37,38 @@ export default function RevistasFilterPanel({ filters, setFilters, publishers, e
                 {hasAnyFilter && (
                     <button className="btn-reset" onClick={onReset}>
                         <RotateCcw size={14} />
-                        Limpiar todo
+                        Reiniciar filtros
                     </button>
                 )}
             </div>
 
             <div className="filters-selects">
+                <div className="filter-select-group filter-select-group--chips">
+                    <label>
+                        <Target size={14} />
+                        Tipo de Revista
+                    </label>
+                    <div className="modality-chips">
+                        {tipos.map(t => (
+                            <button
+                                key={t}
+                                className={`modality-chip ${filters.tipo === t ? 'modality-chip--active' : ''}`}
+                                onClick={() => setFilters({ ...filters, tipo: filters.tipo === t ? '' : t })}
+                            >
+                                {t}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
                 <div className="filter-select-group">
-                    <label>Publisher</label>
+                    <label>
+                        <BookOpen size={14} />
+                        Editorial
+                    </label>
                     <div className="select-wrapper">
                         <select value={filters.publisher} onChange={e => setFilters({ ...filters, publisher: e.target.value })}>
-                            <option value="">Todos</option>
+                            <option value="">Todas las editoriales</option>
                             {publishers.map(p => <option key={p} value={p}>{p}</option>)}
                         </select>
                         <ChevronDown size={14} className="select-chevron" />
@@ -55,21 +76,13 @@ export default function RevistasFilterPanel({ filters, setFilters, publishers, e
                 </div>
 
                 <div className="filter-select-group">
-                    <label>Enfoque</label>
-                    <div className="select-wrapper">
-                        <select value={filters.enfoque} onChange={e => setFilters({ ...filters, enfoque: e.target.value })}>
-                            <option value="">Todos</option>
-                            {enfoques.map(e => <option key={e} value={e}>{e}</option>)}
-                        </select>
-                        <ChevronDown size={14} className="select-chevron" />
-                    </div>
-                </div>
-
-                <div className="filter-select-group">
-                    <label>Disciplina</label>
+                    <label>
+                        <Layers size={14} />
+                        Disciplina
+                    </label>
                     <div className="select-wrapper">
                         <select value={filters.disciplina} onChange={e => setFilters({ ...filters, disciplina: e.target.value })}>
-                            <option value="">Todas</option>
+                            <option value="">Todas las disciplinas</option>
                             {disciplinas.map(d => <option key={d} value={d}>{d}</option>)}
                         </select>
                         <ChevronDown size={14} className="select-chevron" />
@@ -79,7 +92,7 @@ export default function RevistasFilterPanel({ filters, setFilters, publishers, e
 
             {activeFilters.length > 0 && (
                 <div className="active-chips">
-                    <span className="chips-label">Activos:</span>
+                    <span className="chips-label">Filtros aplicados:</span>
                     {activeFilters.map(f => (
                         <span key={f.key} className="filter-chip">
                             {f.label}
