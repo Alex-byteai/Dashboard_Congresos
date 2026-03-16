@@ -4,7 +4,7 @@
     "publishers": 16,
     "disciplinas": 12,
     "categorias": 4,
-    "lastUpdated": "2026-03-16 09:25:41",
+    "lastUpdated": "2026-03-16 11:06:27",
     "version": "1.0"
   },
   "revistas": [
@@ -438,7 +438,7 @@
       "sitioWeb": "https://www.nature.com/sdata/",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100451321",
       "id": 10,
-      "tipo": "Data Journal",
+      "tipo": "Research Journal",
       "categorias_scopus": [
         {
           "Categoria": "Mathematics",
@@ -817,24 +817,24 @@
       "enfoque": "Bienestar y desarrollo humano"
     },
     {
-      "journal": "REVESCO Revista de Estudios Cooperativos",
-      "issn": "1135-6618",
-      "eissn": "1885-8031",
+      "journal": "CIRIEC-Espana Revista de Economia Publica, Social y Cooperativa",
+      "issn": "0213-8093",
+      "eissn": "1989-6816",
       "publisher": "CIRIEC - España",
       "disciplinas": [
         "Economics, Econometrics and Finance",
         "Social Sciences"
       ],
-      "cobertura": "2011 - 2025",
+      "cobertura": "2015 - 2025",
       "citeScore": "2.5",
       "sitioWeb": "https://www.ciriec-revistaeconomia.es/",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100199128",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100787833",
       "id": 17,
       "tipo": "Research Journal",
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
-          "Subcategoria": "Social Sciences (miscellaneous)",
+          "Subcategoria": "Sociology and Political Science",
           "Percentil": "68",
           "Cuartil": "Q2"
         },
@@ -850,7 +850,7 @@
           "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
           "Linea": "Bienestar y desarrollo humano",
           "Sublinea": "Comportamiento social",
-          "Origen_Scopus": "Social Sciences > Social Sciences (miscellaneous)"
+          "Origen_Scopus": "Social Sciences > Sociology and Political Science"
         },
         {
           "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
