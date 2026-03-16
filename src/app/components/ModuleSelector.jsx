@@ -19,7 +19,7 @@ export const MODULES = [
         color: '#6366f1',
         bgGradient: 'linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%)',
         borderColor: '#6366f1',
-        available: false,
+        available: true,
     },
 ];
 

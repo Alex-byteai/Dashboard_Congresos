@@ -11,7 +11,7 @@ export default function Header({ moduleName, onBack }) {
                 </button>
             )}
             <div className="header-content">
-                <h1>Dashboard {moduleName || 'Conferencias Científicas'}</h1>
+                <h1>{moduleName || 'Conferencias Científicas'}</h1>
             </div>
         </div>
     );

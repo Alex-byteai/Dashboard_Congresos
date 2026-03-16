@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { LayoutGrid, Table, Calendar, PieChart } from 'lucide-react'
+import { LayoutGrid, Table, Calendar } from 'lucide-react'
 
 import Header from '../../shared/components/Header'
 import Stats from './components/StatsCards'
@@ -7,8 +7,7 @@ import Filters from './components/FilterPanel'
 import CongressList from './components/CongressList'
 import CongressTable from './components/CongressTable'
 import Timeline from './components/Timeline'
-import Charts from './components/Charts'
-import CareerFilter, { CAREERS } from './components/CareerFilter'
+import CareerFilter, { CAREERS } from '../../shared/components/CareerFilter'
 
 export default function CongresosModule({ onBack }) {
     const [data, setData] = useState([])
@@ -209,13 +208,6 @@ export default function CongresosModule({ onBack }) {
                         <Calendar size={18} />
                         Timeline
                     </button>
-                    <button
-                        className={`tab ${activeTab === 'stats' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('stats')}
-                    >
-                        <PieChart size={18} />
-                        Estadísticas
-                    </button>
                 </div>
 
                 {activeTab === 'cards' && (
@@ -241,9 +233,6 @@ export default function CongresosModule({ onBack }) {
                     />
                 )}
 
-                {activeTab === 'stats' && (
-                    <Charts data={data} />
-                )}
             </div>
         </>
     )

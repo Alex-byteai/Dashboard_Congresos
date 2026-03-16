@@ -482,7 +482,7 @@ body {
 
 .event-header {
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
   align-items: flex-start;
   margin-bottom: 1.25rem;
 }
@@ -490,11 +490,38 @@ body {
 .event-acronym {
   background: var(--primary);
   color: white;
-  padding: 0.25rem 0.6rem;
-  border-radius: 4px;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   letter-spacing: 0.05em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Technical Header for Revistas */
+.event-tech-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.tech-tag b {
+  color: var(--primary);
+  margin-right: 4px;
 }
 
 .event-title {
@@ -521,6 +548,8 @@ body {
   gap: 0.75rem;
   font-size: 0.9rem;
   color: var(--text-secondary);
+  width: 100%;
+  min-width: 0; /* Important for flex children truncation */
 }
 
 .meta-icon {
@@ -600,13 +629,104 @@ body {
 }
 
 @keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
-  100% {
-    transform: translateX(-50%);
-  }
+/* Quartile List Stylings */
+.quartile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.quartile-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.quartile-toggle-btn:hover {
+  background: white;
+  border-color: var(--accent);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.quartile-content-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+  overflow: hidden;
+}
+
+.quartile-content-wrapper.is-open {
+  grid-template-rows: 1fr;
+  margin-top: 1rem;
+}
+
+.quartile-content-inner {
+  min-height: 0;
+}
+
+.quartile-row {
+  display: flex;
+  align-items: flex-start; /* Align indicator to top of multi-line text */
+  gap: 10px;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.quartile-row:hover {
+  background: white;
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.quartile-indicator {
+  flex-shrink: 0; /* Don't squash the Q indicator */
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: white;
+  min-width: 32px;
+  text-align: center;
+}
+
+.q-rank-q1 { background: #10b981; } /* Bright Emerald */
+.q-rank-q2 { background: #84cc16; } /* Lime */
+.q-rank-q3 { background: #f59e0b; } /* Amber */
+.q-rank-q4 { background: #ef4444; } /* Red */
+.q-rank-na { background: #94a3b8; } /* Slate */
+
+.quartile-name {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1.4; /* Improve readability for multi-line text */
+  word-break: break-word; /* Ensure extremely long words don't overflow */
 }
 
 /* Urgency Badges */
@@ -1641,6 +1761,7 @@ body {
 
 .stat-card--revistas .stat-value {
   margin-bottom: 0 !important;
+  text-align: center !important;
   line-height: 1.2;
 }
 
