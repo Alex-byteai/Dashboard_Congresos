@@ -38,14 +38,9 @@ export default function RevistasTable({ revistas }) {
                 <table className="styled-table">
                     <thead>
                         <tr>
-                            <th style={{ width: '34%' }}>
+                            <th style={{ width: '45%' }}>
                                 <button className="table-sort" onClick={() => toggleSort('journal')}>
                                     Revista <ArrowUpDown size={14} />
-                                </button>
-                            </th>
-                            <th>
-                                <button className="table-sort" onClick={() => toggleSort('publisher')}>
-                                    Publisher <ArrowUpDown size={14} />
                                 </button>
                             </th>
                             <th>ISSN</th>
@@ -60,7 +55,6 @@ export default function RevistasTable({ revistas }) {
                                     <span className="table-event-name">{r.journal}</span>
                                     {r.enfoque && <span className="table-event-sub">{r.enfoque}</span>}
                                 </td>
-                                <td>{r.publisher || '-'}</td>
                                 <td>
                                     <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
                                         <span style={{ fontWeight: 600 }}>{r.issn || '-'}</span>

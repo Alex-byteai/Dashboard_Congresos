@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sync-data": "copy backend\\revistas_processor\\revistas.json public\\revistas.json"
   },
   "dependencies": {
     "chart.js": "^4.4.0",

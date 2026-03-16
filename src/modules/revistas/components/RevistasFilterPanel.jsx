@@ -1,10 +1,25 @@
-import React from 'react';
 import { Search, RotateCcw, ChevronDown, X, BookOpen, Layers, Target, Activity } from 'lucide-react';
+import React from 'react';
 
-export default function RevistasFilterPanel({ filters, setFilters, publishers, tipos, disciplinas, onReset }) {
+const CAT_COLORS = {
+    'INNOVACIÓN Y TECNOLOGÍA DIGITAL': { color: '#0ea5e9' },
+    'DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE': { color: '#10b981' },
+    'SOCIEDAD Y COMPORTAMIENTO HUMANO': { color: '#6366f1' },
+    'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO': { color: '#f78e1e' },
+}
 
-    const activeFilters = [
-        filters.publisher && { key: 'publisher', label: filters.publisher },
+export default function RevistasFilterPanel({ filters, setFilters, tipos, disciplinas, categorias, lineas, onReset }) {
+
+    const toggleLinea = (linea) => {
+        const current = filters.lineas || []
+        const isSelected = current.includes(linea)
+        const newLineas = isSelected
+            ? current.filter(l => l !== linea)
+            : [...current, linea]
+        setFilters({ ...filters, lineas: newLineas })
+    }
+
+    const otherActiveFilters = [
         filters.tipo && { key: 'tipo', label: filters.tipo },
         filters.disciplina && { key: 'disciplina', label: filters.disciplina },
     ].filter(Boolean)
@@ -13,7 +28,7 @@ export default function RevistasFilterPanel({ filters, setFilters, publishers, t
         setFilters({ ...filters, [key]: '' })
     }
 
-    const hasAnyFilter = filters.search || activeFilters.length > 0
+    const hasAnyFilter = filters.search || filters.categorias.length > 0 || otherActiveFilters.length > 0
 
     return (
         <div className="filters filters--revistas">
@@ -42,6 +57,36 @@ export default function RevistasFilterPanel({ filters, setFilters, publishers, t
                 )}
             </div>
 
+            {/* Research Lines — Progressive Disclosure */}
+            {filters.categorias.length > 0 && lineas.length > 0 && (
+                <div className="career-filter career-filter--inline">
+                    <div className="career-filter__header">
+                        <span className="career-filter__label">Líneas de Investigación</span>
+                        {(filters.lineas || []).length > 0 && (
+                            <button className="career-filter__clear"
+                                onClick={() => setFilters({ ...filters, lineas: [] })}>
+                                Limpiar líneas
+                            </button>
+                        )}
+                    </div>
+                    <div className="career-filter__grid">
+                        {lineas.map(linea => {
+                            const isActive = (filters.lineas || []).includes(linea)
+                            return (
+                                <button
+                                    key={linea}
+                                    className={`career-chip ${isActive ? 'career-chip--active' : ''}`}
+                                    style={{ '--career-color': '#475569', '--career-bg': '#f1f5f9' }}
+                                    onClick={() => toggleLinea(linea)}
+                                >
+                                    <span className="career-chip__name">{linea}</span>
+                                </button>
+                            )
+                        })}
+                    </div>
+                </div>
+            )}
+
             <div className="filters-selects">
                 <div className="filter-select-group filter-select-group--chips">
                     <label>
@@ -63,20 +108,6 @@ export default function RevistasFilterPanel({ filters, setFilters, publishers, t
 
                 <div className="filter-select-group">
                     <label>
-                        <BookOpen size={14} />
-                        Editorial
-                    </label>
-                    <div className="select-wrapper">
-                        <select value={filters.publisher} onChange={e => setFilters({ ...filters, publisher: e.target.value })}>
-                            <option value="">Todas las editoriales</option>
-                            {publishers.map(p => <option key={p} value={p}>{p}</option>)}
-                        </select>
-                        <ChevronDown size={14} className="select-chevron" />
-                    </div>
-                </div>
-
-                <div className="filter-select-group">
-                    <label>
                         <Layers size={14} />
                         Disciplina
                     </label>
@@ -90,10 +121,38 @@ export default function RevistasFilterPanel({ filters, setFilters, publishers, t
                 </div>
             </div>
 
-            {activeFilters.length > 0 && (
+            {hasAnyFilter && (filters.categorias.length > 0 || otherActiveFilters.length > 0) && (
                 <div className="active-chips">
                     <span className="chips-label">Filtros aplicados:</span>
-                    {activeFilters.map(f => (
+                    
+                    {/* Categories color-coded like Congresos */}
+                    {filters.categorias.map(cat => {
+                        const color = CAT_COLORS[cat]?.color || '#f78e1e'
+                        return (
+                            <span key={cat} className="filter-chip"
+                                style={{ borderColor: color, color: color, fontWeight: 700 }}>
+                                {cat}
+                                <button 
+                                    onClick={() => setFilters({ ...filters, categorias: filters.categorias.filter(c => c !== cat) })}
+                                    style={{ background: color }}
+                                >
+                                    <X size={11} />
+                                </button>
+                            </span>
+                        )
+                    })}
+
+                    {/* Lines coded like Congresos */}
+                    {(filters.lineas || []).map(l => (
+                        <span key={l} className="filter-chip"
+                            style={{ borderColor: '#475569', color: '#475569' }}>
+                            {l}
+                            <button onClick={() => toggleLinea(l)} style={{ background: '#475569' }}><X size={11} /></button>
+                        </span>
+                    ))}
+
+                    {/* Other filters */}
+                    {otherActiveFilters.map(f => (
                         <span key={f.key} className="filter-chip">
                             {f.label}
                             <button onClick={() => removeFilter(f.key)}><X size={11} /></button>

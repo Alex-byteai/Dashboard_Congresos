@@ -15,15 +15,6 @@ export default function RevistasStatsCards({ stats }) {
                     </div>
                 </div>
                 <div className="stat-card stat-card--revistas">
-                    <div className="stat-icon" style={{ background: 'linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)', color: '#f78e1e' }}>
-                        <Building2 size={24} />
-                    </div>
-                    <div className="stat-info">
-                        <div className="stat-value">{stats.publishers}</div>
-                        <div className="stat-label">Editoriales</div>
-                    </div>
-                </div>
-                <div className="stat-card stat-card--revistas">
                     <div className="stat-icon" style={{ background: 'linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%)', color: '#6366f1' }}>
                         <Layers size={24} />
                     </div>
