@@ -158,9 +158,7 @@ export default function CongresosModule({ onBack }) {
 
     const stats = {
         total: filteredEvents.length,
-        urgent: filteredEvents.filter(e => e.deadlineDays !== null && e.deadlineDays > 0 && e.deadlineDays <= 30).length,
-        countries: new Set(filteredEvents.map(e => e.pais).filter(Boolean)).size,
-        scopus: filteredEvents.filter(e => e.isScopus).length
+        urgent: filteredEvents.filter(e => e.deadlineDays !== null && e.deadlineDays >= 0 && e.deadlineDays <= 30).length
     }
 
     if (loading) return <div className="loader"><div className="spinner"></div></div>
