@@ -126,8 +126,7 @@ export default function RevistasModule({ onBack }) {
 
     const stats = useMemo(() => {
         return {
-            total: filtered.length,
-            disciplinas: new Set(filtered.flatMap(r => r.disciplinas || []).filter(Boolean)).size
+            total: filtered.length
         }
     }, [filtered])
 

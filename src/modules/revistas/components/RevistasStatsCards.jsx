@@ -1,5 +1,4 @@
-import React from 'react';
-import { BookOpen, Building2, Layers } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 
 export default function RevistasStatsCards({ stats }) {
     return (
@@ -12,15 +11,6 @@ export default function RevistasStatsCards({ stats }) {
                     <div className="stat-info">
                         <div className="stat-value">{stats.total}</div>
                         <div className="stat-label">Revistas Indexadas</div>
-                    </div>
-                </div>
-                <div className="stat-card stat-card--revistas">
-                    <div className="stat-icon" style={{ background: 'linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%)', color: '#6366f1' }}>
-                        <Layers size={24} />
-                    </div>
-                    <div className="stat-info">
-                        <div className="stat-value">{stats.disciplinas}</div>
-                        <div className="stat-label">Disciplinas</div>
                     </div>
                 </div>
             </div>

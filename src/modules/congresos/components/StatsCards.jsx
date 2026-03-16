@@ -1,5 +1,4 @@
-import React from 'react';
-import { Calendar, Users, MapPin } from 'lucide-react';
+import { Calendar, Users } from 'lucide-react';
 
 export default function Stats({ stats }) {
     return (
@@ -18,13 +17,6 @@ export default function Stats({ stats }) {
                     </div>
                     <div className="stat-value">{stats.urgent}</div>
                     <div className="stat-label">Deadlines Urgentes</div>
-                </div>
-                <div className="stat-card">
-                    <div className="stat-icon">
-                        <MapPin size={28} />
-                    </div>
-                    <div className="stat-value">{stats.countries}</div>
-                    <div className="stat-label">Países</div>
                 </div>
             </div>
         </div>
