@@ -6,7 +6,6 @@ import CareerFilter, { CAREERS } from '../../shared/components/CareerFilter'
 import RevistasStatsCards from './components/RevistasStatsCards'
 import RevistasFilterPanel from './components/RevistasFilterPanel'
 import RevistasList from './components/RevistasList'
-import RevistasList from './components/RevistasList'
 
 export default function RevistasModule({ onBack }) {
     const [loading, setLoading] = useState(true)
