@@ -286,8 +286,12 @@ def process_excel_to_json(excel_path, output_path):
     return output_data
 
 if __name__ == '__main__':
-    excel_file = 'List_congreso.xlsx'
-    json_file = 'public/congresses.json'
+    import os
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    root_dir = os.path.join(script_dir, '..', '..')
+    
+    excel_file = os.path.join(root_dir, 'data_raw', 'List_congreso.xlsx')
+    json_file = os.path.join(root_dir, 'public', 'congresses.json')
     
     try:
         process_excel_to_json(excel_file, json_file)

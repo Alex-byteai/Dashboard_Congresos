@@ -1,6 +1,6 @@
 import React from 'react';
 import { Calendar, MapPin, Clock, GraduationCap, ExternalLink, AlertCircle, SearchX } from 'lucide-react';
-import { trackEvent } from '../../../analytics'
+import { trackEvent } from '../../../core/services/analytics'
 
 export default function CongressList({ events, getUrgencyClass, getUrgencyText }) {
     if (events.length === 0) {

@@ -33,9 +33,10 @@ const Tooltip = ({ content, children }) => {
 const getStatus = (text) => {
     if (!text) return 'error';
     const t = text.toLowerCase();
-    if (t.includes('no se registra') || t.includes('no especificado') || t.includes('no especifica') || t === 'n/a' || t === '-') return 'error';
-    if (t.includes('doble ciego') || t.includes('aplica') || t.includes('scopus') || t.includes('ieee') || t.includes('wos') || t.includes('scielo') || t.includes('sí')) return 'success';
-    return 'warning';
+    
+    if (t.includes('no precisa')) return 'warning';
+    
+    return 'success';
 };
 
 const getVerdictStatus = (text) => {
