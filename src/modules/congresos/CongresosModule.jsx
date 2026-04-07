@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { LayoutGrid, Table, Calendar } from 'lucide-react'
+import { LayoutGrid, Table, Calendar, ShieldCheck } from 'lucide-react'
 
 import Header from '../../shared/components/Header'
 import Stats from './components/StatsCards'
@@ -196,8 +196,8 @@ export default function CongresosModule({ onBack }) {
                         className={`tab ${activeTab === 'table' ? 'active' : ''}`}
                         onClick={() => setActiveTab('table')}
                     >
-                        <Table size={18} />
-                        Tabla
+                        <ShieldCheck size={18} />
+                        Integridad
                     </button>
                     <button
                         className={`tab ${activeTab === 'timeline' ? 'active' : ''}`}
@@ -219,8 +219,6 @@ export default function CongresosModule({ onBack }) {
                 {activeTab === 'table' && (
                     <CongressTable
                         events={filteredEvents}
-                        getUrgencyClass={getUrgencyClass}
-                        getUrgencyText={getUrgencyText}
                     />
                 )}
 

@@ -1,17 +1,19 @@
 import { useEffect, useMemo, useState } from 'react'
-import { LayoutGrid } from 'lucide-react'
+import { LayoutGrid, FilePlus } from 'lucide-react'
 
 import Header from '../../shared/components/Header'
 import CareerFilter, { CAREERS } from '../../shared/components/CareerFilter'
 import RevistasStatsCards from './components/RevistasStatsCards'
 import RevistasFilterPanel from './components/RevistasFilterPanel'
 import RevistasList from './components/RevistasList'
+import ReviewRequestModal from './components/ReviewRequestModal'
 
 export default function RevistasModule({ onBack }) {
     const [loading, setLoading] = useState(true)
     const [revistas, setRevistas] = useState([])
     const [facets, setFacets] = useState({ tipos: [], disciplinas: [], categorias: [] })
     const [selectedCareers, setSelectedCareers] = useState([])
+    const [showReviewModal, setShowReviewModal] = useState(false)
 
     const initialFilters = {
         search: '',
@@ -138,6 +140,31 @@ export default function RevistasModule({ onBack }) {
             <RevistasStatsCards stats={stats} />
 
             <div className="container">
+                <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '1.5rem' }}>
+                    <button 
+                        onClick={() => setShowReviewModal(true)}
+                        style={{ 
+                            display: 'flex', alignItems: 'center', gap: '0.5rem', 
+                            background: 'white', color: 'var(--text-main)', 
+                            border: '1.5px solid var(--border)', borderRadius: '50px', 
+                            padding: '0.6rem 1.25rem', fontWeight: 600, cursor: 'pointer',
+                            transition: 'all 0.2s', fontSize: '0.875rem',
+                            boxShadow: 'var(--shadow-sm)'
+                        }}
+                        onMouseEnter={(e) => { 
+                            e.currentTarget.style.borderColor = 'var(--primary)';
+                            e.currentTarget.style.color = 'var(--primary)';
+                        }}
+                        onMouseLeave={(e) => { 
+                            e.currentTarget.style.borderColor = 'var(--border)';
+                            e.currentTarget.style.color = 'var(--text-main)';
+                        }}
+                    >
+                        <FilePlus size={18} />
+                        ¿No encuentras tu revista? Solicitar Revisión
+                    </button>
+                </div>
+
                 <CareerFilter
                     selectedCareers={selectedCareers}
                     onSelect={handleCareerSelect}
@@ -153,8 +180,13 @@ export default function RevistasModule({ onBack }) {
                     onReset={() => { setFilters(initialFilters); setSelectedCareers([]) }}
                 />
 
-                <RevistasList revistas={filtered} />
+                <RevistasList revistas={filtered} onRequestReview={() => setShowReviewModal(true)} />
             </div>
+
+            <ReviewRequestModal 
+                isOpen={showReviewModal}
+                onClose={() => setShowReviewModal(false)}
+            />
         </>
     )
 }

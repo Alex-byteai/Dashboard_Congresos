@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, ExternalLink, Hash, Layers, SearchX, Globe, Layout, ChevronDown, ChevronUp } from 'lucide-react';
+import { Building2, ExternalLink, Hash, Layers, SearchX, Globe, Layout, ChevronDown, ChevronUp, ShieldCheck, FilePlus } from 'lucide-react';
 
 function RevistaCard({ r }) {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -86,29 +86,61 @@ function RevistaCard({ r }) {
                 )}
             </div>
 
-            {r.sitioWeb && (
-                <a
-                    href={r.sitioWeb}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="event-link"
-                    style={{ background: 'var(--primary)', color: 'white', borderRadius: '14px' }}
-                >
-                    Explorar Revista
-                    <ExternalLink size={16} />
-                </a>
+            {(r.sitioWeb || r.enlace_informe) && (
+                <div className="event-actions" style={{ display: 'flex', gap: '0.75rem', marginTop: 'auto', paddingTop: '1rem', width: '100%' }}>
+                    {r.sitioWeb && (
+                        <a
+                            href={r.sitioWeb}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="event-link"
+                            style={{ background: 'var(--primary)', color: 'white', border: '2px solid var(--primary)', borderRadius: '12px', flex: 1, justifyContent: 'center', marginBottom: 0, padding: '0.65rem', boxSizing: 'border-box' }}
+                        >
+                            Explorar
+                            <ExternalLink size={16} />
+                        </a>
+                    )}
+                    {r.enlace_informe && (
+                        <a
+                            href={r.enlace_informe}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="event-link"
+                            style={{ background: '#f8fafc', color: 'var(--text-main)', border: '2px solid #e2e8f0', borderRadius: '12px', flex: 1, justifyContent: 'center', marginBottom: 0, padding: '0.65rem', boxSizing: 'border-box' }}
+                        >
+                            Informe
+                            <ShieldCheck size={16} style={{ color: '#059669' }} />
+                        </a>
+                    )}
+                </div>
             )}
         </div>
     );
 }
 
-export default function RevistasList({ revistas }) {
+export default function RevistasList({ revistas, onRequestReview }) {
     if (!revistas || revistas.length === 0) {
         return (
-            <div className="empty-state">
-                <SearchX size={64} className="empty-icon" />
-                <h3>No se encontraron revistas</h3>
-                <p>Intenta ajustar los filtros de búsqueda</p>
+            <div className="empty-state" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '4rem 1rem', background: 'var(--card-bg)', borderRadius: 'var(--radius-lg)', border: '1px dashed var(--border)', textAlign: 'center' }}>
+                <SearchX size={64} className="empty-icon" style={{ color: 'var(--text-muted)', marginBottom: '1rem' }} />
+                <h3 style={{ fontSize: '1.25rem', color: 'var(--text)', marginBottom: '0.5rem' }}>No se encontraron revistas</h3>
+                <p style={{ color: 'var(--text-muted)', marginBottom: onRequestReview ? '2rem' : 0 }}>Intenta ajustar los filtros de búsqueda o ingresa otros términos.</p>
+                
+                {onRequestReview && (
+                    <div style={{ background: 'white', padding: '1.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border)', maxWidth: '400px', width: '100%', boxShadow: 'var(--shadow-sm)' }}>
+                        <FilePlus size={32} style={{ color: 'var(--primary)', marginBottom: '1rem' }} />
+                        <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--text)' }}>¿No encuentras la revista que buscas?</h4>
+                        <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>Solicita la evaluación de una revista que aún no ha sido indexada.</p>
+                        <button 
+                            onClick={onRequestReview}
+                            style={{ padding: '0.6rem 1.25rem', background: 'var(--card-bg)', color: 'var(--text-main)', border: '1.5px solid var(--border)', borderRadius: '50px', fontWeight: 600, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', transition: 'all 0.2s', width: '100%', justifyContent: 'center' }}
+                            onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--primary)'; e.currentTarget.style.color = 'var(--primary)' }}
+                            onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-main)' }}
+                        >
+                            Solicitar Inclusión
+                        </button>
+                    </div>
+                )}
             </div>
         );
     }
