@@ -4,7 +4,7 @@ import pandas as pd
 import os
 # Path to your service account key file
 script_dir = os.path.dirname(os.path.abspath(__file__))
-json_key_path = os.path.join(script_dir, '..', 'key', 'utility-cumulus-489121-p6-b2666eda463a.json')
+json_key_path = os.path.join(script_dir, '..', 'config', 'google_key.json')
 
 # Authenticate with gspread using the service account key
 gc = gspread.service_account(filename=json_key_path)
@@ -27,6 +27,7 @@ try:
     # Convert to pandas DataFrame
     if data:
         df = pd.DataFrame(data[1:], columns=data[0]) # First row as headers
+        df.columns = df.columns.str.strip()
         print('Data loaded into pandas DataFrame.')
     else:
         df = pd.DataFrame()
@@ -999,6 +1000,13 @@ def _norm_issn(val):
 
 def _safe_val(val):
     """Convierte un valor del DataFrame a string limpio o None."""
+    import pandas as pd
+    # Si hay columnas duplicadas, row['col'] devuelve una Series.
+    if isinstance(val, pd.Series):
+        # Tomar el primer valor no nulo, o el primero por defecto
+        val_clean = val.dropna()
+        val = val_clean.iloc[0] if not val_clean.empty else val.iloc[0]
+
     if pd.isna(val) or str(val).strip() in ('nan', '-', ''):
         return None
     if hasattr(val, 'strftime'):
@@ -1051,23 +1059,28 @@ def enrich_with_excel(journal_entry: dict, excel_row) -> dict:
         return journal_entry
     
     # Enlace del informe de integridad de la revista
-    excel_link_informe = _safe_val(excel_row['Enlace del informe'])
+    excel_link_informe = _safe_val(excel_row.get('Enlace del informe'))
     if excel_link_informe:
         journal_entry['enlace_informe'] = excel_link_informe
 
     # Editor: completar solo si Scopus no lo tiene
     if journal_entry.get('publisher') in ('N/A', None, ''):
-        journal_entry['publisher'] = _safe_val(excel_row['Editorial']) or 'N/A'
+        journal_entry['publisher'] = _safe_val(excel_row.get('Editorial')) or 'N/A'
 
     # Sitio Web: el del Excel tiene prioridad
-    excel_link = _safe_val(excel_row['Enlace'])
+    excel_link = _safe_val(excel_row.get('Enlace'))
     if excel_link:
         journal_entry['sitioWeb'] = excel_link
 
     # Tipo de revista
-    excel_tipo = _safe_val(excel_row['Tipo de revista'])
+    excel_tipo = _safe_val(excel_row.get('Tipo de revista'))
     if excel_tipo:
         journal_entry['tipo'] = excel_tipo
+
+    # Fecha de emision
+    excel_fecha_emision = _safe_val(excel_row.get('Fecha de emisión'))
+    if excel_fecha_emision:
+        journal_entry['fecha_emision'] = excel_fecha_emision
 
     # Agregamos categorías adicionales que podrían ser útiles
     # pero filtramos lo que NO es relevante para el dashboard final
@@ -1319,7 +1332,8 @@ final_output = {
 print(json.dumps(final_output, indent=2, ensure_ascii=False))
 
 # Guardar en archivo
-output_path = os.path.join(script_dir, 'revistas.json')
+root_dir = os.path.join(script_dir, '..', '..')
+output_path = os.path.join(root_dir, 'public', 'revistas.json')
 with open(output_path, 'w', encoding='utf-8') as f:
     json.dump(final_output, f, indent=2, ensure_ascii=False)
 

@@ -498,7 +498,7 @@ body {
   font-weight: 700;
   font-size: 0.82rem;
   letter-spacing: 0.05em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Technical Header for Revistas */
@@ -552,7 +552,8 @@ body {
   font-size: 0.9rem;
   color: var(--text-secondary);
   width: 100%;
-  min-width: 0; /* Important for flex children truncation */
+  min-width: 0;
+  /* Important for flex children truncation */
 }
 
 .meta-icon {
@@ -632,8 +633,13 @@ body {
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Quartile List Stylings */
@@ -665,7 +671,7 @@ body {
 .quartile-toggle-btn:hover {
   background: white;
   border-color: var(--accent);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .quartile-content-wrapper {
@@ -686,7 +692,8 @@ body {
 
 .quartile-row {
   display: flex;
-  align-items: flex-start; /* Align indicator to top of multi-line text */
+  align-items: flex-start;
+  /* Align indicator to top of multi-line text */
   gap: 10px;
   padding: 10px 12px;
   background: #f8fafc;
@@ -706,7 +713,8 @@ body {
 }
 
 .quartile-indicator {
-  flex-shrink: 0; /* Don't squash the Q indicator */
+  flex-shrink: 0;
+  /* Don't squash the Q indicator */
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.65rem;
@@ -716,11 +724,31 @@ body {
   text-align: center;
 }
 
-.q-rank-q1 { background: #10b981; } /* Bright Emerald */
-.q-rank-q2 { background: #84cc16; } /* Lime */
-.q-rank-q3 { background: #f59e0b; } /* Amber */
-.q-rank-q4 { background: #ef4444; } /* Red */
-.q-rank-na { background: #94a3b8; } /* Slate */
+.q-rank-q1 {
+  background: #10b981;
+}
+
+/* Bright Emerald */
+.q-rank-q2 {
+  background: #84cc16;
+}
+
+/* Lime */
+.q-rank-q3 {
+  background: #f59e0b;
+}
+
+/* Amber */
+.q-rank-q4 {
+  background: #ef4444;
+}
+
+/* Red */
+.q-rank-na {
+  background: #94a3b8;
+}
+
+/* Slate */
 
 .quartile-name {
   flex: 1;
@@ -728,8 +756,10 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--text-main);
-  line-height: 1.4; /* Improve readability for multi-line text */
-  word-break: break-word; /* Ensure extremely long words don't overflow */
+  line-height: 1.4;
+  /* Improve readability for multi-line text */
+  word-break: break-word;
+  /* Ensure extremely long words don't overflow */
 }
 
 /* Urgency Badges */
@@ -1169,159 +1199,198 @@ body {
 }
 
 /* =========================================
-   MODULE SELECTOR (Hub)
+   ULIMA ACADEMIC MODULE SELECTOR
    ========================================= */
 
-.module-selector {
+.ulima-selector {
   min-height: 100vh;
-  background: var(--bg);
+  background: #f4f4f5;
+  /* Light technical grey */
+  display: flex;
+  flex-direction: column;
+}
+
+.ulima-selector__hero {
+  background: #000000;
+  /* Solid Ulima Black */
+  color: #ffffff;
+  padding: 3rem 1.5rem 4rem;
+  text-align: center;
+  border-bottom: 5px solid #f78e1e;
+  /* Ulima Orange border */
+}
+
+.ulima-hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ulima-brand-stack {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 3rem 1.5rem;
+  gap: 0;
+  margin-bottom: 1.5rem;
 }
 
-.module-selector__hero {
-  text-align: center;
-  margin-bottom: 3rem;
+.ulima-brand-logo {
+  width: 240px;
+  /* Sun logo increased size */
+  height: auto;
+  display: block;
 }
 
-.module-selector__logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 72px;
-  height: 72px;
-  background: var(--primary);
-  color: var(--accent);
-  border-radius: 20px;
-  margin-bottom: 1.25rem;
-  box-shadow: var(--shadow-md);
-}
-
-.module-selector__title {
+.ulima-logo-text {
+  display: inline-block;
   font-family: var(--font-display);
-  font-size: 2.5rem;
   font-weight: 900;
-  color: var(--primary);
+  font-size: 2.25rem;
   letter-spacing: -0.02em;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  line-height: 0.8; /* Pull characters closer and reduce top padding */
+  margin-top: -12px; /* Force it up to stick to the logo */
 }
 
-.module-selector__subtitle {
-  color: var(--text-muted);
-  font-size: 1.05rem;
+.ulima-logo-text .logo-u {
+  color: #f78e1e;
+  /* Orange U */
 }
 
-.module-selector__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.ulima-selector__title {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.ulima-selector__subtitle {
+  color: #a1a1aa;
+  /* Muted gray for subtitle */
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.ulima-selector__main {
+  flex: 1;
+  padding: 0 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Pull cards up to overlap the black hero */
+  margin-top: -3.5rem;
+}
+
+.ulima-selector__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   width: 100%;
   max-width: 800px;
 }
 
-/* Module Card */
-.module-card {
+/* Ulima Card Style */
+.ulima-card {
   display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  padding: 1.75rem;
-  background: var(--mod-bg, #fff);
-  border: 2px solid transparent;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  cursor: pointer;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 4px;
+  /* Slightly sharp corners for architectural look */
+  border-top: 4px solid #f78e1e;
+  /* Institutional orange top bar */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   text-align: left;
-  transition: all 0.25s ease;
-  width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  padding: 0;
   font-family: var(--font-body);
-  position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 360px;
+  /* Previene que se estiren de mas */
 }
 
-.module-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  border: 2px solid var(--mod-border, var(--accent));
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-.module-card:hover:not(:disabled)::before {
-  opacity: 1;
-}
-
-.module-card:hover:not(:disabled) {
+.ulima-card:hover:not(:disabled) {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+  border-bottom-color: #f78e1e;
 }
 
-.module-card:active:not(:disabled) {
-  transform: translateY(-1px);
-}
-
-.module-card--disabled {
-  opacity: 0.6;
+.ulima-card--disabled {
+  opacity: 0.5;
   cursor: not-allowed;
-  filter: grayscale(0.3);
+  filter: grayscale(1);
 }
 
-.module-card__icon-wrap {
+.ulima-card__content {
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+
+.ulima-card__icon-wrap {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-md);
+  background: #f4f4f5;
+  color: #000000;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
-  box-shadow: var(--shadow-sm);
-  color: var(--mod-color, var(--accent));
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
 }
 
-.module-card__body {
+.ulima-card__body {
   flex: 1;
-  min-width: 0;
 }
 
-.module-card__name {
+.ulima-card__name {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  color: #000000;
+  font-size: 1.15rem;
   font-weight: 800;
-  color: var(--primary);
-  margin-bottom: 0.3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
+  margin-bottom: 0.35rem;
 }
 
-.module-card__desc {
+.ulima-card__desc {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: #52525b;
+  /* Text secondary */
   line-height: 1.45;
+  margin: 0;
 }
 
-.module-card__arrow {
-  flex-shrink: 0;
-  color: var(--mod-color, var(--accent));
+.ulima-card__footer {
+  padding: 0.85rem 1.5rem;
+  background: #fafafa;
+  border-top: 1px solid #f4f4f5;
   display: flex;
   align-items: center;
 }
 
-.module-card__soon {
-  font-size: 0.7rem;
+.ulima-link {
+  color: #f78e1e;
   font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  background: var(--border);
-  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.ulima-badge-soon {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #e4e4e7;
+  color: #71717a;
   padding: 0.25rem 0.6rem;
-  border-radius: 50px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Header Back Button */

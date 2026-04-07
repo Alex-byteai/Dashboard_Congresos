@@ -15,7 +15,7 @@ export default function ReviewRequestModal({ isOpen, onClose }) {
         const subject = `Solicitud de Revisión de Integridad: ${formData.journalName}`;
         const body = `Nombre de la Revista: ${formData.journalName}%0D%0AISSN/E-ISSN: ${formData.issn}%0D%0A%0D%0AMotivo de la solicitud:%0D%0A${formData.reason}`;
 
-        window.location.href = `mailto:camontoy@ulima.edu.pe?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:iqintegridadidic@ulima.edu.pe?subject=${subject}&body=${body}`;
         onClose();
         // Reset form
         setFormData({ journalName: '', issn: '', reason: '' });
@@ -71,10 +71,11 @@ export default function ReviewRequestModal({ isOpen, onClose }) {
 
                     <div>
                         <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--text)' }}>
-                            ISSN / E-ISSN (Opcional)
+                            ISSN / E-ISSN (Obligatorio) <span style={{ color: '#ef4444' }}>*</span>
                         </label>
                         <input
                             type="text"
+                            required
                             value={formData.issn}
                             onChange={e => setFormData({ ...formData, issn: e.target.value })}
                             style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-md)', border: '1.5px solid var(--border)', fontSize: '0.875rem', fontFamily: 'var(--font-body)', boxSizing: 'border-box' }}

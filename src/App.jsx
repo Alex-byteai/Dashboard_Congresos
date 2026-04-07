@@ -13,7 +13,7 @@ import {
     Filler
 } from 'chart.js'
 
-import ModuleSelector from './app/components/ModuleSelector'
+import ModuleSelector from './core/components/ModuleSelector'
 import CongresosModule from './modules/congresos/CongresosModule'
 import RevistasModule from './modules/revistas/RevistasModule'
 
