@@ -1049,6 +1049,11 @@ def enrich_with_excel(journal_entry: dict, excel_row) -> dict:
     """
     if excel_row is None:
         return journal_entry
+    
+    # Enlace del informe de integridad de la revista
+    excel_link_informe = _safe_val(excel_row['Enlace del informe'])
+    if excel_link_informe:
+        journal_entry['enlace_informe'] = excel_link_informe
 
     # Editor: completar solo si Scopus no lo tiene
     if journal_entry.get('publisher') in ('N/A', None, ''):
@@ -1058,6 +1063,11 @@ def enrich_with_excel(journal_entry: dict, excel_row) -> dict:
     excel_link = _safe_val(excel_row['Enlace'])
     if excel_link:
         journal_entry['sitioWeb'] = excel_link
+
+    # Tipo de revista
+    excel_tipo = _safe_val(excel_row['Tipo de revista'])
+    if excel_tipo:
+        journal_entry['tipo'] = excel_tipo
 
     # Agregamos categorías adicionales que podrían ser útiles
     # pero filtramos lo que NO es relevante para el dashboard final
@@ -1240,7 +1250,6 @@ for index, row in filtered_df.iterrows():
         if base_data:
             base_data["id"] = id_counter
             id_counter += 1
-            base_data["tipo"] = "Research Journal"
             base_data["categorias_scopus"] = scopus_categories
 
             # ── ENRIQUECIMIENTO CON EXCEL ─────────────────────────────────

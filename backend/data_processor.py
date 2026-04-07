@@ -220,6 +220,18 @@ def process_excel_to_json(excel_path, output_path):
         lineas     = split_semicolon(get_named('linea_ulima', row))
         sublineas  = split_semicolon(get_named('sublinea_ulima', row))
 
+        # Parámetros de Integridad
+        integridad = {
+            'organizadores': str(get_named('Organizadores | Patrocinadores', row) or ''),
+            'comite_cientifico': str(get_named('Comité científico', row) or ''),
+            'programa_temas': str(get_named('Programa | Temas', row) or ''),
+            'revision_pares': str(get_named('Revisión por pares', row) or ''),
+            'indexacion_bd': str(get_named('Indexación en BD', row) or ''),
+            'conflicto_intereses': str(get_named('Conflicto de intereses', row) or ''),
+            'observaciones': str(get_named('Observaciones', row) or ''),
+            'conclusiones': str(get_named('Conclusiones', row) or '')
+        }
+
         congress = {
             'id': idx,
             'evento': str(evento or ''),
@@ -237,7 +249,8 @@ def process_excel_to_json(excel_path, output_path):
             'deadline': deadline,
             'deadlineStatus': get_deadline_status(deadline),
             'publicacion': str(get_named('Publicación', row) or ''),
-            'enlace': str(get_named('Enlace', row) or '')
+            'enlace': str(get_named('Enlace', row) or ''),
+            'integridad': integridad
         }
 
         congresses.append(congress)
