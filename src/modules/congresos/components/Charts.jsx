@@ -15,7 +15,7 @@ export default function Charts({ data }) {
             datasets: [{
                 label: 'Eventos',
                 data: sorted.map(i => i[1]),
-                backgroundColor: '#f78e1e',
+                backgroundColor: '#ff5017',
                 borderRadius: 4
             }]
         }
@@ -63,11 +63,11 @@ export default function Charts({ data }) {
             datasets: [{
                 label: 'Eventos por mes',
                 data: sortedKeys.map(k => counts[k]),
-                borderColor: '#f78e1e',
+                borderColor: '#ff5017',
                 backgroundColor: 'rgba(247, 142, 30, 0.1)',
                 tension: 0.4,
                 fill: true,
-                pointBackgroundColor: '#f78e1e',
+                pointBackgroundColor: '#ff5017',
                 pointBorderColor: '#fff',
                 pointBorderWidth: 2,
                 pointRadius: 4

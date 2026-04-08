@@ -24,7 +24,7 @@ export const CAREERS = [
 ];
 
 const CATEGORY_COLOR = {
-    'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO': { color: '#f78e1e', bg: '#fff7ed' },
+    'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO': { color: '#ff5017', bg: '#fff7ed' },
     'DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE': { color: '#10b981', bg: '#ecfdf5' },
     'SOCIEDAD Y COMPORTAMIENTO HUMANO': { color: '#6366f1', bg: '#eef2ff' },
     'INNOVACIÓN Y TECNOLOGÍA DIGITAL': { color: '#0ea5e9', bg: '#f0f9ff' },

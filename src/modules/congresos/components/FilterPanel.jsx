@@ -6,7 +6,7 @@ const CAT_COLORS = {
     'INNOVACIÓN Y TECNOLOGÍA DIGITAL': { color: '#0ea5e9' },
     'DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE': { color: '#10b981' },
     'SOCIEDAD Y COMPORTAMIENTO HUMANO': { color: '#6366f1' },
-    'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO': { color: '#f78e1e' },
+    'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO': { color: '#ff5017' },
 }
 
 export default function Filters({ filters, setFilters, countries, lineas, onReset, activeCategoryLabels = [] }) {
@@ -153,7 +153,7 @@ export default function Filters({ filters, setFilters, countries, lineas, onRese
 
                     {/* Visual indicators for selected Categories (derived from Careers) */}
                     {activeCategoryLabels.map(cat => {
-                        const color = CAT_COLORS[cat]?.color || '#f78e1e'
+                        const color = CAT_COLORS[cat]?.color || '#ff5017'
                         return (
                             <span key={cat} className="filter-chip"
                                 style={{ borderColor: color, color: color, fontWeight: 700 }}>
