@@ -7,7 +7,7 @@
   /* Black */
   --primary-light: #333333;
   /* Dark Gray */
-  --accent: #f78e1e;
+  --accent: #ff5017;
   /* U. Lima Orange */
   --accent-light: #ffb060;
   --accent-hover: #e07b0e;
@@ -1216,7 +1216,7 @@ body {
   color: #ffffff;
   padding: 3rem 1.5rem 4rem;
   text-align: center;
-  border-bottom: 5px solid #f78e1e;
+  border-bottom: 5px solid #ff5017;
   /* Ulima Orange border */
 }
 
@@ -1251,7 +1251,7 @@ body {
 }
 
 .ulima-logo-text .logo-u {
-  color: #f78e1e;
+  color: #ff5017;
   /* Orange U */
 }
 
@@ -1297,7 +1297,7 @@ body {
   border: 1px solid #e4e4e7;
   border-radius: 4px;
   /* Slightly sharp corners for architectural look */
-  border-top: 4px solid #f78e1e;
+  border-top: 4px solid #ff5017;
   /* Institutional orange top bar */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -1314,7 +1314,7 @@ body {
 .ulima-card:hover:not(:disabled) {
   transform: translateY(-4px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
-  border-bottom-color: #f78e1e;
+  border-bottom-color: #ff5017;
 }
 
 .ulima-card--disabled {
@@ -1372,7 +1372,7 @@ body {
 }
 
 .ulima-link {
-  color: #f78e1e;
+  color: #ff5017;
   font-weight: 700;
   font-size: 0.85rem;
   display: flex;
@@ -1762,7 +1762,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
-  color: #f78e1e;
+  color: #ff5017;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.8);
 }

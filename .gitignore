@@ -3,3 +3,4 @@ backend/key/
 .env
 dist/
 build/
+node_modules/

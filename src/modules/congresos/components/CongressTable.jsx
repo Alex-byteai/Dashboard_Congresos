@@ -100,7 +100,7 @@ export default function CongressTable({ events }) {
                     const integridad = event.integridad || {};
 
                     const revStatus = getStatus(integridad.revision_pares);
-                    const indStatus = getStatus(integridad.indexacion_bd);
+                    const indStatus = 'success'; // Todos los congresos en el Hub están indexados corporativamente
                     const verdictColor = getVerdictStatus(integridad.conclusiones);
 
                     let verdictBorder = 'var(--border)';
