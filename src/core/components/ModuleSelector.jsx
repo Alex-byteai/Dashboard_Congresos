@@ -1,18 +1,17 @@
 import { BookOpen, FileText, ChevronRight } from 'lucide-react';
-import logoUlima from '../../image/Ulima.png';
 
 export const MODULES = [
     {
         id: 'congresos',
         label: 'Congresos',
-        description: 'Dashboard de conferencias científicas rigurosamente auditadas. Encuentra espacios confiables y libres de prácticas predatorias para presentar tus hallazgos.',
+        description: 'Encuentra congresos científicos evaluados según criterios de integridad y calidad editorial para apoyar una postulación informada.',
         icon: BookOpen,
         available: true,
     },
     {
         id: 'revistas',
         label: 'Revistas',
-        description: 'Dashboard interactivo de revistas científicas validadas institucionalmente. Identifica cuartiles, áreas temáticas y publica con respaldo ético.',
+        description: 'Consulta informes de integridad y revisa información clave de revistas científicas para la elección del medio de publicación.',
         icon: FileText,
         available: true,
     },
@@ -23,16 +22,9 @@ export default function ModuleSelector({ onSelectModule }) {
         <div className="ulima-selector">
             <header className="ulima-selector__hero">
                 <div className="ulima-hero-container">
-                    <div className="ulima-brand-stack">
-                        <img src={logoUlima} alt="Logo Ulima" className="ulima-brand-logo" />
-                        <div className="ulima-logo-text">
-                            <span className="logo-u">U</span>
-                            <span className="logo-lima">Lima</span>
-                        </div>
-                    </div>
                     <h1 className="ulima-selector__title">Instituto de Investigación Científica (IDIC)</h1>
                     <p className="ulima-selector__subtitle">
-                        Portal de Integridad Científica y Acompañamiento Metodológico
+                        PORTAL DE INTEGRIDAD CIENTÍFICA PARA LA PUBLICACIÓN ACADÉMICA
                     </p>
                 </div>
             </header>
@@ -73,8 +65,10 @@ export default function ModuleSelector({ onSelectModule }) {
 
                 <div style={{ marginTop: '4rem', maxWidth: '600px', textAlign: 'center', color: '#71717a', fontSize: '0.9rem', lineHeight: '1.6' }}>
                     <p>
-                        <strong>Importante:</strong> Toda la información suministrada en estos módulos ha superado filtros de revisión de calidad.
-                        Está diseñada para que nuestros investigadores y docentes publiquen y expongan sus trabajos con total seguridad institucional, maximizando la visibilidad de la Universidad de Lima.
+                        <strong>Importante:</strong> La información presentada ha sido elaborada conforme a los protocolos y lineamientos institucionales orientados a resguardar la integridad científica de las publicaciones. Este portal constituye una herramienta de apoyo para la toma de decisiones sobre la elección de revistas y congresos por parte de investigadores con afiliación a la Universidad. Reúne información de medios previamente evaluados y en proceso de actualización continua. Su contenido tiene carácter orientador y no sustituye la evaluación académica ni la responsabilidad del equipo investigador en la selección del medio de publicación.
+                    </p>
+                    <p style={{ marginTop: '0.75rem' }}>
+                        Para mayor información, revisa el <a href="https://www.ulima.edu.pe/sites/default/files/centers/files/protocolo_idoneidad_publicaciones_idic_v25jul_1.pdf" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', fontWeight: 600, textDecoration: 'underline' }}>PROTOCOLO PARA LA EVALUACIÓN DE LA IDONEIDAD DE PUBLICACIONES CIENTÍFICAS</a>.
                     </p>
                 </div>
             </main>

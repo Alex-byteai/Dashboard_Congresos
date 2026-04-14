@@ -7,6 +7,8 @@ import RevistasStatsCards from './components/RevistasStatsCards'
 import RevistasFilterPanel from './components/RevistasFilterPanel'
 import RevistasList from './components/RevistasList'
 import ReviewRequestModal from './components/ReviewRequestModal'
+import BadPracticesModal from './components/BadPracticesModal'
+import { AlertOctagon } from 'lucide-react'
 
 export default function RevistasModule({ onBack }) {
     const [loading, setLoading] = useState(true)
@@ -14,6 +16,7 @@ export default function RevistasModule({ onBack }) {
     const [facets, setFacets] = useState({ tipos: [], disciplinas: [], categorias: [] })
     const [selectedCareers, setSelectedCareers] = useState([])
     const [showReviewModal, setShowReviewModal] = useState(false)
+    const [showBadPractices, setShowBadPractices] = useState(false)
 
     const initialFilters = {
         search: '',
@@ -49,12 +52,17 @@ export default function RevistasModule({ onBack }) {
         }))
     }
 
+    const [revistasObservadas, setRevistasObservadas] = useState([])
+
     useEffect(() => {
-        fetch('/revistas.json')
-            .then(res => res.json())
-            .then(jsonData => {
+        Promise.all([
+            fetch('/revistas.json').then(res => res.json()),
+            fetch('/revistas_observadas.json').then(res => res.json()).catch(() => ({ revistas_observadas: [] }))
+        ])
+            .then(([jsonData, observadasData]) => {
                 const fetchedRevistas = jsonData.revistas || []
                 setRevistas(fetchedRevistas)
+                setRevistasObservadas(observadasData.revistas_observadas || [])
                 setFacets(jsonData.facets || { tipos: [], disciplinas: [], categorias: [] })
                 
                 // Build dynamic taxonomy: { Category: [Lines] }
@@ -140,7 +148,27 @@ export default function RevistasModule({ onBack }) {
             <RevistasStatsCards stats={stats} />
 
             <div className="container">
-                <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '1.5rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '1.5rem', gap: '1rem', flexWrap: 'wrap' }}>
+                    <button 
+                        onClick={() => setShowBadPractices(true)}
+                        style={{ 
+                            display: 'flex', alignItems: 'center', gap: '0.5rem', 
+                            background: '#fee2e2', color: '#dc2626', 
+                            border: '1.5px solid #fca5a5', borderRadius: '50px', 
+                            padding: '0.6rem 1.25rem', fontWeight: 600, cursor: 'pointer',
+                            transition: 'all 0.2s', fontSize: '0.875rem'
+                        }}
+                        onMouseEnter={(e) => { 
+                            e.currentTarget.style.background = '#fecaca';
+                        }}
+                        onMouseLeave={(e) => { 
+                            e.currentTarget.style.background = '#fee2e2';
+                        }}
+                    >
+                        <AlertOctagon size={18} />
+                        Revistas Observadas
+                    </button>
+
                     <button 
                         onClick={() => setShowReviewModal(true)}
                         style={{ 
@@ -186,6 +214,14 @@ export default function RevistasModule({ onBack }) {
             <ReviewRequestModal 
                 isOpen={showReviewModal}
                 onClose={() => setShowReviewModal(false)}
+                revistas={revistas}
+                revistasObservadas={revistasObservadas}
+            />
+
+            <BadPracticesModal
+                isOpen={showBadPractices}
+                onClose={() => setShowBadPractices(false)}
+                revistasMalas={revistasObservadas}
             />
         </>
     )
