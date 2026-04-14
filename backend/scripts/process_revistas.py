@@ -4,7 +4,7 @@ import pandas as pd
 import os
 # Path to your service account key file
 script_dir = os.path.dirname(os.path.abspath(__file__))
-json_key_path = os.path.join(script_dir, '..', 'config', 'google_key.json')
+json_key_path = os.path.join(script_dir, '..', 'key', 'google_key.json')
 
 # Authenticate with gspread using the service account key
 gc = gspread.service_account(filename=json_key_path)
@@ -1337,5 +1337,38 @@ output_path = os.path.join(root_dir, 'public', 'revistas.json')
 with open(output_path, 'w', encoding='utf-8') as f:
     json.dump(final_output, f, indent=2, ensure_ascii=False)
 
-print(f"\n✅ Proceso completado. Archivo generado en: {output_path}")
+# ── CONTRUCCIÓN ESTRUCTURA FINAL DE REVISTAS OBSERVADAS (MALAS PRÁCTICAS) ────
+try:
+    df_malas = df[
+        (df['Estado'] == 'Vigente') & 
+        (df['Conclusión'].str.contains('Posibles indicios de malas prácticas', na=False))
+    ]
+    
+    malas_json_list = []
+    
+    for _, row in df_malas.iterrows():
+        # Get data safely to avoid NaNs
+        def get_val(col):
+            val = row[col] if col in df_malas.columns else ""
+            return "" if pd.isna(val) else str(val).strip()
+
+        malas_json_list.append({
+            "journal": get_val('Nombre de la revista / fuente'),
+            "issn": get_val('ISSN'),
+            "eissn": get_val('E-ISSN'),
+            "enlace_informe": get_val('Enlace del informe'),
+            "conclusion": get_val('Conclusión')
+        })
+
+    # Save to file
+    observadas_output_path = os.path.join(root_dir, 'public', 'revistas_observadas.json')
+    with open(observadas_output_path, 'w', encoding='utf-8') as f:
+        json.dump({"revistas_observadas": malas_json_list}, f, indent=2, ensure_ascii=False)
+    
+    print(f"Se guardaron {len(malas_json_list)} revistas observadas en: {observadas_output_path}")
+
+except Exception as e:
+    print(f"Hubo un error procesando las revistas observadas: {e}")
+
+print(f"\nProceso completado general. Archivo generado en: {output_path}")
 
