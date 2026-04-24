@@ -946,7 +946,7 @@ ASJC = {
 #  CONFIGURACIÓN API
 # ══════════════════════════════════════════════════════════════════════════════
 
-API_KEY = 'd4fe8cbc4d50dc5b515badc88e809d8b'
+API_KEY = '03ac1926f2ad4e2160adc0856690189d'
 
 SCOPUS_HEADERS = {
     "X-ELS-APIKey": API_KEY,
