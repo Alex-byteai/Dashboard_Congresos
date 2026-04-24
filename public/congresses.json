@@ -1,7 +1,7 @@
 {
   "metadata": {
     "totalCongresses": 20,
-    "lastUpdated": "2026-04-07 15:45:43",
+    "lastUpdated": "2026-04-24 11:57:43",
     "version": "2.1"
   },
   "taxonomy": {
@@ -251,7 +251,7 @@
       "pais": "Mexico",
       "modalidad": "Hibrido",
       "deadline": "2026-04-15",
-      "deadlineStatus": "urgent",
+      "deadlineStatus": "passed",
       "publicacion": "Scopus",
       "enlace": "bicaai.org",
       "integridad": {
@@ -937,7 +937,7 @@
       "pais": "Portugal",
       "modalidad": "Hibrido",
       "deadline": "2026-04-15",
-      "deadlineStatus": "urgent",
+      "deadlineStatus": "passed",
       "publicacion": "Scopus, WoS",
       "enlace": "https://www.academic-conferences.org/conferences/ecmlg/",
       "integridad": {
