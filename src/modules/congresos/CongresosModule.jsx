@@ -22,7 +22,7 @@ export default function CongresosModule({ onBack }) {
         sublinea: '',
         modality: '',
         indexation: '',
-        onlyActive: true // Default to true for better UX
+        onlyActive: false // Default to false as requested
     }
     const [filters, setFilters] = useState(initialFilters)
     const [taxonomy, setTaxonomy] = useState({})
