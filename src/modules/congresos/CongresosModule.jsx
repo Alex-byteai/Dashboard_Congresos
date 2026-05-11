@@ -61,11 +61,26 @@ export default function CongresosModule({ onBack }) {
                     setTaxonomy(jsonData.taxonomy)
                 }
 
+                const today = new Date()
+                today.setHours(0, 0, 0, 0)
+
                 const processed = jsonData.congresses.map(event => {
                     const daysRemaining = calculateDaysRemaining(event.deadline)
+                    
+                    // Determine if the event is in the past
+                    const dateToCompare = event.fechaFin || event.fechaInicio
+                    let isPast = false
+                    if (dateToCompare) {
+                        const endDate = new Date(dateToCompare)
+                        if (!isNaN(endDate.getTime())) {
+                            isPast = endDate < today
+                        }
+                    }
+
                     return {
                         ...event,
                         deadlineDays: daysRemaining,
+                        isPast,
                         isScopus: event.publicacion?.toLowerCase().includes('scopus') || false,
                         isIEEE: event.publicacion?.toLowerCase().includes('ieee') || false,
                         isWoS: event.publicacion?.toLowerCase().includes('wos') || false,
@@ -112,6 +127,9 @@ export default function CongresosModule({ onBack }) {
     }
 
     const filteredEvents = data.filter(event => {
+        // First, exclude past events as requested
+        if (event.isPast) return false
+
         const searchLower = filters.search.toLowerCase()
         const matchesSearch = !filters.search ||
             event.evento?.toLowerCase().includes(searchLower) ||
