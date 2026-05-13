@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalCongresses": 20,
-    "lastUpdated": "2026-04-24 11:57:43",
+    "totalCongresses": 21,
+    "lastUpdated": "2026-05-13 09:49:37",
     "version": "2.1"
   },
   "taxonomy": {
@@ -294,7 +294,7 @@
       "pais": "Paraguay",
       "modalidad": "Presencial",
       "deadline": "2026-05-31",
-      "deadlineStatus": "upcoming",
+      "deadlineStatus": "urgent",
       "publicacion": "Springer LNAI, Scopus, DBLP",
       "enlace": "https://www.iberamia.org/iberamia2026/",
       "integridad": {
@@ -553,7 +553,7 @@
       "pais": "Costa Rica",
       "modalidad": "Presencial",
       "deadline": "2026-06-08",
-      "deadlineStatus": "upcoming",
+      "deadlineStatus": "urgent",
       "publicacion": "Scopus",
       "enlace": "https://r9.ieee.org/costarica/conescapan-2026-call-for-papers/",
       "integridad": {
@@ -638,7 +638,7 @@
       "pais": "Brasil",
       "modalidad": "Presencial",
       "deadline": "2026-08-01",
-      "deadlineStatus": "future",
+      "deadlineStatus": "upcoming",
       "publicacion": "Scopus",
       "enlace": "https://sbgames.org/sbgames2026/",
       "integridad": {
@@ -680,7 +680,7 @@
       "pais": "Portugal",
       "modalidad": "Presencial",
       "deadline": "2026-05-30",
-      "deadlineStatus": "upcoming",
+      "deadlineStatus": "urgent",
       "publicacion": "Scopus",
       "enlace": "https://apwg.org/events/ecrime2026/",
       "integridad": {
@@ -851,7 +851,7 @@
       "pais": "Argentina",
       "modalidad": "Presencial",
       "deadline": "2026-08-03",
-      "deadlineStatus": "future",
+      "deadlineStatus": "upcoming",
       "publicacion": "IEEE Xplore, Scopus",
       "enlace": "https://lamc-ieee.org/",
       "integridad": {
@@ -946,6 +946,50 @@
         "programa_temas": "Temario:\nManagement and Organizational Strategy\nLeadership Studies\nGovernance and Institutional Frameworks\nCoaching and Team Development\nOrganizational Transformation and Change Management\nDoctoral Research in Management and Leadership\nResearch Dissemination and Academic Exchange\nAcademic Networking and Collaboration",
         "revision_pares": "El sitio web indica que los artículos aceptados para el ECMLG serán sometidos a una revisión por pares doble ciego.",
         "indexacion_bd": "El sitio web indica que las actas estarán disponibles en el siguiente enlace: https://papers.academic-conferences.org/index.php/ecmlg\nLas publicaciones del 2025 aun no están visibles en Scopus porque el evento se desarrolló en noviembre 2025. Asimismo, se indica que los trabajos presentados en la conferencia también se considerarán para su posterior poblicación en la revista European Journal of Training and Development \n",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
+      }
+    },
+    {
+      "id": 21,
+      "evento": "ECRM 2026",
+      "nombreCompleto": "ECRM 2026 (European Conference on Research Methods in Business & Management Studies)",
+      "disciplina": "Métodos de investigación cualitativa; Investigación basada en estudios de caso; Etnografía; Teoría fundamentada; Análisis narrativo y del discurso; Métodos de investigación cuantitativa; Técnicas estadísticas y análisis de datos; Diseño e implementación de encuestas; Diseños experimentales y cuasi-experimentales; Métodos mixtos de investigación; Integración de métodos cualitativos y cuantitativos; Técnicas de triangulación; Métodos de investigación innovadores y emergentes; Métodos de investigación digitales y en línea; Inteligencia artificial y machine learning en investigación; Métodos visuales; Epistemología y ontología en investigación; Desarrollo de teorías y marcos conceptuales; Ética en la investigación; Integridad y ética científica; Desafíos éticos en investigación digital; Investigación aplicada en negocios; Investigación acción; Métodos participativos; Consultoría e investigación empresarial; Investigación en economías emergentes",
+      "categoria": [
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
+      ],
+      "linea": [
+        "Bienestar y desarrollo humano",
+        "Gestión del conocimiento",
+        "Inteligencia artificial y computación avanzada",
+        "Transformación digital"
+      ],
+      "sublinea": [
+        "Educación, desarrollo cognitivo y socioafectivo",
+        "Inteligencia de negocios",
+        "Internet de las cosas (IoT)",
+        "Machine learning y deep learning",
+        "Procesamiento de lenguaje natural"
+      ],
+      "fechaInicio": "2026-08-06",
+      "fechaFin": "2026-08-07",
+      "lugar": "Cape Peninsula University of Technology (CPUT)",
+      "ciudad": "Ciudad del Cabo",
+      "pais": "Sudáfrica",
+      "modalidad": "Hibrido",
+      "deadline": "2026-03-05",
+      "deadlineStatus": "passed",
+      "publicacion": "Scopus, WoS",
+      "enlace": "https://www.academic-conferences.org/conferences/ecrm/",
+      "integridad": {
+        "organizadores": "Academic Conferences and Publishing International Ltd (ACPI)",
+        "comite_cientifico": "El sitio web indica a los miembros del Comité de la conferencia ECRM",
+        "programa_temas": "Temario: \nQualitative Research Methods\nQuantitative Research Methods\nMixed and Innovative Research Methodologies\nTeaching and Learning Research Methods\nEthics and Best Practices in Research",
+        "revision_pares": "El sitio web indica que todos los artículos son revisados ​​por pares a doble ciego por miembros del comité de la conferencia",
+        "indexacion_bd": "El sitio web indica que las actas estarán disponibles en el siguiente enlace: https://papers.academic-conferences.org/index.php/ecmlg\nLas publicaciones del 2025 aun no están visibles en Scopus porque el evento se desarrolló en noviembre 2025. Asimismo, se indica que los trabajos presentados en la conferencia también se considerarán para su posterior poblicación en la revista Electronic Journal of Business Research Methods ",
         "conflicto_intereses": "No precisa",
         "observaciones": "-",
         "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
