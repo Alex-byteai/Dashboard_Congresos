@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalCongresses": 21,
-    "lastUpdated": "2026-05-13 09:49:37",
+    "totalCongresses": 23,
+    "lastUpdated": "2026-05-18 10:31:51",
     "version": "2.1"
   },
   "taxonomy": {
@@ -569,7 +569,7 @@
     },
     {
       "id": 12,
-      "evento": "CIDIP/ICPME 2026",
+      "evento": "CIDIP/ICPME ",
       "nombreCompleto": "30th International Congress on Project Management and Engineering",
       "disciplina": "Dirección y Gestión de Proyectos; Ingeniería Civil y Urbanismo. Construcción y Arquitectura; Ingeniería de Producto y Procesos. Diseño Industrial; Ingeniería Ambiental y Gestión de Recursos Naturales; Eficiencia Energética y Energías Renovables; Desarrollo Rural y Proyectos de Cooperación al Desarrollo; Tecnologías de Información y Comunicaciones (TIC). Ingeniería del Software; Gestión de Riesgos y Seguridad; Innovación en Dirección e Ingeniería de Proyectos. Educación; Buenas Prácticas y Casos de Empresa",
       "categoria": [
@@ -824,7 +824,7 @@
     },
     {
       "id": 18,
-      "evento": "IEEE LAMC 2026",
+      "evento": "IEEE LAMC ",
       "nombreCompleto": "6th IEEE MTT-S Latin America Microwave Conference",
       "disciplina": "Componentes pasivos; Circuitos pasivos; Componentes planar y no planar; Filtros; Multiplexores; Dispositivos sintonizables; Metamateriales; RFICs; MMICs; Amplificadores de potencia; Técnicas de linealización; Circuitos de bajo ruido; Generación de señales; Conversión de señales; Control de señales; Modelado lineal; Modelado no lineal; Técnicas de medición; Sistemas de microondas; Front-ends; Aplicaciones ISM; Sistemas de navegación; Sistemas inteligentes de transporte; Sensores; Imagenología; Transmisión inalámbrica de energía; Comunicaciones terrestres; Comunicaciones vehiculares; Comunicaciones satelitales; Comunicaciones indoor; Comunicaciones inalámbricas; Comunicaciones celulares; Antenas activas; Antenas pasivas; Arreglos de fase; Antenas integradas; Antenas MIMO; Antenas digitales; Beamforming; Antenas inteligentes; Integridad de señal; Integridad de potencia; Interferencia electromagnética; Compatibilidad electromagnética; Interconexiones de alta velocidad; Validación post-silicio; Redes de distribución de potencia; Simulación RF; Mediciones RF; Modelado surrogate; Space mapping; Reducción de orden de modelos; Machine learning para RF; Diseño estadístico; Optimización electromagnética; Optimización multifísica; Teoría electromagnética; Técnicas numéricas en dominio del tiempo; Técnicas numéricas en dominio de frecuencia",
       "categoria": [
@@ -911,7 +911,7 @@
     },
     {
       "id": 20,
-      "evento": "ECMLG 2026",
+      "evento": "ECMLG ",
       "nombreCompleto": "22nd European Conference on Management, Leadership and Governance)",
       "disciplina": "Liderazgo transformacional; Liderazgo transaccional; Liderazgo servicial; Cultura organizacional y liderazgo; Gestión estratégica; Formulación de estrategias; Implementación estratégica; Agilidad organizacional; Adaptabilidad empresarial; Transformación digital; Tecnología aplicada a la gestión; Inteligencia Artificial en la toma de decisiones; Analítica de datos en management; Automatización organizacional; Sostenibilidad organizacional; Responsabilidad Social Corporativa; Liderazgo ético; Equipos multiculturales; Gestión intercultural; Comunicación intercultural; Innovación organizacional; Gestión del cambio; Cultura de innovación; Comportamiento organizacional; Dinámicas de equipo; Motivación y compromiso; Productividad y desempeño; Gobernanza corporativa; Liderazgo en entornos digitales; Tendencias emergentes en liderazgo y gestión",
       "categoria": [
@@ -953,7 +953,7 @@
     },
     {
       "id": 21,
-      "evento": "ECRM 2026",
+      "evento": "ECRM ",
       "nombreCompleto": "ECRM 2026 (European Conference on Research Methods in Business & Management Studies)",
       "disciplina": "Métodos de investigación cualitativa; Investigación basada en estudios de caso; Etnografía; Teoría fundamentada; Análisis narrativo y del discurso; Métodos de investigación cuantitativa; Técnicas estadísticas y análisis de datos; Diseño e implementación de encuestas; Diseños experimentales y cuasi-experimentales; Métodos mixtos de investigación; Integración de métodos cualitativos y cuantitativos; Técnicas de triangulación; Métodos de investigación innovadores y emergentes; Métodos de investigación digitales y en línea; Inteligencia artificial y machine learning en investigación; Métodos visuales; Epistemología y ontología en investigación; Desarrollo de teorías y marcos conceptuales; Ética en la investigación; Integridad y ética científica; Desafíos éticos en investigación digital; Investigación aplicada en negocios; Investigación acción; Métodos participativos; Consultoría e investigación empresarial; Investigación en economías emergentes",
       "categoria": [
@@ -990,6 +990,94 @@
         "programa_temas": "Temario: \nQualitative Research Methods\nQuantitative Research Methods\nMixed and Innovative Research Methodologies\nTeaching and Learning Research Methods\nEthics and Best Practices in Research",
         "revision_pares": "El sitio web indica que todos los artículos son revisados ​​por pares a doble ciego por miembros del comité de la conferencia",
         "indexacion_bd": "El sitio web indica que las actas estarán disponibles en el siguiente enlace: https://papers.academic-conferences.org/index.php/ecmlg\nLas publicaciones del 2025 aun no están visibles en Scopus porque el evento se desarrolló en noviembre 2025. Asimismo, se indica que los trabajos presentados en la conferencia también se considerarán para su posterior poblicación en la revista Electronic Journal of Business Research Methods ",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
+      }
+    },
+    {
+      "id": 22,
+      "evento": "CONTROLO ",
+      "nombreCompleto": "17th APCA International Conference on Automatic Control and Soft Computing",
+      "disciplina": "Sistemas de control; Control adaptativo; Control aeroespacial; Educación en control; Sensores y actuadores; Teoría de control; Arquitecturas de control; Sistemas de eventos discretos; Control distribuido; Estimación e identificación de sistemas; Detección de fallas; Diagnóstico de fallas; Control tolerante a fallas; Sistemas difusos; Sistemas neuro-difusos; Control con humano en el bucle; Sistemas híbridos; Control basado en inteligencia artificial; Control lineal; Control no lineal; Modelado y simulación; Sistemas de control en red; Control óptimo; Control robusto; Control estocástico; Optimización; Laboratorios remotos y virtuales; Automatización industrial; Sistemas automatizados; Robótica; Robots inteligentes; Sistemas ciberfísicos; Soft computing aplicado al control; Soft computing en robótica; Soft computing en automatización; Inteligencia computacional en control\n\n",
+      "categoria": [
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
+      ],
+      "linea": [
+        "Ciudades inteligentes y sostenibles",
+        "Experiencia digital humana",
+        "Inteligencia artificial y computación avanzada",
+        "Transformación digital"
+      ],
+      "sublinea": [
+        "Diseño de interfaces adaptativas",
+        "Gestión inteligente de recursos",
+        "Internet de las cosas (IoT)",
+        "Machine learning y deep learning",
+        "Sistemas autónomos y robótica"
+      ],
+      "fechaInicio": "2026-09-09",
+      "fechaFin": "2026-09-11",
+      "lugar": "Universidad de Coimbra, Portugal",
+      "ciudad": "Coimbra",
+      "pais": "Portugal",
+      "modalidad": "Presencial",
+      "deadline": "2026-05-29",
+      "deadlineStatus": "urgent",
+      "publicacion": "Scopus",
+      "enlace": "controlo2026.apca.pt",
+      "integridad": {
+        "organizadores": "Universidad de Coímbra",
+        "comite_cientifico": "El sitio web cuenta con información referente a los siguientes comités: Comité Directivo, Comité Organizador, Comité de Programa",
+        "programa_temas": "Temario:\n1. Sistemas de control\nControl adaptativo \nControl aeronáutico y aeroespacial \nEducación de control \nTecnología de control, sensores y actuadores \nTeoría, arquitecturas y aplicaciones del control \nSistemas de eventos discretos \nControl distribuido \nEstimación e identificación \nDetección de fallos, diagnóstico y control tolerante a fallos \nSistemas y control difusos y neurodifusos \nControl con intervención humana \nSistemas híbridos \nControl inteligente basado en IA \nControl lineal y no lineal \nModelado y simulación \nSistemas de control en red \nControl óptimo, robusto y estocástico \nEnfoques de optimización \nLaboratorios remotos y virtuales\n2. Automatización y Robótica\nVehículos guiados automáticamente \nAgentes autónomos \nSistemas ciberfísicos \nSistemas embebidos \nModelado y automatización de fábricas \nGrafcet y redes de Petri \nInteracción entre agentes y humanos \nInterfaces hombre-máquina \nRedes industriales y automatización \nAutomatización industrial \nInstrumentación \nInternet de las cosas e Industria 4.0 \nSistemas de fabricación \nSistemas mecatrónicos \nRobots móviles \nModelado de sistemas complejos \nPercepción y Conciencia \nAutomatización de procesos \nSistemas en tiempo real \nRobótica \nVisión, reconocimiento y reconstrucción\n3. Computación blanda con aplicación al control, la automatización o la robótica\nProgramación adaptativa y dinámica \nInteligencia artificial y reconocimiento de patrones \nNube, niebla y macrodatos \nSistemas artificiales cognitivos \nInteligencia computacional \nMinería de datos y recuperación de información \nReducción e interpretación de datos \nEvolución de los sistemas de IA \nComputación independiente y cognitiva \nAgentes inteligentes y conocimiento del contexto \nAdquisición y representación del conocimiento \nAprendizaje automático \nSistemas de toma de decisiones inteligentes de percepción \nAprendizaje por refuerzo y aprendizaje profundo",
+        "revision_pares": "El sitio web indica que las actas se publicarán en IEEE Explore. Todos los artículos revisados ​​por pares, aceptados y presentados se enviarán para su publicación en la biblioteca digital IEEE Xplore.",
+        "indexacion_bd": "El sitio web indica que las actas se enviarán al Thomson Reuters Conference Proceedings Citation Index (ISI), INSPEC y Scopus para su indexación.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
+    },
+    {
+      "id": 23,
+      "evento": "ICACIT Symposium ",
+      "nombreCompleto": "12th ICACIT Symposium Advancing Quality, Artificial Intelligence, and Applied Innovation in Engineering and Computing Education",
+      "disciplina": "Acreditación en ingeniería y computación; Educación basada en resultados; Sistemas de mejora continua; Analítica de calidad educativa; Evaluación auténtica; Evaluación de programas académicos; Efectividad institucional; Integridad académica digital; Calidad en educación híbrida y virtual; Métricas de diversidad e inclusión; Inteligencia Artificial en educación; Inteligencia Artificial generativa en educación; Laboratorios virtuales y remotos; Entornos inmersivos de aprendizaje; Gemelos digitales; Sistemas ciberfísicos en educación; Ética de la IA en educación; Aprendizaje basado en proyectos; Aprendizaje basado en retos; Desarrollo de habilidades profesionales; Liderazgo y ética; Inclusión y diversidad en educación; Cambio climático; Ingeniería sostenible; Colaboración universidad-industria-gobierno; Innovación social; Emprendimiento tecnológico; Ética en ingeniería; Políticas públicas en ingeniería; Ingeniería de software aplicada; Desarrollo de prototipos; Pruebas de concepto; Validación tecnológica; Proyectos de tesis aplicados; Transferencia tecnológica\n\n",
+      "categoria": [
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
+      ],
+      "linea": [
+        "Bienestar y desarrollo humano",
+        "Gestión del conocimiento",
+        "Inteligencia artificial y computación avanzada",
+        "Transformación digital",
+        "Ética, gobernanza y responsabilidad social"
+      ],
+      "sublinea": [
+        "Educación, desarrollo cognitivo y socioafectivo",
+        "Inteligencia de negocios",
+        "Internet de las cosas (IoT)",
+        "Machine learning y deep learning",
+        "Ética y gobernanza"
+      ],
+      "fechaInicio": "2026-10-21",
+      "fechaFin": "2026-10-23",
+      "lugar": "Pontificia Universidad Católica de Chile (UC) - Santiago, Chile",
+      "ciudad": "Santiago",
+      "pais": "Chile",
+      "modalidad": "Híbrido",
+      "deadline": "2026-06-30",
+      "deadlineStatus": "upcoming",
+      "publicacion": "Scopus",
+      "enlace": "icacit.org.pe/symposium",
+      "integridad": {
+        "organizadores": "ICACIT (Instituto de Calidad y Acreditación de Programas de Computación, Ingeniería y Tecnología)",
+        "comite_cientifico": "El sitio web indica a los miembros de su Comité Organizador, y Comité Directivo",
+        "programa_temas": "Temario:\nGarantía de calidad, acreditación y educación basada en resultados en ingeniería o informática\nTransformación digital, inteligencia artificial y tecnologías emergentes en la formación en ingeniería\nInnovación curricular, estrategias pedagógicas y desarrollo estudiantil\nSostenibilidad, impacto social e ingeniería o informática global\nIngeniería aplicada, informática y proyectos vinculados a la industria o a la comunidad",
+        "revision_pares": "El sitio web indica que todas las propuestas se someten a una revisión por pares a doble ciego realizada por revisores expertos",
+        "indexacion_bd": "El sitio web indica que todos los artículos en inglés aceptados y presentados oralmente en el Simposio ICACIT 2026 se incluirán en las actas de la conferencia y se enviarán para su publicación a IEEE Xplore®. El contenido de IEEE Xplore® se pone a disposición de sus socios de resumen e indexación, Scopus, para su posible inclusión en sus respectivas bases de datos.",
         "conflicto_intereses": "No precisa",
         "observaciones": "-",
         "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
