@@ -1,20 +1,6 @@
 {
   "revistas_observadas": [
     {
-      "journal": "Education Sciences",
-      "issn": "-",
-      "eissn": "2227-7102",
-      "enlace_informe": "https://drive.google.com/file/d/1E15lObfN31WKFz3-KtTdiAuYtQHQd2l-/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
-      "journal": "Molecules",
-      "issn": "-",
-      "eissn": "1420-3049",
-      "enlace_informe": "https://drive.google.com/file/d/1XsIC8CrJuN4s4qyuo_vPRM9gUvD5eubm/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
       "journal": "Buildings",
       "issn": "-",
       "eissn": "2075-5309",
@@ -71,6 +57,13 @@
       "conclusion": "Posibles indicios de malas prácticas"
     },
     {
+      "journal": "Case Studies in Construction Materials",
+      "issn": "2214-5095",
+      "eissn": "-",
+      "enlace_informe": "https://drive.google.com/file/d/1e6Js_mWFIbr3REajAtEjIRFrZ4b0aKfP/view?usp=drivesdk",
+      "conclusion": "Posibles indicios de malas prácticas"
+    },
+    {
       "journal": "International Journal of Interactive Mobile Technologies (iJIM)",
       "issn": "-",
       "eissn": "1865-7923",
@@ -96,6 +89,20 @@
       "issn": "",
       "eissn": "2405-8440",
       "enlace_informe": "https://drive.google.com/file/d/1D9g1_lsXOg05a84N3hVqxL5hy1pieJ1A/view?usp=drivesdk",
+      "conclusion": "Posibles indicios de malas prácticas"
+    },
+    {
+      "journal": "Sustainability",
+      "issn": "",
+      "eissn": "2071-1050",
+      "enlace_informe": "https://drive.google.com/file/d/13r4MgLxXjPoCcpqGi9geTAnrLbEG0L6r/view?usp=drivesdk",
+      "conclusion": "Posibles indicios de malas prácticas"
+    },
+    {
+      "journal": "Corporate Board: Role, Duties and Composition",
+      "issn": "1810-8601",
+      "eissn": "2312-2722",
+      "enlace_informe": "https://drive.google.com/file/d/1lKWYGkMimOMFidHcLwxaniiKTOlCOOzh/view?usp=drivesdk",
       "conclusion": "Posibles indicios de malas prácticas"
     }
   ]
