@@ -1,20 +1,6 @@
 {
   "revistas_observadas": [
     {
-      "journal": "Buildings",
-      "issn": "-",
-      "eissn": "2075-5309",
-      "enlace_informe": "https://drive.google.com/file/d/1jKYipnfQZyl3uwMuWNnmj6WWTkERc4fi/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
-      "journal": "Advances in Pharmacological and Pharmaceutical Sciences",
-      "issn": "2633-4682",
-      "eissn": "2633-4690",
-      "enlace_informe": "https://drive.google.com/file/d/14_C0-FrSuKjHR4KUA0anXjfajTRppYbp/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
       "journal": "Pharmaceutics",
       "issn": "-",
       "eissn": "1999-4923",
