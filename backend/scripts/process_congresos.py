@@ -1,44 +1,46 @@
+import os
 import json
+import gspread
+import pandas as pd
 from datetime import datetime
 from pathlib import Path
-from openpyxl import load_workbook
-import pandas as pd # Use pandas for easier merging/lookup if available, or stick to openpyxl if dep is issue. 
-# actually, existing code uses openpyxl. sticking to it for consistency unless pandas is better for this join.
-# The user env has pandas installed (implied by previous context). I'll use pandas for the join file as it's cleaner.
 
+try:
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.metrics.pairwise import cosine_similarity
+    HAS_ML = True
+except ImportError:
+    HAS_ML = False
+    print("WARNING: scikit-learn not installed. Please install it with 'pip install scikit-learn'")
+
+# Path to your service account key file
+script_dir = os.path.dirname(os.path.abspath(__file__))
+json_key_path = os.path.join(script_dir, '..', 'key', 'google_key.json')
+
+# URL of the Google Sheet
+SHEET_URL = 'https://docs.google.com/spreadsheets/d/16EQjwWFqkAoW4Y7moGEsEljkskgtSMhS-1TrFtaAU48/edit?pli=1&gid=2063995054#gid=2063995054'
 
 
 def parse_date(date_val):
-    """Parse various date formats to ISO format.
-    
-    IMPORTANT: When openpyxl returns a datetime object, it means Excel stored
-    the cell as a date. However, dates entered as DD/MM/YYYY text get interpreted
-    by Excel (US locale) as MM/DD/YYYY, so day and month are SWAPPED.
-    Text strings with '/' are parsed correctly as DD/MM/YYYY.
-    """
-    if date_val is None or date_val == '':
+    """Parse various date formats to ISO format."""
+    if pd.isna(date_val) or date_val is None or date_val == '':
         return None
 
-    # If openpyxl returned a datetime object: Excel swapped day/month on entry.
-    # Swap them back to get the correct date.
     if isinstance(date_val, datetime):
-        # Swap: stored month is actually the day, stored day is actually the month
-        corrected = date_val.replace(day=date_val.month, month=date_val.day)
-        return corrected.strftime('%Y-%m-%d')
+        return date_val.strftime('%Y-%m-%d')
 
     date_str = str(date_val).strip()
 
-    # Text in DD/MM/YYYY or D/M/YYYY format (correct as-is)
     if '/' in date_str:
         try:
             parts = date_str.split('/')
             if len(parts) == 3:
                 day, month, year = parts
+                # Some sheets might have MM/DD/YYYY or DD/MM/YYYY. Assuming DD/MM/YYYY.
                 return f"{year}-{month.zfill(2)}-{day.zfill(2)}"
         except:
             pass
 
-    # Already in YYYY-MM-DD format
     if '-' in date_str and len(date_str) >= 10:
         return date_str[:10]
 
@@ -50,11 +52,9 @@ def get_deadline_status(deadline_str):
         return 'unknown'
     
     try:
-        # Parse the date
         if isinstance(deadline_str, datetime):
             deadline_date = deadline_str
         else:
-            # Try to parse ISO format
             deadline_date = datetime.fromisoformat(deadline_str)
         
         today = datetime.now()
@@ -72,9 +72,7 @@ def get_deadline_status(deadline_str):
         return 'unknown'
 
 
-
 # Full taxonomy: Categoría → Línea → [Sublíneas]
-# This is the authoritative hierarchy defined by ULIMA.
 FULL_TAXONOMY = {
     'INNOVACIÓN Y TECNOLOGÍA DIGITAL': {
         'Inteligencia artificial y computación avanzada': [
@@ -158,98 +156,180 @@ FULL_TAXONOMY = {
     },
 }
 
-def split_semicolon(value):
-    """Split a semicolon-separated string into a sorted list of stripped values"""
-    if not value or str(value).strip() in ('', 'nan', 'None'):
-        return []
-    return sorted([v.strip() for v in str(value).split(';') if v.strip()])
+# --- ML SETUP ---
+# Flatten taxonomy for embeddings
+TAXONOMY_FLAT = []
+for cat, lineas in FULL_TAXONOMY.items():
+    for linea, sublineas in lineas.items():
+        for sublinea in sublineas:
+            TAXONOMY_FLAT.append({
+                'categoria': cat,
+                'linea': linea,
+                'sublinea': sublinea,
+                'text': f"{linea} {sublinea}"
+            })
 
-def process_excel_to_json(excel_path, output_path):
-    """Main processing function"""
-    print(f"Reading Excel file: {excel_path}")
+vectorizer = None
+taxonomy_tfidf = None
+
+def init_ml_model():
+    global vectorizer, taxonomy_tfidf
+    if not HAS_ML:
+        return
+    if vectorizer is None:
+        print("Inicializando modelo de Machine Learning (TF-IDF Ligero)...")
+        # Usamos character n-grams para ser robustos ante variaciones de palabras y morfología
+        vectorizer = TfidfVectorizer(analyzer='char_wb', ngram_range=(3, 5))
+        
+        taxonomy_texts = [item['text'] for item in TAXONOMY_FLAT]
+        taxonomy_tfidf = vectorizer.fit_transform(taxonomy_texts)
+
+def classify_theme_with_ml(tematicas_raw):
+    """
+    Toma un string de temáticas (e.g. "Ingeniería de Software; Ciencia de Datos")
+    y devuelve listas únicas de categorias, lineas y sublineas usando TF-IDF + Similitud del Coseno.
+    """
+    if not tematicas_raw or pd.isna(tematicas_raw) or str(tematicas_raw).strip() in ('', 'nan', 'None'):
+        return [], [], []
     
-    # Load workbook
-    wb = load_workbook(excel_path)
-    ws = wb.active
+    tematicas = [t.strip() for t in str(tematicas_raw).split(';') if t.strip()]
     
-    # Get headers from first row
-    headers = []
-    for cell in ws[1]:
-        headers.append(cell.value)
+    if not tematicas or not HAS_ML or vectorizer is None:
+        return [], [], []
+        
+    categorias_set = set()
+    lineas_set = set()
+    sublineas_set = set()
     
-    print(f"Found {len(headers)} columns")
+    # Predecir todo el bloque de temáticas juntas
+    tematicas_tfidf = vectorizer.transform(tematicas)
+    cosine_scores = cosine_similarity(tematicas_tfidf, taxonomy_tfidf)
+    
+    matches = []
+    
+    for i in range(len(tematicas)):
+        # Encontrar la mejor coincidencia para la temática actual
+        best_match_idx = cosine_scores[i].argmax()
+        best_score = cosine_scores[i][best_match_idx]
+        
+        # Opcional: solo agregar si el score de similitud es mayor a cierto umbral
+        if best_score > 0.35: # AUMENTADO LA RIGUROSIDAD: de 0.05 a 0.35
+            best_taxonomy = TAXONOMY_FLAT[best_match_idx]
+            matches.append((best_score, best_taxonomy))
+            
+    # Ordenar los matches por score (mayor similitud primero)
+    matches.sort(key=lambda x: x[0], reverse=True)
+    
+    # Limitar el número máximo de sublíneas únicas a asignar (ej. top 4 más relevantes)
+    MAX_CATEGORIES = 4
+    added_sublineas = set()
+    
+    for score, taxonomy in matches:
+        if taxonomy['sublinea'] not in added_sublineas:
+            categorias_set.add(taxonomy['categoria'])
+            lineas_set.add(taxonomy['linea'])
+            sublineas_set.add(taxonomy['sublinea'])
+            added_sublineas.add(taxonomy['sublinea'])
+            
+            if len(added_sublineas) >= MAX_CATEGORIES:
+                break
+        
+    return sorted(list(categorias_set)), sorted(list(lineas_set)), sorted(list(sublineas_set))
+
+
+def get_named(row, col_name):
+    """Helper to get a value safely from a pandas series (row)"""
+    if col_name in row.index:
+        val = row[col_name]
+        return None if pd.isna(val) else val
+    return None
+
+def process_google_sheet_to_json(output_path):
+    """Main processing function using Google Sheets API via gspread"""
+    
+    print(f"Authenticating and accessing Google Sheet...")
+    if not os.path.exists(json_key_path):
+        raise FileNotFoundError(f"Google key file not found at {json_key_path}")
+        
+    gc = gspread.service_account(filename=json_key_path)
+    
+    try:
+        spreadsheet = gc.open_by_url(SHEET_URL)
+        worksheet = spreadsheet.worksheet('Registro de congresos_validación de integridad')
+        data = worksheet.get_all_values()
+        
+        if not data:
+            raise ValueError("Worksheet is empty")
+            
+        df = pd.DataFrame(data[1:], columns=data[0])
+        df.columns = df.columns.str.strip()
+        print(f"Data loaded successfully. Found {len(df)} rows.")
+        
+    except Exception as e:
+        print(f"Error reading Google Sheet: {e}")
+        return
+        
+    init_ml_model()
     
     congresses = []
     countries = set()
     modalities = {}
 
-    # Build a column-name → index map from the header row (robust to column changes)
-    col_idx = {str(h).strip(): i for i, h in enumerate(headers) if h is not None}
-    print(f"Column map: {col_idx}")
+    for idx, row in df.iterrows():
+        evento = get_named(row, 'Evento')
+        nombre = get_named(row, 'Nombre Completo')
 
-    def get_named(name, row):
-        """Get a cell value by column name, returns None if column not found."""
-        idx = col_idx.get(name)
-        return row[idx] if idx is not None and idx < len(row) else None
-
-    # Process each row (skip header)
-    for idx, row in enumerate(ws.iter_rows(min_row=2, values_only=True), start=1):
-
-        evento  = get_named('Evento', row)
-        nombre  = get_named('Nombre Completo', row)
-
-        # Skip empty rows
         if not evento and not nombre:
             continue
 
-        # Parse dates
-        fecha_inicio = parse_date(get_named('Fecha inicio', row))
-        fecha_fin    = parse_date(get_named('Fecha fin', row))
-        deadline     = parse_date(get_named('Deadline', row))
+        fecha_inicio = parse_date(get_named(row, 'Fecha inicio'))
+        fecha_fin    = parse_date(get_named(row, 'Fecha fin'))
+        deadline     = parse_date(get_named(row, 'Deadline'))
 
-        ciudad   = str(get_named('Ciudad', row) or '')
-        pais     = str(get_named('Pais', row) or '')
-        modalidad = str(get_named('Modalidad', row) or '')
+        ciudad    = str(get_named(row, 'Ciudad') or '')
+        pais      = str(get_named(row, 'Pais') or '')
+        modalidad = str(get_named(row, 'Modalidad') or '')
 
-        # Track statistics
         if pais: countries.add(pais)
         if modalidad: modalities[modalidad] = modalities.get(modalidad, 0) + 1
 
-        # Parse 3-level hierarchy (semicolon-separated values) by column name
-        categorias = split_semicolon(get_named('categoria_ulima', row))
-        lineas     = split_semicolon(get_named('linea_ulima', row))
-        sublineas  = split_semicolon(get_named('sublinea_ulima', row))
+        # MACHINE LEARNING CLASSIFICATION
+        tematica_text = get_named(row, 'Tematica')
+        if not tematica_text:
+             tematica_text = get_named(row, 'Temática')
 
-        # Parámetros de Integridad
+        categorias, lineas, sublineas = classify_theme_with_ml(tematica_text)
+
+        # Integrity Parameters
         integridad = {
-            'organizadores': str(get_named('Organizadores | Patrocinadores', row) or ''),
-            'comite_cientifico': str(get_named('Comité científico', row) or ''),
-            'programa_temas': str(get_named('Programa | Temas', row) or ''),
-            'revision_pares': str(get_named('Revisión por pares', row) or ''),
-            'indexacion_bd': str(get_named('Indexación en BD', row) or ''),
-            'conflicto_intereses': str(get_named('Conflicto de intereses', row) or ''),
-            'observaciones': str(get_named('Observaciones', row) or ''),
-            'conclusiones': str(get_named('Conclusiones', row) or '')
+            'organizadores': str(get_named(row, 'Organizadores | Patrocinadores') or ''),
+            'comite_cientifico': str(get_named(row, 'Comité científico') or ''),
+            'programa_temas': str(get_named(row, 'Programa | Temas') or ''),
+            'revision_pares': str(get_named(row, 'Revisión por pares') or ''),
+            'indexacion_bd': str(get_named(row, 'Indexación en BD') or ''),
+            'conflicto_intereses': str(get_named(row, 'Conflicto de intereses') or ''),
+            'observaciones': str(get_named(row, 'Observaciones') or ''),
+            'conclusiones': str(get_named(row, 'Conclusiones') or '')
         }
 
         congress = {
-            'id': idx,
+            'id': idx + 1,
             'evento': str(evento or ''),
             'nombreCompleto': str(nombre or ''),
-            'disciplina': str(get_named('Disciplina', row) or ''),
+            'disciplina': str(get_named(row, 'Disciplina') or ''),
             'categoria': categorias,
             'linea': lineas,
             'sublinea': sublineas,
             'fechaInicio': fecha_inicio,
             'fechaFin': fecha_fin,
-            'lugar': str(get_named('Lugar', row) or ''),
+            'lugar': str(get_named(row, 'Lugar') or ''),
             'ciudad': ciudad,
             'pais': pais,
             'modalidad': modalidad,
             'deadline': deadline,
             'deadlineStatus': get_deadline_status(deadline),
-            'publicacion': str(get_named('Publicación', row) or ''),
-            'enlace': str(get_named('Enlace', row) or ''),
+            'publicacion': str(get_named(row, 'Publicación') or ''),
+            'enlace': str(get_named(row, 'Enlace') or ''),
             'integridad': integridad
         }
 
@@ -257,20 +337,18 @@ def process_excel_to_json(excel_path, output_path):
 
     
     print(f"Processed {len(congresses)} congresses")
-    print(f"Using full taxonomy: {len(FULL_TAXONOMY)} categorias")
     
     # Create output structure
     output_data = {
         'metadata': {
             'totalCongresses': len(congresses),
             'lastUpdated': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            'version': '2.1'
+            'version': '2.2'
         },
         'taxonomy': FULL_TAXONOMY,
         'congresses': congresses
     }
     
-    # Write JSON
     output_file = Path(output_path)
     output_file.parent.mkdir(parents=True, exist_ok=True)
     
@@ -286,15 +364,12 @@ def process_excel_to_json(excel_path, output_path):
     return output_data
 
 if __name__ == '__main__':
-    import os
     script_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.join(script_dir, '..', '..')
-    
-    excel_file = os.path.join(root_dir, 'data_raw', 'List_congreso.xlsx')
     json_file = os.path.join(root_dir, 'public', 'congresses.json')
     
     try:
-        process_excel_to_json(excel_file, json_file)
+        process_google_sheet_to_json(json_file)
         print("\nData processing complete!")
     except Exception as e:
         print(f"Error: {e}")
