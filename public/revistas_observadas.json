@@ -1,76 +1,6 @@
 {
   "revistas_observadas": [
     {
-      "journal": "Pharmaceutics",
-      "issn": "-",
-      "eissn": "1999-4923",
-      "enlace_informe": "https://drive.google.com/file/d/1IZIE0T73nuw8YHKZcrJudCb7WcP1aTj2/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
-      "journal": "Applied Sciences (Switzerland)",
-      "issn": "-",
-      "eissn": "2076-3417",
-      "enlace_informe": "https://drive.google.com/file/d/1CAVCxGqOOdKRdM1KeGp_Abq1LIZ7PH4G/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
-      "journal": "Frontiers in Psychology",
-      "issn": "-",
-      "eissn": "1664-1078",
-      "enlace_informe": "https://drive.google.com/file/d/10pSZ8RnxeCFba8gjnhFF43AnVeHHC-6U/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
-      "journal": "Agriculture (Switzerland)",
-      "issn": "-",
-      "eissn": "2077-0472",
-      "enlace_informe": "https://drive.google.com/file/d/1jQLRi3kxOfyjKEmOKxNwvSvAR055bEtv/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
-      "journal": "C-Journal of Carbon Research",
-      "issn": "-",
-      "eissn": "2311-5629",
-      "enlace_informe": "https://drive.google.com/file/d/1aW4yItikESj6SA4SIvEgQsqyjdzJz4Yd/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
-      "journal": "Case Studies in Construction Materials",
-      "issn": "2214-5095",
-      "eissn": "-",
-      "enlace_informe": "https://drive.google.com/file/d/1OqhE8enKR5r-y7Humk44pI112H9oEuQX/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
-      "journal": "Case Studies in Construction Materials",
-      "issn": "2214-5095",
-      "eissn": "-",
-      "enlace_informe": "https://drive.google.com/file/d/1e6Js_mWFIbr3REajAtEjIRFrZ4b0aKfP/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
-      "journal": "International Journal of Interactive Mobile Technologies (iJIM)",
-      "issn": "-",
-      "eissn": "1865-7923",
-      "enlace_informe": "https://drive.google.com/file/d/1FFIhzULJ13i2CvBWpdZGR_dH0a5alwS2/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
-      "journal": "Frontiers in Education",
-      "issn": "-",
-      "eissn": "2504-284X",
-      "enlace_informe": "https://drive.google.com/file/d/10yRCK9wd7_o4FKArVTg4GgfpRtpHvlvW/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
-      "journal": "Biomedicines",
-      "issn": "",
-      "eissn": "2227-9059",
-      "enlace_informe": "https://drive.google.com/file/d/1iRjBHozAGWm3m-ztebdt702NwKjMHHxZ/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
       "journal": "Heliyon",
       "issn": "",
       "eissn": "2405-8440",
@@ -89,6 +19,20 @@
       "issn": "1810-8601",
       "eissn": "2312-2722",
       "enlace_informe": "https://drive.google.com/file/d/1lKWYGkMimOMFidHcLwxaniiKTOlCOOzh/view?usp=drivesdk",
+      "conclusion": "Posibles indicios de malas prácticas"
+    },
+    {
+      "journal": "Frontiers in Education",
+      "issn": "2504-284X",
+      "eissn": "2504-284X",
+      "enlace_informe": "https://drive.google.com/file/d/1_oAU8DG1CPWOnoRkn85KxKZN3slAWuil/view?usp=drivesdk",
+      "conclusion": "Posibles indicios de malas prácticas"
+    },
+    {
+      "journal": "",
+      "issn": "2212-4292",
+      "eissn": "2212-4306",
+      "enlace_informe": "https://drive.google.com/file/d/1brv3KdKB1cxaWXqdHhVj5QvDDWpvrQI0/view?usp=drivesdk",
       "conclusion": "Posibles indicios de malas prácticas"
     }
   ]

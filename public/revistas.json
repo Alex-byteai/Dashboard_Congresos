@@ -1,2048 +1,13 @@
 {
   "metadata": {
-    "totalRevistas": 100,
-    "publishers": 61,
+    "totalRevistas": 86,
+    "publishers": 36,
     "disciplinas": 23,
     "categorias": 4,
-    "lastUpdated": "2026-06-12 09:39:19",
+    "lastUpdated": "2026-07-17 12:33:49",
     "version": "1.0"
   },
   "revistas": [
-    {
-      "journal": "Revista de Comunicacion",
-      "issn": "1684-0933",
-      "eissn": "2227-1465",
-      "publisher": "Universidad de Piura",
-      "disciplinas": [
-        "Social Sciences"
-      ],
-      "cobertura": "2018 - 2026",
-      "citeScore": "3.3",
-      "sitioWeb": "https://revistadecomunicacion.com/index.php/rcom/es/",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100863482",
-      "id": 1,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Cultural Studies",
-          "Percentil": "92",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Communication",
-          "Percentil": "73",
-          "Cuartil": "Q2"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1xyJFz12_zWyWc8H0GvVD1a9nrd0cJBDP/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "16/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Comunicación y cultura digital",
-          "Sublinea": "Comunicación intercultural",
-          "Origen_Scopus": "Social Sciences > Cultural Studies"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Comunicación y cultura digital",
-          "Sublinea": "Medios digitales y sociedad",
-          "Origen_Scopus": "Social Sciences > Communication"
-        }
-      ],
-      "enfoque": "Comunicación y cultura digital"
-    },
-    {
-      "journal": "Journal of Computer-Mediated Communication",
-      "issn": "",
-      "eissn": "1083-6101",
-      "publisher": "Oxford University Press",
-      "disciplinas": [
-        "Social Sciences"
-      ],
-      "cobertura": "1995 - 2026",
-      "citeScore": "12.8",
-      "sitioWeb": "https://academic.oup.com/jcmc",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=18232",
-      "id": 2,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Communication",
-          "Percentil": "97",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1hO7AO-4WGzIog7Gg7xByD-RtwcBKU3JT/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "16/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Comunicación y cultura digital",
-          "Sublinea": "Medios digitales y sociedad",
-          "Origen_Scopus": "Social Sciences > Communication"
-        }
-      ],
-      "enfoque": "Comunicación y cultura digital"
-    },
-    {
-      "journal": "Latin American Research Review",
-      "issn": "0023-8791",
-      "eissn": "1542-4278",
-      "publisher": "Cambridge University Press",
-      "disciplinas": [
-        "Social Sciences",
-        "Arts and Humanities",
-        "Multidisciplinary",
-        "Economics, Econometrics and Finance"
-      ],
-      "cobertura": "1970 - 1970",
-      "citeScore": "1.7",
-      "sitioWeb": "https://www.cambridge.org/core/journals/latin-american-research-review",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=27733",
-      "id": 3,
-      "categorias_scopus": [
-        {
-          "Categoria": "Arts and Humanities",
-          "Subcategoria": "Literature and Literary Theory",
-          "Percentil": "97",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Arts and Humanities",
-          "Subcategoria": "History",
-          "Percentil": "92",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Arts and Humanities",
-          "Subcategoria": "General Arts and Humanities",
-          "Percentil": "88",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Cultural Studies",
-          "Percentil": "83",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Anthropology",
-          "Percentil": "71",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Multidisciplinary",
-          "Subcategoria": "Multidisciplinary",
-          "Percentil": "56",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Political Science and International Relations",
-          "Percentil": "55",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Sociology and Political Science",
-          "Percentil": "54",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Economics, Econometrics and Finance",
-          "Subcategoria": "General Economics, Econometrics and Finance",
-          "Percentil": "51",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Geography, Planning and Development",
-          "Percentil": "44",
-          "Cuartil": "Q3"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Development",
-          "Percentil": "38",
-          "Cuartil": "Q3"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1WWLrT2E7xHJzDwmo9usajJLzBdkeXVWo/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "16/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Comunicación y cultura digital",
-          "Sublinea": "Narrativas transmedia",
-          "Origen_Scopus": "Arts and Humanities > Literature and Literary Theory"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Comunicación y cultura digital",
-          "Sublinea": "Comunicación intercultural",
-          "Origen_Scopus": "Arts and Humanities > History"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Comportamiento social",
-          "Origen_Scopus": "Social Sciences > Anthropology"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Ética, gobernanza y responsabilidad social",
-          "Sublinea": "Ética y gobernanza",
-          "Origen_Scopus": "Social Sciences > Political Science and International Relations"
-        },
-        {
-          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-          "Linea": "Economía digital",
-          "Sublinea": "Mercados globales",
-          "Origen_Scopus": "Economics, Econometrics and Finance > General Economics, Econometrics and Finance"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Ciudades inteligentes y sostenibles",
-          "Sublinea": "Urbanismo sostenible",
-          "Origen_Scopus": "Social Sciences > Geography, Planning and Development"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Pobreza e informalidad",
-          "Origen_Scopus": "Social Sciences > Development"
-        }
-      ],
-      "enfoque": "Comunicación y cultura digital"
-    },
-    {
-      "journal": "Latin American Journal of Solids and Structures",
-      "issn": "1679-7817",
-      "eissn": "1679-7825",
-      "publisher": "Marcílio Alves",
-      "disciplinas": [
-        "Engineering",
-        "Materials Science"
-      ],
-      "cobertura": "2003 - 2026",
-      "citeScore": "2.4",
-      "sitioWeb": "https://www.lajss.org/index.php/LAJSS",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=13900154710",
-      "id": 4,
-      "categorias_scopus": [
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Automotive Engineering",
-          "Percentil": "51",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Ocean Engineering",
-          "Percentil": "46",
-          "Cuartil": "Q3"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Aerospace Engineering",
-          "Percentil": "45",
-          "Cuartil": "Q3"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Mechanical Engineering",
-          "Percentil": "43",
-          "Cuartil": "Q3"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Civil and Structural Engineering",
-          "Percentil": "40",
-          "Cuartil": "Q3"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Mechanics of Materials",
-          "Percentil": "39",
-          "Cuartil": "Q3"
-        },
-        {
-          "Categoria": "Materials Science",
-          "Subcategoria": "General Materials Science",
-          "Percentil": "33",
-          "Cuartil": "Q3"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1gmgn7IsB58rqKzzL0I3njGCNov7Lh9qP/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "12/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Ciudades inteligentes y sostenibles",
-          "Sublinea": "Movilidad urbana",
-          "Origen_Scopus": "Engineering > Automotive Engineering"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Ciudades inteligentes y sostenibles",
-          "Sublinea": "Infraestructura sostenible",
-          "Origen_Scopus": "Engineering > Ocean Engineering"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Tecnología y ecosistemas",
-          "Sublinea": "Materiales avanzados",
-          "Origen_Scopus": "Engineering > Mechanical Engineering"
-        }
-      ],
-      "enfoque": "Ciudades inteligentes y sostenibles"
-    },
-    {
-      "journal": "Journal of Public Economics",
-      "issn": "0047-2727",
-      "eissn": "0047-2727",
-      "publisher": "Elsevier",
-      "disciplinas": [
-        "Economics, Econometrics and Finance"
-      ],
-      "cobertura": "1972 - 2026",
-      "citeScore": "5.6",
-      "sitioWeb": "https://www.sciencedirect.com/journal/journal-of-public-economics",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=29009",
-      "id": 5,
-      "categorias_scopus": [
-        {
-          "Categoria": "Economics, Econometrics and Finance",
-          "Subcategoria": "Economics and Econometrics",
-          "Percentil": "77",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Economics, Econometrics and Finance",
-          "Subcategoria": "Finance",
-          "Percentil": "76",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1ANrJjwCS6eLgs6iQdKbJVYcxbJYdR6oL/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "13/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-          "Linea": "Economía digital",
-          "Sublinea": "Análisis de datos económicos",
-          "Origen_Scopus": "Economics, Econometrics and Finance > Economics and Econometrics"
-        },
-        {
-          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-          "Linea": "Economía digital",
-          "Sublinea": "Fintech y servicios financieros",
-          "Origen_Scopus": "Economics, Econometrics and Finance > Finance"
-        }
-      ],
-      "enfoque": "Economía digital"
-    },
-    {
-      "journal": "Estoa",
-      "issn": "1390-7263",
-      "eissn": "1390-9274",
-      "publisher": "Centro de investigación de la Facultad de Arquitectura y Urbanismo, Universidad de Cuenca",
-      "disciplinas": [
-        "Engineering",
-        "Social Sciences"
-      ],
-      "cobertura": "2023 - 2026",
-      "citeScore": "0.7",
-      "sitioWeb": "https://publicaciones.ucuenca.edu.ec/ojs/index.php/estoa/about",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101209908",
-      "id": 6,
-      "categorias_scopus": [
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Architecture",
-          "Percentil": "45",
-          "Cuartil": "Q3"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Urban Studies",
-          "Percentil": "32",
-          "Cuartil": "Q3"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Building and Construction",
-          "Percentil": "15",
-          "Cuartil": "Q4"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1NZ7aQomNvIZ8Uw5_rWXggIGZdfXQQsUt/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "18/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Ciudades inteligentes y sostenibles",
-          "Sublinea": "Urbanismo sostenible",
-          "Origen_Scopus": "Engineering > Architecture"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Ciudades inteligentes y sostenibles",
-          "Sublinea": "Infraestructura sostenible",
-          "Origen_Scopus": "Engineering > Building and Construction"
-        }
-      ],
-      "enfoque": "Ciudades inteligentes y sostenibles"
-    },
-    {
-      "journal": "Results in Control and Optimization",
-      "issn": "",
-      "eissn": "2666-7207",
-      "publisher": "Elsevier",
-      "disciplinas": [
-        "Computer Science",
-        "Mathematics",
-        "Engineering"
-      ],
-      "cobertura": "2020 - 2026",
-      "citeScore": "7.8",
-      "sitioWeb": "https://www.sciencedirect.com/journal/results-in-control-and-optimization",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101060462",
-      "id": 7,
-      "categorias_scopus": [
-        {
-          "Categoria": "Mathematics",
-          "Subcategoria": "Applied Mathematics",
-          "Percentil": "94",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Mathematics",
-          "Subcategoria": "Control and Optimization",
-          "Percentil": "92",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Mathematics",
-          "Subcategoria": "Modelling and Simulation",
-          "Percentil": "91",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Control and Systems Engineering",
-          "Percentil": "80",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Computer Science",
-          "Subcategoria": "Artificial Intelligence",
-          "Percentil": "77",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1-otyASnCuGjswr2QamAHgGpR-MNSub8i/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "17/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-          "Linea": "Inteligencia artificial y computación avanzada",
-          "Sublinea": "Machine learning y deep learning",
-          "Origen_Scopus": "Mathematics > Applied Mathematics"
-        },
-        {
-          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-          "Linea": "Inteligencia artificial y computación avanzada",
-          "Sublinea": "Sistemas autónomos y robótica",
-          "Origen_Scopus": "Mathematics > Control and Optimization"
-        }
-      ],
-      "enfoque": "Inteligencia artificial y computación avanzada"
-    },
-    {
-      "journal": "Environment and Behavior",
-      "issn": "0013-9165",
-      "eissn": "1552-390X",
-      "publisher": "SAGE Publications Ltd.",
-      "disciplinas": [
-        "Environmental Science"
-      ],
-      "cobertura": "1969 - 2026",
-      "citeScore": "9.2",
-      "sitioWeb": "https://journals.sagepub.com/home/eab",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=14356",
-      "id": 8,
-      "categorias_scopus": [
-        {
-          "Categoria": "Environmental Science",
-          "Subcategoria": "General Environmental Science",
-          "Percentil": "85",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/163fLvx6vmZOw-yqzkduUCtRETt3a-H7F/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "16/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Sostenibilidad y cambio climático",
-          "Sublinea": "Gestión sostenible de recursos",
-          "Origen_Scopus": "Environmental Science > General Environmental Science"
-        }
-      ],
-      "enfoque": "Sostenibilidad y cambio climático"
-    },
-    {
-      "journal": "Science and Justice",
-      "issn": "1355-0306",
-      "eissn": "1876-4452",
-      "publisher": "Forensic Science Society",
-      "disciplinas": [
-        "Medicine"
-      ],
-      "cobertura": "1995 - 2026",
-      "citeScore": "5.3",
-      "sitioWeb": "https://www.sciencedirect.com/journal/science-and-justice",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=27800",
-      "id": 9,
-      "categorias_scopus": [
-        {
-          "Categoria": "Medicine",
-          "Subcategoria": "Pathology and Forensic Medicine",
-          "Percentil": "79",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1t7kxjlU9ZEyPBrZ83myaCBwscGMhCQOa/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "13/03/2026",
-      "clasificacion_ulima": [],
-      "enfoque": "General"
-    },
-    {
-      "journal": "International Journal of STEM Education",
-      "issn": "",
-      "eissn": "2196-7822",
-      "publisher": "Springer Nature",
-      "disciplinas": [
-        "Social Sciences"
-      ],
-      "cobertura": "2014 - 2026",
-      "citeScore": "19.8",
-      "sitioWeb": "https://link.springer.com/journal/40594",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100873488",
-      "id": 10,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Education",
-          "Percentil": "99",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1Gp_GMICN5B_z1ZGBAseExvQkP2ULSWd6/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "19/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
-          "Origen_Scopus": "Social Sciences > Education"
-        }
-      ],
-      "enfoque": "Bienestar y desarrollo humano"
-    },
-    {
-      "journal": "Communication Methods and Measures",
-      "issn": "1931-2458",
-      "eissn": "1931-2466",
-      "publisher": "Taylor & Francis",
-      "disciplinas": [
-        "Social Sciences"
-      ],
-      "cobertura": "2010 - 2026",
-      "citeScore": "13.3",
-      "sitioWeb": "https://www.tandfonline.com/journals/hcms20",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19700190349",
-      "id": 11,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Communication",
-          "Percentil": "98",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/18hU_7tVlLXZj-GKprBKSYEQvBwAjcO3h/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "25/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Comunicación y cultura digital",
-          "Sublinea": "Medios digitales y sociedad",
-          "Origen_Scopus": "Social Sciences > Communication"
-        }
-      ],
-      "enfoque": "Comunicación y cultura digital"
-    },
-    {
-      "journal": "Political Psychology",
-      "issn": "0162-895X",
-      "eissn": "1467-9221",
-      "publisher": "John Wiley & Sons",
-      "disciplinas": [
-        "Psychology",
-        "Social Sciences",
-        "Arts and Humanities"
-      ],
-      "cobertura": "1996 - 2026",
-      "citeScore": "7.6",
-      "sitioWeb": "https://onlinelibrary.wiley.com/journal/14679221",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=22861",
-      "id": 12,
-      "categorias_scopus": [
-        {
-          "Categoria": "Arts and Humanities",
-          "Subcategoria": "Philosophy",
-          "Percentil": "98",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Political Science and International Relations",
-          "Percentil": "96",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Sociology and Political Science",
-          "Percentil": "94",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Psychology",
-          "Subcategoria": "Experimental and Cognitive Psychology",
-          "Percentil": "94",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Psychology",
-          "Subcategoria": "Clinical Psychology",
-          "Percentil": "91",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Psychology",
-          "Subcategoria": "Social Psychology",
-          "Percentil": "90",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1eiWscGNP_AP2cpldKeasN-u2cd47jqlI/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "25/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Ética, gobernanza y responsabilidad social",
-          "Sublinea": "Ética y gobernanza",
-          "Origen_Scopus": "Arts and Humanities > Philosophy"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Comportamiento social",
-          "Origen_Scopus": "Social Sciences > Sociology and Political Science"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
-          "Origen_Scopus": "Psychology > Experimental and Cognitive Psychology"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Salud mental y bienestar",
-          "Origen_Scopus": "Psychology > Clinical Psychology"
-        }
-      ],
-      "enfoque": "Ética, gobernanza y responsabilidad social"
-    },
-    {
-      "journal": "Education and Information Technologies",
-      "issn": "1360-2357",
-      "eissn": "1573-7608",
-      "publisher": "Springer Nature",
-      "disciplinas": [
-        "Social Sciences"
-      ],
-      "cobertura": "1996 - 2002",
-      "citeScore": "15.5",
-      "sitioWeb": "https://link.springer.com/journal/10639",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=144955",
-      "id": 13,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Education",
-          "Percentil": "98",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Library and Information Sciences",
-          "Percentil": "97",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1JsOiRAfy-nwKyyfSUHJsMe5c-dB0aRZX/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "26/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
-          "Origen_Scopus": "Social Sciences > Education"
-        },
-        {
-          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-          "Linea": "Gestión del conocimiento",
-          "Sublinea": "Transferencia de conocimiento",
-          "Origen_Scopus": "Social Sciences > Library and Information Sciences"
-        }
-      ],
-      "enfoque": "Bienestar y desarrollo humano"
-    },
-    {
-      "journal": "Journal of Future Foods",
-      "issn": "",
-      "eissn": "2772-5669",
-      "publisher": "KeAi Communications Co",
-      "disciplinas": [
-        "Agricultural and Biological Sciences",
-        "Nursing"
-      ],
-      "cobertura": "2021 - 2027",
-      "citeScore": "16.9",
-      "sitioWeb": "https://www.keaipublishing.com/en/journals/journal-of-future-foods/",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101097033",
-      "id": 14,
-      "categorias_scopus": [
-        {
-          "Categoria": "Agricultural and Biological Sciences",
-          "Subcategoria": "Agricultural and Biological Sciences (miscellaneous)",
-          "Percentil": "99",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Nursing",
-          "Subcategoria": "Nutrition and Dietetics",
-          "Percentil": "98",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Agricultural and Biological Sciences",
-          "Subcategoria": "Food Science",
-          "Percentil": "96",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1qD0-MkfgpF8DXeX2p2p1-svI_f_VVKzO/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "26/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Tecnología y ecosistemas",
-          "Sublinea": "Biodiversidad y conservación",
-          "Origen_Scopus": "Agricultural and Biological Sciences > Agricultural and Biological Sciences (miscellaneous)"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Sostenibilidad y cambio climático",
-          "Sublinea": "Economía circular",
-          "Origen_Scopus": "Agricultural and Biological Sciences > Food Science"
-        }
-      ],
-      "enfoque": "Tecnología y ecosistemas"
-    },
-    {
-      "journal": "Applicable Analysis",
-      "issn": "0003-6811",
-      "eissn": "1563-504X",
-      "publisher": "Taylor & Francis",
-      "disciplinas": [
-        "Mathematics"
-      ],
-      "cobertura": "1971 - 2026",
-      "citeScore": "2.8",
-      "sitioWeb": "https://www.tandfonline.com/journals/gapa20",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=25142",
-      "id": 15,
-      "categorias_scopus": [
-        {
-          "Categoria": "Mathematics",
-          "Subcategoria": "Analysis",
-          "Percentil": "73",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Mathematics",
-          "Subcategoria": "Applied Mathematics",
-          "Percentil": "61",
-          "Cuartil": "Q2"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1V8zrDJa2ihiBSu2PJEwJQ5xEl2Z2b39a/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "27/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-          "Linea": "Inteligencia artificial y computación avanzada",
-          "Sublinea": "Machine learning y deep learning",
-          "Origen_Scopus": "Mathematics > Analysis"
-        }
-      ],
-      "enfoque": "Inteligencia artificial y computación avanzada"
-    },
-    {
-      "journal": "Environmental Earth Sciences",
-      "issn": "1866-6280",
-      "eissn": "1866-6299",
-      "publisher": "Springer Nature",
-      "disciplinas": [
-        "Earth and Planetary Sciences",
-        "Environmental Science",
-        "Agricultural and Biological Sciences"
-      ],
-      "cobertura": "2009 - 2026",
-      "citeScore": "5.4",
-      "sitioWeb": "https://link.springer.com/journal/12665/updates/27838270",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19400158519",
-      "id": 16,
-      "categorias_scopus": [
-        {
-          "Categoria": "Earth and Planetary Sciences",
-          "Subcategoria": "Geology",
-          "Percentil": "83",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Earth and Planetary Sciences",
-          "Subcategoria": "Earth-Surface Processes",
-          "Percentil": "80",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Agricultural and Biological Sciences",
-          "Subcategoria": "Soil Science",
-          "Percentil": "72",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Environmental Science",
-          "Subcategoria": "Water Science and Technology",
-          "Percentil": "71",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Environmental Science",
-          "Subcategoria": "Pollution",
-          "Percentil": "62",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Environmental Science",
-          "Subcategoria": "Global and Planetary Change",
-          "Percentil": "54",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Environmental Science",
-          "Subcategoria": "Environmental Chemistry",
-          "Percentil": "53",
-          "Cuartil": "Q2"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1lx95DXqsmCqIjo5q3_ty0fUw0sT0HqTb/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "30/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Sostenibilidad y cambio climático",
-          "Sublinea": "Gestión sostenible de recursos",
-          "Origen_Scopus": "Agricultural and Biological Sciences > Soil Science"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Ciudades inteligentes y sostenibles",
-          "Sublinea": "Gestión inteligente de recursos",
-          "Origen_Scopus": "Environmental Science > Water Science and Technology"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Tecnología y ecosistemas",
-          "Sublinea": "Tecnologías limpias",
-          "Origen_Scopus": "Environmental Science > Pollution"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Sostenibilidad y cambio climático",
-          "Sublinea": "Adaptación al cambio climático",
-          "Origen_Scopus": "Environmental Science > Global and Planetary Change"
-        }
-      ],
-      "enfoque": "Sostenibilidad y cambio climático"
-    },
-    {
-      "journal": "Information Processing in Agriculture",
-      "issn": "2097-0153",
-      "eissn": "2214-3173",
-      "publisher": "China Agricultural University",
-      "disciplinas": [
-        "Agricultural and Biological Sciences",
-        "Computer Science"
-      ],
-      "cobertura": "2014 - 2026",
-      "citeScore": "21.1",
-      "sitioWeb": "https://www.sciencedirect.com/journal/information-processing-in-agriculture",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100804573",
-      "id": 17,
-      "categorias_scopus": [
-        {
-          "Categoria": "Agricultural and Biological Sciences",
-          "Subcategoria": "Animal Science and Zoology",
-          "Percentil": "99",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Agricultural and Biological Sciences",
-          "Subcategoria": "Agronomy and Crop Science",
-          "Percentil": "99",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Agricultural and Biological Sciences",
-          "Subcategoria": "Aquatic Science",
-          "Percentil": "99",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Agricultural and Biological Sciences",
-          "Subcategoria": "Forestry",
-          "Percentil": "99",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Computer Science",
-          "Subcategoria": "Computer Science Applications",
-          "Percentil": "97",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1MwMSzGZJCbk8RLAP2xR3VC6hHTaLLdv0/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "30/03/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Tecnología y ecosistemas",
-          "Sublinea": "Biodiversidad y conservación",
-          "Origen_Scopus": "Agricultural and Biological Sciences > Animal Science and Zoology"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Sostenibilidad y cambio climático",
-          "Sublinea": "Gestión sostenible de recursos",
-          "Origen_Scopus": "Agricultural and Biological Sciences > Agronomy and Crop Science"
-        },
-        {
-          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-          "Linea": "Transformación digital",
-          "Sublinea": "Tecnologías emergentes",
-          "Origen_Scopus": "Computer Science > Computer Science Applications"
-        }
-      ],
-      "enfoque": "Tecnología y ecosistemas"
-    },
-    {
-      "journal": "ACS Sustainable Chemistry and Engineering",
-      "issn": "",
-      "eissn": "2168-0485",
-      "publisher": "American Chemical Society",
-      "disciplinas": [
-        "Chemistry",
-        "Environmental Science",
-        "Chemical Engineering",
-        "Energy"
-      ],
-      "cobertura": "2013 - 2026",
-      "citeScore": "12.0",
-      "sitioWeb": "https://pubs.acs.org/page/ascecg/about.html",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100248891",
-      "id": 18,
-      "categorias_scopus": [
-        {
-          "Categoria": "Chemical Engineering",
-          "Subcategoria": "General Chemical Engineering",
-          "Percentil": "90",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Chemistry",
-          "Subcategoria": "General Chemistry",
-          "Percentil": "88",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Environmental Science",
-          "Subcategoria": "Environmental Chemistry",
-          "Percentil": "83",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Energy",
-          "Subcategoria": "Renewable Energy, Sustainability and the Environment",
-          "Percentil": "82",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1vFuzDmxcgA01xiWliI5ZPR0kj3skdtlv/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "6/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Tecnología y ecosistemas",
-          "Sublinea": "Tecnologías limpias",
-          "Origen_Scopus": "Chemical Engineering > General Chemical Engineering"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Sostenibilidad y cambio climático",
-          "Sublinea": "Energías renovables",
-          "Origen_Scopus": "Energy > Renewable Energy, Sustainability and the Environment"
-        }
-      ],
-      "enfoque": "Tecnología y ecosistemas"
-    },
-    {
-      "journal": "Sustainable Materials and Technologies",
-      "issn": "2214-9929",
-      "eissn": "2214-9937",
-      "publisher": "Elsevier",
-      "disciplinas": [
-        "Energy",
-        "Engineering",
-        "Environmental Science",
-        "Materials Science"
-      ],
-      "cobertura": "2014 - 2026",
-      "citeScore": "12.4",
-      "sitioWeb": "https://www.sciencedirect.com/journal/sustainable-materials-and-technologies",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100442376",
-      "id": 19,
-      "categorias_scopus": [
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Industrial and Manufacturing Engineering",
-          "Percentil": "91",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Materials Science",
-          "Subcategoria": "General Materials Science",
-          "Percentil": "88",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Environmental Science",
-          "Subcategoria": "Waste Management and Disposal",
-          "Percentil": "85",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Energy",
-          "Subcategoria": "Renewable Energy, Sustainability and the Environment",
-          "Percentil": "83",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1EYpY0FIlRaddKdTiXMkGWbUpD_LFoDhD/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "6/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Tecnología y ecosistemas",
-          "Sublinea": "Tecnologías limpias",
-          "Origen_Scopus": "Engineering > Industrial and Manufacturing Engineering"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Tecnología y ecosistemas",
-          "Sublinea": "Materiales avanzados",
-          "Origen_Scopus": "Materials Science > General Materials Science"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Tecnología y ecosistemas",
-          "Sublinea": "Gestión de residuos",
-          "Origen_Scopus": "Environmental Science > Waste Management and Disposal"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Sostenibilidad y cambio climático",
-          "Sublinea": "Energías renovables",
-          "Origen_Scopus": "Energy > Renewable Energy, Sustainability and the Environment"
-        }
-      ],
-      "enfoque": "Tecnología y ecosistemas"
-    },
-    {
-      "journal": "Appetite",
-      "issn": "0195-6663",
-      "eissn": "1095-8304",
-      "publisher": "Academic Press",
-      "disciplinas": [
-        "Psychology",
-        "Nursing"
-      ],
-      "cobertura": "1970 - 1970",
-      "citeScore": "7.7",
-      "sitioWeb": "https://www.sciencedirect.com/journal/appetite",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=29994",
-      "id": 20,
-      "categorias_scopus": [
-        {
-          "Categoria": "Psychology",
-          "Subcategoria": "General Psychology",
-          "Percentil": "88",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Nursing",
-          "Subcategoria": "Nutrition and Dietetics",
-          "Percentil": "83",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/16RqbjLNT4hoRXMn5di7bL2FHoaemsHsH/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "7/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Salud mental y bienestar",
-          "Origen_Scopus": "Psychology > General Psychology"
-        }
-      ],
-      "enfoque": "Bienestar y desarrollo humano"
-    },
-    {
-      "journal": "Eating Behaviors",
-      "issn": "1471-0153",
-      "eissn": "1873-7358",
-      "publisher": "Elsevier",
-      "disciplinas": [
-        "Medicine",
-        "Psychology"
-      ],
-      "cobertura": "2000 - 2026",
-      "citeScore": "4.3",
-      "sitioWeb": "https://www.sciencedirect.com/journal/eating-behaviors",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=13545",
-      "id": 21,
-      "categorias_scopus": [
-        {
-          "Categoria": "Psychology",
-          "Subcategoria": "Clinical Psychology",
-          "Percentil": "68",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Medicine",
-          "Subcategoria": "Psychiatry and Mental health",
-          "Percentil": "61",
-          "Cuartil": "Q2"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1BGo8BUR8JSP_gjgLeEwxaCiyt_v83cj3/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "7/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Salud mental y bienestar",
-          "Origen_Scopus": "Psychology > Clinical Psychology"
-        }
-      ],
-      "enfoque": "Bienestar y desarrollo humano"
-    },
-    {
-      "journal": "Food, Culture and Society",
-      "issn": "1552-8014",
-      "eissn": "1751-7443",
-      "publisher": "Taylor & Francis",
-      "disciplinas": [
-        "Agricultural and Biological Sciences",
-        "Psychology",
-        "Social Sciences"
-      ],
-      "cobertura": "2008 - 2026",
-      "citeScore": "3.6",
-      "sitioWeb": "https://www.tandfonline.com/journals/rffc20",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=5700165569",
-      "id": 22,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Cultural Studies",
-          "Percentil": "93",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Psychology",
-          "Subcategoria": "Social Psychology",
-          "Percentil": "58",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Agricultural and Biological Sciences",
-          "Subcategoria": "Food Science",
-          "Percentil": "53",
-          "Cuartil": "Q2"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1XvVTuKMoCNkyV-xHjefw-1zec6S0nezR/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "7/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Comunicación y cultura digital",
-          "Sublinea": "Comunicación intercultural",
-          "Origen_Scopus": "Social Sciences > Cultural Studies"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Comportamiento social",
-          "Origen_Scopus": "Psychology > Social Psychology"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Sostenibilidad y cambio climático",
-          "Sublinea": "Economía circular",
-          "Origen_Scopus": "Agricultural and Biological Sciences > Food Science"
-        }
-      ],
-      "enfoque": "Comunicación y cultura digital"
-    },
-    {
-      "journal": "Psicoperspectivas",
-      "issn": "",
-      "eissn": "0718-6924",
-      "publisher": "Pontificia Universidad Catolica de Valparaiso",
-      "disciplinas": [
-        "Psychology",
-        "Social Sciences"
-      ],
-      "cobertura": "2006 - 2026",
-      "citeScore": "1.9",
-      "sitioWeb": "https://www.psicoperspectivas.cl/index.php/psicoperspectivas",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100793178",
-      "id": 23,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "General Social Sciences",
-          "Percentil": "57",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Psychology",
-          "Subcategoria": "General Psychology",
-          "Percentil": "37",
-          "Cuartil": "Q3"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1dGYFLJTB9p830HWt8AGybH6uNfqKuvfa/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "7/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Comportamiento social",
-          "Origen_Scopus": "Social Sciences > General Social Sciences"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Salud mental y bienestar",
-          "Origen_Scopus": "Psychology > General Psychology"
-        }
-      ],
-      "enfoque": "Bienestar y desarrollo humano"
-    },
-    {
-      "journal": "Salud Publica de Mexico",
-      "issn": "0036-3634",
-      "eissn": "1606-7916",
-      "publisher": "Instituto Nacional de Salud Pública",
-      "disciplinas": [
-        "Medicine"
-      ],
-      "cobertura": "1961 - 2026",
-      "citeScore": "4.5",
-      "sitioWeb": "https://saludpublica.mx/index.php/spm",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19317",
-      "id": 24,
-      "categorias_scopus": [
-        {
-          "Categoria": "Medicine",
-          "Subcategoria": "Public Health, Environmental and Occupational Health",
-          "Percentil": "71",
-          "Cuartil": "Q2"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1JNg0EZEqfXfK_qEDNKElHt1HAjdwON1x/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "8/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Salud mental y bienestar",
-          "Origen_Scopus": "Medicine > Public Health, Environmental and Occupational Health"
-        }
-      ],
-      "enfoque": "Bienestar y desarrollo humano"
-    },
-    {
-      "journal": "Scientific Reports",
-      "issn": "",
-      "eissn": "2045-2322",
-      "publisher": "Springer Nature",
-      "disciplinas": [
-        "Multidisciplinary"
-      ],
-      "cobertura": "2011 - 2026",
-      "citeScore": "6.4",
-      "sitioWeb": "https://www.nature.com/srep/",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100200805",
-      "id": 25,
-      "categorias_scopus": [
-        {
-          "Categoria": "Multidisciplinary",
-          "Subcategoria": "Multidisciplinary",
-          "Percentil": "87",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1XGAQDnu6FU3bkNd-OJY36Fl5qW1DtPM4/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "9/04/2026",
-      "clasificacion_ulima": [],
-      "enfoque": "General"
-    },
-    {
-      "journal": "Investigaciones Historicas",
-      "issn": "0210-9425",
-      "eissn": "2530-6472",
-      "publisher": "Universidad de Valladolid",
-      "disciplinas": [
-        "Arts and Humanities"
-      ],
-      "cobertura": "2013 - 2015",
-      "citeScore": "0.3",
-      "sitioWeb": "https://revistas.uva.es/index.php/invehisto/es",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100283375",
-      "id": 26,
-      "categorias_scopus": [
-        {
-          "Categoria": "Arts and Humanities",
-          "Subcategoria": "History",
-          "Percentil": "36",
-          "Cuartil": "Q3"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1YlnfVGW7RvLXyA85J45EVPalzbAyFobS/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "10/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Comunicación y cultura digital",
-          "Sublinea": "Comunicación intercultural",
-          "Origen_Scopus": "Arts and Humanities > History"
-        }
-      ],
-      "enfoque": "Comunicación y cultura digital"
-    },
-    {
-      "journal": "Computer Communications",
-      "issn": "0140-3664",
-      "eissn": "1873-703X",
-      "publisher": "Elsevier",
-      "disciplinas": [
-        "Computer Science"
-      ],
-      "cobertura": "1978 - 2026",
-      "citeScore": "12.1",
-      "sitioWeb": "https://www.sciencedirect.com/journal/computer-communications",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=13681",
-      "id": 27,
-      "categorias_scopus": [
-        {
-          "Categoria": "Computer Science",
-          "Subcategoria": "Computer Networks and Communications",
-          "Percentil": "91",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/18_Rqs0em9O-epmt-xNwOjNmKwY2NwbXE/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "10/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-          "Linea": "Transformación digital",
-          "Sublinea": "Internet de las cosas (IoT)",
-          "Origen_Scopus": "Computer Science > Computer Networks and Communications"
-        }
-      ],
-      "enfoque": "Transformación digital"
-    },
-    {
-      "journal": "Structures",
-      "issn": "",
-      "eissn": "2352-0124",
-      "publisher": "Elsevier",
-      "disciplinas": [
-        "Engineering"
-      ],
-      "cobertura": "2015 - 2026",
-      "citeScore": "7.1",
-      "sitioWeb": "https://www.sciencedirect.com/journal/structures",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100372467",
-      "id": 28,
-      "categorias_scopus": [
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Architecture",
-          "Percentil": "95",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Safety, Risk, Reliability and Quality",
-          "Percentil": "86",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Building and Construction",
-          "Percentil": "82",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Civil and Structural Engineering",
-          "Percentil": "82",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1BMP5AaGU0jhz6k8CUtH5JJF4cEIvq3Th/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "10/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Ciudades inteligentes y sostenibles",
-          "Sublinea": "Urbanismo sostenible",
-          "Origen_Scopus": "Engineering > Architecture"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Ciudades inteligentes y sostenibles",
-          "Sublinea": "Infraestructura sostenible",
-          "Origen_Scopus": "Engineering > Safety, Risk, Reliability and Quality"
-        }
-      ],
-      "enfoque": "Ciudades inteligentes y sostenibles"
-    },
-    {
-      "journal": "Journal of Building Engineering",
-      "issn": "",
-      "eissn": "2352-7102",
-      "publisher": "Elsevier",
-      "disciplinas": [
-        "Engineering"
-      ],
-      "cobertura": "2015 - 2026",
-      "citeScore": "13.1",
-      "sitioWeb": "https://www.sciencedirect.com/journal/journal-of-building-engineering",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100389518",
-      "id": 29,
-      "categorias_scopus": [
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Architecture",
-          "Percentil": "99",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Safety, Risk, Reliability and Quality",
-          "Percentil": "97",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Civil and Structural Engineering",
-          "Percentil": "95",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Mechanics of Materials",
-          "Percentil": "93",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Building and Construction",
-          "Percentil": "93",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1wB87AddDoE6R7WOsbCbYXHWeB_MZesal/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "10/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Ciudades inteligentes y sostenibles",
-          "Sublinea": "Urbanismo sostenible",
-          "Origen_Scopus": "Engineering > Architecture"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Ciudades inteligentes y sostenibles",
-          "Sublinea": "Infraestructura sostenible",
-          "Origen_Scopus": "Engineering > Safety, Risk, Reliability and Quality"
-        },
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Tecnología y ecosistemas",
-          "Sublinea": "Materiales avanzados",
-          "Origen_Scopus": "Engineering > Mechanics of Materials"
-        }
-      ],
-      "enfoque": "Ciudades inteligentes y sostenibles"
-    },
-    {
-      "journal": "Journal of Ecological Engineering",
-      "issn": "",
-      "eissn": "2299-8993",
-      "publisher": "Polskie Towarzystwo Inzynierii Ekologicznej (PTIE)",
-      "disciplinas": [
-        "Agricultural and Biological Sciences",
-        "Environmental Science"
-      ],
-      "cobertura": "2013 - 2026",
-      "citeScore": "4.0",
-      "sitioWeb": "https://www.jeeng.net/",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100246533",
-      "id": 30,
-      "categorias_scopus": [
-        {
-          "Categoria": "Agricultural and Biological Sciences",
-          "Subcategoria": "Ecology, Evolution, Behavior and Systematics",
-          "Percentil": "73",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Environmental Science",
-          "Subcategoria": "General Environmental Science",
-          "Percentil": "60",
-          "Cuartil": "Q2"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/10NRGg9IEs4_gEDjUAwIdWnxaijjharL3/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "13/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Sostenibilidad y cambio climático",
-          "Sublinea": "Gestión sostenible de recursos",
-          "Origen_Scopus": "Agricultural and Biological Sciences > Ecology, Evolution, Behavior and Systematics"
-        }
-      ],
-      "enfoque": "Sostenibilidad y cambio climático"
-    },
-    {
-      "journal": "Forensic Science International: Digital Investigation",
-      "issn": "2666-2825",
-      "eissn": "2666-2817",
-      "publisher": "Elsevier",
-      "disciplinas": [
-        "Medicine",
-        "Computer Science",
-        "Health Professions",
-        "Social Sciences"
-      ],
-      "cobertura": "2020 - 2026",
-      "citeScore": "6.7",
-      "sitioWeb": "https://www.sciencedirect.com/journal/forensic-science-international-digital-investigation",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101032719",
-      "id": 31,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Law",
-          "Percentil": "96",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Medicine",
-          "Subcategoria": "Pathology and Forensic Medicine",
-          "Percentil": "88",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Health Professions",
-          "Subcategoria": "Medical Laboratory Technology",
-          "Percentil": "86",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Computer Science",
-          "Subcategoria": "Computer Science Applications",
-          "Percentil": "74",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Computer Science",
-          "Subcategoria": "Information Systems",
-          "Percentil": "73",
-          "Cuartil": "Q2"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1ut3-NxSMI5tIlr_NE4CtlpxPiaUuLvQ6/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "13/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Ética, gobernanza y responsabilidad social",
-          "Sublinea": "Derechos humanos y tecnología",
-          "Origen_Scopus": "Social Sciences > Law"
-        },
-        {
-          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-          "Linea": "Transformación digital",
-          "Sublinea": "Tecnologías emergentes",
-          "Origen_Scopus": "Computer Science > Computer Science Applications"
-        }
-      ],
-      "enfoque": "Ética, gobernanza y responsabilidad social"
-    },
-    {
-      "journal": "Ricerche di Matematica",
-      "issn": "0035-5038",
-      "eissn": "1827-3491",
-      "publisher": "Springer",
-      "disciplinas": [
-        "Mathematics"
-      ],
-      "cobertura": "2007 - 2026",
-      "citeScore": "2.4",
-      "sitioWeb": "https://link.springer.com/journal/11587",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=8000153103",
-      "id": 32,
-      "categorias_scopus": [
-        {
-          "Categoria": "Mathematics",
-          "Subcategoria": "General Mathematics",
-          "Percentil": "76",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Mathematics",
-          "Subcategoria": "Applied Mathematics",
-          "Percentil": "53",
-          "Cuartil": "Q2"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/10aOwfw9LksDsRmtlZq0Mc4cXq3Iz2fSw/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "13/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-          "Linea": "Inteligencia artificial y computación avanzada",
-          "Sublinea": "Machine learning y deep learning",
-          "Origen_Scopus": "Mathematics > General Mathematics"
-        }
-      ],
-      "enfoque": "Inteligencia artificial y computación avanzada"
-    },
-    {
-      "journal": "REICE. Revista Iberoamericana Sobre Calidad, Eficacia y Cambio en Educacion",
-      "issn": "",
-      "eissn": "1696-4713",
-      "publisher": "Universidad Autonoma de Madrid",
-      "disciplinas": [
-        "Social Sciences"
-      ],
-      "cobertura": "2003 - 2026",
-      "citeScore": "3.7",
-      "sitioWeb": "https://revistas.uam.es/reice/index",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100897232",
-      "id": 33,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Cultural Studies",
-          "Percentil": "93",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Sociology and Political Science",
-          "Percentil": "78",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Education",
-          "Percentil": "70",
-          "Cuartil": "Q2"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1c5dX0LxNN9mBjtdfhKxzFt36GQ7ejBVA/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "14/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Comunicación y cultura digital",
-          "Sublinea": "Comunicación intercultural",
-          "Origen_Scopus": "Social Sciences > Cultural Studies"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Comportamiento social",
-          "Origen_Scopus": "Social Sciences > Sociology and Political Science"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
-          "Origen_Scopus": "Social Sciences > Education"
-        }
-      ],
-      "enfoque": "Comunicación y cultura digital"
-    },
-    {
-      "journal": "British Food Journal",
-      "issn": "0007-070X",
-      "eissn": "1758-4108",
-      "publisher": "Emerald Publishing",
-      "disciplinas": [
-        "Agricultural and Biological Sciences"
-      ],
-      "cobertura": "1899 - 2026",
-      "citeScore": "9.3",
-      "sitioWeb": "https://www.emeraldgrouppublishing.com/journal/bfj",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=144664",
-      "id": 34,
-      "categorias_scopus": [
-        {
-          "Categoria": "Agricultural and Biological Sciences",
-          "Subcategoria": "Food Science",
-          "Percentil": "87",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1T3jZBF3-yCqvM0_WEhafULHHvrk29zZw/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "14/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Sostenibilidad y cambio climático",
-          "Sublinea": "Economía circular",
-          "Origen_Scopus": "Agricultural and Biological Sciences > Food Science"
-        }
-      ],
-      "enfoque": "Sostenibilidad y cambio climático"
-    },
-    {
-      "journal": "International Review of Financial Analysis",
-      "issn": "1057-5219",
-      "eissn": "1057-5219",
-      "publisher": "Elsevier",
-      "disciplinas": [
-        "Economics, Econometrics and Finance"
-      ],
-      "cobertura": "1992 - 2026",
-      "citeScore": "13.8",
-      "sitioWeb": "https://www.sciencedirect.com/journal/international-review-of-financial-analysis",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=17385",
-      "id": 35,
-      "categorias_scopus": [
-        {
-          "Categoria": "Economics, Econometrics and Finance",
-          "Subcategoria": "Finance",
-          "Percentil": "96",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Economics, Econometrics and Finance",
-          "Subcategoria": "Economics and Econometrics",
-          "Percentil": "95",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1Hg3pi1Fu9KzHU5HPvYkJcgllZQKu2BK-/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "14/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-          "Linea": "Economía digital",
-          "Sublinea": "Fintech y servicios financieros",
-          "Origen_Scopus": "Economics, Econometrics and Finance > Finance"
-        },
-        {
-          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-          "Linea": "Economía digital",
-          "Sublinea": "Análisis de datos económicos",
-          "Origen_Scopus": "Economics, Econometrics and Finance > Economics and Econometrics"
-        }
-      ],
-      "enfoque": "Economía digital"
-    },
-    {
-      "journal": "Revista Mediterranea de Comunicacion",
-      "issn": "2530-0024",
-      "eissn": "1989-872X",
-      "publisher": "Universidad de Alicante",
-      "disciplinas": [
-        "Social Sciences"
-      ],
-      "cobertura": "2020 - 2026",
-      "citeScore": "2.9",
-      "sitioWeb": "https://www.mediterranea-comunicacion.org/",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101041529",
-      "id": 36,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Cultural Studies",
-          "Percentil": "91",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Communication",
-          "Percentil": "68",
-          "Cuartil": "Q2"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1cvb4OEn9CnKThM8bBoKMZxUEihTMxK7z/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "14/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Comunicación y cultura digital",
-          "Sublinea": "Comunicación intercultural",
-          "Origen_Scopus": "Social Sciences > Cultural Studies"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Comunicación y cultura digital",
-          "Sublinea": "Medios digitales y sociedad",
-          "Origen_Scopus": "Social Sciences > Communication"
-        }
-      ],
-      "enfoque": "Comunicación y cultura digital"
-    },
-    {
-      "journal": "Communication Studies",
-      "issn": "1051-0974",
-      "eissn": "1745-1035",
-      "publisher": "Taylor & Francis",
-      "disciplinas": [
-        "Social Sciences"
-      ],
-      "cobertura": "1989 - 2026",
-      "citeScore": "2.5",
-      "sitioWeb": "https://www.tandfonline.com/journals/rcst20",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=5600153399",
-      "id": 37,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Communication",
-          "Percentil": "63",
-          "Cuartil": "Q2"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1GH_0bF6lvH6X9efnzuJoT4IqF7x3ER7Z/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "14/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Comunicación y cultura digital",
-          "Sublinea": "Medios digitales y sociedad",
-          "Origen_Scopus": "Social Sciences > Communication"
-        }
-      ],
-      "enfoque": "Comunicación y cultura digital"
-    },
-    {
-      "journal": "South African Journal of Industrial Engineering",
-      "issn": "1012-277X",
-      "eissn": "2224-7890",
-      "publisher": "South African Institute of Industrial Engineering",
-      "disciplinas": [
-        "Engineering"
-      ],
-      "cobertura": "2008 - 2026",
-      "citeScore": "1.6",
-      "sitioWeb": "https://sajie.journals.ac.za/pub/index",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19700173182",
-      "id": 38,
-      "categorias_scopus": [
-        {
-          "Categoria": "Engineering",
-          "Subcategoria": "Industrial and Manufacturing Engineering",
-          "Percentil": "38",
-          "Cuartil": "Q3"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1A2XQ2EsErumSbNG40PzviWldWMQ0OJe4/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "14/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-          "Linea": "Tecnología y ecosistemas",
-          "Sublinea": "Tecnologías limpias",
-          "Origen_Scopus": "Engineering > Industrial and Manufacturing Engineering"
-        }
-      ],
-      "enfoque": "Tecnología y ecosistemas"
-    },
-    {
-      "journal": "Psychological Methods",
-      "issn": "1082-989X",
-      "eissn": "1939-1463",
-      "publisher": "American Psychological Association",
-      "disciplinas": [
-        "Psychology"
-      ],
-      "cobertura": "1996 - 2026",
-      "citeScore": "23.4",
-      "sitioWeb": "https://www.apa.org/pubs/journals/met/",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=13461",
-      "id": 39,
-      "categorias_scopus": [
-        {
-          "Categoria": "Psychology",
-          "Subcategoria": "Psychology (miscellaneous)",
-          "Percentil": "98",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1sG8oSyTYOPywbF0jeIQAoptr3n47tWNV/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "14/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Salud mental y bienestar",
-          "Origen_Scopus": "Psychology > Psychology (miscellaneous)"
-        }
-      ],
-      "enfoque": "Bienestar y desarrollo humano"
-    },
-    {
-      "journal": "International Journal of Educational Technology in Higher Education",
-      "issn": "",
-      "eissn": "2365-9440",
-      "publisher": "Springer",
-      "disciplinas": [
-        "Social Sciences",
-        "Computer Science"
-      ],
-      "cobertura": "2016 - 2026",
-      "citeScore": "48.4",
-      "sitioWeb": "https://link.springer.com/journal/41239",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100466714",
-      "id": 40,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Education",
-          "Percentil": "99",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Computer Science",
-          "Subcategoria": "Computer Science Applications",
-          "Percentil": "99",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/13fWQEpI732dZbcNdo94qDCTIo2GXNBR7/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "15/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
-          "Origen_Scopus": "Social Sciences > Education"
-        },
-        {
-          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-          "Linea": "Transformación digital",
-          "Sublinea": "Tecnologías emergentes",
-          "Origen_Scopus": "Computer Science > Computer Science Applications"
-        }
-      ],
-      "enfoque": "Bienestar y desarrollo humano"
-    },
     {
       "journal": "Ecological Informatics",
       "issn": "1574-9541",
@@ -2058,7 +23,7 @@
       "citeScore": "13.2",
       "sitioWeb": "https://www.sciencedirect.com/journal/ecological-informatics",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=3100147401",
-      "id": 41,
+      "id": 1,
       "categorias_scopus": [
         {
           "Categoria": "Mathematics",
@@ -2135,168 +100,6 @@
       "enfoque": "Inteligencia artificial y computación avanzada"
     },
     {
-      "journal": "Revista de Derecho",
-      "issn": "0716-9132",
-      "eissn": "0718-0950",
-      "publisher": "Universidad Austral de Chile",
-      "disciplinas": [
-        "Social Sciences"
-      ],
-      "cobertura": "2006 - 2025",
-      "citeScore": "1.0",
-      "sitioWeb": "http://revistas.uach.cl/index.php/revider/index",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=5000160302",
-      "id": 42,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Law",
-          "Percentil": "44",
-          "Cuartil": "Q3"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1jvhLKIn-bpXNV1PHE-uJkIlYCjTcCJuZ/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "15/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Ética, gobernanza y responsabilidad social",
-          "Sublinea": "Derechos humanos y tecnología",
-          "Origen_Scopus": "Social Sciences > Law"
-        }
-      ],
-      "enfoque": "Ética, gobernanza y responsabilidad social"
-    },
-    {
-      "journal": "Civilistica.com",
-      "issn": "",
-      "eissn": "2316-8374",
-      "publisher": "Revista Civilistica",
-      "disciplinas": [
-        "Social Sciences"
-      ],
-      "cobertura": "2017 - 2026",
-      "citeScore": "0.2",
-      "sitioWeb": "https://civilistica.emnuvens.com.br/redc/index",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100831020",
-      "id": 43,
-      "categorias_scopus": [
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Law",
-          "Percentil": "7",
-          "Cuartil": "Q4"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1PUXxOTkNepgz9Cqe9JxVhGqj6N5XjLtU/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "15/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Ética, gobernanza y responsabilidad social",
-          "Sublinea": "Derechos humanos y tecnología",
-          "Origen_Scopus": "Social Sciences > Law"
-        }
-      ],
-      "enfoque": "Ética, gobernanza y responsabilidad social"
-    },
-    {
-      "journal": "Journal of Moral Education",
-      "issn": "0305-7240",
-      "eissn": "1465-3877",
-      "publisher": "Routledge",
-      "disciplinas": [
-        "Social Sciences",
-        "Arts and Humanities"
-      ],
-      "cobertura": "1971 - 2026",
-      "citeScore": "5.1",
-      "sitioWeb": "https://www.tandfonline.com/journals/cjme20",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=24810",
-      "id": 44,
-      "categorias_scopus": [
-        {
-          "Categoria": "Arts and Humanities",
-          "Subcategoria": "Religious studies",
-          "Percentil": "98",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Social Sciences",
-          "Subcategoria": "Education",
-          "Percentil": "81",
-          "Cuartil": "Q1"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/11HgA8xeI-t2l5QGoYoMQAWH43Qv968JG/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "16/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
-          "Origen_Scopus": "Social Sciences > Education"
-        }
-      ],
-      "enfoque": "Bienestar y desarrollo humano"
-    },
-    {
-      "journal": "Psycho-Oncology",
-      "issn": "1057-9249",
-      "eissn": "1099-1611",
-      "publisher": "John Wiley and Sons",
-      "disciplinas": [
-        "Psychology",
-        "Medicine"
-      ],
-      "cobertura": "1992 - 2026",
-      "citeScore": "5.8",
-      "sitioWeb": "https://onlinelibrary.wiley.com/journal/10991611",
-      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=13069",
-      "id": 45,
-      "categorias_scopus": [
-        {
-          "Categoria": "Psychology",
-          "Subcategoria": "Experimental and Cognitive Psychology",
-          "Percentil": "86",
-          "Cuartil": "Q1"
-        },
-        {
-          "Categoria": "Medicine",
-          "Subcategoria": "Psychiatry and Mental health",
-          "Percentil": "74",
-          "Cuartil": "Q2"
-        },
-        {
-          "Categoria": "Medicine",
-          "Subcategoria": "Oncology",
-          "Percentil": "72",
-          "Cuartil": "Q2"
-        }
-      ],
-      "enlace_informe": "https://drive.google.com/file/d/1dI7x6rQuZr-w_RN4s9-G-pWTKEIqudEb/view?usp=drivesdk",
-      "tipo": "Research Journal",
-      "fecha_emision": "16/04/2026",
-      "clasificacion_ulima": [
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
-          "Origen_Scopus": "Psychology > Experimental and Cognitive Psychology"
-        },
-        {
-          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
-          "Linea": "Bienestar y desarrollo humano",
-          "Sublinea": "Salud mental y bienestar",
-          "Origen_Scopus": "Medicine > Psychiatry and Mental health"
-        }
-      ],
-      "enfoque": "Bienestar y desarrollo humano"
-    },
-    {
       "journal": "Large-Scale Assessments in Education",
       "issn": "",
       "eissn": "2196-0739",
@@ -2308,7 +111,7 @@
       "citeScore": "4.9",
       "sitioWeb": "https://link.springer.com/journal/40536",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100901162",
-      "id": 46,
+      "id": 2,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -2344,7 +147,7 @@
       "citeScore": "5.8",
       "sitioWeb": "https://www.sciencedirect.com/journal/space-policy",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=12915",
-      "id": 47,
+      "id": 3,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -2409,7 +212,7 @@
       "citeScore": "0.1",
       "sitioWeb": "https://ejournals.eu/en/journal/romanica-cracoviensia",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100386856",
-      "id": 48,
+      "id": 4,
       "categorias_scopus": [
         {
           "Categoria": "Arts and Humanities",
@@ -2463,7 +266,7 @@
       "citeScore": "9.3",
       "sitioWeb": "https://ieeeaccess.ieee.org/",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100374601",
-      "id": 49,
+      "id": 5,
       "categorias_scopus": [
         {
           "Categoria": "Engineering",
@@ -2521,7 +324,7 @@
       "citeScore": "0.7",
       "sitioWeb": "",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100199539",
-      "id": 50,
+      "id": 6,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -2567,7 +370,7 @@
       "citeScore": "6.3",
       "sitioWeb": "https://www.sciencedirect.com/journal/international-journal-of-gastronomy-and-food-science",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100789945",
-      "id": 51,
+      "id": 7,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -2615,7 +418,7 @@
       "citeScore": "29.1",
       "sitioWeb": "https://www.sciencedirect.com/journal/artificial-intelligence-in-agriculture",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101042196",
-      "id": 52,
+      "id": 8,
       "categorias_scopus": [
         {
           "Categoria": "Agricultural and Biological Sciences",
@@ -2691,7 +494,7 @@
       "citeScore": "5.7",
       "sitioWeb": "https://www.worldscientific.com/worldscinet/m3as",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=24598",
-      "id": 53,
+      "id": 9,
       "categorias_scopus": [
         {
           "Categoria": "Mathematics",
@@ -2732,7 +535,7 @@
       "citeScore": "8.6",
       "sitioWeb": "https://www.sciencedirect.com/journal/smart-agricultural-technology",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101111783",
-      "id": 54,
+      "id": 10,
       "categorias_scopus": [
         {
           "Categoria": "Agricultural and Biological Sciences",
@@ -2784,7 +587,7 @@
       "citeScore": "1.8",
       "sitioWeb": "https://acta.inpa.gov.br/",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=18748",
-      "id": 55,
+      "id": 11,
       "categorias_scopus": [
         {
           "Categoria": "Agricultural and Biological Sciences",
@@ -2818,7 +621,7 @@
       "citeScore": "10.9",
       "sitioWeb": "https://journals.lww.com/cmj/pages/default.aspx",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=29225",
-      "id": 56,
+      "id": 12,
       "categorias_scopus": [
         {
           "Categoria": "Medicine",
@@ -2852,7 +655,7 @@
       "citeScore": "4.4",
       "sitioWeb": "https://journals.sagepub.com/home/SMO",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100932751",
-      "id": 57,
+      "id": 13,
       "categorias_scopus": [
         {
           "Categoria": "Medicine",
@@ -2887,7 +690,7 @@
       "citeScore": "4.6",
       "sitioWeb": "http://www.jbr-pub.org.cn/",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19400158823",
-      "id": 58,
+      "id": 14,
       "categorias_scopus": [
         {
           "Categoria": "Medicine",
@@ -2927,7 +730,7 @@
       "citeScore": "5.7",
       "sitioWeb": "https://revistas.uned.es/index.php/educacionXX1/index",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19400156819",
-      "id": 59,
+      "id": 15,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -2961,7 +764,7 @@
       "citeScore": "1.2",
       "sitioWeb": "https://www.cys.cic.ipn.mx/index.php/CyS",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100223167",
-      "id": 60,
+      "id": 16,
       "categorias_scopus": [
         {
           "Categoria": "Computer Science",
@@ -2996,7 +799,7 @@
       "citeScore": "2.6",
       "sitioWeb": "https://reference-global.com/journal/IJCSS",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100224419",
-      "id": 61,
+      "id": 17,
       "categorias_scopus": [
         {
           "Categoria": "Computer Science",
@@ -3044,7 +847,7 @@
       "citeScore": "10.7",
       "sitioWeb": "https://www.sciencedirect.com/journal/applied-clay-science",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=24614",
-      "id": 62,
+      "id": 18,
       "categorias_scopus": [
         {
           "Categoria": "Earth and Planetary Sciences",
@@ -3102,7 +905,7 @@
       "citeScore": "0.3",
       "sitioWeb": "https://revistas.pj.gob.pe/revista/index.php/ropj",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101196447",
-      "id": 63,
+      "id": 19,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -3137,7 +940,7 @@
       "citeScore": "2.8",
       "sitioWeb": "https://cest.usp-pl.com/index.php/cest",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101267690",
-      "id": 64,
+      "id": 20,
       "categorias_scopus": [
         {
           "Categoria": "Engineering",
@@ -3190,7 +993,7 @@
       "citeScore": "7.6",
       "sitioWeb": "https://www.sciencedirect.com/journal/psychiatry-research",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=18729",
-      "id": 65,
+      "id": 21,
       "categorias_scopus": [
         {
           "Categoria": "Medicine",
@@ -3231,7 +1034,7 @@
       "citeScore": "9.2",
       "sitioWeb": "https://www.sciencedirect.com/journal/journal-of-affective-disorders",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=16245",
-      "id": 66,
+      "id": 22,
       "categorias_scopus": [
         {
           "Categoria": "Psychology",
@@ -3272,7 +1075,7 @@
       "citeScore": "4.8",
       "sitioWeb": "https://onlinelibrary.wiley.com/journal/1943278x",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=15313",
-      "id": 67,
+      "id": 23,
       "categorias_scopus": [
         {
           "Categoria": "Medicine",
@@ -3319,7 +1122,7 @@
       "citeScore": "2.4",
       "sitioWeb": "https://revistalatinoamericanadepsicologia.konradlorenz.edu.co/",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=14730",
-      "id": 68,
+      "id": 24,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -3366,7 +1169,7 @@
       "citeScore": "4.0",
       "sitioWeb": "https://journals.sagepub.com/home/jpa",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=12833",
-      "id": 69,
+      "id": 25,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -3419,7 +1222,7 @@
       "citeScore": "7.5",
       "sitioWeb": "https://link.springer.com/journal/13033",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19700166518",
-      "id": 70,
+      "id": 26,
       "categorias_scopus": [
         {
           "Categoria": "Nursing",
@@ -3471,7 +1274,7 @@
       "citeScore": "6.6",
       "sitioWeb": "https://link.springer.com/journal/12906",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100979268",
-      "id": 71,
+      "id": 27,
       "categorias_scopus": [
         {
           "Categoria": "Medicine",
@@ -3499,7 +1302,7 @@
       "citeScore": "7.8",
       "sitioWeb": "https://pubs.acs.org/journal/acsodf",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100828963",
-      "id": 72,
+      "id": 28,
       "categorias_scopus": [
         {
           "Categoria": "Chemistry",
@@ -3540,7 +1343,7 @@
       "citeScore": "8.7",
       "sitioWeb": "https://www.rsc.org/publishing/journals/rsc-advances",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100199840",
-      "id": 73,
+      "id": 29,
       "categorias_scopus": [
         {
           "Categoria": "Chemical Engineering",
@@ -3582,7 +1385,7 @@
       "citeScore": "4.7",
       "sitioWeb": "https://link.springer.com/journal/41062",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100888788",
-      "id": 74,
+      "id": 30,
       "categorias_scopus": [
         {
           "Categoria": "Engineering",
@@ -3647,7 +1450,7 @@
       "citeScore": "2.7",
       "sitioWeb": "https://www.sciencedirect.com/journal/next-materials",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101248691",
-      "id": 75,
+      "id": 31,
       "categorias_scopus": [
         {
           "Categoria": "Engineering",
@@ -3693,7 +1496,7 @@
       "citeScore": "1.2",
       "sitioWeb": "https://revistas.pucp.edu.pe/index.php/psicologia/index",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100469663",
-      "id": 76,
+      "id": 32,
       "categorias_scopus": [
         {
           "Categoria": "Psychology",
@@ -3727,7 +1530,7 @@
       "citeScore": "3.7",
       "sitioWeb": "https://journals.sagepub.com/home/JSE",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=11800154592",
-      "id": 77,
+      "id": 33,
       "categorias_scopus": [
         {
           "Categoria": "Economics, Econometrics and Finance",
@@ -3761,7 +1564,7 @@
       "citeScore": "12.4",
       "sitioWeb": "https://www.sciencedirect.com/journal/ain-shams-engineering-journal",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19700200705",
-      "id": 78,
+      "id": 34,
       "categorias_scopus": [
         {
           "Categoria": "Engineering",
@@ -3797,7 +1600,7 @@
       "citeScore": "4.1",
       "sitioWeb": "https://link.springer.com/journal/181",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=20642",
-      "id": 79,
+      "id": 35,
       "categorias_scopus": [
         {
           "Categoria": "Mathematics",
@@ -3861,7 +1664,7 @@
       "citeScore": "0.3",
       "sitioWeb": "https://revistas.javeriana.edu.co/index.php/signoypensamiento",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100316036",
-      "id": 80,
+      "id": 36,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -3908,7 +1711,7 @@
       "citeScore": "0.8",
       "sitioWeb": "https://revistas.uniandes.edu.co/index.php/dys/index",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=33459",
-      "id": 81,
+      "id": 37,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -3979,7 +1782,7 @@
       "citeScore": "6.2",
       "sitioWeb": "https://link.springer.com/journal/12649",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19600157918",
-      "id": 82,
+      "id": 38,
       "categorias_scopus": [
         {
           "Categoria": "Environmental Science",
@@ -4040,7 +1843,7 @@
       "citeScore": "4.6",
       "sitioWeb": "https://link.springer.com/journal/11581",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=145625",
-      "id": 83,
+      "id": 39,
       "categorias_scopus": [
         {
           "Categoria": "Engineering",
@@ -4106,7 +1909,7 @@
       "citeScore": "5.6",
       "sitioWeb": "https://link.springer.com/journal/10800",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=25194",
-      "id": 84,
+      "id": 40,
       "categorias_scopus": [
         {
           "Categoria": "Chemical Engineering",
@@ -4160,7 +1963,7 @@
       "citeScore": "7.2",
       "sitioWeb": "https://journals.sagepub.com/home/pus",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=22370",
-      "id": 85,
+      "id": 41,
       "categorias_scopus": [
         {
           "Categoria": "Arts and Humanities",
@@ -4219,7 +2022,7 @@
       "citeScore": "3.1",
       "sitioWeb": "https://vaep-rita.org/es/home-espanol/",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19700201532",
-      "id": 86,
+      "id": 42,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -4265,7 +2068,7 @@
       "citeScore": "3.4",
       "sitioWeb": "https://www.ojed.org/jis/index",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100455461",
-      "id": 87,
+      "id": 43,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -4299,7 +2102,7 @@
       "citeScore": "5.5",
       "sitioWeb": "https://online-journals.org/index.php/i-joe/index",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100906923",
-      "id": 88,
+      "id": 44,
       "categorias_scopus": [
         {
           "Categoria": "Engineering",
@@ -4345,7 +2148,7 @@
       "citeScore": "5.2",
       "sitioWeb": "https://www.tandfonline.com/journals/cjpi20",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=20329",
-      "id": 89,
+      "id": 45,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -4391,7 +2194,7 @@
       "citeScore": "8.2",
       "sitioWeb": "https://journals.sagepub.com/home/PSX",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=22890",
-      "id": 90,
+      "id": 46,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -4425,7 +2228,7 @@
       "citeScore": "3.5",
       "sitioWeb": "https://scholarworks.waldenu.edu/hlrc/",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100900271",
-      "id": 91,
+      "id": 47,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -4459,7 +2262,7 @@
       "citeScore": "4.3",
       "sitioWeb": "http://www.jotse.org",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100450131",
-      "id": 92,
+      "id": 48,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -4493,7 +2296,7 @@
       "citeScore": "6.5",
       "sitioWeb": "https://www.sciencedirect.com/journal/results-in-materials",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101081677",
-      "id": 93,
+      "id": 49,
       "categorias_scopus": [
         {
           "Categoria": "Materials Science",
@@ -4527,7 +2330,7 @@
       "citeScore": "0.5",
       "sitioWeb": "http://www.comunicacionymedios.uchile.cl/",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101105297",
-      "id": 94,
+      "id": 50,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -4573,7 +2376,7 @@
       "citeScore": "0.6",
       "sitioWeb": "https://publi.ludomedia.org/index.php/ntqr/index",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101210511",
-      "id": 95,
+      "id": 51,
       "categorias_scopus": [
         {
           "Categoria": "Multidisciplinary",
@@ -4600,7 +2403,7 @@
       "citeScore": "3.3",
       "sitioWeb": "https://www.emerald.com/mrjiam",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100823284",
-      "id": 96,
+      "id": 52,
       "categorias_scopus": [
         {
           "Categoria": "Business, Management and Accounting",
@@ -4646,7 +2449,7 @@
       "citeScore": "1.2",
       "sitioWeb": "https://sumapsicologica.konradlorenz.edu.co/",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19700188499",
-      "id": 97,
+      "id": 53,
       "categorias_scopus": [
         {
           "Categoria": "Psychology",
@@ -4680,7 +2483,7 @@
       "citeScore": "4.7",
       "sitioWeb": "https://journals.sagepub.com/home/ecoa",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100228016",
-      "id": 98,
+      "id": 54,
       "categorias_scopus": [
         {
           "Categoria": "Psychology",
@@ -4722,7 +2525,7 @@
       "citeScore": "3.6",
       "sitioWeb": "https://www.sciencedirect.com/journal/social-sciences-and-humanities-open",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101142603",
-      "id": 99,
+      "id": 55,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -4782,7 +2585,7 @@
       "citeScore": "0.8",
       "sitioWeb": "http://revistas.unc.edu.ar/index.php/racc",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100877822",
-      "id": 100,
+      "id": 56,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -4833,67 +2636,1469 @@
         }
       ],
       "enfoque": "Comunicación y cultura digital"
+    },
+    {
+      "journal": "Journal of Information Literacy",
+      "issn": "",
+      "eissn": "1750-5968",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Social Sciences"
+      ],
+      "cobertura": "2014 - 2026",
+      "citeScore": "2.8",
+      "sitioWeb": "https://journals.cilip.org.uk/jil/index",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100329302",
+      "id": 57,
+      "categorias_scopus": [
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Library and Information Sciences",
+          "Percentil": "67",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Education",
+          "Percentil": "59",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1kdpNuhZi10qylhzS5Gp2BcaLyTu1MViJ/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "17/06/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Gestión del conocimiento",
+          "Sublinea": "Transferencia de conocimiento",
+          "Origen_Scopus": "Social Sciences > Library and Information Sciences"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
+          "Origen_Scopus": "Social Sciences > Education"
+        }
+      ],
+      "enfoque": "Gestión del conocimiento"
+    },
+    {
+      "journal": "Actualidad Juridica Iberoamericana",
+      "issn": "",
+      "eissn": "2386-4567",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Social Sciences"
+      ],
+      "cobertura": "2019 - 2026",
+      "citeScore": "0.3",
+      "sitioWeb": "https://revista-aji.com/",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100920639",
+      "id": 58,
+      "categorias_scopus": [
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Law",
+          "Percentil": "16",
+          "Cuartil": "Q4"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1ZgMCJv5xgFTpjY0VObDspJ_hwieDoQCi/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "18/06/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Ética, gobernanza y responsabilidad social",
+          "Sublinea": "Derechos humanos y tecnología",
+          "Origen_Scopus": "Social Sciences > Law"
+        }
+      ],
+      "enfoque": "Ética, gobernanza y responsabilidad social"
+    },
+    {
+      "journal": "Eurasip Journal on Audio, Speech, and Music Processing",
+      "issn": "1687-4714",
+      "eissn": "1687-4722",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Physics and Astronomy",
+        "Engineering"
+      ],
+      "cobertura": "2007 - 2026",
+      "citeScore": "5.7",
+      "sitioWeb": "https://asmp-eurasipjournals.springeropen.com",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=5100155036",
+      "id": 59,
+      "categorias_scopus": [
+        {
+          "Categoria": "Physics and Astronomy",
+          "Subcategoria": "Acoustics and Ultrasonics",
+          "Percentil": "84",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Engineering",
+          "Subcategoria": "Electrical and Electronic Engineering",
+          "Percentil": "72",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1OKxPnCGBv21Kr58RUGgtK63HV3jlwHdI/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "24/06/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Transformación digital",
+          "Sublinea": "Tecnologías emergentes",
+          "Origen_Scopus": "Engineering > Electrical and Electronic Engineering"
+        }
+      ],
+      "enfoque": "Transformación digital"
+    },
+    {
+      "journal": "Signal, Image and Video Processing",
+      "issn": "1863-1703",
+      "eissn": "1863-1711",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Computer Science",
+        "Engineering"
+      ],
+      "cobertura": "2007 - 2026",
+      "citeScore": "3.9",
+      "sitioWeb": "https://link.springer.com/journal/11760",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=6200180165",
+      "id": 60,
+      "categorias_scopus": [
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Signal Processing",
+          "Percentil": "62",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Engineering",
+          "Subcategoria": "Electrical and Electronic Engineering",
+          "Percentil": "60",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1mvCT671wvtj5045Rhjr3iMydYx6o84vA/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "25/06/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Inteligencia artificial y computación avanzada",
+          "Sublinea": "Machine learning y deep learning",
+          "Origen_Scopus": "Computer Science > Signal Processing"
+        },
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Transformación digital",
+          "Sublinea": "Tecnologías emergentes",
+          "Origen_Scopus": "Engineering > Electrical and Electronic Engineering"
+        }
+      ],
+      "enfoque": "Inteligencia artificial y computación avanzada"
+    },
+    {
+      "journal": "Discrete and Continuous Dynamical Systems - Series S",
+      "issn": "1937-1632",
+      "eissn": "1937-1179",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Mathematics"
+      ],
+      "cobertura": "2008 - 2026",
+      "citeScore": "2.8",
+      "sitioWeb": "https://www.aimsciences.org/dcds-s",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100207001",
+      "id": 61,
+      "categorias_scopus": [
+        {
+          "Categoria": "Mathematics",
+          "Subcategoria": "Discrete Mathematics and Combinatorics",
+          "Percentil": "83",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Mathematics",
+          "Subcategoria": "Analysis",
+          "Percentil": "74",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Mathematics",
+          "Subcategoria": "Applied Mathematics",
+          "Percentil": "61",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1Zv5-ibCgvvOmiht2j5yzOmfEel-IYTqa/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "25/06/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Inteligencia artificial y computación avanzada",
+          "Sublinea": "Machine learning y deep learning",
+          "Origen_Scopus": "Mathematics > Discrete Mathematics and Combinatorics"
+        }
+      ],
+      "enfoque": "Inteligencia artificial y computación avanzada"
+    },
+    {
+      "journal": "Innovation and Management Review",
+      "issn": "",
+      "eissn": "2515-8961",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Business, Management and Accounting"
+      ],
+      "cobertura": "2018 - 2026",
+      "citeScore": "8.6",
+      "sitioWeb": "http://www.emeraldgrouppublishing.com/services/publishing/inmr/index.htm",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101064919",
+      "id": 62,
+      "categorias_scopus": [
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Business, Management and Accounting (miscellaneous)",
+          "Percentil": "90",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Organizational Behavior and Human Resource Management",
+          "Percentil": "83",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Business and International Management",
+          "Percentil": "80",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Management of Technology and Innovation",
+          "Percentil": "78",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1tr5L53L7N5ajZIUXyvuVYchLBYzxSisF/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "25/06/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Innovación empresarial",
+          "Sublinea": "Gestión de la innovación",
+          "Origen_Scopus": "Business, Management and Accounting > Business, Management and Accounting (miscellaneous)"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Innovación empresarial",
+          "Sublinea": "Transformación organizacional",
+          "Origen_Scopus": "Business, Management and Accounting > Organizational Behavior and Human Resource Management"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Innovación empresarial",
+          "Sublinea": "Modelos de negocio digitales",
+          "Origen_Scopus": "Business, Management and Accounting > Business and International Management"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Gestión del conocimiento",
+          "Sublinea": "Gestión del capital intelectual",
+          "Origen_Scopus": "Business, Management and Accounting > Management of Technology and Innovation"
+        }
+      ],
+      "enfoque": "Innovación empresarial"
+    },
+    {
+      "journal": "Science and Education",
+      "issn": "0926-7220",
+      "eissn": "1573-1901",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Social Sciences"
+      ],
+      "cobertura": "1992 - 2026",
+      "citeScore": "6.3",
+      "sitioWeb": "https://link.springer.com/journal/11191",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=144970",
+      "id": 63,
+      "categorias_scopus": [
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Education",
+          "Percentil": "87",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1wOf-YuLh2ccOVhHlv03bpERE8C9ibAvx/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "25/06/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
+          "Origen_Scopus": "Social Sciences > Education"
+        }
+      ],
+      "enfoque": "Bienestar y desarrollo humano"
+    },
+    {
+      "journal": "Applied Cognitive Psychology",
+      "issn": "0888-4080",
+      "eissn": "1099-0720",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Psychology",
+        "Arts and Humanities"
+      ],
+      "cobertura": "1987 - 2026",
+      "citeScore": "3.3",
+      "sitioWeb": "https://onlinelibrary.wiley.com/journal/10990720",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=12024",
+      "id": 64,
+      "categorias_scopus": [
+        {
+          "Categoria": "Arts and Humanities",
+          "Subcategoria": "Arts and Humanities (miscellaneous)",
+          "Percentil": "82",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Psychology",
+          "Subcategoria": "Developmental and Educational Psychology",
+          "Percentil": "54",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Psychology",
+          "Subcategoria": "Experimental and Cognitive Psychology",
+          "Percentil": "48",
+          "Cuartil": "Q3"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/19xXN0KrnF7uVAIVWyYxAYD0D11riT3kR/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "25/06/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Comunicación y cultura digital",
+          "Sublinea": "Comunicación intercultural",
+          "Origen_Scopus": "Arts and Humanities > Arts and Humanities (miscellaneous)"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
+          "Origen_Scopus": "Psychology > Developmental and Educational Psychology"
+        }
+      ],
+      "enfoque": "Comunicación y cultura digital"
+    },
+    {
+      "journal": "Spanish Journal of Psychology",
+      "issn": "1138-7416",
+      "eissn": "1988-2904",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Arts and Humanities",
+        "Psychology",
+        "Social Sciences"
+      ],
+      "cobertura": "1998 - 2026",
+      "citeScore": "3.5",
+      "sitioWeb": "https://www.cambridge.org/core/journals/spanish-journal-of-psychology",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=15272",
+      "id": 65,
+      "categorias_scopus": [
+        {
+          "Categoria": "Arts and Humanities",
+          "Subcategoria": "Language and Linguistics",
+          "Percentil": "89",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Linguistics and Language",
+          "Percentil": "88",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Psychology",
+          "Subcategoria": "General Psychology",
+          "Percentil": "52",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1ui66ON4pXPlU1tj2FhInbkW5m_ybNaS_/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "25/06/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Comunicación y cultura digital",
+          "Sublinea": "Comunicación intercultural",
+          "Origen_Scopus": "Arts and Humanities > Language and Linguistics"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Salud mental y bienestar",
+          "Origen_Scopus": "Psychology > General Psychology"
+        }
+      ],
+      "enfoque": "Comunicación y cultura digital"
+    },
+    {
+      "journal": "International Journal of Psychology",
+      "issn": "0020-7594",
+      "eissn": "1464-066X",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Psychology",
+        "Arts and Humanities"
+      ],
+      "cobertura": "1966 - 2026",
+      "citeScore": "3.9",
+      "sitioWeb": "https://onlinelibrary.wiley.com/journal/1464066x",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=14896",
+      "id": 66,
+      "categorias_scopus": [
+        {
+          "Categoria": "Arts and Humanities",
+          "Subcategoria": "Arts and Humanities (miscellaneous)",
+          "Percentil": "85",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Psychology",
+          "Subcategoria": "General Psychology",
+          "Percentil": "57",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1Cf78mq58HSWzIWJjWWDtCZOLaJxs_O0P/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "25/06/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Comunicación y cultura digital",
+          "Sublinea": "Comunicación intercultural",
+          "Origen_Scopus": "Arts and Humanities > Arts and Humanities (miscellaneous)"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Salud mental y bienestar",
+          "Origen_Scopus": "Psychology > General Psychology"
+        }
+      ],
+      "enfoque": "Comunicación y cultura digital"
+    },
+    {
+      "journal": "Social Psychology",
+      "issn": "1864-9335",
+      "eissn": "2151-2590",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Psychology",
+        "Social Sciences",
+        "Arts and Humanities"
+      ],
+      "cobertura": "2006 - 2006",
+      "citeScore": "2.7",
+      "sitioWeb": "https://econtent.hogrefe.com/journal/zsp",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19700188900",
+      "id": 67,
+      "categorias_scopus": [
+        {
+          "Categoria": "Arts and Humanities",
+          "Subcategoria": "Arts and Humanities (miscellaneous)",
+          "Percentil": "78",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Sociology and Political Science",
+          "Percentil": "68",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Psychology",
+          "Subcategoria": "General Psychology",
+          "Percentil": "46",
+          "Cuartil": "Q3"
+        },
+        {
+          "Categoria": "Psychology",
+          "Subcategoria": "Social Psychology",
+          "Percentil": "44",
+          "Cuartil": "Q3"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1tslcZvClnIqufu0kRdy8WEAIEd83NGA3/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "25/06/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Comunicación y cultura digital",
+          "Sublinea": "Comunicación intercultural",
+          "Origen_Scopus": "Arts and Humanities > Arts and Humanities (miscellaneous)"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Comportamiento social",
+          "Origen_Scopus": "Social Sciences > Sociology and Political Science"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Salud mental y bienestar",
+          "Origen_Scopus": "Psychology > General Psychology"
+        }
+      ],
+      "enfoque": "Comunicación y cultura digital"
+    },
+    {
+      "journal": "Journal of Psychology",
+      "issn": "0022-3980",
+      "eissn": "1940-1019",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Psychology",
+        "Business, Management and Accounting",
+        "Social Sciences"
+      ],
+      "cobertura": "1936 - 1959",
+      "citeScore": "5.4",
+      "sitioWeb": "https://www.tandfonline.com/journals/vjrl20",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=30064",
+      "id": 68,
+      "categorias_scopus": [
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Education",
+          "Percentil": "82",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Business, Management and Accounting (miscellaneous)",
+          "Percentil": "77",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Psychology",
+          "Subcategoria": "General Psychology",
+          "Percentil": "76",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1LJKq0yxK5rLx3I71SD_b2asCS3yJvRB9/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "26/06/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
+          "Origen_Scopus": "Social Sciences > Education"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Innovación empresarial",
+          "Sublinea": "Gestión de la innovación",
+          "Origen_Scopus": "Business, Management and Accounting > Business, Management and Accounting (miscellaneous)"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Salud mental y bienestar",
+          "Origen_Scopus": "Psychology > General Psychology"
+        }
+      ],
+      "enfoque": "Bienestar y desarrollo humano"
+    },
+    {
+      "journal": "International Journal of STEM Education",
+      "issn": "",
+      "eissn": "2196-7822",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Social Sciences"
+      ],
+      "cobertura": "2014 - 2026",
+      "citeScore": "19.8",
+      "sitioWeb": "https://www.stemeducationjournal.com",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100873488",
+      "id": 69,
+      "categorias_scopus": [
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Education",
+          "Percentil": "99",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1BtEiId17nmczIgMK8r6M-iWiNbABWiib/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "26/06/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
+          "Origen_Scopus": "Social Sciences > Education"
+        }
+      ],
+      "enfoque": "Bienestar y desarrollo humano"
+    },
+    {
+      "journal": "European Economic Review",
+      "issn": "0014-2921",
+      "eissn": "0014-2921",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Economics, Econometrics and Finance"
+      ],
+      "cobertura": "1969 - 2026",
+      "citeScore": "4.5",
+      "sitioWeb": "https://www.sciencedirect.com/journal/european-economic-review",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=20749",
+      "id": 70,
+      "categorias_scopus": [
+        {
+          "Categoria": "Economics, Econometrics and Finance",
+          "Subcategoria": "Economics and Econometrics",
+          "Percentil": "69",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Economics, Econometrics and Finance",
+          "Subcategoria": "Finance",
+          "Percentil": "67",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/15rOfF4DSmgLR7hf-dgzCtQtij7b4i1Vx/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "1/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Economía digital",
+          "Sublinea": "Análisis de datos económicos",
+          "Origen_Scopus": "Economics, Econometrics and Finance > Economics and Econometrics"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Economía digital",
+          "Sublinea": "Fintech y servicios financieros",
+          "Origen_Scopus": "Economics, Econometrics and Finance > Finance"
+        }
+      ],
+      "enfoque": "Economía digital"
+    },
+    {
+      "journal": "Economic Inquiry",
+      "issn": "0095-2583",
+      "eissn": "1465-7295",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Business, Management and Accounting",
+        "Economics, Econometrics and Finance"
+      ],
+      "cobertura": "1962 - 2026",
+      "citeScore": "4.1",
+      "sitioWeb": "https://onlinelibrary.wiley.com/journal/14657295",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=20002",
+      "id": 71,
+      "categorias_scopus": [
+        {
+          "Categoria": "Economics, Econometrics and Finance",
+          "Subcategoria": "Economics and Econometrics",
+          "Percentil": "65",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "General Business, Management and Accounting",
+          "Percentil": "57",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1oc2Oas4qF4xBn3wocORfgPWxnGKpgVWa/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "1/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Economía digital",
+          "Sublinea": "Análisis de datos económicos",
+          "Origen_Scopus": "Economics, Econometrics and Finance > Economics and Econometrics"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Innovación empresarial",
+          "Sublinea": "Gestión de la innovación",
+          "Origen_Scopus": "Business, Management and Accounting > General Business, Management and Accounting"
+        }
+      ],
+      "enfoque": "Economía digital"
+    },
+    {
+      "journal": "Journal of Maritime Research",
+      "issn": "1697-4840",
+      "eissn": "1697-9133",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Social Sciences",
+        "Engineering",
+        "Arts and Humanities"
+      ],
+      "cobertura": "2009 - 2020",
+      "citeScore": "0.7",
+      "sitioWeb": "https://www.jmr.unican.es/jmr/es/index",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19600161820",
+      "id": 72,
+      "categorias_scopus": [
+        {
+          "Categoria": "Arts and Humanities",
+          "Subcategoria": "History",
+          "Percentil": "71",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Cultural Studies",
+          "Percentil": "59",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Engineering",
+          "Subcategoria": "Ocean Engineering",
+          "Percentil": "18",
+          "Cuartil": "Q4"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1_S_YixZlnyxa-jWb0K9iOp6J-tE-XKz0/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "1/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Comunicación y cultura digital",
+          "Sublinea": "Comunicación intercultural",
+          "Origen_Scopus": "Arts and Humanities > History"
+        },
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Ciudades inteligentes y sostenibles",
+          "Sublinea": "Infraestructura sostenible",
+          "Origen_Scopus": "Engineering > Ocean Engineering"
+        }
+      ],
+      "enfoque": "Comunicación y cultura digital"
+    },
+    {
+      "journal": "Ship Technology Research",
+      "issn": "0937-7255",
+      "eissn": "2056-7111",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Engineering"
+      ],
+      "cobertura": "1995 - 1999",
+      "citeScore": "2.8",
+      "sitioWeb": "https://www.tandfonline.com/journals/ystr20",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=27317",
+      "id": 73,
+      "categorias_scopus": [
+        {
+          "Categoria": "Engineering",
+          "Subcategoria": "Ocean Engineering",
+          "Percentil": "52",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/14sOOy_W9jHOjZgGHRmdZe50h5F2Xc2FW/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "1/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Ciudades inteligentes y sostenibles",
+          "Sublinea": "Infraestructura sostenible",
+          "Origen_Scopus": "Engineering > Ocean Engineering"
+        }
+      ],
+      "enfoque": "Ciudades inteligentes y sostenibles"
+    },
+    {
+      "journal": "Applied Economics",
+      "issn": "0003-6846",
+      "eissn": "1466-4283",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Economics, Econometrics and Finance"
+      ],
+      "cobertura": "1969 - 2026",
+      "citeScore": "4.4",
+      "sitioWeb": "https://www.tandfonline.com/journals/raec20",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=18768",
+      "id": 74,
+      "categorias_scopus": [
+        {
+          "Categoria": "Economics, Econometrics and Finance",
+          "Subcategoria": "Economics and Econometrics",
+          "Percentil": "68",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1XaEbAFjbcJYMNOO6tC4PPuXH4jakuAGq/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "2/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Economía digital",
+          "Sublinea": "Análisis de datos económicos",
+          "Origen_Scopus": "Economics, Econometrics and Finance > Economics and Econometrics"
+        }
+      ],
+      "enfoque": "Economía digital"
+    },
+    {
+      "journal": "International Journal of Engineering Pedagogy",
+      "issn": "",
+      "eissn": "2192-4880",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Social Sciences",
+        "Engineering"
+      ],
+      "cobertura": "2018 - 2026",
+      "citeScore": "5.4",
+      "sitioWeb": "https://online-journals.org/index.php/i-jep/index",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100898957",
+      "id": 75,
+      "categorias_scopus": [
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Education",
+          "Percentil": "82",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Engineering",
+          "Subcategoria": "General Engineering",
+          "Percentil": "77",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1Rfoh6N3K9OsJJx2fk-fbaaFiUT9dMsOw/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "3/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
+          "Origen_Scopus": "Social Sciences > Education"
+        },
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Ciudades inteligentes y sostenibles",
+          "Sublinea": "Infraestructura sostenible",
+          "Origen_Scopus": "Engineering > General Engineering"
+        }
+      ],
+      "enfoque": "Bienestar y desarrollo humano"
+    },
+    {
+      "journal": "Cleaner Logistics and Supply Chain",
+      "issn": "",
+      "eissn": "2772-3909",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Environmental Science",
+        "Engineering",
+        "Business, Management and Accounting"
+      ],
+      "cobertura": "2021 - 2026",
+      "citeScore": "14.6",
+      "sitioWeb": "https://www.sciencedirect.com/journal/cleaner-logistics-and-supply-chain",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101098869",
+      "id": 76,
+      "categorias_scopus": [
+        {
+          "Categoria": "Environmental Science",
+          "Subcategoria": "Environmental Science (miscellaneous)",
+          "Percentil": "96",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Environmental Science",
+          "Subcategoria": "Management, Monitoring, Policy and Law",
+          "Percentil": "95",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Engineering",
+          "Subcategoria": "Industrial and Manufacturing Engineering",
+          "Percentil": "94",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Management of Technology and Innovation",
+          "Percentil": "91",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1GPEKZhFnpy20ZmUoxGFtyxsUOIif2Jgm/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "3/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Sostenibilidad y cambio climático",
+          "Sublinea": "Gestión sostenible de recursos",
+          "Origen_Scopus": "Environmental Science > Environmental Science (miscellaneous)"
+        },
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Ciudades inteligentes y sostenibles",
+          "Sublinea": "Gestión inteligente de recursos",
+          "Origen_Scopus": "Environmental Science > Management, Monitoring, Policy and Law"
+        },
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Tecnología y ecosistemas",
+          "Sublinea": "Tecnologías limpias",
+          "Origen_Scopus": "Engineering > Industrial and Manufacturing Engineering"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Gestión del conocimiento",
+          "Sublinea": "Gestión del capital intelectual",
+          "Origen_Scopus": "Business, Management and Accounting > Management of Technology and Innovation"
+        }
+      ],
+      "enfoque": "Sostenibilidad y cambio climático"
+    },
+    {
+      "journal": "Advances in Civil Engineering",
+      "issn": "1687-8086",
+      "eissn": "1687-8094",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Engineering"
+      ],
+      "cobertura": "2008 - 2026",
+      "citeScore": "4.3",
+      "sitioWeb": "https://onlinelibrary.wiley.com/journal/7074",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19900191852",
+      "id": 77,
+      "categorias_scopus": [
+        {
+          "Categoria": "Engineering",
+          "Subcategoria": "Civil and Structural Engineering",
+          "Percentil": "63",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/11fpHHC6JNTTsC-02sRMeJxpSkw6-_FDD/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "7/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Ciudades inteligentes y sostenibles",
+          "Sublinea": "Infraestructura sostenible",
+          "Origen_Scopus": "Engineering > Civil and Structural Engineering"
+        }
+      ],
+      "enfoque": "Ciudades inteligentes y sostenibles"
+    },
+    {
+      "journal": "Journal of Medical Systems",
+      "issn": "0148-5598",
+      "eissn": "1573-689X",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Medicine",
+        "Health Professions",
+        "Computer Science"
+      ],
+      "cobertura": "1977 - 2026",
+      "citeScore": "10.8",
+      "sitioWeb": "https://link.springer.com/journal/10916",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=23710",
+      "id": 78,
+      "categorias_scopus": [
+        {
+          "Categoria": "Medicine",
+          "Subcategoria": "Medicine (miscellaneous)",
+          "Percentil": "91",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Medicine",
+          "Subcategoria": "Health Informatics",
+          "Percentil": "88",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Information Systems",
+          "Percentil": "87",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Health Professions",
+          "Subcategoria": "Health Information Management",
+          "Percentil": "85",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1l4LExaEnVRU8QGnVcE9jahPbVkkO4T1f/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "7/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Salud mental y bienestar",
+          "Origen_Scopus": "Medicine > Medicine (miscellaneous)"
+        },
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Transformación digital",
+          "Sublinea": "Tecnologías emergentes",
+          "Origen_Scopus": "Computer Science > Information Systems"
+        }
+      ],
+      "enfoque": "Bienestar y desarrollo humano"
+    },
+    {
+      "journal": "Health Information Science and Systems",
+      "issn": "",
+      "eissn": "2047-2501",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Medicine",
+        "Health Professions",
+        "Computer Science"
+      ],
+      "cobertura": "2013 - 2026",
+      "citeScore": "8.1",
+      "sitioWeb": "https://link.springer.com/journal/13755",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100853958",
+      "id": 79,
+      "categorias_scopus": [
+        {
+          "Categoria": "Medicine",
+          "Subcategoria": "Health Informatics",
+          "Percentil": "81",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Health Professions",
+          "Subcategoria": "Health Information Management",
+          "Percentil": "80",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Information Systems",
+          "Percentil": "79",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/16iVaW94GU2LnKWiGIl49pHyxDjtcDL01/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "7/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Salud mental y bienestar",
+          "Origen_Scopus": "Medicine > Health Informatics"
+        },
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Transformación digital",
+          "Sublinea": "Tecnologías emergentes",
+          "Origen_Scopus": "Computer Science > Information Systems"
+        }
+      ],
+      "enfoque": "Bienestar y desarrollo humano"
+    },
+    {
+      "journal": "Journal of Science Education and Technology",
+      "issn": "1059-0145",
+      "eissn": "1573-1839",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Social Sciences",
+        "Engineering"
+      ],
+      "cobertura": "1992 - 2002",
+      "citeScore": "10.9",
+      "sitioWeb": "https://link.springer.com/journal/10956",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=23646",
+      "id": 80,
+      "categorias_scopus": [
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Education",
+          "Percentil": "96",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Engineering",
+          "Subcategoria": "General Engineering",
+          "Percentil": "93",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1230wMMt2xOYu8zQ-Am6bhX8eehvytCp7/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "7/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
+          "Origen_Scopus": "Social Sciences > Education"
+        },
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Ciudades inteligentes y sostenibles",
+          "Sublinea": "Infraestructura sostenible",
+          "Origen_Scopus": "Engineering > General Engineering"
+        }
+      ],
+      "enfoque": "Bienestar y desarrollo humano"
+    },
+    {
+      "journal": "Journal of Public Economics",
+      "issn": "0047-2727",
+      "eissn": "0047-2727",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Economics, Econometrics and Finance"
+      ],
+      "cobertura": "1972 - 2026",
+      "citeScore": "5.6",
+      "sitioWeb": "https://www.sciencedirect.com/journal/journal-of-public-economics",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=29009",
+      "id": 81,
+      "categorias_scopus": [
+        {
+          "Categoria": "Economics, Econometrics and Finance",
+          "Subcategoria": "Economics and Econometrics",
+          "Percentil": "77",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Economics, Econometrics and Finance",
+          "Subcategoria": "Finance",
+          "Percentil": "76",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/12812PICK35HGwdibDi--T0DFupQlVlaf/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "8/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Economía digital",
+          "Sublinea": "Análisis de datos económicos",
+          "Origen_Scopus": "Economics, Econometrics and Finance > Economics and Econometrics"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Economía digital",
+          "Sublinea": "Fintech y servicios financieros",
+          "Origen_Scopus": "Economics, Econometrics and Finance > Finance"
+        }
+      ],
+      "enfoque": "Economía digital"
+    },
+    {
+      "journal": "Education and Information Technologies",
+      "issn": "1360-2357",
+      "eissn": "1573-7608",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Social Sciences"
+      ],
+      "cobertura": "1996 - 2002",
+      "citeScore": "15.5",
+      "sitioWeb": "https://link.springer.com/journal/10639",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=144955",
+      "id": 82,
+      "categorias_scopus": [
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Education",
+          "Percentil": "98",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Library and Information Sciences",
+          "Percentil": "97",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/165xdIbqFfaSrwxX6NTyV34ZB_HWsC7yo/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "8/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
+          "Origen_Scopus": "Social Sciences > Education"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Gestión del conocimiento",
+          "Sublinea": "Transferencia de conocimiento",
+          "Origen_Scopus": "Social Sciences > Library and Information Sciences"
+        }
+      ],
+      "enfoque": "Bienestar y desarrollo humano"
+    },
+    {
+      "journal": "Journal of Innovation and Knowledge",
+      "issn": "2530-7614",
+      "eissn": "2444-569X",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Business, Management and Accounting",
+        "Economics, Econometrics and Finance"
+      ],
+      "cobertura": "2016 - 2026",
+      "citeScore": "24.7",
+      "sitioWeb": "https://www.sciencedirect.com/journal/journal-of-innovation-and-knowledge",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100932830",
+      "id": 83,
+      "categorias_scopus": [
+        {
+          "Categoria": "Economics, Econometrics and Finance",
+          "Subcategoria": "Economics and Econometrics",
+          "Percentil": "99",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Management of Technology and Innovation",
+          "Percentil": "99",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Business and International Management",
+          "Percentil": "99",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Marketing",
+          "Percentil": "97",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1ES5x7haA7hVWYBcFMR45QXT6Dqd9zZhB/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "13/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Economía digital",
+          "Sublinea": "Análisis de datos económicos",
+          "Origen_Scopus": "Economics, Econometrics and Finance > Economics and Econometrics"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Gestión del conocimiento",
+          "Sublinea": "Gestión del capital intelectual",
+          "Origen_Scopus": "Business, Management and Accounting > Management of Technology and Innovation"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Innovación empresarial",
+          "Sublinea": "Modelos de negocio digitales",
+          "Origen_Scopus": "Business, Management and Accounting > Business and International Management"
+        }
+      ],
+      "enfoque": "Economía digital"
+    },
+    {
+      "journal": "Revista de Psicologia (Peru)",
+      "issn": "0254-9247",
+      "eissn": "2223-3733",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Psychology"
+      ],
+      "cobertura": "2016 - 2026",
+      "citeScore": "1.2",
+      "sitioWeb": "http://revistas.pucp.edu.pe/index.php/psicologia",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100469663",
+      "id": 84,
+      "categorias_scopus": [
+        {
+          "Categoria": "Psychology",
+          "Subcategoria": "General Psychology",
+          "Percentil": "29",
+          "Cuartil": "Q3"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1NB53F_lDMU8mPLEYp0kVsg6TBML3XozQ/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "13/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Salud mental y bienestar",
+          "Origen_Scopus": "Psychology > General Psychology"
+        }
+      ],
+      "enfoque": "Bienestar y desarrollo humano"
+    },
+    {
+      "journal": "Personality and Individual Differences",
+      "issn": "0191-8869",
+      "eissn": "0191-8869",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Psychology"
+      ],
+      "cobertura": "1980 - 2026",
+      "citeScore": "5.9",
+      "sitioWeb": "https://www.sciencedirect.com/journal/personality-and-individual-differences",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=12807",
+      "id": 85,
+      "categorias_scopus": [
+        {
+          "Categoria": "Psychology",
+          "Subcategoria": "General Psychology",
+          "Percentil": "81",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1gj1A59DrmM4iUImQNls41CrjQALkX5Tu/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "13/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Salud mental y bienestar",
+          "Origen_Scopus": "Psychology > General Psychology"
+        }
+      ],
+      "enfoque": "Bienestar y desarrollo humano"
+    },
+    {
+      "journal": "Journal of Cereal Science",
+      "issn": "0733-5210",
+      "eissn": "1095-9963",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Agricultural and Biological Sciences",
+        "Biochemistry, Genetics and Molecular Biology"
+      ],
+      "cobertura": "1983 - 2026",
+      "citeScore": "7.3",
+      "sitioWeb": "https://www.sciencedirect.com/journal/journal-of-cereal-science",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=34814",
+      "id": 86,
+      "categorias_scopus": [
+        {
+          "Categoria": "Agricultural and Biological Sciences",
+          "Subcategoria": "Food Science",
+          "Percentil": "79",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Biochemistry, Genetics and Molecular Biology",
+          "Subcategoria": "Biochemistry",
+          "Percentil": "73",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1TBWJLWwWXaP1JgfVYGITYVSCGY6l2btV/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "fecha_emision": "17/07/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Sostenibilidad y cambio climático",
+          "Sublinea": "Economía circular",
+          "Origen_Scopus": "Agricultural and Biological Sciences > Food Science"
+        }
+      ],
+      "enfoque": "Sostenibilidad y cambio climático"
     }
   ],
   "facets": {
     "publishers": [
-      "Academic Press",
       "Ain Shams University",
       "American Chemical Society",
-      "American Psychological Association",
       "BioMed Central Ltd",
-      "Cambridge University Press",
       "Centro Estudios Derecho Penal",
-      "Centro de investigación de la Facultad de Arquitectura y Urbanismo, Universidad de Cuenca",
-      "China Agricultural University",
       "Elsevier",
       "Elsevier B.V.",
       "Elsevier Ireland Ltd",
-      "Emerald Publishing",
-      "Forensic Science Society",
       "Informe N° IDIC-IQInteg-R-106-2026",
       "Institute of Electrical and Electronics Engineers",
       "Instituto Nacional de Pesquisas da Amazonia",
-      "Instituto Nacional de Salud Pública",
       "Instituto Politecnico Nacional",
       "Jagiellonian University Press",
-      "John Wiley & Sons",
-      "John Wiley and Sons",
       "KeAi Communications Co",
       "Konrad Lorenz Editores",
       "Lippincott Williams and Wilkins",
-      "Marcílio Alves",
       "N/A",
       "Nanjing Medical University and Chungbuk National University Press",
-      "Oxford University Press",
       "Physica-Verlag",
       "Poder Judicial del Perú",
-      "Polskie Towarzystwo Inzynierii Ekologicznej (PTIE)",
-      "Pontificia Universidad Catolica de Valparaiso",
       "Pontificia Universidad Catolica del Peru",
       "Pontificia Universidad Javeriana",
-      "Revista Civilistica",
-      "Routledge",
       "Royal Society of Chemistry",
       "SAGE Publications Inc",
       "SAGE Publications Ltd.",
-      "South African Institute of Industrial Engineering",
-      "Springer",
       "Springer - Biomed Central (BMC)",
       "Springer International Publishing AG",
-      "Springer Nature",
       "Springer Netherlands",
       "Springer Science and Business Media B.V.",
       "Springer Science and Business Media Deutschland GmbH",
       "SpringerOpen",
-      "Taylor & Francis",
       "Universe Scientific Publishing",
-      "Universidad Austral de Chile",
-      "Universidad Autonoma de Madrid",
       "Universidad Nacional de Educacion a Distancia (UNED)",
-      "Universidad de Alicante",
-      "Universidad de Piura",
-      "Universidad de Valladolid",
       "Universidad de los Andes, Colombia",
       "Walter de Gruyter / Sciendo",
       "Wiley-Blackwell",
