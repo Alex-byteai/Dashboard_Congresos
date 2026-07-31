@@ -1,13 +1,6 @@
 {
   "revistas_observadas": [
     {
-      "journal": "Heliyon",
-      "issn": "",
-      "eissn": "2405-8440",
-      "enlace_informe": "https://drive.google.com/file/d/1D9g1_lsXOg05a84N3hVqxL5hy1pieJ1A/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
       "journal": "Sustainability",
       "issn": "",
       "eissn": "2071-1050",
@@ -33,6 +26,13 @@
       "issn": "2212-4292",
       "eissn": "2212-4306",
       "enlace_informe": "https://drive.google.com/file/d/1brv3KdKB1cxaWXqdHhVj5QvDDWpvrQI0/view?usp=drivesdk",
+      "conclusion": "Posibles indicios de malas prácticas"
+    },
+    {
+      "journal": "PLOS ONE",
+      "issn": "1932-6203",
+      "eissn": "1932-6203",
+      "enlace_informe": "https://drive.google.com/file/d/18J33UydrHGzQEz8PIBw1VddGvAB8Eidz/view?usp=drivesdk",
       "conclusion": "Posibles indicios de malas prácticas"
     }
   ]
