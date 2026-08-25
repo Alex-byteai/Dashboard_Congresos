@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MagnifyingGlass as Search, CheckCircle, WarningCircle as AlertCircle, ArrowSquareOut as ExternalLink, FileMagnifyingGlass as FileSearch, ShieldWarning as ShieldAlert } from '@phosphor-icons/react';
 import Modal from '../../../shared/components/Modal';
 
-export default function ReviewRequestModal({ isOpen, onClose, revistas = [], revistasObservadas = [] }) {
+export default function ReviewRequestModal({ isOpen, onClose, revistas = [], revistasObservadas = [], onViewJournal }) {
     const [issn, setIssn] = useState('');
     const [status, setStatus] = useState('idle'); // 'idle' | 'found' | 'bad_practice' | 'not_found'
     const [foundJournal, setFoundJournal] = useState(null);
@@ -132,12 +132,16 @@ export default function ReviewRequestModal({ isOpen, onClose, revistas = [], rev
                                         <p style={{ margin: '0 0 1rem 0', color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.5' }}>
                                             La revista <strong style={{ color: 'var(--text)' }}>{foundJournal.journal}</strong> se encuentra en nuestra base de datos. Puedes encontrar su ficha de integridad y cuartiles usando el buscador principal de revistas.
                                         </p>
-                                        <button onClick={close} style={{
-                                            background: 'transparent', border: '1.5px solid var(--pastel-green-text)', color: 'var(--pastel-green-text)',
+                                        <button onClick={() => {
+                                            onViewJournal?.(foundJournal);
+                                            close();
+                                        }} style={{
+                                            background: 'var(--pastel-green-text)', border: '1.5px solid var(--pastel-green-text)', color: 'white',
                                             padding: '0.5rem 1rem', borderRadius: 'var(--radius-sm)', fontWeight: 600, cursor: 'pointer',
-                                            fontSize: '0.85rem'
+                                            fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem'
                                         }}>
-                                            Volver al Dashboard
+                                            Ver revista en el Dashboard
+                                            <ExternalLink size={15} />
                                         </button>
                                     </div>
                                 </div>
