@@ -18,6 +18,18 @@ export default function RevistasModule({ onBack }) {
     const [showReviewModal, setShowReviewModal] = useState(false)
     const [showBadPractices, setShowBadPractices] = useState(false)
 
+    const handleViewJournal = (journal) => {
+        setFilters(prev => ({ ...prev, search: journal.journal }))
+        setShowReviewModal(false)
+
+        window.setTimeout(() => {
+            document.querySelector(`[data-journal-id="${journal.id}"]`)?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            })
+        }, 250)
+    }
+
     const initialFilters = {
         search: '',
         tipo: '',
@@ -223,6 +235,7 @@ export default function RevistasModule({ onBack }) {
                 onClose={() => setShowReviewModal(false)}
                 revistas={revistas}
                 revistasObservadas={revistasObservadas}
+                onViewJournal={handleViewJournal}
             />
 
             <BadPracticesModal

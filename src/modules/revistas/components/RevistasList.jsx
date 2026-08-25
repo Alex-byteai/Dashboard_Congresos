@@ -11,7 +11,7 @@ function RevistaCard({ r }) {
     };
 
     return (
-        <div key={r.id} className="event-card event-card--revistas">
+        <div key={r.id} data-journal-id={r.id} className="event-card event-card--revistas">
             <div className="event-header">
                 <div className="event-tech-header">
                     {r.issn && (
