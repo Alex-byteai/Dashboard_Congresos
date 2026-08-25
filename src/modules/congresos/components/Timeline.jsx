@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, MapPin } from 'lucide-react';
+import { Clock, MapPin } from '@phosphor-icons/react';
 
 export default function Timeline({ events, getUrgencyClass }) {
     if (events.length === 0) return null;
@@ -31,10 +31,12 @@ export default function Timeline({ events, getUrgencyClass }) {
                 <div key={month}>
                     <div className="timeline-month">{month}</div>
                     {grouped[month].map((event, idx) => (
-                        <div key={event.id} className="timeline-item">
+                        <div key={event.id} className={`timeline-item ${event.isPast ? 'timeline-item--past' : ''}`}>
                             <div className="timeline-dot"></div>
                             <div className="timeline-content">
-                                <div className="timeline-date">{event.fechaInicio}</div>
+                                <div className={`timeline-date ${event.isPast ? 'timeline-date--past' : ''}`}>
+                                    {event.fechaInicio} - {event.fechaFin}
+                                </div>
                                 <h4 className="timeline-title">
                                     {event.evento}
                                 </h4>
@@ -44,7 +46,7 @@ export default function Timeline({ events, getUrgencyClass }) {
                                         <MapPin size={14} />
                                         {event.pais}
                                     </div>
-                                    <span className={`timeline-badge ${getUrgencyClass(event.deadlineDays)}`} style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                    <span className={`urgency-badge ${getUrgencyClass(event.deadlineDays)}`}>
                                         <Clock size={14} />
                                         {event.deadline ? `Deadline: ${event.deadline}` : 'Fecha pendiente'}
                                     </span>

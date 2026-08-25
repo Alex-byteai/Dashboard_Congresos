@@ -10,10 +10,9 @@
     "sync-data": "copy backend\\revistas_processor\\revistas.json public\\revistas.json"
   },
   "dependencies": {
-    "chart.js": "^4.4.0",
+    "@phosphor-icons/react": "^2.1.10",
     "lucide-react": "^0.563.0",
     "react": "^18.2.0",
-    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

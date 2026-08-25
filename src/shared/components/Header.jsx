@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronLeft } from 'lucide-react';
+import { CaretLeft as ChevronLeft } from '@phosphor-icons/react';
 
 export default function Header({ moduleName, onBack }) {
     return (

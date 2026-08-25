@@ -1,4 +1,4 @@
-import { Calendar, Users } from 'lucide-react';
+import { Calendar, Users } from '@phosphor-icons/react';
 
 export default function Stats({ stats }) {
     return (

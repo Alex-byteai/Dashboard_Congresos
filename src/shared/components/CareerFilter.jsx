@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import {
-    Briefcase, Building2, Radio, Calculator, Scale,
-    TrendingUp, Leaf, HardHat, Factory, Monitor,
-    Cpu, Megaphone, Globe, Brain, ChevronDown, ChevronUp
-} from 'lucide-react';
+    Briefcase, Buildings as Building2, Radio, Calculator, Scales as Scale,
+    TrendUp as TrendingUp, Leaf, HardHat, Factory, Monitor,
+    Cpu, Megaphone, Globe, Brain, CaretDown as ChevronDown, CaretUp as ChevronUp
+} from '@phosphor-icons/react';
 
 
 export const CAREERS = [
@@ -24,7 +24,7 @@ export const CAREERS = [
 ];
 
 const CATEGORY_COLOR = {
-    'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO': { color: '#ff5017', bg: '#fff7ed' },
+    'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO': { color: '#ff5017', bg: '#fff1ea' },
     'DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE': { color: '#10b981', bg: '#ecfdf5' },
     'SOCIEDAD Y COMPORTAMIENTO HUMANO': { color: '#6366f1', bg: '#eef2ff' },
     'INNOVACIÓN Y TECNOLOGÍA DIGITAL': { color: '#0ea5e9', bg: '#f0f9ff' },
@@ -103,7 +103,7 @@ export default function CareerFilter({ selectedCareers, onSelect }) {
                                             onClick={() => onSelect(career.id)}
                                         >
                                             <span className="career-chip__icon">
-                                                <Icon size={16} strokeWidth={2} />
+                                                <Icon size={16} />
                                             </span>
                                             <span className="career-chip__name">{career.label}</span>
                                         </button>

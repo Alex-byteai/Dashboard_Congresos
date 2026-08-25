@@ -1,8 +1,11 @@
-import React from 'react';
-import { Calendar, MapPin, Clock, GraduationCap, ExternalLink, AlertCircle, SearchX } from 'lucide-react';
+import React, { useState } from 'react';
+import { Calendar, MapPin, Clock, GraduationCap, ArrowSquareOut as ExternalLink, WarningCircle as AlertCircle, MagnifyingGlassMinus as SearchX, ShieldCheck } from '@phosphor-icons/react';
 import { trackEvent } from '../../../core/services/analytics'
+import CongressIntegrityModal from './CongressIntegrityModal';
 
 export default function CongressList({ events, getUrgencyClass, getUrgencyText }) {
+    const [integrityEvent, setIntegrityEvent] = useState(null);
+
     if (events.length === 0) {
         return (
             <div className="empty-state">
@@ -16,9 +19,12 @@ export default function CongressList({ events, getUrgencyClass, getUrgencyText }
     return (
         <div className="cards-grid">
             {events.map(event => (
-                <div key={event.id} className="event-card">
+                <div key={event.id} className={`event-card ${event.isPast ? 'event-card--past' : ''}`}>
                     <div className="event-header">
                         <div className="event-acronym">{event.evento || 'N/A'}</div>
+                        {event.isPast && (
+                            <div className="event-status event-status--past">Finalizado</div>
+                        )}
                         {event.deadlineDays !== null && (
                             <div className={`urgency-badge ${getUrgencyClass(event.deadlineDays)}`}>
                                 <AlertCircle size={14} />
@@ -32,7 +38,9 @@ export default function CongressList({ events, getUrgencyClass, getUrgencyText }
                     <div className="event-meta">
                         <div className="meta-item">
                             <Calendar size={18} className="meta-icon" />
-                            <span>{event.fechaInicio} - {event.fechaFin}</span>
+                            <span className={event.isPast ? 'event-dates--past' : ''}>
+                                {event.fechaInicio} - {event.fechaFin}
+                            </span>
                         </div>
                         <div className="meta-item">
                             <MapPin size={18} className="meta-icon" />
@@ -77,23 +85,35 @@ export default function CongressList({ events, getUrgencyClass, getUrgencyText }
                         )}
                     </div>
 
-                    {event.enlace && (
-                        <a
-                            href={`https://${event.enlace.replace(/^https?:\/\//, '')}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="event-link"
-                            onClick={() => {
-                                const url = `https://${event.enlace.replace(/^https?:\/\//, '')}`
-                                trackEvent('outbound_click', { event_id: event.id, url })
-                            }}
+                    <div className="event-actions">
+                        {event.enlace && (
+                            <a
+                                href={`https://${event.enlace.replace(/^https?:\/\//, '')}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="event-link event-link--primary"
+                                onClick={() => {
+                                    const url = `https://${event.enlace.replace(/^https?:\/\//, '')}`
+                                    trackEvent('outbound_click', { event_id: event.id, url })
+                                }}
+                            >
+                                Explorar
+                                <ExternalLink size={16} />
+                            </a>
+                        )}
+                        <button
+                            type="button"
+                            className="event-link event-link--secondary"
+                            onClick={() => setIntegrityEvent(event)}
                         >
-                            Visitar Sitio Web
-                            <ExternalLink size={16} />
-                        </a>
-                    )}
+                            Integridad
+                            <ShieldCheck size={16} />
+                        </button>
+                    </div>
                 </div>
             ))}
+
+            <CongressIntegrityModal event={integrityEvent} onClose={() => setIntegrityEvent(null)} />
         </div>
     );
 }

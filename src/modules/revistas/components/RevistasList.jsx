@@ -1,9 +1,14 @@
 import React from 'react';
-import { Building2, ExternalLink, Hash, Layers, SearchX, Globe, Layout, ChevronDown, ChevronUp, ShieldCheck, FilePlus } from 'lucide-react';
+import { ArrowSquareOut as ExternalLink, Stack as Layers, MagnifyingGlassMinus as SearchX, Layout, CaretDown as ChevronDown, CaretUp as ChevronUp, ShieldCheck, FilePlus } from '@phosphor-icons/react';
 
 function RevistaCard({ r }) {
     const [isOpen, setIsOpen] = React.useState(false);
     const hasQuartiles = (r.categorias_scopus || []).length > 0;
+    const apcStyles = {
+        'Sin APC': { background: 'var(--pastel-green-bg)', color: 'var(--pastel-green-text)' },
+        'Con APC': { background: 'var(--accent-pale)', color: 'var(--accent-hover)' },
+        'APC opcional': { background: 'var(--pastel-yellow-bg)', color: 'var(--pastel-yellow-text)' }
+    };
 
     return (
         <div key={r.id} className="event-card event-card--revistas">
@@ -27,7 +32,7 @@ function RevistaCard({ r }) {
             <div className="event-meta">
                 <div className="meta-item">
                     <Layout size={18} className="meta-icon" />
-                    <span style={{ fontWeight: 500, color: 'var(--text-main)' }}>{r.enfoque || 'General'}</span>
+                    <span style={{ fontWeight: 500, color: 'var(--text)' }}>{r.enfoque || 'General'}</span>
                 </div>
 
                 <div className="meta-item" style={{ alignItems: 'flex-start', minWidth: 0 }}>
@@ -73,28 +78,30 @@ function RevistaCard({ r }) {
 
             <div className="badges">
                 <span className={`badge ${r.tipo === 'Data Journal' ? 'badge-virtual' : 'badge-area'}`} style={{
-                    background: r.tipo === 'Data Journal' ? '#ecfdf5' : '#eff6ff',
-                    color: r.tipo === 'Data Journal' ? '#059669' : '#3b82f6',
-                    fontWeight: 600
+                    background: r.tipo === 'Data Journal' ? 'var(--pastel-green-bg)' : 'var(--pastel-blue-bg)',
+                    color: r.tipo === 'Data Journal' ? 'var(--pastel-green-text)' : 'var(--pastel-blue-text)',
+                    fontWeight: 700
                 }}>
                     {r.tipo || 'Journal'}
                 </span>
-                {r.sitioWeb && (
-                    <span className="badge badge-virtual" style={{ background: '#f8fafc', color: '#64748b' }}>
-                        <Globe size={12} /> Acceso Online
+                {r.tipo_apc && (
+                    <span className="badge badge-apc" style={{
+                        ...(apcStyles[r.tipo_apc] || { background: 'var(--card-bg-alt)', color: 'var(--text-secondary)' }),
+                        fontWeight: 700
+                    }}>
+                        {r.tipo_apc}
                     </span>
                 )}
             </div>
 
             {(r.sitioWeb || r.enlace_informe) && (
-                <div className="event-actions" style={{ display: 'flex', gap: '0.75rem', marginTop: 'auto', paddingTop: '1rem', width: '100%' }}>
+                <div className="event-actions">
                     {r.sitioWeb && (
                         <a
                             href={r.sitioWeb}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="event-link"
-                            style={{ background: 'var(--primary)', color: 'white', border: '2px solid var(--primary)', borderRadius: '12px', flex: 1, justifyContent: 'center', marginBottom: 0, padding: '0.65rem', boxSizing: 'border-box' }}
+                            className="event-link event-link--primary"
                         >
                             Explorar
                             <ExternalLink size={16} />
@@ -105,11 +112,10 @@ function RevistaCard({ r }) {
                             href={r.enlace_informe}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="event-link"
-                            style={{ background: '#f8fafc', color: 'var(--text-main)', border: '2px solid #e2e8f0', borderRadius: '12px', flex: 1, justifyContent: 'center', marginBottom: 0, padding: '0.65rem', boxSizing: 'border-box' }}
+                            className="event-link event-link--secondary"
                         >
                             Informe
-                            <ShieldCheck size={16} style={{ color: '#059669' }} />
+                            <ShieldCheck size={16} />
                         </a>
                     )}
                 </div>
@@ -133,9 +139,9 @@ export default function RevistasList({ revistas, onRequestReview }) {
                         <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>Solicita la evaluación de una revista que aún no ha sido indexada.</p>
                         <button 
                             onClick={onRequestReview}
-                            style={{ padding: '0.6rem 1.25rem', background: 'var(--card-bg)', color: 'var(--text-main)', border: '1.5px solid var(--border)', borderRadius: '50px', fontWeight: 600, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', transition: 'all 0.2s', width: '100%', justifyContent: 'center' }}
+                            style={{ padding: '0.6rem 1.25rem', background: 'var(--card-bg)', color: 'var(--text)', border: '1.5px solid var(--border)', borderRadius: 'var(--radius-md)', fontWeight: 600, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', transition: 'border-color 0.2s var(--ease-out), color 0.2s var(--ease-out)', width: '100%', justifyContent: 'center' }}
                             onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--primary)'; e.currentTarget.style.color = 'var(--primary)' }}
-                            onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-main)' }}
+                            onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text)' }}
                         >
                             Solicitar Inclusión
                         </button>

@@ -1,34 +1,9 @@
 import { useState } from 'react'
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
-    ArcElement,
-    PointElement,
-    LineElement,
-    Filler
-} from 'chart.js'
+import { IconContext } from '@phosphor-icons/react'
 
 import ModuleSelector from './core/components/ModuleSelector'
 import CongresosModule from './modules/congresos/CongresosModule'
 import RevistasModule from './modules/revistas/RevistasModule'
-
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
-    ArcElement,
-    PointElement,
-    LineElement,
-    Filler
-)
 
 // ─── App Root: Hub de Módulos ─────────────────────────────────────────────────
 function App() {
@@ -50,7 +25,11 @@ function App() {
         }
     }
 
-    return renderModule()
+    return (
+        <IconContext.Provider value={{ weight: 'bold' }}>
+            {renderModule()}
+        </IconContext.Provider>
+    )
 }
 
 export default App

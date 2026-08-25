@@ -217,7 +217,7 @@
     },
     {
       "id": 4,
-      "evento": "BICA 2026",
+      "evento": "BICA",
       "nombreCompleto": "17th Annual International Conference on Biologically Inspired Cognitive Architectures",
       "disciplina": "",
       "categoria": [
@@ -258,7 +258,7 @@
     },
     {
       "id": 5,
-      "evento": "IBERAMIA 2026",
+      "evento": "IBERAMIA",
       "nombreCompleto": "19th Ibero-American Conference on Artificial Intelligence",
       "disciplina": "",
       "categoria": [
@@ -300,7 +300,7 @@
     },
     {
       "id": 6,
-      "evento": "WS-AI4CCAM 2026",
+      "evento": "WS-AI4CCAM",
       "nombreCompleto": "World Symposium on Artificial Intelligence for Climate Change Adaptation and Mitigation",
       "disciplina": "",
       "categoria": [
@@ -343,7 +343,7 @@
     },
     {
       "id": 7,
-      "evento": "IoTBDS 2026",
+      "evento": "IoTBDS",
       "nombreCompleto": "11th International Conference on Internet of Things and Big Data Systems",
       "disciplina": "",
       "categoria": [
@@ -386,7 +386,7 @@
     },
     {
       "id": 8,
-      "evento": "HCII 2026 (HCI International)",
+      "evento": "HCII",
       "nombreCompleto": "28th International Conference on Human-Computer Interaction",
       "disciplina": "",
       "categoria": [
@@ -428,7 +428,7 @@
     },
     {
       "id": 9,
-      "evento": "COMIA 2026",
+      "evento": "COMIA",
       "nombreCompleto": "XVIII Congreso Mexicano de Inteligencia Artificial",
       "disciplina": "",
       "categoria": [
@@ -468,7 +468,7 @@
     },
     {
       "id": 10,
-      "evento": "CIbSE 2026",
+      "evento": "CIbSE",
       "nombreCompleto": "XXIX Ibero-American Conference on Software Engineering",
       "disciplina": "",
       "categoria": [
@@ -511,7 +511,7 @@
     },
     {
       "id": 11,
-      "evento": "CONESCAPAN 2026",
+      "evento": "CONESCAPAN",
       "nombreCompleto": "IEEE Convention of Central America and Panama",
       "disciplina": "",
       "categoria": [
@@ -553,7 +553,7 @@
     },
     {
       "id": 12,
-      "evento": "CIDIP/ICPME 2026",
+      "evento": "CIDIP/ICPME",
       "nombreCompleto": "30th International Congress on Project Management and Engineering",
       "disciplina": "",
       "categoria": [
@@ -597,7 +597,7 @@
     },
     {
       "id": 13,
-      "evento": "SBGames 2026",
+      "evento": "SBGames",
       "nombreCompleto": "Simpósio Brasileiro de Jogos e Entretenimento Digital",
       "disciplina": "",
       "categoria": [
@@ -763,7 +763,7 @@
     },
     {
       "id": 17,
-      "evento": "CLEI 2026",
+      "evento": "CLEI",
       "nombreCompleto": "52nd Latin American Computing Conference",
       "disciplina": "",
       "categoria": [
@@ -806,7 +806,7 @@
     },
     {
       "id": 18,
-      "evento": "IEEE LAMC 2026",
+      "evento": "IEEE LAMC",
       "nombreCompleto": "6th IEEE MTT-S Latin America Microwave Conference",
       "disciplina": "",
       "categoria": [
@@ -890,7 +890,7 @@
     },
     {
       "id": 20,
-      "evento": "ECMLG 2026",
+      "evento": "ECMLG",
       "nombreCompleto": "22nd European Conference on Management, Leadership and Governance)",
       "disciplina": "",
       "categoria": [
@@ -933,7 +933,7 @@
     },
     {
       "id": 21,
-      "evento": "ECRM 2026",
+      "evento": "ECRM",
       "nombreCompleto": "ECRM 2026 (European Conference on Research Methods in Business & Management Studies)",
       "disciplina": "",
       "categoria": [
@@ -975,7 +975,7 @@
     },
     {
       "id": 22,
-      "evento": "CONTROLO 2026",
+      "evento": "CONTROLO",
       "nombreCompleto": "17th APCA International Conference on Automatic Control and Soft Computing",
       "disciplina": "",
       "categoria": [
@@ -1016,7 +1016,7 @@
     },
     {
       "id": 23,
-      "evento": "ICACIT Symposium 2026",
+      "evento": "ICACIT",
       "nombreCompleto": "12th ICACIT Symposium Advancing Quality, Artificial Intelligence, and Applied Innovation in Engineering and Computing Education ",
       "disciplina": "",
       "categoria": [
@@ -1057,7 +1057,7 @@
     },
     {
       "id": 24,
-      "evento": "ICOMTA 2026",
+      "evento": "ICOMTA",
       "nombreCompleto": "VI International Conference on Communication and Applied Technologies 2026",
       "disciplina": "",
       "categoria": [

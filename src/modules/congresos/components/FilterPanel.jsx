@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, RotateCcw, ChevronDown, X, MapPin, Globe, Clock, CheckCircle2, Circle, Activity } from 'lucide-react';
+import { MagnifyingGlass as Search, ArrowCounterClockwise as RotateCcw, X, MapPin, Globe, Clock, Calendar, CheckCircle as CheckCircle2, Circle, Pulse as Activity } from '@phosphor-icons/react';
 
 // Color matching for active chips bar
 const CAT_COLORS = {
@@ -25,6 +25,7 @@ export default function Filters({ filters, setFilters, countries, lineas, onRese
         filters.modality && { key: 'modality', label: filters.modality },
         filters.indexation && { key: 'indexation', label: filters.indexation },
         filters.onlyActive && { key: 'onlyActive', label: 'Solo vigentes' },
+        filters.onlyUpcoming && { key: 'onlyUpcoming', label: 'No finalizados' },
     ].filter(Boolean)
 
     const removeFilter = (key) => setFilters({ ...filters, [key]: '' })
@@ -142,6 +143,24 @@ export default function Filters({ filters, setFilters, countries, lineas, onRese
                             </div>
                         </div>
                         <span className="deadline-toggle__label">Solo vigentes</span>
+                    </button>
+                </div>
+
+                <div className="filter-select-group filter-select-group--toggle">
+                    <label>
+                        <Calendar size={14} />
+                        Estado
+                    </label>
+                    <button
+                        className={`deadline-toggle ${filters.onlyUpcoming ? 'deadline-toggle--active' : ''}`}
+                        onClick={() => setFilters({ ...filters, onlyUpcoming: !filters.onlyUpcoming })}
+                    >
+                        <div className="deadline-toggle__track">
+                            <div className="deadline-toggle__thumb">
+                                {filters.onlyUpcoming ? <CheckCircle2 size={10} /> : <Circle size={10} />}
+                            </div>
+                        </div>
+                        <span className="deadline-toggle__label">No finalizados</span>
                     </button>
                 </div>
             </div>
