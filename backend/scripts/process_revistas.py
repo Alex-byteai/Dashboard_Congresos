@@ -1076,6 +1076,11 @@ def enrich_with_excel(journal_entry: dict, excel_row) -> dict:
     excel_tipo = _safe_val(excel_row.get('Tipo de revista'))
     if excel_tipo:
         journal_entry['tipo'] = excel_tipo
+    
+    # Tipo de APC
+    excel_apc = _safe_val(excel_row.get('Tipo APC'))
+    if excel_apc:
+        journal_entry['tipo_apc'] = excel_apc
 
     # Fecha de emision
     excel_fecha_emision = _safe_val(excel_row.get('Fecha de emisión'))
