@@ -1,4 +1,4 @@
-import { BookOpen, FileText, ChevronRight } from 'lucide-react';
+import { BookOpen, FileText, CaretRight as ChevronRight } from '@phosphor-icons/react';
 
 export const MODULES = [
     {
@@ -31,18 +31,19 @@ export default function ModuleSelector({ onSelectModule }) {
 
             <main className="ulima-selector__main">
                 <div className="ulima-selector__grid">
-                    {MODULES.map((mod) => {
+                    {MODULES.map((mod, index) => {
                         const Icon = mod.icon;
                         return (
                             <button
                                 key={mod.id}
                                 className={`ulima-card ${!mod.available ? 'ulima-card--disabled' : ''}`}
+                                style={{ '--card-index': index }}
                                 onClick={() => mod.available && onSelectModule(mod.id)}
                                 disabled={!mod.available}
                             >
                                 <div className="ulima-card__content">
                                     <div className="ulima-card__icon-wrap">
-                                        <Icon size={28} strokeWidth={1.5} />
+                                        <Icon size={28} />
                                     </div>
                                     <div className="ulima-card__body">
                                         <h2 className="ulima-card__name">{mod.label}</h2>
@@ -63,7 +64,7 @@ export default function ModuleSelector({ onSelectModule }) {
                     })}
                 </div>
 
-                <div style={{ marginTop: '4rem', maxWidth: '600px', textAlign: 'center', color: '#71717a', fontSize: '0.9rem', lineHeight: '1.6' }}>
+                <div style={{ marginTop: '4rem', maxWidth: '600px', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: '1.6' }}>
                     <p>
                         <strong>Importante:</strong> La información presentada ha sido elaborada conforme a los protocolos y lineamientos institucionales orientados a resguardar la integridad científica de las publicaciones. Este portal constituye una herramienta de apoyo para la toma de decisiones sobre la elección de revistas y congresos por parte de investigadores con afiliación a la Universidad. Reúne información de medios previamente evaluados y en proceso de actualización continua. Su contenido tiene carácter orientador y no sustituye la evaluación académica ni la responsabilidad del equipo investigador en la selección del medio de publicación.
                     </p>

@@ -1,22 +1,8 @@
 {
   "revistas_observadas": [
     {
-      "journal": "Sustainability",
-      "issn": "",
-      "eissn": "2071-1050",
-      "enlace_informe": "https://drive.google.com/file/d/13r4MgLxXjPoCcpqGi9geTAnrLbEG0L6r/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
-      "journal": "Corporate Board: Role, Duties and Composition",
-      "issn": "1810-8601",
-      "eissn": "2312-2722",
-      "enlace_informe": "https://drive.google.com/file/d/1lKWYGkMimOMFidHcLwxaniiKTOlCOOzh/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
       "journal": "Frontiers in Education",
-      "issn": "2504-284X",
+      "issn": "",
       "eissn": "2504-284X",
       "enlace_informe": "https://drive.google.com/file/d/1_oAU8DG1CPWOnoRkn85KxKZN3slAWuil/view?usp=drivesdk",
       "conclusion": "Posibles indicios de malas prácticas"
@@ -30,9 +16,16 @@
     },
     {
       "journal": "PLOS ONE",
-      "issn": "1932-6203",
+      "issn": "",
       "eissn": "1932-6203",
       "enlace_informe": "https://drive.google.com/file/d/18J33UydrHGzQEz8PIBw1VddGvAB8Eidz/view?usp=drivesdk",
+      "conclusion": "Posibles indicios de malas prácticas"
+    },
+    {
+      "journal": "International Journal of Information and Education Technology",
+      "issn": "",
+      "eissn": "2010-3689",
+      "enlace_informe": "https://drive.google.com/file/d/1_eeoZinI9t9B9IlbubKQaErz-J3HBdSY/view?usp=drivesdk",
       "conclusion": "Posibles indicios de malas prácticas"
     }
   ]

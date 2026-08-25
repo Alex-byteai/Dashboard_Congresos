@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { LayoutGrid, FilePlus } from 'lucide-react'
+import { FilePlus } from '@phosphor-icons/react'
 
 import Header from '../../shared/components/Header'
 import CareerFilter, { CAREERS } from '../../shared/components/CareerFilter'
@@ -8,7 +8,7 @@ import RevistasFilterPanel from './components/RevistasFilterPanel'
 import RevistasList from './components/RevistasList'
 import ReviewRequestModal from './components/ReviewRequestModal'
 import BadPracticesModal from './components/BadPracticesModal'
-import { AlertOctagon } from 'lucide-react'
+import { WarningOctagon as AlertOctagon } from '@phosphor-icons/react'
 
 export default function RevistasModule({ onBack }) {
     const [loading, setLoading] = useState(true)
@@ -21,6 +21,7 @@ export default function RevistasModule({ onBack }) {
     const initialFilters = {
         search: '',
         tipo: '',
+        apc: '',
         disciplina: '',
         categorias: [],
         lineas: []
@@ -112,6 +113,7 @@ export default function RevistasModule({ onBack }) {
                 r.enfoque?.toLowerCase().includes(q)
 
             const matchesTipo = !filters.tipo || r.tipo === filters.tipo
+            const matchesApc = !filters.apc || r.tipo_apc === filters.apc
             const matchesDisciplina = !filters.disciplina || (r.disciplinas || []).includes(filters.disciplina)
 
             const journalClassification = r.clasificacion_ulima || []
@@ -130,7 +132,7 @@ export default function RevistasModule({ onBack }) {
             const matchesCareer = selectedCareerCats.length === 0 ||
                 selectedCareerCats.some(cat => journalCategories.includes(cat))
 
-            return matchesSearch && matchesTipo && matchesDisciplina && matchesCategoria && matchesLinea && matchesCareer
+            return matchesSearch && matchesTipo && matchesApc && matchesDisciplina && matchesCategoria && matchesLinea && matchesCareer
         })
     }, [filters, revistas, selectedCareers])
 
@@ -149,44 +151,48 @@ export default function RevistasModule({ onBack }) {
 
             <div className="container">
                 <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '1.5rem', gap: '1rem', flexWrap: 'wrap' }}>
-                    <button 
+                    <button
                         onClick={() => setShowBadPractices(true)}
-                        style={{ 
-                            display: 'flex', alignItems: 'center', gap: '0.5rem', 
-                            background: '#fee2e2', color: '#dc2626', 
-                            border: '1.5px solid #fca5a5', borderRadius: '50px', 
+                        style={{
+                            display: 'flex', alignItems: 'center', gap: '0.5rem',
+                            background: 'var(--pastel-red-bg)', color: 'var(--pastel-red-text)',
+                            border: '1.5px solid var(--pastel-red-bg)', borderRadius: 'var(--radius-md)',
                             padding: '0.6rem 1.25rem', fontWeight: 600, cursor: 'pointer',
-                            transition: 'all 0.2s', fontSize: '0.875rem'
+                            transition: 'background 0.2s var(--ease-out), transform 0.1s var(--ease-out)', fontSize: '0.875rem'
                         }}
-                        onMouseEnter={(e) => { 
-                            e.currentTarget.style.background = '#fecaca';
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.background = '#fbdcde';
                         }}
-                        onMouseLeave={(e) => { 
-                            e.currentTarget.style.background = '#fee2e2';
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.background = 'var(--pastel-red-bg)';
                         }}
+                        onMouseDown={(e) => { e.currentTarget.style.transform = 'scale(0.97)'; }}
+                        onMouseUp={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
                     >
                         <AlertOctagon size={18} />
                         Revistas Observadas
                     </button>
 
-                    <button 
+                    <button
                         onClick={() => setShowReviewModal(true)}
-                        style={{ 
-                            display: 'flex', alignItems: 'center', gap: '0.5rem', 
-                            background: 'white', color: 'var(--text-main)', 
-                            border: '1.5px solid var(--border)', borderRadius: '50px', 
+                        style={{
+                            display: 'flex', alignItems: 'center', gap: '0.5rem',
+                            background: 'white', color: 'var(--text)',
+                            border: '1.5px solid var(--border)', borderRadius: 'var(--radius-md)',
                             padding: '0.6rem 1.25rem', fontWeight: 600, cursor: 'pointer',
-                            transition: 'all 0.2s', fontSize: '0.875rem',
-                            boxShadow: 'var(--shadow-sm)'
+                            transition: 'border-color 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.1s var(--ease-out)', fontSize: '0.875rem',
+                            boxShadow: 'none'
                         }}
-                        onMouseEnter={(e) => { 
+                        onMouseEnter={(e) => {
                             e.currentTarget.style.borderColor = 'var(--primary)';
                             e.currentTarget.style.color = 'var(--primary)';
                         }}
-                        onMouseLeave={(e) => { 
+                        onMouseLeave={(e) => {
                             e.currentTarget.style.borderColor = 'var(--border)';
-                            e.currentTarget.style.color = 'var(--text-main)';
+                            e.currentTarget.style.color = 'var(--text)';
                         }}
+                        onMouseDown={(e) => { e.currentTarget.style.transform = 'scale(0.97)'; }}
+                        onMouseUp={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
                     >
                         <FilePlus size={18} />
                         ¿No encuentras tu revista? Solicitar Revisión
@@ -202,6 +208,7 @@ export default function RevistasModule({ onBack }) {
                     filters={filters}
                     setFilters={setFilters}
                     tipos={facets.tipos || []}
+                    apcs={['Sin APC', 'Con APC', 'APC opcional']}
                     disciplinas={facets.disciplinas || []}
                     categorias={facets.categorias || []}
                     lineas={uniqueLineas}

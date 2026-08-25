@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "totalCongresses": 14,
-    "lastUpdated": "2026-02-19 15:59:38",
-    "version": "2.1"
+    "totalCongresses": 24,
+    "lastUpdated": "2026-06-12 10:39:15",
+    "version": "2.2"
   },
   "taxonomy": {
     "INNOVACIÓN Y TECNOLOGÍA DIGITAL": {
@@ -91,25 +91,22 @@
       "id": 1,
       "evento": "LACCEI",
       "nombreCompleto": "24th LACCEI International Multi-Conference for Engineering, Education and Technology",
-      "disciplina": "Acreditación y Evaluación en Ingeniería; Ciencias Básicas en Educación en Ingeniería; Currículo y Educación en Ingeniería; Ética y Sociedad en Ingeniería; Gestión de la Educación en Ingeniería; Laboratorios Remotos y en Línea; Reclutamiento y Retención en Ingeniería; Tecnologías para la Enseñanza y el Aprendizaje; Mujeres y Diversidad en Ingeniería; Aeroespacial y Aeronáutica; Agroindustria y Agricultura; Bioquímica; Ingeniería Biomédica y Salud; Biotecnología y Bioinformática; Nanotecnología; Ingeniería Química y de Materiales; Ingeniería Civil e Infraestructura; Ciencias de la Computación; Ingeniería de Software; Inteligencia Artificial; Ciencia de Datos; Ciberseguridad y Forensia Digital; Ingeniería Eléctrica y Electrónica; Energía y Agua; Emprendimiento e Innovación; Ingeniería Ambiental; Ingeniería Humanitaria; Tecnologías de Información; Internet de las Cosas (IoT); Industria 5.0; Sociedad 6.0; Logística y Transporte; Ingeniería Mecánica y Electromecánica; Riesgos Naturales; Oceanografía y Ciencias Marinas; Gestión del Ciclo de Vida de Proyectos; Producción e Ingeniería Industrial; Desarrollo Sostenible; Gestión de Tecnología; Telecomunicaciones",
+      "disciplina": "",
       "categoria": [
         "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
         "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
       ],
       "linea": [
-        "Bienestar y desarrollo humano",
-        "Experiencia digital humana",
         "Innovación empresarial",
-        "Tecnología y ecosistemas"
+        "Tecnología y ecosistemas",
+        "Transformación digital"
       ],
       "sublinea": [
-        "Diseño de interfaces adaptativas",
-        "Educación, desarrollo cognitivo y socioafectivo",
+        "Ciberseguridad y privacidad",
         "Emprendimiento tecnológico",
-        "Materiales avanzados",
-        "Salud mental y bienestar"
+        "Internet de las cosas (IoT)",
+        "Tecnologías limpias"
       ],
       "fechaInicio": "2026-07-15",
       "fechaFin": "2026-07-17",
@@ -120,49 +117,23 @@
       "deadline": "2026-02-16",
       "deadlineStatus": "passed",
       "publicacion": "Actas LACCEI (Scopus)",
-      "enlace": "http://laccei.org/laccei2026/"
+      "enlace": "http://laccei.org/laccei2026/",
+      "integridad": {
+        "organizadores": "Organization of American States | Florida Atlantic University | Pok | CONFEDI (Corporación de Facultades de Ingeniería de Chile)",
+        "comite_cientifico": "",
+        "programa_temas": "Engineering without Borders: Artificial Intelligence, Knowledge, Innovation, and Alliances for a Future from the Americas, es decir, Ingeniería sin Fronteras con énfasis en Inteligencia Artificial, conocimiento, innovación y alianzas para el futuro en las Américas",
+        "revision_pares": "El sitio web menciona la realización de revisión por pares",
+        "indexacion_bd": "Los artículos aceptados se someten a un proceso de revisión por pares doble ciego y, una vez aprobados, se procede a su envío a Scopus",
+        "conflicto_intereses": "El sitio web menciona el tratamiento de los conflictos de intereses",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
     },
     {
       "id": 2,
       "evento": "TICEC",
       "nombreCompleto": "14ª Conferencia Ecuatoriana de Tecnologías de la Información y Comunicación",
-      "disciplina": "Inteligencia Artificial Aplicada; Datos Abiertos; MLOps; Reproducibilidad de Modelos; Políticas y Gobierno Basado en Datos; Ética en IA; Seguridad y Robustez de Modelos; Ensayos Clínicos Digitales; Interoperabilidad Clínica; Seguridad del Paciente; Bioseñales e Imagenología; Biomateriales; Prototipado Biomédico; Medicina de Precisión; Modelación Ambiental; Sostenibilidad Ambiental; Teledetección; Gestión de Cuencas; Adaptación Climática; Ciudades Resilientes; Redes Eléctricas Inteligentes; Generación Distribuida; Energías Renovables; Agricultura de Precisión; Bioprocesos; Genética Aplicada; Nuevos Materiales; Pruebas de Materiales; Gemelos Digitales; Control de Procesos; Mantenimiento Predictivo; Manufactura Avanzada; Identidad Digital; Confianza Digital; Protección de Datos; Cumplimiento Normativo; Ciberseguridad; Ciberseguridad en IA e Infraestructuras Críticas; Tecnología Educativa (EdTech); Evaluación del Aprendizaje; Inclusión Digital; Accesibilidad Digital; Gobierno Digital; Sociedad Digital",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
-      ],
-      "linea": [
-        "Bienestar y desarrollo humano",
-        "Ciudades inteligentes y sostenibles",
-        "Gestión del conocimiento",
-        "Inteligencia artificial y computación avanzada",
-        "Ética, gobernanza y responsabilidad social"
-      ],
-      "sublinea": [
-        "Gestión inteligente de recursos",
-        "Inteligencia de negocios",
-        "Salud mental y bienestar",
-        "Sistemas autónomos y robótica",
-        "Ética y gobernanza"
-      ],
-      "fechaInicio": "2026-10-15",
-      "fechaFin": "2026-10-16",
-      "lugar": "Quito, Ecuador",
-      "ciudad": "Quito",
-      "pais": "Ecuador",
-      "modalidad": "Presencial",
-      "deadline": "2026-06-28",
-      "deadlineStatus": "future",
-      "publicacion": "Scopus",
-      "enlace": "ticec.cedia.edu.ec"
-    },
-    {
-      "id": 3,
-      "evento": "WorldCIST",
-      "nombreCompleto": "14th World Conference on Information Systems and Technologies",
-      "disciplina": "Gestión de la Información y del Conocimiento; Modelos Organizacionales y Sistemas de Información; Modelado de Software y Sistemas; Arquitecturas, Aplicaciones y Herramientas de Software; Sistemas y Aplicaciones Multimedia; Redes de Computadores, Movilidad y Sistemas Pervasivos; Sistemas Inteligentes y de Apoyo a la Decisión; Analítica de Big Data y Aplicaciones; Interacción Humano–Computador; Ética, Computación y Seguridad; Informática en Salud; Tecnologías de la Información en Educación; Tecnologías para Aplicaciones Biomédicas; Tecnologías de la Información en Radiocomunicaciones",
+      "disciplina": "",
       "categoria": [
         "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
         "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
@@ -171,15 +142,57 @@
       "linea": [
         "Ciudades inteligentes y sostenibles",
         "Gestión del conocimiento",
-        "Inteligencia artificial y computación avanzada",
+        "Sostenibilidad y cambio climático",
         "Transformación digital"
       ],
       "sublinea": [
-        "Gestión inteligente de recursos",
-        "Inteligencia de negocios",
-        "Internet de las cosas (IoT)",
-        "Sistemas autónomos y robótica",
-        "Tecnologías emergentes"
+        "Aprendizaje organizacional",
+        "Ciberseguridad y privacidad",
+        "Energías renovables",
+        "Gestión inteligente de recursos"
+      ],
+      "fechaInicio": "2026-10-15",
+      "fechaFin": "2026-10-16",
+      "lugar": "Quito, Ecuador",
+      "ciudad": "Quito",
+      "pais": "Ecuador",
+      "modalidad": "Presencial",
+      "deadline": "2026-06-28",
+      "deadlineStatus": "urgent",
+      "publicacion": "Scopus",
+      "enlace": "ticec.cedia.edu.ec",
+      "integridad": {
+        "organizadores": "CEDIA (Corporación Ecuatoriana para el Desarrollo de la Investigación y la Academia)",
+        "comite_cientifico": "",
+        "programa_temas": "Los ejes temáticos de TICEC 2026 se centran en inteligencia artificial, ciencia de datos, salud digital y sostenibilidad, abordados desde la investigación, la innovación tecnológica y sus aplicaciones en el ámbito de las TIC.",
+        "revision_pares": "No precisa",
+        "indexacion_bd": "El sitio web señala que las memorias del Track Científico se publicarán en Springer, en una conferencia indexada en Scopus",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
+    },
+    {
+      "id": 3,
+      "evento": "WorldCIST",
+      "nombreCompleto": "14th World Conference on Information Systems and Technologies",
+      "disciplina": "",
+      "categoria": [
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
+      ],
+      "linea": [
+        "Experiencia digital humana",
+        "Gestión del conocimiento",
+        "Innovación empresarial",
+        "Tecnología y ecosistemas"
+      ],
+      "sublinea": [
+        "Interacción humano-computadora",
+        "Tecnologías limpias",
+        "Transferencia de conocimiento",
+        "Transformación organizacional"
       ],
       "fechaInicio": "2026-03-31",
       "fechaFin": "2026-04-02",
@@ -190,29 +203,37 @@
       "deadline": "2025-12-16",
       "deadlineStatus": "passed",
       "publicacion": "Scopus",
-      "enlace": "worldcist.org"
+      "enlace": "worldcist.org",
+      "integridad": {
+        "organizadores": "Universidade da Madeira | Information and Technology Management Association",
+        "comite_cientifico": "El sitio web indica que el evento cuenta con un Comité Científico",
+        "programa_temas": "Temario:\nGestión de la Información y el Conocimiento\nModelos Organizacionales y Sistemas de Información\nModelado de Software y Sistemas\nSistemas de Software, Arquitecturas, Aplicaciones y Herramientas\nSistemas Multimedia y Aplicaciones\nRedes de Computadoras, Movilidad y Sistemas Pervasivos\nSistemas Inteligentes y de Soporte a la Decisión\nAnálisis y Aplicaciones de Big Data\nInteracción Persona-Computadora\nÉtica, Computadoras y Seguridad\nInformática en Salud\nTecnologías de la Información en Educación\nTecnologías de la Información en Radiocomunicaciones\nTecnologías para Aplicaciones Biomédicas\n",
+        "revision_pares": "El sitio web indica que todos los trabajos serán sometidos a una revisión ciega por al menos dos miembros del Comité del Programa",
+        "indexacion_bd": "Los artículos completos y cortos aceptados y registrados serán publicados en Proceedings by Springer, en varios volúmenes de la serie de libros Lecture Notes in Networks and Systems , serán enviados para indexación a Scopus, WoS, DBLP, Google Scholar, entre otros",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
     },
     {
       "id": 4,
-      "evento": "BICA 2026",
+      "evento": "BICA",
       "nombreCompleto": "17th Annual International Conference on Biologically Inspired Cognitive Architectures",
-      "disciplina": "Inteligencia Artificial; Creatividad y Razonamiento de Metas en Sistemas Artificiales; Inteligencia Corporizada y Ambiental; Capacidades Lingüísticas y Competencia Social en IA; Aprendizaje por Lectura, Observación, Razonamiento y Analogía; Mecanismos Robustos y Escalables de Aprendizaje Automático; Aprendizaje Autorregulado, Autoorganizado y Metaaprendizaje; Emociones en IA y Modelos BICA; Pruebas y Métricas para BICA en el Contexto del BICA Challenge; IA Ética, Confiable y Explicable; Ciberseguridad y BICA; Percepción, Razonamiento, Toma de Decisiones y Acción en BICA; Cognición Naturaleza–Artificial Combinada; Comparación de Formas de Aprendizaje y Memoria; Teoría de la Mente y Memoria Episódica y Autobiográfica; Introspección, Metacognición y Autoconciencia en BICA; Modelos de Aprendizaje y Memoria: Robustez, Flexibilidad y Transferibilidad; Lenguaje Natural y Cognición; Marcos Unificadores y Arquitecturas Cognitivas\n\nSistemas Mixto‑Iniciativa inspirados en el cerebro y la mente; Inteligencia Social y Emocional en Agentes Artificiales; BICA en Tecnologías Educativas y Tutoría; Modelos BICA del Yo para Percepción y Acción; Representación y Procesamiento de Emociones; Personajes Virtuales, Personalidades Artificiales y Compatibilidad Humana; Modelado Basado en Agentes de Fenómenos Sociales Inteligentes; Procesamiento Natural y Artificial de Información; Mecanismos Cognitivos y de Aprendizaje Informados por Neurociencia; Correlatos Neuronales de Procesos Cognitivos y Metacognitivos; Sistemas Neuromórficos Robustos y Escalables; Mecanismos Fisiológicos de Formación y Reconsolidación de Memoria; Representación del Conocimiento Conceptual y Contextual en Sistemas Neuronales\n\nBases Matemáticas para BICA; Substratos Alternativos para BICA (materiales inteligentes, neuromórficos, cuánticos y biocomputación); Enfoques Evolutivos, Sistémicos y Educativos para BICA; Preguntas Fundamentales en Investigación BICA; Cognitive Decathlon y Grandes Desafíos del BICA; Masa Crítica para un Aprendiz Universal de Nivel Humano; Métricas y Evaluación para el BICA Challenge",
+      "disciplina": "",
       "categoria": [
         "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
         "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
       ],
       "linea": [
-        "Experiencia digital humana",
         "Gestión del conocimiento",
         "Inteligencia artificial y computación avanzada",
         "Transformación digital"
       ],
       "sublinea": [
-        "Diseño de interfaces adaptativas",
-        "Inteligencia de negocios",
-        "Internet de las cosas (IoT)",
-        "Machine learning y deep learning",
-        "Sistemas autónomos y robótica"
+        "Aprendizaje organizacional",
+        "Ciberseguridad y privacidad",
+        "Procesamiento de lenguaje natural",
+        "Visión computacional"
       ],
       "fechaInicio": "2026-09-09",
       "fechaFin": "2026-09-12",
@@ -221,31 +242,40 @@
       "pais": "Mexico",
       "modalidad": "Hibrido",
       "deadline": "2026-04-15",
-      "deadlineStatus": "upcoming",
+      "deadlineStatus": "passed",
       "publicacion": "Scopus",
-      "enlace": "bicaai.org"
+      "enlace": "bicaai.org",
+      "integridad": {
+        "organizadores": "Centro de Investigación y de Estudios Avanzados del IPN (Cinvestav) | Universidad Marista | Universidad de Guadalajara  Cuvalles",
+        "comite_cientifico": "El sitio web cuenta con información referente al Comité Organizador Central, no específicamente a un Comité Científico",
+        "programa_temas": "El sitio web indica que se publicará proximamente el programa del congreso",
+        "revision_pares": "No precisa",
+        "indexacion_bd": "El sito web menciona las opciones de publicación en las revistas: Lecture Notes in Electrical Engineering, Cognitive Systems Research (ambas indexadas en Scopus)",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
     },
     {
       "id": 5,
-      "evento": "IBERAMIA 2026",
+      "evento": "IBERAMIA",
       "nombreCompleto": "19th Ibero-American Conference on Artificial Intelligence",
-      "disciplina": "Inteligencia Artificial Fundamental; Agentes Inteligentes; Robótica; Entornos Inteligentes; Aprendizaje Automático; Ciencia de Datos; Modelos Generativos; Procesamiento del Lenguaje Natural; Comunicación e Interacción Persona‑Máquina; Inteligencia Artificial para la Sociedad; Ética en Inteligencia Artificial; Sostenibilidad y Tecnología Responsable; Aplicaciones de Inteligencia Artificial; Transferencia Tecnológica en IA",
+      "disciplina": "",
       "categoria": [
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
         "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
         "SOCIEDAD Y COMPORTAMIENTO HUMANO"
       ],
       "linea": [
-        "Experiencia digital humana",
-        "Inteligencia artificial y computación avanzada",
-        "Transformación digital",
-        "Ética, gobernanza y responsabilidad social"
+        "Ciudades inteligentes y sostenibles",
+        "Comunicación y cultura digital",
+        "Inteligencia artificial y computación avanzada"
       ],
       "sublinea": [
-        "Diseño de interfaces adaptativas",
-        "Internet de las cosas (IoT)",
-        "Machine learning y deep learning",
-        "Sistemas autónomos y robótica",
-        "Ética y gobernanza"
+        "Comunicación intercultural",
+        "Gestión inteligente de recursos",
+        "Procesamiento de lenguaje natural",
+        "Visión computacional"
       ],
       "fechaInicio": "2026-11-18",
       "fechaFin": "2026-11-20",
@@ -254,32 +284,40 @@
       "pais": "Paraguay",
       "modalidad": "Presencial",
       "deadline": "2026-05-31",
-      "deadlineStatus": "future",
+      "deadlineStatus": "passed",
       "publicacion": "Springer LNAI, Scopus, DBLP",
-      "enlace": "https://www.iberamia.org/iberamia2026/"
+      "enlace": "https://www.iberamia.org/iberamia2026/",
+      "integridad": {
+        "organizadores": "Universidad Nacional de Asunción y la Universidad Católica de Asunción ",
+        "comite_cientifico": "En el sitio web no se consigna un Comité Científico; no obstante, se detallan un Comité Organizador y un Comité de Programa",
+        "programa_temas": "El sitio indica que los temas se desarrollarán en torno a: aprendizaje automático, planificación, representación del conocimiento, razonamiento, inteligencia computacional, procesamiento del lenguaje natural, robótica y percepción, IA generativa, agentes autónomos y sistemas multiagente, IA en educación, IA general, IA social, IA de confianza y ética, y aplicaciones de IA.",
+        "revision_pares": "El sitio web indica que todos los papers se someterán a un proceso de revisión por pares de doble ciego por parte del Comité del Programa. Asimismo, indican que los artículos deben ser originales y no haber sito enviados simultaneamente a otra revista o conferencia",
+        "indexacion_bd": "El sitio web indica que un grupo de artículos serán nominados para una revisión rápida en revistas participantes, incluidas AI Communications , Progress in Artificial Intelligence , Inteligencia Artificial, entre otras indexadas en Scopus",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "La revista  AI Communications, señalada en el sitio web como revista objetivo, se encuentra descontinuada en Scopus. Su periodo de cobertura fue hasta el 2024",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
     },
     {
       "id": 6,
-      "evento": "WS-AI4CCAM 2026",
+      "evento": "WS-AI4CCAM",
       "nombreCompleto": "World Symposium on Artificial Intelligence for Climate Change Adaptation and Mitigation",
-      "disciplina": "Industria 5.0 y Manufactura Verde; Inteligencia Artificial para Modelos Climáticos; Inteligencia Artificial Experiencial y Herramientas Digitales para Adaptación Climática; Políticas e Instituciones para la Promoción de la IA; Eficiencia Energética y Optimización de Operaciones con IA; Alianzas Público‑Privadas para el Uso y Transferencia de Tecnología en IA; Evaluación del Impacto de la IA en el Cambio Climático; Monitoreo de Eventos Climáticos Extremos y Gestión del Riesgo con IA; Educación Climática Basada en Datos y Ciencia Ciudadana potenciada por IA; Análisis Asistido por IA de Interacciones Océano‑Atmósfera; Teleconexiones Climáticas Modeladas con IA",
+      "disciplina": "",
       "categoria": [
         "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
         "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
         "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
       ],
       "linea": [
-        "Ciudades inteligentes y sostenibles",
+        "Experiencia digital humana",
         "Gestión del conocimiento",
-        "Inteligencia artificial y computación avanzada",
-        "Tecnología y ecosistemas",
-        "Transformación digital"
+        "Sostenibilidad y cambio climático",
+        "Tecnología y ecosistemas"
       ],
       "sublinea": [
-        "Gestión inteligente de recursos",
-        "Inteligencia de negocios",
-        "Internet de las cosas (IoT)",
-        "Sistemas autónomos y robótica",
+        "Adaptación al cambio climático",
+        "Diseño de interfaces adaptativas",
+        "Gestión del capital intelectual",
         "Tecnologías limpias"
       ],
       "fechaInicio": "2026-05-07",
@@ -289,32 +327,41 @@
       "pais": "Brasil",
       "modalidad": "Presencial",
       "deadline": "2026-03-05",
-      "deadlineStatus": "urgent",
+      "deadlineStatus": "passed",
       "publicacion": "Springer(Scopus)",
-      "enlace": "https://www.haw-hamburg.de/en/university/newsroom/news-details/news/news/show/world-symposium-on-artificial-intelligence-for-climate-change-adaptation-and-mitigation-ws-ai4ccam/"
+      "enlace": "https://www.haw-hamburg.de/en/university/newsroom/news-details/news/news/show/world-symposium-on-artificial-intelligence-for-climate-change-adaptation-and-mitigation-ws-ai4ccam/",
+      "integridad": {
+        "organizadores": "Universidad Federal Fluminense (UFF) en asociación con el Laboratorio de Modelado Aplicado en Clima y Medio Ambiente (LAMMOC/UFF), el Programa de Posgrado en Ingeniería de Biosistemas (PGEB/UFF), la Comisión de Sustentabilidad de la UFF y BiodAI – Centro de Investigación en Ingeniería de IA ",
+        "comite_cientifico": "El sitio web señala a los integrantes del comité científico, entre los cuales destacan investigadores de Brasil, Alemania",
+        "programa_temas": "Los artículos seleccionados abordarán la aplicación de la inteligencia artificial y las tecnologías de la Industria 5.0 para fortalecer la acción climática, mediante políticas, alianzas y buenas prácticas orientadas a la modelización, el monitoreo, la educación, la eficiencia energética y la gestión de riesgos.",
+        "revision_pares": "El sitio web señala que las contribuciones serán sometidas a un proceso de revisión por pares.",
+        "indexacion_bd": "El sitio web indica que como resultado del evento se publicará el libro “Inteligencia Artificial para la Mitigación y Adaptación al Cambio Climático” porSpringer Nature, como parte de la “Gestión del Cambio Climático”, indexado en Scopus",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
     },
     {
       "id": 7,
-      "evento": "IoTBDS 2026",
+      "evento": "IoTBDS",
       "nombreCompleto": "11th International Conference on Internet of Things and Big Data Systems",
-      "disciplina": "Seguridad en IA e IoT; Detección de amenazas con IA en IoT; Edge AI para seguridad en IoT; Blockchain e IA para IoT; Privacidad y ética en IoT con IA; Seguridad impulsada por IA para IoT; Analítica avanzada e inteligencia en Big Data; Gestión de datos masivos; Modelado y experimentación en Big Data; Tecnologías y plataformas de Big Data; Redes y análisis social; Ingeniería de datos para Big Data; Algoritmos y metodologías de Big Data; Big Data como servicio (BDaaS); Marcos de software y procesamiento de datos; Health Informatics as a Service (HIaaS); Servicios y aplicaciones IoT; Seguridad como servicio (SECaaS); Servicios emergentes basados en datos; Aplicaciones IoT para salud, manufactura, energía y transporte; Smart cities y sistemas inteligentes IoT; Ética y privacidad en aplicaciones IoT; Arquitecturas IoT seguras; Redes de sensores y diagnóstico remoto; Gestión de transporte y movilidad inteligente; Arquitectura de software y middleware IoT; Dispositivos inteligentes y sistemas de recomendación; Protocolos de comunicación IoT; Comunicaciones máquina‑a‑máquina (M2M); Eficiencia energética en IoT; Ingeniería de software para IoT; Machine Learning y Deep Learning para IoT; Analítica de datos en IoT; Tecnologías y plataformas IoT; Sistemas embebidos y sensores; Conectividad e infraestructura IoT; Edge Computing; Integración IoT con AI/ML; Seguridad en redes IoT; Privacidad en IoT; Gestión de identidades y acceso; Criptografía avanzada; Modelos de confianza para IoT y Big Data; Cumplimiento normativo y ética en sistemas conectados",
+      "disciplina": "",
       "categoria": [
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
         "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
         "SOCIEDAD Y COMPORTAMIENTO HUMANO"
       ],
       "linea": [
-        "Economía digital",
-        "Gestión del conocimiento",
-        "Transformación digital",
-        "Ética, gobernanza y responsabilidad social"
+        "Ciudades inteligentes y sostenibles",
+        "Comunicación y cultura digital",
+        "Inteligencia artificial y computación avanzada",
+        "Transformación digital"
       ],
       "sublinea": [
         "Ciberseguridad y privacidad",
-        "Derechos humanos y tecnología",
-        "Fintech y servicios financieros",
-        "Inteligencia de negocios",
-        "Internet de las cosas (IoT)"
+        "Comunicación intercultural",
+        "Infraestructura sostenible",
+        "Machine learning y deep learning"
       ],
       "fechaInicio": "2026-05-21",
       "fechaFin": "2026-05-23",
@@ -323,29 +370,40 @@
       "pais": "España",
       "modalidad": "Hibrido",
       "deadline": "2026-02-24",
-      "deadlineStatus": "urgent",
+      "deadlineStatus": "passed",
       "publicacion": "Springer CCIS (Scopus, WoS)",
-      "enlace": "iotbds.scitevents.org"
+      "enlace": "iotbds.scitevents.org",
+      "integridad": {
+        "organizadores": "Institute for Systems and Technologies of Information, Control and Communication (INSTICC)",
+        "comite_cientifico": "El sitio web no indica un comité científico como tal, pero si presenta un Comité de Programa y los miembros que lo conforman.",
+        "programa_temas": "Temario: \nSeguridad de la IA y el IoT\nInvestigación de Big Data\nServicios emergentes y análisis\nAplicaciones del Internet de las cosas (IoT)\nFundamentos del Internet de las cosas ( IoT)\nTecnologías IoT\nSeguridad, privacidad y confianza\n",
+        "revision_pares": "El sitio web indica que realizará la revisión por pares de docle ciego solo a los artículos presentados en inglés",
+        "indexacion_bd": "El sitio web indica que los artículos aceptados serán publicaaaados por Springer e indexarán en Scopus, de igual manera las actas del congreso.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
     },
     {
       "id": 8,
-      "evento": "HCII 2026 (HCI International)",
+      "evento": "HCII",
       "nombreCompleto": "28th International Conference on Human-Computer Interaction",
-      "disciplina": "Teorías y Métodos de HCI; Diseño de Interacción; UX y Usabilidad; Diseño de Servicios y Design Thinking; Investigación de Usuarios; Métodos y Técnicas de Evaluación; Interfaces de Usuario Multimodales; Interfaces Adaptativas y Personalizadas; Inteligencia Artificial Generativa en HCI; Robots, Androides, Avatares y Humanos Virtuales; Tecnologías de Percepción y Sensado; Análisis de Imágenes y Drones; Conducción Autónoma; Simbiosis Humano‑Tecnología; IA Centrada en Humanos (HCAI); Inteligencia Artificial Explicable (XAI); Derechos de Propiedad Intelectual en Interfaces; Interacción VR; Interacción AR; Interacción MR; Interacción XR; Metaverso; Sistemas de Transporte del Futuro; Sistemas Médicos del Futuro; Interfaces Cerebro‑Computador (BCI); Privacidad y Seguridad en Línea; Anonimato y Protección de Datos; Sostenibilidad y SDGs en HCI; Ética y Filosofía de la Interacción; Reconocimiento de Emociones; Bienestar y Calidad de Vida; Accesibilidad y Acceso Universal; Interacción para Discapacidad; Interacción para Personas Mayores; Interacción para Niños; Internacionalización y Localización; Diversidad Cultural, Género e Inclusión en HCI; Creatividad y Educación; e‑Learning; Aprendizaje a Distancia; Diseño de Juegos; Gamificación; e‑Sports; Ciencias del Deporte; HCI y Psicología; HCI y Sociología; HCI y Antropología; Trabajo Remoto y Productividad; e‑Government; Voto Electrónico; HCI para Gobernanza Ética; Crímenes Digitales y Conflictos; Desigualdad Social y Económica en HCI",
+      "disciplina": "",
       "categoria": [
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
       ],
       "linea": [
         "Experiencia digital humana",
         "Inteligencia artificial y computación avanzada",
-        "Transformación digital"
+        "Transformación digital",
+        "Ética, gobernanza y responsabilidad social"
       ],
       "sublinea": [
+        "Ciberseguridad y privacidad",
         "Diseño de interfaces adaptativas",
-        "Diseño y construcción virtual",
-        "Interacción humano-computadora",
-        "Internet de las cosas (IoT)",
-        "Sistemas autónomos y robótica"
+        "Machine learning y deep learning",
+        "Ética y gobernanza"
       ],
       "fechaInicio": "2026-07-26",
       "fechaFin": "2026-07-31",
@@ -354,31 +412,38 @@
       "pais": "Canada",
       "modalidad": "Hibrido",
       "deadline": "2026-03-30",
-      "deadlineStatus": "upcoming",
+      "deadlineStatus": "passed",
       "publicacion": "Springer LNCS (Scopus, WoS)",
-      "enlace": "2026.hci.international/hci"
+      "enlace": "2026.hci.international/hci",
+      "integridad": {
+        "organizadores": "El sitio web indica que se realizará la conferencia en conjunto con otras afines a ella: HCI: Área temática de interacción persona-computadora\r\nHIMI: Área Temática de Interfaz Humana y Gestión de la Información\r\nEPCE: 23.ª Conferencia Internacional sobre Psicología de la Ingeniería y Ergonomía Cognitiva\r\nAC: 20ª Conferencia Internacional sobre el Aumento de la Cognición en la Era Acelerada por la IA\r\nUAHCI: XX Conferencia Internacional sobre Acceso Universal en la Interacción Persona-Computadora\r\nCCD: XVIII Conferencia Internacional sobre Diseño Transcultural\r\nSCSM: 18ª Conferencia Internacional sobre Computación Social y Redes Sociales\r\nVAMR: 18ª Conferencia Internacional sobre Realidad Virtual, Aumentada y Mixta\r\nDHM: XVII Conferencia Internacional sobre Modelado Humano Digital y Aplicaciones en Salud, Seguridad, Ergonomía y Gestión de Riesgos\r\nDUXU: XV Conferencia Internacional sobre Diseño, Experiencia de Usuario y Usabilidad\r\nC&C: 14ª Conferencia Internacional sobre Cultura y Computación\r\nDAPI: 14ª Conferencia Internacional sobre Interacciones Distribuidas, Ambientales y Pervasivas\r\nHCIBGO: XIII Conferencia Internacional sobre HCI en Empresas, Gobierno y Organizaciones\r\nLCT: XIII Conferencia Internacional sobre Tecnologías de Aprendizaje y Colaboración\r\nITAP: XII Conferencia Internacional sobre los Aspectos Humanos de las TI para la Población de Edad Avanzada\r\nAIS: 8ª Conferencia Internacional sobre Sistemas de Instrucción Adaptativos\r\nHCI-CPT: 8ª Conferencia Internacional sobre HCI para Ciberseguridad, Privacidad y Confianza\r\nHCI-Games: 8ª Conferencia Internacional sobre HCI en Juegos\r\nMobiTAS: 8ª Conferencia Internacional sobre HCI en Movilidad, Transporte y Sistemas Automotrices\r\nAI-HCI: 7ª Conferencia Internacional sobre Inteligencia Artificial en HCI\r\nMÓVIL: 7ª Conferencia Internacional sobre Diseño, Operación y Evaluación de Comunicaciones Móviles Centradas en el Ser Humano",
+        "comite_cientifico": "No precisa",
+        "programa_temas": "Temario:\nGeneral:\r\nTeorías y métodos de HCI\r\nProceso de diseño y gestión del ciclo de vida\r\nInvestigación de usuarios\r\nMétodos y técnicas de evaluación\r\nUX (Experiencia de Usuario) y Usabilidad\r\nDesign Thinking y Diseño de Servicios\r\nTecnología de vanguardia y experiencia de vida humana:\r\nInteligencia artificial generativa\r\nRobots, androides, avatares y humanos virtuales\r\nTecnología de detección\r\nAnálisis de imágenes y drones\r\nConducción autónoma\r\nSimbiosis humano-tecnología:\r\nIA centrada en el ser humano (IAC) e IA explicable (IAX)\r\nDerechos de propiedad intelectual\r\nInterfaces adaptativas y personalizadas\r\nDistopía y utopía\r\nInteracciones entre el ser humano y el medio ambiente:\r\nVR, AR, MR, XR y Metaverso\r\nSistemas de transporte del futuro\r\nSistemas médicos del futuro\r\nInterfaz cerebro-máquina\r\nÉtica, Privacidad y Seguridad:\r\nCuestiones filosóficas y éticas de la HCI\r\nPrivacidad y seguridad en línea\r\nAnonimato y privacidad\r\nSostenibilidad, ODS y HCI\r\nBienestar, Salud y Eudaimonía:\r\nEfecto estético-usabilidad\r\nReconocimiento de las emociones humanas\r\nSatisfacción y placer\r\nCalidad de vida (CV)\r\nAccesibilidad y Acceso Universal:\r\nDiferencias culturales y HCI\r\nGénero y diversidad\r\nInternacionalización, globalización y localización\r\nInterfaz para personas con discapacidad, personas mayores y niños\r\nAprendizaje y creatividad:\r\nCreatividad y educación\r\nAprendizaje electrónico y aprendizaje a distancia\r\nDiseño de juegos y gamificación\r\ne-Sports y Ciencias del Deporte\r\nOrganización social y democracia:\r\nHCI y Psicología, Sociología y Antropología\r\nTrabajo remoto y productividad\r\nGobierno electrónico y voto electrónico\r\nHCI ética y crímenes/conflictos\r\nDesequilibrios sociales y económicos y HCI",
+        "revision_pares": "Para un tipo de presentación de trabajos de última hora (máximo 800 palabras), el sitio web indica que serán revisados por pares a doble ciego por al menos dos revisores.",
+        "indexacion_bd": "El sitio web indica que las Actas de la Conferencia Internacional HCI 2026 serán publicadas por Springer; estos se publicarán en volúmenes de las series Lecture Notes in Computer Science (LNCS) y Lecture Notes in Artificial Intelligence (LNAI) las cuales el editor enviará a Scopus para su indexación.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
     },
     {
       "id": 9,
-      "evento": "COMIA 2026",
+      "evento": "COMIA",
       "nombreCompleto": "XVIII Congreso Mexicano de Inteligencia Artificial",
-      "disciplina": "Sistemas expertos y sistemas basados en conocimiento; Representación, adquisición y manejo del conocimiento; Sistemas multi-agente e IA distribuida; Organizaciones inteligentes; Inteligencia artificial generativa; Procesamiento del lenguaje natural; Interfaces inteligentes: multimedia y realidad virtual; Visión por computadora y procesamiento de imágenes; Inteligencia computacional; Aprendizaje automático y reconocimiento de patrones; Incertidumbre y razonamiento; Demostración de teoremas automatizada; Robótica; Planificación y programación; Sistemas inteligentes híbridos; Bioinformática y aplicaciones médicas; Cuestiones metodológicas y filosóficas de la IA; Sistemas de tutorías inteligentes; Minería de datos; Aplicaciones con inteligencia artificial\n\n",
+      "disciplina": "",
       "categoria": [
         "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
         "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
       ],
       "linea": [
-        "Experiencia digital humana",
         "Gestión del conocimiento",
-        "Inteligencia artificial y computación avanzada",
-        "Transformación digital"
+        "Inteligencia artificial y computación avanzada"
       ],
       "sublinea": [
-        "Diseño de interfaces adaptativas",
-        "Inteligencia de negocios",
-        "Internet de las cosas (IoT)",
-        "Machine learning y deep learning",
-        "Sistemas autónomos y robótica"
+        "Aprendizaje organizacional",
+        "Procesamiento de lenguaje natural",
+        "Transferencia de conocimiento",
+        "Visión computacional"
       ],
       "fechaInicio": "2026-05-25",
       "fechaFin": "2026-05-29",
@@ -387,31 +452,41 @@
       "pais": "Mexico",
       "modalidad": "Presencial",
       "deadline": "2026-04-01",
-      "deadlineStatus": "upcoming",
+      "deadlineStatus": "passed",
       "publicacion": "Springer CCIS (Scopus) + memorias del congreso",
-      "enlace": "comia.com.mx"
+      "enlace": "comia.com.mx",
+      "integridad": {
+        "organizadores": "Sociedad Mexicana de Inteligencia Artificial (SMIA)",
+        "comite_cientifico": "El sitio web no indica un comité científico como tal, pero si presenta un Comité de Programa y los miembros que lo conforman.",
+        "programa_temas": "Temario: \n  Sistemas expertos y sistemas basados en conocimiento\r\n  Representación, adquisición y manejo del conocimiento\r\n  Sistemas multi-agente e IA distribuida\r\n  Organizaciones inteligentes\r\n  Inteligencia artificial generativa\r\n  Procesamiento del lenguaje natural\r\n  Interfaces inteligentes: multimedia, realidad virtual\r\n  Visión por computadora y procesamiento de imágenes\r\n  Inteligencia computacional\r\n  Aprendizaje automático y reconocimiento de patrones\r\n  Incertidumbre y razonamiento\r\n  Demostración de teoremas automatizada\r\n  Robótica\r\n  Planificación y programación\r\n  Sistemas inteligentes híbridos\r\n  Bioinformática y aplicaciones médicas\r\n  Cuestiones metodológicas y filosóficas de la IA\r\n  Sistemas de tutorías inteligente\r\n  Minería de datos\r\n  Aplicaciones con IA",
+        "revision_pares": "El sitio web indica que los artículos serán sometidos a una revisión doblemente ciega ",
+        "indexacion_bd": "El sitio web indica que los mejores artículos aceptados, escritos en idioma inglés, serán publicados en un volumen de Communications in Computer and Information Science de la editorial Springer, publicación indexada en Scopus.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
     },
     {
       "id": 10,
-      "evento": "CIbSE 2026",
+      "evento": "CIbSE",
       "nombreCompleto": "XXIX Ibero-American Conference on Software Engineering",
-      "disciplina": "Aplicación de la inteligencia artificial a la ingeniería de software; LLMs y modelos fundacionales en ingeniería de software; Ingeniería de software continua (Desarrollo Ágil, DevOps, Entrega Continua, Integración Continua); Ingeniería de software basada en la comunidad (código abierto, crowdsourcing); Detección de vulnerabilidades para mejorar la seguridad del software; Calidad de software, modelos de calidad y gestión de la deuda técnica; Sostenibilidad del software e Ingeniería de Software Verde; Ingeniería de software para dominios estratégicos (agricultura, aviación, ciudades inteligentes, etc.); Minería de repositorios de software y analítica de software; Modelado del software e ingeniería dirigida por modelos; Aspectos humanos y sociales de la ingeniería de software; Confidencialidad, integridad, privacidad, equidad y justicia; Informes de experiencias industriales en ingeniería de software; Métodos de investigación en ingeniería de software",
+      "disciplina": "",
       "categoria": [
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
         "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
         "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
       ],
       "linea": [
-        "Experiencia digital humana",
-        "Gestión del conocimiento",
-        "Inteligencia artificial y computación avanzada",
+        "Ciudades inteligentes y sostenibles",
+        "Innovación empresarial",
+        "Sostenibilidad y cambio climático",
         "Transformación digital"
       ],
       "sublinea": [
-        "Diseño de interfaces adaptativas",
-        "Inteligencia de negocios",
-        "Machine learning y deep learning",
-        "Sistemas autónomos y robótica",
-        "Tecnologías emergentes"
+        "Ciberseguridad y privacidad",
+        "Gestión inteligente de recursos",
+        "Gestión sostenible de recursos",
+        "Modelos de negocio digitales"
       ],
       "fechaInicio": "2026-05-11",
       "fechaFin": "2026-05-15",
@@ -422,29 +497,38 @@
       "deadline": "2026-02-06",
       "deadlineStatus": "passed",
       "publicacion": "Scopus",
-      "enlace": "https://conf.researchr.org/home/cibse-2026"
+      "enlace": "https://conf.researchr.org/home/cibse-2026",
+      "integridad": {
+        "organizadores": "La Escuela Iberoamericana Avanzada de Ingeniería de Software (EIbAIS)",
+        "comite_cientifico": "El sitio web no indica un comité científico como tal, pero si presenta un Comité General y un Comité Directivo",
+        "programa_temas": "Temario:\nAplicación de la Inteligencia Artificial a la Ingeniería de Software\r\nSistemas autoadaptativos\r\nIngeniería de software basada en la comunidad (por ejemplo, código abierto, crowdsourcing)\r\nIngeniería de Software Continua (Desarrollo Ágil, DevOps, Entrega Continua, Integración Continua, etc.)\r\nConfidencialidad, integridad, privacidad y equidad\r\nDetección de vulnerabilidades para mejorar la seguridad del software\r\nGemelos digitales\r\nÉtica en la ingeniería de software\r\nIngeniería de software experimental\r\nAspectos humanos y sociales de la ingeniería de software\r\nInformes de experiencias industriales en Ingeniería de Software\r\nLLMs y otros modelos básicos en Ingeniería de Software\r\nCiencia abierta para la ingeniería de software\r\nIngeniería de software cuántico\r\nIngeniería de requisitos\r\nMétodos de investigación en ingeniería de software\r\nIngeniería de software basada en búsquedas\r\nArquitectura y variabilidad del software\r\nEconomía del software\r\nEcosistemas de software y sistemas de sistemas\r\nIngeniería de software y ciencia de datos\r\nEducación y formación en ingeniería de software\r\nIngeniería de software para dominios estratégicos (por ejemplo, agricultura, aviación, ciudades inteligentes, etc.)\r\nEvolución y modernización del software\r\nModelado de software e ingeniería basada en modelos\r\nProcesos de software\r\nLíneas de productos y procesos de software\r\nCalidad del software, modelos de calidad y gestión de la deuda técnica\r\nConfiabilidad del software\r\nMinería de repositorios de software y análisis de software\r\nReutilización de software\r\nSostenibilidad del software e ingeniería de software verde\r\nPruebas de software",
+        "revision_pares": "El sitio web indica que los artículos serán sometidos a una revisión por al menos tres miembros del Comité del Programa",
+        "indexacion_bd": "El sitio web indica que los artículos técnicos y de indeas emergentes aceptados se inlcuirán en las actas del congreso, que estarán disponibles a través de la  Biblioteca Digital Abierta de la Sociedad Brasileña de Computación - SOL y Curran Associates , y posteriormente indexadas en DBLP y Scopus.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "El plazo venció para el envío de artículos",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
     },
     {
       "id": 11,
-      "evento": "CONESCAPAN 2026",
+      "evento": "CONESCAPAN",
       "nombreCompleto": "IEEE Convention of Central America and Panama",
-      "disciplina": "Gestión y control de recursos energéticos distribuidos; Integración de energías renovables y redes inteligentes; Estabilidad del sistema eléctrico y control de voltaje; Microredes y sistemas de almacenamiento de energía; Medición inteligente y gestión del lado de la demanda; Transmisión HVDC; Electrónica de potencia para energías renovables; Diseño de máquinas eléctricas para energía renovable; Fiabilidad de la red; Seguridad ciberfísica en sistemas de potencia; Física y modelado de dispositivos electrónicos; Nanoelectrónica y tecnologías de gigaescala; Electrónica flexible, impresa y orgánica; Circuitos analógicos, digitales y mixtos; Diseño VLSI/ULSI y SoC/NoC; FPGA avanzados; Microsistemas MEMS/NEMS y sensores integrados; Circuitos RF y microondas; IoT y electrónica embebida; Electrónica de potencia y conversión energética; Control y sistemas ciberfísicos; Microrredes y sostenibilidad energética; Procesamiento de señales en hardware para IA; Arquitecturas de hardware para IA; Automatización del diseño electrónico (EDA); Pruebas y confiabilidad de circuitos; Circuitos tolerantes a fallas; Sistemas electrónicos para comunicaciones; Circuitos para aplicaciones científicas e industriales; Inteligencia artificial y aprendizaje automático; Procesamiento de lenguaje natural; IoT y sistemas embebidos; Ciberseguridad; Realidad aumentada y realidad virtual; Computación en la nube; Software libre; Ingeniería de software; Sistemas distribuidos y arquitecturas emergentes; Computación de alto rendimiento; Blockchain; IA aplicada a salud; Procesamiento de señales biomédicas; Procesamiento de imágenes biomédicas; Sensores biomédicos; Sistemas portátiles de monitoreo; Neuroingeniería; Interfaces cerebro‑computador",
+      "disciplina": "",
       "categoria": [
         "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
         "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
       ],
       "linea": [
-        "Ciudades inteligentes y sostenibles",
+        "Experiencia digital humana",
+        "Inteligencia artificial y computación avanzada",
         "Sostenibilidad y cambio climático",
-        "Tecnología y ecosistemas",
         "Transformación digital"
       ],
       "sublinea": [
+        "Ciberseguridad y privacidad",
         "Energías renovables",
-        "Gestión inteligente de recursos",
-        "Gestión sostenible de recursos",
-        "Internet de las cosas (IoT)",
-        "Tecnologías limpias"
+        "Procesamiento de lenguaje natural",
+        "Realidad virtual y aumentada"
       ],
       "fechaInicio": "2026-09-23",
       "fechaFin": "2026-09-25",
@@ -453,30 +537,42 @@
       "pais": "Costa Rica",
       "modalidad": "Presencial",
       "deadline": "2026-06-08",
-      "deadlineStatus": "future",
+      "deadlineStatus": "passed",
       "publicacion": "Scopus",
-      "enlace": "https://r9.ieee.org/costarica/conescapan-2026-call-for-papers/"
+      "enlace": "https://r9.ieee.org/costarica/conescapan-2026-call-for-papers/",
+      "integridad": {
+        "organizadores": "IEEE Costa Rica | Tecnológico de Costa Rica - San Carlos (IEEE Student Branch) | Universidad de Costa Rica IEEE Student Branch | Universidad Invenio IEEE Student Branch | IEEE Student Branch Tecnológico Costa Rica ",
+        "comite_cientifico": "El sitio web no indica un comité científico como tal, pero si presenta un Comité Organizador y los miembros de este comité",
+        "programa_temas": "Temario: \nGestión y Control de Recursos Energéticos Distribuidos\nIntegración de Energía Renovable y Redes Inteligentes\nEstabilidad del Sistema Eléctrico y Control de Voltaje\nMicroredes y Sistemas de Almacenamiento de Energía\nMedición Inteligente y Gestión del Lado de la Demanda\nTransmisión de Corriente Continua de Alto Voltaje (HVDC)\nElectrónica de Potencia para Aplicaciones en Energías Renovables\nDiseño de Máquinas Eléctricas para Aplicaciones de Energía Renovable\nFiabilidad de la Red y Seguridad Ciberfísica en Sistemas de Potencia Modernos",
+        "revision_pares": "El sitio web indica que todos los artículos se someterán a un proceso de revisión por pares.",
+        "indexacion_bd": "No precisa; sin embargo se menciona en el sitio web que, los artículos aceptados se enviarán para su inclusión en la Biblioteca Digital IEEE Xplore, sujeto al cumplimiento de los requisitos de alcance y calidad de IEEE Xplore. ",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
     },
     {
       "id": 12,
-      "evento": "CIDIP/ICPME 2026",
+      "evento": "CIDIP/ICPME",
       "nombreCompleto": "30th International Congress on Project Management and Engineering",
-      "disciplina": "Dirección y Gestión de Proyectos; Ingeniería Civil y Urbanismo. Construcción y Arquitectura; Ingeniería de Producto y Procesos. Diseño Industrial; Ingeniería Ambiental y Gestión de Recursos Naturales; Eficiencia Energética y Energías Renovables; Desarrollo Rural y Proyectos de Cooperación al Desarrollo; Tecnologías de Información y Comunicaciones (TIC). Ingeniería del Software; Gestión de Riesgos y Seguridad; Innovación en Dirección e Ingeniería de Proyectos. Educación; Buenas Prácticas y Casos de Empresa",
+      "disciplina": "",
       "categoria": [
         "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO"
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
       ],
       "linea": [
-        "Ciudades inteligentes y sostenibles",
+        "Bienestar y desarrollo humano",
         "Innovación empresarial",
-        "Sostenibilidad y cambio climático"
+        "Sostenibilidad y cambio climático",
+        "Transformación digital"
       ],
       "sublinea": [
-        "Gestión de la innovación",
-        "Gestión inteligente de recursos",
-        "Gestión sostenible de recursos",
-        "Infraestructura sostenible",
-        "Urbanismo sostenible"
+        "Ciberseguridad y privacidad",
+        "Educación, desarrollo cognitivo y socioafectivo",
+        "Energías renovables",
+        "Gestión de la innovación"
       ],
       "fechaInicio": "2026-07-07",
       "fechaFin": "2026-07-09",
@@ -487,29 +583,39 @@
       "deadline": "2026-01-16",
       "deadlineStatus": "passed",
       "publicacion": "Actas indexadas en Scopus",
-      "enlace": "https://congresos.aeipro.com/"
+      "enlace": "https://congresos.aeipro.com/",
+      "integridad": {
+        "organizadores": "Universitat Jaume I (UJI) – Escuela Técnica Superior de Tecnología y Ciencias Experimentales (ESTCE) | Asociación Española de Dirección de Proyectos e Ingeniería (AEIPRO IPMA_España)",
+        "comite_cientifico": "El sitio web no indica un comité científico como tal, pero si presenta un Comité de Honor, y un Comité Organizador ",
+        "programa_temas": "Áreas temáticas:\nGestión de proyectos\nIngeniería Civil y Urbanismo. Construcción y Arquitectura\nIngeniería de Productos y Procesos y Diseño Industrial\nIngeniería Ambiental y Gestión de Recursos Naturales\nEficiencia Energética y Energías Renovables\nProyectos de Desarrollo Rural y Cooperación al Desarrollo\nTecnologías de la Información y las Comunicaciones (TIC). Ingeniería de Software\nGestión de Riesgos y Seguridad\nInnovación en la gestión de proyectos y la formación en ingeniería\nBuenas prácticas y casos de negocio\n",
+        "revision_pares": "El sitio web indica que todos los artículos se someterán a un proceso de revisión doble ciego.",
+        "indexacion_bd": "El sitio web indica que las actas del congreso se indexarán en Scopus e incluirán el DOI.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "El plazo venció para el envío de resumenes",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
     },
     {
       "id": 13,
-      "evento": "SBGames 2026",
+      "evento": "SBGames",
       "nombreCompleto": "Simpósio Brasileiro de Jogos e Entretenimento Digital",
-      "disciplina": "Arte de juegos; Animación e ilustración; Concept art; Modelado 2D y 3D; Diseño visual y UI/UX; Motion graphics para juegos; Narrativa visual y storytelling; Diseño de juegos; Diseño de niveles; Diseño sonoro y música para juegos; Estudios culturales del videojuego; Juegos y sociedad; Comunidades de jugadores; Representación, diversidad e inclusión; Preservación e historia de los juegos; Estudios de eSports; Comunidades modders y creadores; Juegos educativos; Gamificación; Juegos serios para aprendizaje; Evaluación de juegos educativos; Juegos en educación básica; Juegos en educación superior; Juegos como recurso pedagógico; Desarrollo y producción de videojuegos; Emprendimiento en videojuegos; Mercados y modelos de negocio; Gestión de equipos y pipelines; Publicación y distribución; Marketing y comunidades; Inteligencia Artificial en videojuegos; Aprendizaje automático en juegos; Animación procedural; Física computacional; Motores de juego y rendering; Shaders; Procesamiento de imágenes; Realidad virtual; Realidad aumentada; Juegos multijugador y redes; Juegos en la nube; Optimización y rendimiento; Seguridad y anti-cheat; Juegos para la salud y la rehabilitación; Juegos serios en medicina; Biofeedback; Sensores para salud; Juegos terapéuticos; Juegos para bienestar",
+      "disciplina": "",
       "categoria": [
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
         "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
         "SOCIEDAD Y COMPORTAMIENTO HUMANO"
       ],
       "linea": [
         "Bienestar y desarrollo humano",
         "Experiencia digital humana",
-        "Inteligencia artificial y computación avanzada",
-        "Transformación digital"
+        "Innovación empresarial",
+        "Inteligencia artificial y computación avanzada"
       ],
       "sublinea": [
-        "Diseño de interfaces adaptativas",
-        "Diseño y construcción virtual",
-        "Educación, desarrollo cognitivo y socioafectivo",
+        "Emprendimiento tecnológico",
         "Realidad virtual y aumentada",
-        "Sistemas autónomos y robótica"
+        "Salud mental y bienestar",
+        "Visión computacional"
       ],
       "fechaInicio": "2026-09-29",
       "fechaFin": "2026-10-02",
@@ -518,15 +624,234 @@
       "pais": "Brasil",
       "modalidad": "Presencial",
       "deadline": "2026-08-01",
-      "deadlineStatus": "future",
+      "deadlineStatus": "upcoming",
       "publicacion": "Scopus",
-      "enlace": "https://sbgames.org/sbgames2026/"
+      "enlace": "https://sbgames.org/sbgames2026/",
+      "integridad": {
+        "organizadores": "Centro de Excelência Embrapii em Tecnologias Imersivas",
+        "comite_cientifico": "Comissão Especial de Jogos e Entretenimento Digital (CEJOGOS)",
+        "programa_temas": "Temario:\nDesarrollo de juegos y software de entretenimiento digital\nInteligencia artificial y algoritmos aplicados a juegos\nDiseño, arte y narrativa de videojuegos\nInteracción humano-computadora y experiencia de usuario (UX)\nTecnologías inmersivas (VR/AR/MR)\nGamificación y aplicaciones educativas\nIndustrias de juegos y cultura digital",
+        "revision_pares": "El sitio web indica que, los autores de los mejores artículos completos podrán ser invitados a enviar una versión ampliada para una publicación especial en el Journal of Interactive Systems (JIS). ",
+        "indexacion_bd": "La revista Journal on Interactive Systems se encuentra indexada en Scopus y cuenta con un periodo de cobertura de 2020 a 2026.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
     },
     {
       "id": 14,
       "evento": "eCrime",
       "nombreCompleto": "eCrime Researchers Summit (eCrime 2026)",
-      "disciplina": "IA como herramienta para el cibercrimen; Polimorfismo avanzado de malware mediante IA; Generación automática de spear-phishing; Reconocimiento automatizado para ataques; Co-pilotos criminales y crimebots; Bandas híbridas humano-IA; Reducción de barreras de entrada al cibercrimen con IA; Agentes defensivos de IA; Ataques adversariales contra modelos de IA; Ataques contra sistemas de machine learning; Envenenamiento de datos; Jailbreaks y manipulación de LLMs; Diseño de defensas para IA; Seguridad de sistemas de IA; Protección frente a algoritmos criminales de IA; Resiliencia frente a desinformación contra modelos; Sistemas autónomos y semi-autónomos de defensa; Ataques a sistemas ciber-físicos; Secuestro y weaponización de drones; Uso criminal de robots industriales; Ataques a sistemas médicos asistidos por IA; Abuso de IoT doméstico y comercial; Ataques a vehículos autónomos y robots de entrega; Riesgos emergentes de IA contra personas; IA para targeting y manipulación psicológica; Ataques contra infraestructura crítica mediante IA; Diseño de entornos multi-agente para ciberseguridad; Sistemas multi-agente para resiliencia; Ingeniería social potenciada por IA; Plataformas híbridas humano-agente para fraude; Políticas y regulación del cibercrimen; Legislación sobre IA criminal y defensiva; Regulación de sistemas ciber-físicos; Marcos normativos contra el cibercrimen potenciado por IA",
+      "disciplina": "",
+      "categoria": [
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
+      ],
+      "linea": [
+        "Gestión del conocimiento",
+        "Inteligencia artificial y computación avanzada",
+        "Transformación digital"
+      ],
+      "sublinea": [
+        "Machine learning y deep learning",
+        "Sistemas autónomos y robótica",
+        "Tecnologías emergentes",
+        "Transferencia de conocimiento"
+      ],
+      "fechaInicio": "2026-11-03",
+      "fechaFin": "2026-11-05",
+      "lugar": "Lisboa",
+      "ciudad": "Lisboa",
+      "pais": "Portugal",
+      "modalidad": "Presencial (opción remota limitada)",
+      "deadline": "2026-05-30",
+      "deadlineStatus": "passed",
+      "publicacion": "Scopus",
+      "enlace": "https://apwg.org/events/ecrime2026/",
+      "integridad": {
+        "organizadores": "Anti-Phishing Working Group (APWG)",
+        "comite_cientifico": "El sitio web señala a los integrantes del Comité del Programa",
+        "programa_temas": "Temario:\nAspectos conductuales y psicosociales del ciberdelito; y victimización y prevención del sistema ciberfísico\r\nExposiciones, vulnerabilidades y riesgos tecnológicos emergentes\r\nVulnerabilidades arquitectónicas (de productos, tecnologías operativas, infraestructuras y sistemas ciberfísicos) que benefician a los actores criminales\r\nTécnicas nuevas o mejoradas para detectar y responder a los delitos cibernéticos y ciberfísicos de todo tipo \r\nCómo medir y comprender con precisión la salud y la resiliencia de los sistemas, redes, infraestructuras y usuarios frente al ciberdelito\r\nAbordar los desafíos de la creciente complejidad de los delitos cibernéticos (por ejemplo, las infraestructuras digitales, las técnicas forenses y de lucha contra el delito y la estructura de los propios delitos)\r\nMedición y modelado de delitos cibernéticos/delitos contra sistemas ciberfísicos y empresas delictivas relacionadas para rutinas de protección operativa\r\n\r\n \r\n\r\nMedición y modelado de delitos cibernéticos/delitos contra sistemas ciberfísicos y empresas delictivas relacionadas para fundamentar la instrumentación de suscripción racional desarrollada por aseguradoras comerciales\r\n \r\nAnálisis y modelado del panorama de riesgos de ciberdelincuencia y abuso\r\nEstrategias y contramedidas de entrega de carga útil de ciberdelincuencia/delitos ciberfísicos en sistemas (por ejemplo, spam, aplicaciones móviles, ingeniería social, etc.)\r\n \r\nAplicación de políticas públicas y leyes para la supresión programática de delitos cibernéticos comunes; delitos contra o que involucran sistemas ciberfísicos y abusos relacionados\r\n \r\nDesafíos políticos y jurídicos relacionados con el desarrollo y el mantenimiento de prácticas y políticas contra el ciberdelito\r\n \r\nDelitos relacionados con criptomonedas y delitos cibernéticos relacionados, y las herramientas y técnicas forenses necesarias para medir, prevenir y contrarrestar estos delitos.\r\n \r\nEstudios de casos de métodos actuales de ataque a sistemas ciberfísicos o ciberdelitos (por ejemplo, phishing, malware, programas antivirus fraudulentos, pharming, ransomware, crimeware, botnets y técnicas emergentes)\r\n \r\nDetectar y prevenir el abuso de la infraestructura de Internet para neutralizar los delitos cibernéticos/delitos y abusos contra los sistemas ciberfísicos\r\n \r\nDetectar y aislar bandas de cibercriminales y sus rutinas y empresas de lavado de dinero\r\n \r\nEvolución del ciberdelito en sectores verticales específicos (por ejemplo, servicios financieros, comercio electrónico, salud y energía, etc.)\r\n \r\nTécnicas de encubrimiento cibercriminal y herramientas y enfoques para contrarrestarlo\r\n \r\nDiseño y evaluación de UI/UX para neutralizar el fraude y mejorar la seguridad del usuario y la concienciación sobre el ciberdelito.\r\n \r\nNuevos métodos para medir los delitos cibernéticos y los abusos relacionados para el desarrollo de rutinas y programas defensivos",
+        "revision_pares": "El sitio web indica que solo los artículos revisados por pares seleccionados se presentarán en el simposio eCrime junto con paneles y charlas en sesiones generales de otros investigadores de centros de investigación industriales y académicos correspondientes del APWG.",
+        "indexacion_bd": "Los artículos aceptados para el Symposium on Electronic Crime Research (eCrime 2026) serán publicados en formato IEEE y tipicamente incluidos en la IEEE Xplore Digital Library, lo que permite que estén disponibles y sean indexados en bases de datos académicas reconocidas como IEEE Xplore, Scopus y Web of Science, sujeto a los procesos de indexación de cada una de estas bases.",
+        "conflicto_intereses": "No precisa ",
+        "observaciones": "El sitio web no menciona explícitamente en su Call for Papers que los artículos de 2026 serán indexados en bases como Scopus o Web of Science, sino que indica el formato de publicación IEEE, lo que sugiere fuertemente que serán parte de publicaciones IEEE Xplore, que normalmente sí se indexan en Scopus y Web of Science.",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
+    },
+    {
+      "id": 15,
+      "evento": "ECKM",
+      "nombreCompleto": "27th European Conference on Knowledge Management (ECKM 2026)",
+      "disciplina": "",
+      "categoria": [
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO"
+      ],
+      "linea": [
+        "Gestión del conocimiento",
+        "Innovación empresarial"
+      ],
+      "sublinea": [
+        "Aprendizaje organizacional",
+        "Gestión de la innovación",
+        "Gestión del capital intelectual",
+        "Transferencia de conocimiento"
+      ],
+      "fechaInicio": "2026-09-03",
+      "fechaFin": "2026-09-04",
+      "lugar": "Roma",
+      "ciudad": "Roma",
+      "pais": "Italia",
+      "modalidad": "Híbrido",
+      "deadline": "2026-03-04",
+      "deadlineStatus": "passed",
+      "publicacion": "Scopus",
+      "enlace": "https://www.academic-conferences.org/conferences/eckm/",
+      "integridad": {
+        "organizadores": "Congresos académicos y publicaciones internacionales (acpi)",
+        "comite_cientifico": "El sitio web indica los integrantes del programa de la conferencia ECKM",
+        "programa_temas": "Temario: \nCreación e intercambio de conocimientos\nSistemas y tecnologías de gestión del conocimiento\nAprendizaje organizacional e innovación\nGestión estratégica del conocimiento\nKM en contextos específicos\nGestión del conocimiento y cultura organizacional\nÉtica y Gestión del Conocimiento\nTendencias y desafíos emergentes en la gestión del conocimiento\n",
+        "revision_pares": "El sitio web indica que todos los artículos son revisados por pares doble ciego por miembrps del comité de la conferencia.",
+        "indexacion_bd": "El sitio web indica que los artículos aceptados tras el proceso de revisión por pares doble ciego se publicarán en las actas del congreso, previa inscripción y pago del autor. Asimismo, se indica que los editores de la revista Electronic Journal of Knowledge Management seleccionarán los trabajos que consideren apropiados para la publicación en la revista. De igual manera, el sitio web indica que los autores de artículos de alta calidad pueden enviarlos para la edición regular en la revista Bottom Line.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
+    },
+    {
+      "id": 16,
+      "evento": "ICSBT",
+      "nombreCompleto": "23 rd ICSBT International Conference on Smart Business Technologies (ICSBT 2026)",
+      "disciplina": "",
+      "categoria": [
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
+      ],
+      "linea": [
+        "Ciudades inteligentes y sostenibles",
+        "Tecnología y ecosistemas",
+        "Transformación digital",
+        "Ética, gobernanza y responsabilidad social"
+      ],
+      "sublinea": [
+        "Computación cuántica",
+        "Gestión inteligente de recursos",
+        "Tecnologías limpias",
+        "Ética y gobernanza"
+      ],
+      "fechaInicio": "2026-07-19",
+      "fechaFin": "2026-07-20",
+      "lugar": "Vila Galé Porto Hotel",
+      "ciudad": "Porto",
+      "pais": "Portugal",
+      "modalidad": "Híbrido",
+      "deadline": "2026-03-03",
+      "deadlineStatus": "passed",
+      "publicacion": "Scopus",
+      "enlace": "https://icsbt.scitevents.org/",
+      "integridad": {
+        "organizadores": "Institute for Systems and Technologies of Information, Control and Communication (INSTICC)",
+        "comite_cientifico": "El sitio web indica los integrantes del Comité de Programa ",
+        "programa_temas": "Temario: \nTransformación e innovación empresarial inteligente\nIA e inteligencia de decisiones\nFinTech, Blockchain y Confianza Digital\nSostenibilidad y tecnologías ESG\nInvestigación de operaciones y rendimiento empresarial\n",
+        "revision_pares": "El sitio web indica que todas los artículos siguen un proceso de doble ciego así como a un análisis de plagio mediante una herramienta de software antes de la revisión.",
+        "indexacion_bd": "El sitio web indica que las actas se resumirán e indexarán en DBLP, Google Scholar, EI-Compendex, INSPEC, Agencia Japonesa de Ciencia y Tecnología (JST), Registro Noruego de Revistas y Series Científicas, Mathematical Reviews, SCImago, Scopus y zbMATH. Los volúmenes del CCIS también se envían para su inclusión en las Actas del ISI: Lecture Notes in Computer Science",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
+    },
+    {
+      "id": 17,
+      "evento": "CLEI",
+      "nombreCompleto": "52nd Latin American Computing Conference",
+      "disciplina": "",
+      "categoria": [
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
+      ],
+      "linea": [
+        "Gestión del conocimiento",
+        "Inteligencia artificial y computación avanzada",
+        "Sostenibilidad y cambio climático",
+        "Transformación digital"
+      ],
+      "sublinea": [
+        "Adaptación al cambio climático",
+        "Internet de las cosas (IoT)",
+        "Procesamiento de lenguaje natural",
+        "Transferencia de conocimiento"
+      ],
+      "fechaInicio": "2026-09-07",
+      "fechaFin": "2026-09-11",
+      "lugar": "Centro Citibanamex",
+      "ciudad": "Ciudad de México",
+      "pais": "México",
+      "modalidad": "Presencial",
+      "deadline": "2026-03-29",
+      "deadlineStatus": "passed",
+      "publicacion": "IEEE, Scopus",
+      "enlace": "https://clei.org/",
+      "integridad": {
+        "organizadores": "Instituto Tecnólogico Autónomo de México",
+        "comite_cientifico": "El sitio indica a los miembros de su Comité Ejecutivo CLEI 2025-2026 y de su Comité Organizador Local",
+        "programa_temas": "Temario: \nSoftware Systems\nIntelligent Systems\nSystems in Practice\nComputer Technologies \nComputer Science Education ",
+        "revision_pares": "No precisa ",
+        "indexacion_bd": "El sitio web no indica si las conferences se indexarán en Scopus, sin embargo, se precisa que los trabajos aceptados seran publicados en IEEEExplore para su posible indexación.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "El sitio web de la conferencia indica que los mejores papers serán enviados a revistas indexadas asociadas a la conferencia, sin embargo no precisa el nombre de las revistas. En ediciones anteriores, se aprecia que el evento es indexado en Scopus bajo la editorial Institute of Electrical and Electronics Engineers Inc.\r\n",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
+      }
+    },
+    {
+      "id": 18,
+      "evento": "IEEE LAMC",
+      "nombreCompleto": "6th IEEE MTT-S Latin America Microwave Conference",
+      "disciplina": "",
+      "categoria": [
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
+      ],
+      "linea": [
+        "Ciudades inteligentes y sostenibles",
+        "Comunicación y cultura digital",
+        "Inteligencia artificial y computación avanzada",
+        "Tecnología y ecosistemas"
+      ],
+      "sublinea": [
+        "Comunicación intercultural",
+        "Gestión inteligente de recursos",
+        "Machine learning y deep learning",
+        "Materiales avanzados"
+      ],
+      "fechaInicio": "2026-12-09",
+      "fechaFin": "2026-12-11",
+      "lugar": "Centro de Convenciones",
+      "ciudad": "Buenos Aires",
+      "pais": "Argentina",
+      "modalidad": "Presencial",
+      "deadline": "2026-08-03",
+      "deadlineStatus": "upcoming",
+      "publicacion": "IEEE Xplore, Scopus",
+      "enlace": "https://lamc-ieee.org/",
+      "integridad": {
+        "organizadores": "IEEE Microwave Theory and Techniques Society (MTT-S)",
+        "comite_cientifico": "El sitio web indica los miembros del Comité Científico y del Comité Organizador ",
+        "programa_temas": "Sin información en el sitio web, se indica que proximamente estará disponible",
+        "revision_pares": "El sitio web indica que los trabajos presentados al LAMC 2026 serán revisados por pares, de tipo revisión simple ciego.",
+        "indexacion_bd": "El sitio web no indica si las conferences se indexarán en Scopus, sin embargo, se precisa que los trabajos aceptados seran publicados en IEEEExplore para su posible indexación.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
+      }
+    },
+    {
+      "id": 19,
+      "evento": "ACIT",
+      "nombreCompleto": "16th International Conference on Advanced Computer Information Technologies (ACIT’2026)",
+      "disciplina": "",
       "categoria": [
         "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
         "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
@@ -538,21 +863,240 @@
       ],
       "sublinea": [
         "Ciberseguridad y privacidad",
-        "Fintech y servicios financieros",
-        "Internet de las cosas (IoT)",
+        "Economía de plataformas",
         "Sistemas autónomos y robótica",
+        "Visión computacional"
+      ],
+      "fechaInicio": "2026-09-02",
+      "fechaFin": "2026-09-04",
+      "lugar": "Tomas Bata University in Zlín",
+      "ciudad": "Zlín",
+      "pais": "República Checa",
+      "modalidad": "Híbrido",
+      "deadline": "2026-04-05",
+      "deadlineStatus": "passed",
+      "publicacion": "Scopus, WoS",
+      "enlace": "https://www.acit.tech/",
+      "integridad": {
+        "organizadores": "Universidad Nacional de Ucrania Occidental, Universidad Tomas Bata de Zlín, Universidad de Ciencias Aplicadas de Šibenik, Universidad de Economía y Negocios de Wroclaw, Instituto Tecnológico de Deggendorf, Universidad Católica de Ružomberok, Sección de Checoslovaquia del IEEE  ",
+        "comite_cientifico": "La página web señala a los miembros del Comité del Programa Técnico Internacional y a los miembros del Comité Organizador ",
+        "programa_temas": "Temario:\nInteligencia Computacional y Modelado Matemático \nInformación en Economía y Gestión\nCiberseguridad\nSistemas informáticos y de información especializados\nInteligencia artificial y sistemas cognitivos\nTecnología de la información en la educación",
+        "revision_pares": "El sitio web posee una sección donde se indica que se realizará una revisión por pares a cargo del Comité del Congreso.",
+        "indexacion_bd": "El sitio web indica que el congreso está registrado como publicación periódica en la base de datos Scopus con el título: Actas - Conferencia Internacional sobre Tecnologías Avanzadas de la Información Informática (ACIT)",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
+    },
+    {
+      "id": 20,
+      "evento": "ECMLG",
+      "nombreCompleto": "22nd European Conference on Management, Leadership and Governance)",
+      "disciplina": "",
+      "categoria": [
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
+      ],
+      "linea": [
+        "Comunicación y cultura digital",
+        "Innovación empresarial",
+        "Transformación digital",
+        "Ética, gobernanza y responsabilidad social"
+      ],
+      "sublinea": [
+        "Computación cuántica",
+        "Comunicación intercultural",
+        "Responsabilidad social",
+        "Transformación organizacional"
+      ],
+      "fechaInicio": "2026-11-05",
+      "fechaFin": "2026-11-06",
+      "lugar": "Universidade Portucalense",
+      "ciudad": "Porto",
+      "pais": "Portugal",
+      "modalidad": "Hibrido",
+      "deadline": "2026-04-15",
+      "deadlineStatus": "passed",
+      "publicacion": "Scopus, WoS",
+      "enlace": "https://www.academic-conferences.org/conferences/ecmlg/",
+      "integridad": {
+        "organizadores": "Academic Conferences and Publishing International Ltd (ACPI)",
+        "comite_cientifico": "El sitio web indica a los miembros del Comité de la conferencia ECMLG",
+        "programa_temas": "Temario:\nManagement and Organizational Strategy\nLeadership Studies\nGovernance and Institutional Frameworks\nCoaching and Team Development\nOrganizational Transformation and Change Management\nDoctoral Research in Management and Leadership\nResearch Dissemination and Academic Exchange\nAcademic Networking and Collaboration",
+        "revision_pares": "El sitio web indica que los artículos aceptados para el ECMLG serán sometidos a una revisión por pares doble ciego.",
+        "indexacion_bd": "El sitio web indica que las actas estarán disponibles en el siguiente enlace: https://papers.academic-conferences.org/index.php/ecmlg\nLas publicaciones del 2025 aun no están visibles en Scopus porque el evento se desarrolló en noviembre 2025. Asimismo, se indica que los trabajos presentados en la conferencia también se considerarán para su posterior poblicación en la revista European Journal of Training and Development \n",
+        "conflicto_intereses": "No precisa ",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
+      }
+    },
+    {
+      "id": 21,
+      "evento": "ECRM",
+      "nombreCompleto": "ECRM 2026 (European Conference on Research Methods in Business & Management Studies)",
+      "disciplina": "",
+      "categoria": [
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
+      ],
+      "linea": [
+        "Economía digital",
+        "Innovación empresarial",
+        "Inteligencia artificial y computación avanzada",
+        "Transformación digital"
+      ],
+      "sublinea": [
+        "Análisis de datos económicos",
+        "Emprendimiento tecnológico",
+        "Machine learning y deep learning",
         "Tecnologías emergentes"
       ],
-      "fechaInicio": "2026-11-03",
-      "fechaFin": "2026-11-05",
-      "lugar": "Lisboa",
-      "ciudad": "Lisboa",
+      "fechaInicio": "2026-08-06",
+      "fechaFin": "2026-08-07",
+      "lugar": "Cape Peninsula University of Technology (CPUT)",
+      "ciudad": "Ciudad del Cabo",
+      "pais": "Sudáfrica",
+      "modalidad": "Hibrido",
+      "deadline": "2026-03-05",
+      "deadlineStatus": "passed",
+      "publicacion": "Scopus, WOS",
+      "enlace": "https://www.academic-conferences.org/conferences/ecrm/",
+      "integridad": {
+        "organizadores": "Academic Conferences and Publishing International Ltd (ACPI)",
+        "comite_cientifico": "El sitio web indica a los miembros del Comité de la conferencia ECRM",
+        "programa_temas": "Temario: \nQualitative Research Methods\nQuantitative Research Methods\nMixed and Innovative Research Methodologies\nTeaching and Learning Research Methods\nEthics and Best Practices in Research",
+        "revision_pares": "El sitio web indica que todos los artículos son revisados ​​por pares a doble ciego por miembros del comité de la conferencia",
+        "indexacion_bd": "El sitio web indica que las actas estarán disponibles en el siguiente enlace: https://papers.academic-conferences.org/index.php/ecmlg\nLas publicaciones del 2025 aun no están visibles en Scopus porque el evento se desarrolló en noviembre 2025. Asimismo, se indica que los trabajos presentados en la conferencia también se considerarán para su posterior poblicación en la revista Electronic Journal of Business Research Methods ",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
+      }
+    },
+    {
+      "id": 22,
+      "evento": "CONTROLO",
+      "nombreCompleto": "17th APCA International Conference on Automatic Control and Soft Computing",
+      "disciplina": "",
+      "categoria": [
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
+      ],
+      "linea": [
+        "Ciudades inteligentes y sostenibles",
+        "Inteligencia artificial y computación avanzada",
+        "Tecnología y ecosistemas"
+      ],
+      "sublinea": [
+        "Gestión inteligente de recursos",
+        "Materiales avanzados",
+        "Sistemas autónomos y robótica",
+        "Visión computacional"
+      ],
+      "fechaInicio": "2026-09-09",
+      "fechaFin": "2026-09-11",
+      "lugar": "Universidad de Coimbra, Portugal",
+      "ciudad": "Coimbra",
       "pais": "Portugal",
       "modalidad": "Presencial",
-      "deadline": "2026-05-30",
-      "deadlineStatus": "future",
+      "deadline": "2026-05-29",
+      "deadlineStatus": "passed",
       "publicacion": "Scopus",
-      "enlace": "https://apwg.org/events/ecrime2026/"
+      "enlace": "controlo2026.apca.pt",
+      "integridad": {
+        "organizadores": "Universidad de Coímbra",
+        "comite_cientifico": "El sitio web cuenta con información referente a los siguientes comités: Comité Directivo, Comité Organizador, Comité de Programa",
+        "programa_temas": "Temario:\n1. Sistemas de control\nControl adaptativo\r\nControl aeronáutico y aeroespacial\r\nEducación de control\r\nTecnología de control, sensores y actuadores\r\nTeoría, arquitecturas y aplicaciones del control\r\nSistemas de eventos discretos\r\nControl distribuido\r\nEstimación e identificación\r\nDetección de fallos, diagnóstico y control tolerante a fallos\r\nSistemas y control difusos y neurodifusos\r\nControl con intervención humana\r\nSistemas híbridos\r\nControl inteligente basado en IA\r\nControl lineal y no lineal\r\nModelado y simulación\r\nSistemas de control en red\r\nControl óptimo, robusto y estocástico\r\nEnfoques de optimización\r\nLaboratorios remotos y virtuales\n2. Automatización y Robótica\nVehículos guiados automáticamente\r\nAgentes autónomos\r\nSistemas ciberfísicos\r\nSistemas embebidos\r\nModelado y automatización de fábricas\r\nGrafcet y redes de Petri\r\nInteracción entre agentes y humanos\r\nInterfaces hombre-máquina\r\nRedes industriales y automatización\r\nAutomatización industrial\r\nInstrumentación\r\nInternet de las cosas e Industria 4.0\r\nSistemas de fabricación\r\nSistemas mecatrónicos\r\nRobots móviles\r\nModelado de sistemas complejos\r\nPercepción y Conciencia\r\nAutomatización de procesos\r\nSistemas en tiempo real\r\nRobótica\r\nVisión, reconocimiento y reconstrucción\n3. Computación blanda con aplicación al control, la automatización o la robótica\nProgramación adaptativa y dinámica\r\nInteligencia artificial y reconocimiento de patrones\r\nNube, niebla y macrodatos\r\nSistemas artificiales cognitivos\r\nInteligencia computacional\r\nMinería de datos y recuperación de información\r\nReducción e interpretación de datos\r\nEvolución de los sistemas de IA\r\nComputación independiente y cognitiva\r\nAgentes inteligentes y conocimiento del contexto\r\nAdquisición y representación del conocimiento\r\nAprendizaje automático\r\nSistemas de toma de decisiones inteligentes de percepción\r\nAprendizaje por refuerzo y aprendizaje profundo",
+        "revision_pares": "El sitio web indica que las actas se publicarán en IEEE Explore. Todos los artículos revisados ​​por pares, aceptados y presentados se enviarán para su publicación en la biblioteca digital IEEE  Xplore.",
+        "indexacion_bd": "El sitio web indica que las actas se enviarán al Thomson Reuters Conference Proceedings Citation Index (ISI), INSPEC y Scopus para su indexación.  ",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
+    },
+    {
+      "id": 23,
+      "evento": "ICACIT",
+      "nombreCompleto": "12th ICACIT Symposium Advancing Quality, Artificial Intelligence, and Applied Innovation in Engineering and Computing Education ",
+      "disciplina": "",
+      "categoria": [
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO"
+      ],
+      "linea": [
+        "Ciudades inteligentes y sostenibles",
+        "Innovación empresarial",
+        "Sostenibilidad y cambio climático"
+      ],
+      "sublinea": [
+        "Adaptación al cambio climático",
+        "Emprendimiento tecnológico",
+        "Gestión de la innovación",
+        "Urbanismo sostenible"
+      ],
+      "fechaInicio": "2026-10-21",
+      "fechaFin": "2026-10-23",
+      "lugar": "Pontificia Universidad Católica de Chile (UC) - Santiago, Chile",
+      "ciudad": "Santiago",
+      "pais": "Chile",
+      "modalidad": "Híbrido",
+      "deadline": "2026-06-30",
+      "deadlineStatus": "urgent",
+      "publicacion": "Scopus",
+      "enlace": "icacit.org.pe/symposium",
+      "integridad": {
+        "organizadores": "ICACIT (Instituto de Calidad y Acreditación de Programas de Computación, Ingeniería y Tecnología)",
+        "comite_cientifico": "El sitio web indica a los miembros de su Comité Organizador, y Comité Directivo",
+        "programa_temas": "Temario:\nGarantía de calidad, acreditación y educación basada en resultados en ingeniería o informática\nTransformación digital, inteligencia artificial y tecnologías emergentes en la formación en ingeniería\nInnovación curricular, estrategias pedagógicas y desarrollo estudiantil\nSostenibilidad, impacto social e ingeniería o informática global\nIngeniería aplicada, informática y proyectos vinculados a la industria o a la comunidad",
+        "revision_pares": "El sitio web indica que todas  las propuestas se someten a una revisión por pares a doble ciego realizada por revisores expertos ",
+        "indexacion_bd": "El sitio web indica que todos los artículos en inglés aceptados y presentados oralmente en el Simposio ICACIT 2026 se incluirán en las actas de la conferencia y se enviarán para su publicación a IEEE Xplore®. El contenido de IEEE Xplore® se pone a disposición de sus socios de resumen e indexación, Scopus, para su posible inclusión en sus respectivas bases de datos.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
+      }
+    },
+    {
+      "id": 24,
+      "evento": "ICOMTA",
+      "nombreCompleto": "VI International Conference on Communication and Applied Technologies 2026",
+      "disciplina": "",
+      "categoria": [
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
+      ],
+      "linea": [
+        "Ciudades inteligentes y sostenibles",
+        "Comunicación y cultura digital",
+        "Economía digital",
+        "Tecnología y ecosistemas"
+      ],
+      "sublinea": [
+        "Análisis de datos económicos",
+        "Comunicación intercultural",
+        "Gestión inteligente de recursos",
+        "Tecnologías limpias"
+      ],
+      "fechaInicio": "2026-09-08",
+      "fechaFin": "2026-09-10",
+      "lugar": "João Pessoa (Brazil)",
+      "ciudad": "João Pessoa",
+      "pais": "Brasil",
+      "modalidad": "Hibrido",
+      "deadline": "2026-05-29",
+      "deadlineStatus": "passed",
+      "publicacion": "Smart Innovation, Systems and Technologies - Springer",
+      "enlace": "https://icomta.net/ ",
+      "integridad": {
+        "organizadores": "Universidade Federal da Paraíba",
+        "comite_cientifico": "Cuenta con un comité científico",
+        "programa_temas": "El sitio web indica que se actualizará el programa en el mes de agosto de 2026",
+        "revision_pares": "El sitio web indica que los artículos enviados y aceptados tras la revisión por pares podrán ser publicados en Springer, Atlantis Press (CPCI de Web of Science) o Tirant Io Blanch. ",
+        "indexacion_bd": "El sitio web indica que tras la revisión por pares los artículos en inglés podrán ser publicados en Smart Innovation, Systems and Technologies (Springer), indexada en Scopus.",
+        "conflicto_intereses": "No precisa ",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
     }
   ]
 }

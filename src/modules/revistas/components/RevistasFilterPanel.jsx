@@ -1,4 +1,4 @@
-import { Search, RotateCcw, ChevronDown, X, BookOpen, Layers, Target, Activity } from 'lucide-react';
+import { MagnifyingGlass as Search, ArrowCounterClockwise as RotateCcw, CaretDown as ChevronDown, X, Stack as Layers, Target, Tag } from '@phosphor-icons/react';
 import React from 'react';
 
 const CAT_COLORS = {
@@ -8,7 +8,7 @@ const CAT_COLORS = {
     'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO': { color: '#ff5017' },
 }
 
-export default function RevistasFilterPanel({ filters, setFilters, tipos, disciplinas, categorias, lineas, onReset }) {
+export default function RevistasFilterPanel({ filters, setFilters, tipos, apcs, disciplinas, categorias, lineas, onReset }) {
 
     const toggleLinea = (linea) => {
         const current = filters.lineas || []
@@ -21,6 +21,7 @@ export default function RevistasFilterPanel({ filters, setFilters, tipos, discip
 
     const otherActiveFilters = [
         filters.tipo && { key: 'tipo', label: filters.tipo },
+        filters.apc && { key: 'apc', label: filters.apc },
         filters.disciplina && { key: 'disciplina', label: filters.disciplina },
     ].filter(Boolean)
 
@@ -101,6 +102,24 @@ export default function RevistasFilterPanel({ filters, setFilters, tipos, discip
                                 onClick={() => setFilters({ ...filters, tipo: filters.tipo === t ? '' : t })}
                             >
                                 {t}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="filter-select-group filter-select-group--chips">
+                    <label>
+                        <Tag size={14} />
+                        APC
+                    </label>
+                    <div className="modality-chips">
+                        {apcs.map(apc => (
+                            <button
+                                key={apc}
+                                className={`modality-chip ${filters.apc === apc ? 'modality-chip--active' : ''}`}
+                                onClick={() => setFilters({ ...filters, apc: filters.apc === apc ? '' : apc })}
+                            >
+                                {apc}
                             </button>
                         ))}
                     </div>

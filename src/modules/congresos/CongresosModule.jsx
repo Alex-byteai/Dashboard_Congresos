@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
-import { LayoutGrid, Table, Calendar, ShieldCheck } from 'lucide-react'
+import { SquaresFour as LayoutGrid, Calendar } from '@phosphor-icons/react'
 
 import Header from '../../shared/components/Header'
 import Stats from './components/StatsCards'
 import Filters from './components/FilterPanel'
 import CongressList from './components/CongressList'
-import CongressTable from './components/CongressTable'
 import Timeline from './components/Timeline'
 import CareerFilter, { CAREERS } from '../../shared/components/CareerFilter'
 
@@ -22,7 +21,8 @@ export default function CongresosModule({ onBack }) {
         sublinea: '',
         modality: '',
         indexation: '',
-        onlyActive: false // Default to false as requested
+        onlyActive: false,
+        onlyUpcoming: false
     }
     const [filters, setFilters] = useState(initialFilters)
     const [taxonomy, setTaxonomy] = useState({})
@@ -66,6 +66,7 @@ export default function CongresosModule({ onBack }) {
                     return {
                         ...event,
                         deadlineDays: daysRemaining,
+                        isPast: hasEnded(event.fechaFin),
                         isScopus: event.publicacion?.toLowerCase().includes('scopus') || false,
                         isIEEE: event.publicacion?.toLowerCase().includes('ieee') || false,
                         isWoS: event.publicacion?.toLowerCase().includes('wos') || false,
@@ -111,6 +112,16 @@ export default function CongresosModule({ onBack }) {
         return date.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })
     }
 
+    const hasEnded = (dateStr) => {
+        if (!dateStr) return false
+        const endDate = new Date(`${dateStr}T00:00:00`)
+        if (isNaN(endDate.getTime())) return false
+
+        const today = new Date()
+        today.setHours(0, 0, 0, 0)
+        return endDate < today
+    }
+
     const filteredEvents = data.filter(event => {
         const searchLower = filters.search.toLowerCase()
         const matchesSearch = !filters.search ||
@@ -140,8 +151,9 @@ export default function CongresosModule({ onBack }) {
             selectedCategories.some(cat => event.categoria?.includes(cat))
 
         const matchesDeadline = !filters.onlyActive || (event.deadlineDays !== null && event.deadlineDays >= 0)
+        const matchesEventStatus = !filters.onlyUpcoming || !event.isPast
 
-        return matchesSearch && matchesCountry && matchesCategoria && matchesLinea && matchesSublinea && matchesModality && matchesIndexation && matchesCareer && matchesDeadline
+        return matchesSearch && matchesCountry && matchesCategoria && matchesLinea && matchesSublinea && matchesModality && matchesIndexation && matchesCareer && matchesDeadline && matchesEventStatus
     })
 
     const countries = [...new Set(data.map(e => e.pais).filter(Boolean))].sort()
@@ -193,13 +205,6 @@ export default function CongresosModule({ onBack }) {
                         Tarjetas
                     </button>
                     <button
-                        className={`tab ${activeTab === 'table' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('table')}
-                    >
-                        <ShieldCheck size={18} />
-                        Integridad
-                    </button>
-                    <button
                         className={`tab ${activeTab === 'timeline' ? 'active' : ''}`}
                         onClick={() => setActiveTab('timeline')}
                     >
@@ -213,12 +218,6 @@ export default function CongresosModule({ onBack }) {
                         events={filteredEvents}
                         getUrgencyClass={getUrgencyClass}
                         getUrgencyText={getUrgencyText}
-                    />
-                )}
-
-                {activeTab === 'table' && (
-                    <CongressTable
-                        events={filteredEvents}
                     />
                 )}
 
