@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "totalRevistas": 67,
-    "publishers": 47,
+    "totalRevistas": 69,
+    "publishers": 48,
     "disciplinas": 22,
     "categorias": 4,
-    "lastUpdated": "2026-08-26 09:49:37",
+    "lastUpdated": "2026-08-28 08:04:14",
     "version": "1.0"
   },
   "revistas": [
@@ -3196,6 +3196,121 @@
         }
       ],
       "enfoque": "Comunicación y cultura digital"
+    },
+    {
+      "journal": "International Journal of Food Science and Technology",
+      "issn": "0950-5423",
+      "eissn": "1365-2621",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Agricultural and Biological Sciences",
+        "Engineering"
+      ],
+      "cobertura": "1966 - 2026",
+      "citeScore": "7.1",
+      "sitioWeb": "https://academic.oup.com/ijfst",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=20115",
+      "id": 68,
+      "categorias_scopus": [
+        {
+          "Categoria": "Engineering",
+          "Subcategoria": "Industrial and Manufacturing Engineering",
+          "Percentil": "79",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Agricultural and Biological Sciences",
+          "Subcategoria": "Food Science",
+          "Percentil": "78",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1F1Djl_tc_Js0OTZi7dfjBvBW6tA8sGGl/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "25/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Tecnología y ecosistemas",
+          "Sublinea": "Tecnologías limpias",
+          "Origen_Scopus": "Engineering > Industrial and Manufacturing Engineering"
+        },
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Sostenibilidad y cambio climático",
+          "Sublinea": "Economía circular",
+          "Origen_Scopus": "Agricultural and Biological Sciences > Food Science"
+        }
+      ],
+      "enfoque": "Tecnología y ecosistemas"
+    },
+    {
+      "journal": "Journal of Food Measurement and Characterization",
+      "issn": "2193-4126",
+      "eissn": "2193-4134",
+      "publisher": "N/A",
+      "disciplinas": [
+        "Agricultural and Biological Sciences",
+        "Chemical Engineering",
+        "Engineering"
+      ],
+      "cobertura": "2012 - 2026",
+      "citeScore": "6.0",
+      "sitioWeb": "https://link.springer.com/journal/11694",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100224010",
+      "id": 69,
+      "categorias_scopus": [
+        {
+          "Categoria": "Engineering",
+          "Subcategoria": "Safety, Risk, Reliability and Quality",
+          "Percentil": "81",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Engineering",
+          "Subcategoria": "Industrial and Manufacturing Engineering",
+          "Percentil": "74",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Agricultural and Biological Sciences",
+          "Subcategoria": "Food Science",
+          "Percentil": "73",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Chemical Engineering",
+          "Subcategoria": "General Chemical Engineering",
+          "Percentil": "68",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/14wpd5PrReXRdutbs91FedFmV5M5QX4RR/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "tipo_apc": "APC opcional",
+      "fecha_emision": "25/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Ciudades inteligentes y sostenibles",
+          "Sublinea": "Infraestructura sostenible",
+          "Origen_Scopus": "Engineering > Safety, Risk, Reliability and Quality"
+        },
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Tecnología y ecosistemas",
+          "Sublinea": "Tecnologías limpias",
+          "Origen_Scopus": "Engineering > Industrial and Manufacturing Engineering"
+        },
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Sostenibilidad y cambio climático",
+          "Sublinea": "Economía circular",
+          "Origen_Scopus": "Agricultural and Biological Sciences > Food Science"
+        }
+      ],
+      "enfoque": "Ciudades inteligentes y sostenibles"
     }
   ],
   "facets": {
@@ -3219,6 +3334,7 @@
       "Konrad Lorenz Editores",
       "LLC CPC Business Perspectives",
       "Ludomedia EN",
+      "N/A",
       "OmniaScience",
       "Poder Judicial del Perú",
       "Polskie Towarzystwo Inzynierii Ekologicznej (PTIE)",
