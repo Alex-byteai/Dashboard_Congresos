@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "totalRevistas": 69,
-    "publishers": 48,
+    "totalRevistas": 78,
+    "publishers": 51,
     "disciplinas": 22,
     "categorias": 4,
-    "lastUpdated": "2026-08-28 08:04:14",
+    "lastUpdated": "2026-08-28 10:43:14",
     "version": "1.0"
   },
   "revistas": [
@@ -3069,6 +3069,53 @@
       "enfoque": "Comunicación y cultura digital"
     },
     {
+      "journal": "Kyklos",
+      "issn": "0023-5962",
+      "eissn": "1467-6435",
+      "publisher": "John Wiley & Sons",
+      "disciplinas": [
+        "Arts and Humanities",
+        "Economics, Econometrics and Finance"
+      ],
+      "cobertura": "1947 - 1951",
+      "citeScore": "2.2",
+      "sitioWeb": "https://onlinelibrary.wiley.com/journal/14676435",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=16110",
+      "id": 65,
+      "categorias_scopus": [
+        {
+          "Categoria": "Arts and Humanities",
+          "Subcategoria": "Arts and Humanities (miscellaneous)",
+          "Percentil": "76",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Economics, Econometrics and Finance",
+          "Subcategoria": "Economics and Econometrics",
+          "Percentil": "43",
+          "Cuartil": "Q3"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1HI3kWCeOyWTuFSaBl748vrgMzEFEUOBb/view?usp=drivesdk",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "18/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Comunicación y cultura digital",
+          "Sublinea": "Comunicación intercultural",
+          "Origen_Scopus": "Arts and Humanities > Arts and Humanities (miscellaneous)"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Economía digital",
+          "Sublinea": "Análisis de datos económicos",
+          "Origen_Scopus": "Economics, Econometrics and Finance > Economics and Econometrics"
+        }
+      ],
+      "enfoque": "Comunicación y cultura digital"
+    },
+    {
       "journal": "Signo y Pensamiento",
       "issn": "0120-4823",
       "eissn": "2027-2731",
@@ -3080,7 +3127,7 @@
       "citeScore": "0.3",
       "sitioWeb": "http://revistas.javeriana.edu.co/index.php/signoypensamiento/index",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100316036",
-      "id": 65,
+      "id": 66,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -3127,7 +3174,7 @@
       "citeScore": "14.3",
       "sitioWeb": "https://journals.sagepub.com/home/nms",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=16306",
-      "id": 66,
+      "id": 67,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -3163,6 +3210,281 @@
       "enfoque": "Bienestar y desarrollo humano"
     },
     {
+      "journal": "Journal of Entrepreneurship and Innovation in Emerging Economies",
+      "issn": "2393-9575",
+      "eissn": "2394-9945",
+      "publisher": "SAGE",
+      "disciplinas": [
+        "Economics, Econometrics and Finance",
+        "Business, Management and Accounting",
+        "Social Sciences"
+      ],
+      "cobertura": "2015 - 2026",
+      "citeScore": "3.1",
+      "sitioWeb": "https://journals.sagepub.com/home/eie",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101071183",
+      "id": 68,
+      "categorias_scopus": [
+        {
+          "Categoria": "Economics, Econometrics and Finance",
+          "Subcategoria": "Economics, Econometrics and Finance (miscellaneous)",
+          "Percentil": "68",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Development",
+          "Percentil": "61",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Business, Management and Accounting (miscellaneous)",
+          "Percentil": "60",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Economics, Econometrics and Finance",
+          "Subcategoria": "Economics and Econometrics",
+          "Percentil": "56",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Business and International Management",
+          "Percentil": "48",
+          "Cuartil": "Q3"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1kBUKafhlnMAwgg1Yz7wMqcNXwdGSnGE1/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "tipo_apc": "APC opcional",
+      "fecha_emision": "20/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Economía digital",
+          "Sublinea": "Mercados globales",
+          "Origen_Scopus": "Economics, Econometrics and Finance > Economics, Econometrics and Finance (miscellaneous)"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Pobreza e informalidad",
+          "Origen_Scopus": "Social Sciences > Development"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Innovación empresarial",
+          "Sublinea": "Gestión de la innovación",
+          "Origen_Scopus": "Business, Management and Accounting > Business, Management and Accounting (miscellaneous)"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Economía digital",
+          "Sublinea": "Análisis de datos económicos",
+          "Origen_Scopus": "Economics, Econometrics and Finance > Economics and Econometrics"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Innovación empresarial",
+          "Sublinea": "Modelos de negocio digitales",
+          "Origen_Scopus": "Business, Management and Accounting > Business and International Management"
+        }
+      ],
+      "enfoque": "Economía digital"
+    },
+    {
+      "journal": "Economics Letters",
+      "issn": "0165-1765",
+      "eissn": "0165-1765",
+      "publisher": "Elsevier",
+      "disciplinas": [
+        "Economics, Econometrics and Finance"
+      ],
+      "cobertura": "1978 - 2026",
+      "citeScore": "3.1",
+      "sitioWeb": "https://www.sciencedirect.com/journal/economics-letters",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=28490",
+      "id": 69,
+      "categorias_scopus": [
+        {
+          "Categoria": "Economics, Econometrics and Finance",
+          "Subcategoria": "Finance",
+          "Percentil": "55",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Economics, Econometrics and Finance",
+          "Subcategoria": "Economics and Econometrics",
+          "Percentil": "55",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1uquSo5cvIlIHRE6l5jqK4rI_EZjHB8rL/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "tipo_apc": "APC opcional",
+      "fecha_emision": "21/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Economía digital",
+          "Sublinea": "Fintech y servicios financieros",
+          "Origen_Scopus": "Economics, Econometrics and Finance > Finance"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Economía digital",
+          "Sublinea": "Análisis de datos económicos",
+          "Origen_Scopus": "Economics, Econometrics and Finance > Economics and Econometrics"
+        }
+      ],
+      "enfoque": "Economía digital"
+    },
+    {
+      "journal": "KSCE Journal of Civil Engineering",
+      "issn": "1226-7988",
+      "eissn": "1976-3808",
+      "publisher": "Elsevier",
+      "disciplinas": [
+        "Engineering"
+      ],
+      "cobertura": "2009 - 2026",
+      "citeScore": "4.7",
+      "sitioWeb": "https://www.sciencedirect.com/journal/ksce-journal-of-civil-engineering",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=17600155006",
+      "id": 70,
+      "categorias_scopus": [
+        {
+          "Categoria": "Engineering",
+          "Subcategoria": "Civil and Structural Engineering",
+          "Percentil": "67",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1e0lfbz1FsETrLLrDh5LHJLqbGEmK5cgq/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "21/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Ciudades inteligentes y sostenibles",
+          "Sublinea": "Infraestructura sostenible",
+          "Origen_Scopus": "Engineering > Civil and Structural Engineering"
+        }
+      ],
+      "enfoque": "Ciudades inteligentes y sostenibles"
+    },
+    {
+      "journal": "Communication and Society",
+      "issn": "0214-0039",
+      "eissn": "2386-7876",
+      "publisher": "Universidad de Navarra",
+      "disciplinas": [
+        "Social Sciences"
+      ],
+      "cobertura": "2010 - 2026",
+      "citeScore": "3.8",
+      "sitioWeb": "https://revistas.unav.edu/index.php/communication-and-society",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=5700164098",
+      "id": 71,
+      "categorias_scopus": [
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Cultural Studies",
+          "Percentil": "93",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Communication",
+          "Percentil": "78",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1p6li5F1sl1Z8is5VGumc-f7GmiOmmIkM/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "21/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Comunicación y cultura digital",
+          "Sublinea": "Comunicación intercultural",
+          "Origen_Scopus": "Social Sciences > Cultural Studies"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Comunicación y cultura digital",
+          "Sublinea": "Medios digitales y sociedad",
+          "Origen_Scopus": "Social Sciences > Communication"
+        }
+      ],
+      "enfoque": "Comunicación y cultura digital"
+    },
+    {
+      "journal": "OCNOS",
+      "issn": "1885-446X",
+      "eissn": "2254-9099",
+      "publisher": "Centro de Estudios de Promoción de la Lectura y Literatura Infantil, Universidad de Castilla-La Mancha",
+      "disciplinas": [
+        "Social Sciences",
+        "Psychology",
+        "Arts and Humanities"
+      ],
+      "cobertura": "2009 - 2026",
+      "citeScore": "1.6",
+      "sitioWeb": "https://www.revistaocnos.com/",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19900191944",
+      "id": 72,
+      "categorias_scopus": [
+        {
+          "Categoria": "Arts and Humanities",
+          "Subcategoria": "Literature and Literary Theory",
+          "Percentil": "96",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Education",
+          "Percentil": "40",
+          "Cuartil": "Q3"
+        },
+        {
+          "Categoria": "Psychology",
+          "Subcategoria": "Social Psychology",
+          "Percentil": "27",
+          "Cuartil": "Q3"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1NzA096GFq7tzQERmCNvNUCzuUW6zH4At/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "tipo_apc": "Sin APC",
+      "fecha_emision": "21/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Comunicación y cultura digital",
+          "Sublinea": "Narrativas transmedia",
+          "Origen_Scopus": "Arts and Humanities > Literature and Literary Theory"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
+          "Origen_Scopus": "Social Sciences > Education"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Comportamiento social",
+          "Origen_Scopus": "Psychology > Social Psychology"
+        }
+      ],
+      "enfoque": "Comunicación y cultura digital"
+    },
+    {
       "journal": "Media and Communication",
       "issn": "",
       "eissn": "2183-2439",
@@ -3174,7 +3496,7 @@
       "citeScore": "6.0",
       "sitioWeb": "http://www.cogitatiopress.com/mediaandcommunication",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100792085",
-      "id": 67,
+      "id": 73,
       "categorias_scopus": [
         {
           "Categoria": "Social Sciences",
@@ -3201,7 +3523,7 @@
       "journal": "International Journal of Food Science and Technology",
       "issn": "0950-5423",
       "eissn": "1365-2621",
-      "publisher": "N/A",
+      "publisher": "Oxford University Press",
       "disciplinas": [
         "Agricultural and Biological Sciences",
         "Engineering"
@@ -3210,7 +3532,7 @@
       "citeScore": "7.1",
       "sitioWeb": "https://academic.oup.com/ijfst",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=20115",
-      "id": 68,
+      "id": 74,
       "categorias_scopus": [
         {
           "Categoria": "Engineering",
@@ -3249,7 +3571,7 @@
       "journal": "Journal of Food Measurement and Characterization",
       "issn": "2193-4126",
       "eissn": "2193-4134",
-      "publisher": "N/A",
+      "publisher": "Springer Nature",
       "disciplinas": [
         "Agricultural and Biological Sciences",
         "Chemical Engineering",
@@ -3259,7 +3581,7 @@
       "citeScore": "6.0",
       "sitioWeb": "https://link.springer.com/journal/11694",
       "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100224010",
-      "id": 69,
+      "id": 75,
       "categorias_scopus": [
         {
           "Categoria": "Engineering",
@@ -3311,6 +3633,161 @@
         }
       ],
       "enfoque": "Ciudades inteligentes y sostenibles"
+    },
+    {
+      "journal": "ZAMM Zeitschrift fur Angewandte Mathematik und Mechanik",
+      "issn": "0044-2267",
+      "eissn": "1521-4001",
+      "publisher": "John Wiley & Sons",
+      "disciplinas": [
+        "Mathematics",
+        "Engineering"
+      ],
+      "cobertura": "1921 - 1944",
+      "citeScore": "4.7",
+      "sitioWeb": "https://onlinelibrary.wiley.com/journal/15214001",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=27970",
+      "id": 76,
+      "categorias_scopus": [
+        {
+          "Categoria": "Mathematics",
+          "Subcategoria": "Applied Mathematics",
+          "Percentil": "83",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Engineering",
+          "Subcategoria": "Computational Mechanics",
+          "Percentil": "72",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1JDWs3mqznm460ujqF4ZtCSKzF4EwKd-Q/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "tipo_apc": "APC opcional",
+      "fecha_emision": "25/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Inteligencia artificial y computación avanzada",
+          "Sublinea": "Machine learning y deep learning",
+          "Origen_Scopus": "Mathematics > Applied Mathematics"
+        },
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Tecnología y ecosistemas",
+          "Sublinea": "Materiales avanzados",
+          "Origen_Scopus": "Engineering > Computational Mechanics"
+        }
+      ],
+      "enfoque": "Inteligencia artificial y computación avanzada"
+    },
+    {
+      "journal": "Asymptotic Analysis",
+      "issn": "0921-7134",
+      "eissn": "1875-8576",
+      "publisher": "SAGE",
+      "disciplinas": [
+        "Mathematics"
+      ],
+      "cobertura": "1988 - 2026",
+      "citeScore": "2.0",
+      "sitioWeb": "https://journals.sagepub.com/home/asy",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=25239",
+      "id": 77,
+      "categorias_scopus": [
+        {
+          "Categoria": "Mathematics",
+          "Subcategoria": "General Mathematics",
+          "Percentil": "68",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1QWfOpML6guzT9tqgCbaaNrFqOSF1N4Ud/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "tipo_apc": "APC opcional",
+      "fecha_emision": "25/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Inteligencia artificial y computación avanzada",
+          "Sublinea": "Machine learning y deep learning",
+          "Origen_Scopus": "Mathematics > General Mathematics"
+        }
+      ],
+      "enfoque": "Inteligencia artificial y computación avanzada"
+    },
+    {
+      "journal": "Corporate Board: Role, Duties and Composition",
+      "issn": "1810-8601",
+      "eissn": "2312-2722",
+      "publisher": "Virtus Interpress",
+      "disciplinas": [
+        "Business, Management and Accounting",
+        "Decision Sciences"
+      ],
+      "cobertura": "2005 - 2016",
+      "citeScore": "1.8",
+      "sitioWeb": "https://virtusinterpress.org/-Corporate-Board-Role-Duties-and-Composition-.html",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100316027",
+      "id": 78,
+      "categorias_scopus": [
+        {
+          "Categoria": "Decision Sciences",
+          "Subcategoria": "Decision Sciences (miscellaneous)",
+          "Percentil": "40",
+          "Cuartil": "Q3"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Business, Management and Accounting (miscellaneous)",
+          "Percentil": "37",
+          "Cuartil": "Q3"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Organizational Behavior and Human Resource Management",
+          "Percentil": "33",
+          "Cuartil": "Q3"
+        },
+        {
+          "Categoria": "Business, Management and Accounting",
+          "Subcategoria": "Business and International Management",
+          "Percentil": "28",
+          "Cuartil": "Q3"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/12i2cNUe61xXHrLFcaC6o0L56ZYztQiH_/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "27/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Gestión del conocimiento",
+          "Sublinea": "Inteligencia de negocios",
+          "Origen_Scopus": "Decision Sciences > Decision Sciences (miscellaneous)"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Innovación empresarial",
+          "Sublinea": "Gestión de la innovación",
+          "Origen_Scopus": "Business, Management and Accounting > Business, Management and Accounting (miscellaneous)"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Innovación empresarial",
+          "Sublinea": "Transformación organizacional",
+          "Origen_Scopus": "Business, Management and Accounting > Organizational Behavior and Human Resource Management"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Innovación empresarial",
+          "Sublinea": "Modelos de negocio digitales",
+          "Origen_Scopus": "Business, Management and Accounting > Business and International Management"
+        }
+      ],
+      "enfoque": "Gestión del conocimiento"
     }
   ],
   "facets": {
@@ -3318,6 +3795,7 @@
       "American Institute of Mathematical Sciences",
       "CILIP Information Literacy Group",
       "Cambridge University Press",
+      "Centro de Estudios de Promoción de la Lectura y Literatura Infantil, Universidad de Castilla-La Mancha",
       "Cogitatio Press",
       "Education Society of IEEE (Spanish Chapter)",
       "Elsevier",
@@ -3334,8 +3812,8 @@
       "Konrad Lorenz Editores",
       "LLC CPC Business Perspectives",
       "Ludomedia EN",
-      "N/A",
       "OmniaScience",
+      "Oxford University Press",
       "Poder Judicial del Perú",
       "Polskie Towarzystwo Inzynierii Ekologicznej (PTIE)",
       "Pontificia Universidad Catolica del Peru",
@@ -3358,9 +3836,11 @@
       "Universidad de Cantabria",
       "Universidad de Chile",
       "Universidad de Chile - Centro Interdisciplinario de Estudios en Bioetica",
+      "Universidad de Navarra",
       "Universidad de Santo Tomás",
       "Universidad del Bio Bio",
       "University of Bahrain",
+      "Virtus Interpress",
       "Walden University",
       "Wiley-Blackwell Publishing Ltd"
     ],
