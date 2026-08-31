@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "totalRevistas": 78,
-    "publishers": 51,
+    "totalRevistas": 96,
+    "publishers": 59,
     "disciplinas": 22,
     "categorias": 4,
-    "lastUpdated": "2026-08-28 10:43:14",
+    "lastUpdated": "2026-08-31 10:37:39",
     "version": "1.0"
   },
   "revistas": [
@@ -3788,15 +3788,908 @@
         }
       ],
       "enfoque": "Gestión del conocimiento"
+    },
+    {
+      "journal": "Sustainable Social Development",
+      "issn": "",
+      "eissn": "2972-4880",
+      "publisher": "Asia Pacific Academy of Science Pte Ltd",
+      "disciplinas": [
+        "Energy",
+        "Social Sciences"
+      ],
+      "cobertura": "2023 - 2026",
+      "citeScore": "1.5",
+      "sitioWeb": "https://ssd.apacsci.com/index.php/SSD",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101361175",
+      "id": 79,
+      "categorias_scopus": [
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Social Sciences (miscellaneous)",
+          "Percentil": "51",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Public Administration",
+          "Percentil": "37",
+          "Cuartil": "Q3"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Development",
+          "Percentil": "35",
+          "Cuartil": "Q3"
+        },
+        {
+          "Categoria": "Energy",
+          "Subcategoria": "Renewable Energy, Sustainability and the Environment",
+          "Percentil": "25",
+          "Cuartil": "Q3"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1hxlvh11TnkhdY8CCyu14rmGd2CoeM-44/view?usp=drivesdk",
+      "tipo": "Research Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "27/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Comportamiento social",
+          "Origen_Scopus": "Social Sciences > Social Sciences (miscellaneous)"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Ética, gobernanza y responsabilidad social",
+          "Sublinea": "Ética y gobernanza",
+          "Origen_Scopus": "Social Sciences > Public Administration"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Pobreza e informalidad",
+          "Origen_Scopus": "Social Sciences > Development"
+        },
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Sostenibilidad y cambio climático",
+          "Sublinea": "Energías renovables",
+          "Origen_Scopus": "Energy > Renewable Energy, Sustainability and the Environment"
+        }
+      ],
+      "enfoque": "Bienestar y desarrollo humano"
+    },
+    {
+      "journal": "Scientific Data",
+      "issn": "",
+      "eissn": "2052-4463",
+      "publisher": "Springer Nature",
+      "disciplinas": [
+        "Social Sciences",
+        "Computer Science",
+        "Decision Sciences",
+        "Mathematics"
+      ],
+      "cobertura": "2014 - 2026",
+      "citeScore": "9.6",
+      "sitioWeb": "https://www.nature.com/sdata/",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100451321",
+      "id": 80,
+      "categorias_scopus": [
+        {
+          "Categoria": "Mathematics",
+          "Subcategoria": "Statistics and Probability",
+          "Percentil": "97",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Decision Sciences",
+          "Subcategoria": "Statistics, Probability and Uncertainty",
+          "Percentil": "95",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Education",
+          "Percentil": "95",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Library and Information Sciences",
+          "Percentil": "90",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Computer Science Applications",
+          "Percentil": "84",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Information Systems",
+          "Percentil": "84",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1colMPB97BM9D8ovw4SuAeG-S1V1qlG4Z/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Inteligencia artificial y computación avanzada",
+          "Sublinea": "Machine learning y deep learning",
+          "Origen_Scopus": "Mathematics > Statistics and Probability"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Educación, desarrollo cognitivo y socioafectivo",
+          "Origen_Scopus": "Social Sciences > Education"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Gestión del conocimiento",
+          "Sublinea": "Transferencia de conocimiento",
+          "Origen_Scopus": "Social Sciences > Library and Information Sciences"
+        },
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Transformación digital",
+          "Sublinea": "Tecnologías emergentes",
+          "Origen_Scopus": "Computer Science > Computer Science Applications"
+        }
+      ],
+      "enfoque": "Inteligencia artificial y computación avanzada"
+    },
+    {
+      "journal": "Data in Brief",
+      "issn": "",
+      "eissn": "2352-3409",
+      "publisher": "Elsevier",
+      "disciplinas": [
+        "Multidisciplinary"
+      ],
+      "cobertura": "2014 - 2026",
+      "citeScore": "3.4",
+      "sitioWeb": "https://www.sciencedirect.com/journal/data-in-brief",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100372856",
+      "id": 81,
+      "categorias_scopus": [
+        {
+          "Categoria": "Multidisciplinary",
+          "Subcategoria": "Multidisciplinary",
+          "Percentil": "76",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1P-76cD0qI_BO1bwB2KIBVHHMbweIZhpG/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [],
+      "enfoque": "General"
+    },
+    {
+      "journal": "GigaScience",
+      "issn": "",
+      "eissn": "2047-217X",
+      "publisher": "Oxford University Press",
+      "disciplinas": [
+        "Medicine",
+        "Computer Science"
+      ],
+      "cobertura": "2012 - 2026",
+      "citeScore": "6.8",
+      "sitioWeb": "https://academic.oup.com/gigascience",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100420802",
+      "id": 82,
+      "categorias_scopus": [
+        {
+          "Categoria": "Medicine",
+          "Subcategoria": "Health Informatics",
+          "Percentil": "75",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Computer Science Applications",
+          "Percentil": "74",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1S1dMcsqDYkastNDMFypYMGKM8o17Owfn/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Salud mental y bienestar",
+          "Origen_Scopus": "Medicine > Health Informatics"
+        },
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Transformación digital",
+          "Sublinea": "Tecnologías emergentes",
+          "Origen_Scopus": "Computer Science > Computer Science Applications"
+        }
+      ],
+      "enfoque": "Bienestar y desarrollo humano"
+    },
+    {
+      "journal": "Database : the journal of biological databases and curation",
+      "issn": "1758-0463",
+      "eissn": "1758-0463",
+      "publisher": "Oxford University Press",
+      "disciplinas": [
+        "Computer Science",
+        "Biochemistry, Genetics and Molecular Biology",
+        "Agricultural and Biological Sciences"
+      ],
+      "cobertura": "2009 - 2026",
+      "citeScore": "5.8",
+      "sitioWeb": "https://academic.oup.com/database",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=19700188321",
+      "id": 83,
+      "categorias_scopus": [
+        {
+          "Categoria": "Agricultural and Biological Sciences",
+          "Subcategoria": "General Agricultural and Biological Sciences",
+          "Percentil": "84",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Biochemistry, Genetics and Molecular Biology",
+          "Subcategoria": "General Biochemistry, Genetics and Molecular Biology",
+          "Percentil": "72",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Information Systems",
+          "Percentil": "68",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1Li-XYe1Nd5q0lyR8860UbjU1YAcZIK6p/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Tecnología y ecosistemas",
+          "Sublinea": "Biodiversidad y conservación",
+          "Origen_Scopus": "Agricultural and Biological Sciences > General Agricultural and Biological Sciences"
+        },
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Transformación digital",
+          "Sublinea": "Tecnologías emergentes",
+          "Origen_Scopus": "Computer Science > Information Systems"
+        }
+      ],
+      "enfoque": "Tecnología y ecosistemas"
+    },
+    {
+      "journal": "Earth System Science Data",
+      "issn": "1866-3508",
+      "eissn": "1866-3516",
+      "publisher": "Copernicus Publications",
+      "disciplinas": [
+        "Earth and Planetary Sciences"
+      ],
+      "cobertura": "2009 - 2026",
+      "citeScore": "19.2",
+      "sitioWeb": "http://www.earth-system-science-data.net/",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100284918",
+      "id": 84,
+      "categorias_scopus": [
+        {
+          "Categoria": "Earth and Planetary Sciences",
+          "Subcategoria": "General Earth and Planetary Sciences",
+          "Percentil": "98",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/15srhv45lAWkSOJHCrHr2Sgs8pR3MRIMz/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Sostenibilidad y cambio climático",
+          "Sublinea": "Adaptación al cambio climático",
+          "Origen_Scopus": "Earth and Planetary Sciences > General Earth and Planetary Sciences"
+        }
+      ],
+      "enfoque": "Sostenibilidad y cambio climático"
+    },
+    {
+      "journal": "Geoscience Data Journal",
+      "issn": "",
+      "eissn": "2049-6060",
+      "publisher": "John Wiley & Sons",
+      "disciplinas": [
+        "Earth and Planetary Sciences"
+      ],
+      "cobertura": "2015 - 2026",
+      "citeScore": "6.0",
+      "sitioWeb": "https://rmets.onlinelibrary.wiley.com/journal/20496060",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100812867",
+      "id": 85,
+      "categorias_scopus": [
+        {
+          "Categoria": "Earth and Planetary Sciences",
+          "Subcategoria": "General Earth and Planetary Sciences",
+          "Percentil": "81",
+          "Cuartil": "Q1"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1Ou3FQ0e3oTkMpo51-FCSUibAlzCij8l-/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Sostenibilidad y cambio climático",
+          "Sublinea": "Adaptación al cambio climático",
+          "Origen_Scopus": "Earth and Planetary Sciences > General Earth and Planetary Sciences"
+        }
+      ],
+      "enfoque": "Sostenibilidad y cambio climático"
+    },
+    {
+      "journal": "Biodiversity Data Journal",
+      "issn": "1314-2836",
+      "eissn": "1314-2828",
+      "publisher": "Pensoft Publishers",
+      "disciplinas": [
+        "Agricultural and Biological Sciences",
+        "Environmental Science"
+      ],
+      "cobertura": "2013 - 2026",
+      "citeScore": "2.2",
+      "sitioWeb": "http://bdj.pensoft.net",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100808899",
+      "id": 86,
+      "categorias_scopus": [
+        {
+          "Categoria": "Agricultural and Biological Sciences",
+          "Subcategoria": "Insect Science",
+          "Percentil": "60",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Agricultural and Biological Sciences",
+          "Subcategoria": "Animal Science and Zoology",
+          "Percentil": "57",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Agricultural and Biological Sciences",
+          "Subcategoria": "Agricultural and Biological Sciences (miscellaneous)",
+          "Percentil": "51",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Agricultural and Biological Sciences",
+          "Subcategoria": "Ecology, Evolution, Behavior and Systematics",
+          "Percentil": "48",
+          "Cuartil": "Q3"
+        },
+        {
+          "Categoria": "Environmental Science",
+          "Subcategoria": "Ecology",
+          "Percentil": "46",
+          "Cuartil": "Q3"
+        },
+        {
+          "Categoria": "Agricultural and Biological Sciences",
+          "Subcategoria": "Plant Science",
+          "Percentil": "46",
+          "Cuartil": "Q3"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1qM9cQXQqrbO6Yk8IrYCNawPAwOQR-Tev/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Tecnología y ecosistemas",
+          "Sublinea": "Biodiversidad y conservación",
+          "Origen_Scopus": "Agricultural and Biological Sciences > Insect Science"
+        },
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Sostenibilidad y cambio climático",
+          "Sublinea": "Gestión sostenible de recursos",
+          "Origen_Scopus": "Agricultural and Biological Sciences > Ecology, Evolution, Behavior and Systematics"
+        }
+      ],
+      "enfoque": "Tecnología y ecosistemas"
+    },
+    {
+      "journal": "Journal of Chemical and Engineering Data",
+      "issn": "0021-9568",
+      "eissn": "1520-5134",
+      "publisher": "American Chemical Society",
+      "disciplinas": [
+        "Chemical Engineering",
+        "Chemistry"
+      ],
+      "cobertura": "1956 - 2026",
+      "citeScore": "3.7",
+      "sitioWeb": "https://pubs.acs.org/jceaax",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=24158",
+      "id": 87,
+      "categorias_scopus": [
+        {
+          "Categoria": "Chemistry",
+          "Subcategoria": "General Chemistry",
+          "Percentil": "51",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Chemical Engineering",
+          "Subcategoria": "General Chemical Engineering",
+          "Percentil": "50",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1rixS2vx-clQ0GwJGb6sGTB_cBEwsglaz/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "APC opcional",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Tecnología y ecosistemas",
+          "Sublinea": "Tecnologías limpias",
+          "Origen_Scopus": "Chemistry > General Chemistry"
+        }
+      ],
+      "enfoque": "Tecnología y ecosistemas"
+    },
+    {
+      "journal": "Journal of Physical and Chemical Reference Data",
+      "issn": "0047-2689",
+      "eissn": "1529-7845",
+      "publisher": "American Institute of Physics",
+      "disciplinas": [
+        "Chemistry",
+        "Physics and Astronomy"
+      ],
+      "cobertura": "1972 - 2026",
+      "citeScore": "6.7",
+      "sitioWeb": "https://pubs.aip.org/aip/jpr",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=24644",
+      "id": 88,
+      "categorias_scopus": [
+        {
+          "Categoria": "Physics and Astronomy",
+          "Subcategoria": "General Physics and Astronomy",
+          "Percentil": "82",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Chemistry",
+          "Subcategoria": "General Chemistry",
+          "Percentil": "72",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Chemistry",
+          "Subcategoria": "Physical and Theoretical Chemistry",
+          "Percentil": "70",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1L4o8XbFjKU4PTF3k0xr4wBCEuJ2PsBnV/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "APC opcional",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Tecnología y ecosistemas",
+          "Sublinea": "Tecnologías limpias",
+          "Origen_Scopus": "Chemistry > General Chemistry"
+        }
+      ],
+      "enfoque": "Tecnología y ecosistemas"
+    },
+    {
+      "journal": "Atomic Data and Nuclear Data Tables",
+      "issn": "0092-640X",
+      "eissn": "1090-2090",
+      "publisher": "Elsevier",
+      "disciplinas": [
+        "Physics and Astronomy"
+      ],
+      "cobertura": "1969 - 2026",
+      "citeScore": "6.0",
+      "sitioWeb": "https://www.sciencedirect.com/journal/atomic-data-and-nuclear-data-tables",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=28944",
+      "id": 89,
+      "categorias_scopus": [
+        {
+          "Categoria": "Physics and Astronomy",
+          "Subcategoria": "Nuclear and High Energy Physics",
+          "Percentil": "82",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Physics and Astronomy",
+          "Subcategoria": "Atomic and Molecular Physics, and Optics",
+          "Percentil": "71",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1rLzXV-9xz7R8MU1iy7Eskqx_KmS_K9xQ/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [],
+      "enfoque": "General"
+    },
+    {
+      "journal": "Nuclear Data Sheets",
+      "issn": "0090-3752",
+      "eissn": "1095-9904",
+      "publisher": "Elsevier",
+      "disciplinas": [
+        "Physics and Astronomy"
+      ],
+      "cobertura": "1971 - 2026",
+      "citeScore": "3.6",
+      "sitioWeb": "https://www.sciencedirect.com/journal/nuclear-data-sheets",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=12655",
+      "id": 90,
+      "categorias_scopus": [
+        {
+          "Categoria": "Physics and Astronomy",
+          "Subcategoria": "Nuclear and High Energy Physics",
+          "Percentil": "62",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1sFR7whGvM2YuJ-ihLRTRvYd16EhT08FP/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [],
+      "enfoque": "General"
+    },
+    {
+      "journal": "Data Science Journal",
+      "issn": "",
+      "eissn": "1683-1470",
+      "publisher": "Ubiquity Press",
+      "disciplinas": [
+        "Computer Science"
+      ],
+      "cobertura": "2003 - 2003",
+      "citeScore": "2.9",
+      "sitioWeb": "https://datascience.codata.org/",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=4700152809",
+      "id": 91,
+      "categorias_scopus": [
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Computer Science Applications",
+          "Percentil": "46",
+          "Cuartil": "Q3"
+        },
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Computer Science (miscellaneous)",
+          "Percentil": "44",
+          "Cuartil": "Q3"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1F2EePCK_6mEXjiUaMQjDiuc0FRBOV11D/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Transformación digital",
+          "Sublinea": "Tecnologías emergentes",
+          "Origen_Scopus": "Computer Science > Computer Science Applications"
+        },
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Inteligencia artificial y computación avanzada",
+          "Sublinea": "Machine learning y deep learning",
+          "Origen_Scopus": "Computer Science > Computer Science (miscellaneous)"
+        }
+      ],
+      "enfoque": "Transformación digital"
+    },
+    {
+      "journal": "Data Intelligence",
+      "issn": "2096-7004",
+      "eissn": "2641-435X",
+      "publisher": "Science Press",
+      "disciplinas": [
+        "Computer Science",
+        "Social Sciences"
+      ],
+      "cobertura": "2019 - 2026",
+      "citeScore": "6.0",
+      "sitioWeb": "https://www.sciengine.com/DI/home",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101061989",
+      "id": 92,
+      "categorias_scopus": [
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Library and Information Sciences",
+          "Percentil": "84",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Computer Science Applications",
+          "Percentil": "70",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Information Systems",
+          "Percentil": "69",
+          "Cuartil": "Q2"
+        },
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Artificial Intelligence",
+          "Percentil": "68",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1OhF97YVik6DapM7BvTdf6HERXiCNDqR6/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Gestión del conocimiento",
+          "Sublinea": "Transferencia de conocimiento",
+          "Origen_Scopus": "Social Sciences > Library and Information Sciences"
+        },
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Transformación digital",
+          "Sublinea": "Tecnologías emergentes",
+          "Origen_Scopus": "Computer Science > Computer Science Applications"
+        },
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Inteligencia artificial y computación avanzada",
+          "Sublinea": "Machine learning y deep learning",
+          "Origen_Scopus": "Computer Science > Artificial Intelligence"
+        }
+      ],
+      "enfoque": "Gestión del conocimiento"
+    },
+    {
+      "journal": "Research Data Journal for the Humanities and Social Sciences",
+      "issn": "",
+      "eissn": "2452-3666",
+      "publisher": "Brill",
+      "disciplinas": [
+        "Arts and Humanities",
+        "Social Sciences",
+        "Computer Science"
+      ],
+      "cobertura": "2016 - 2016",
+      "citeScore": "1.2",
+      "sitioWeb": "https://researchdatajournal.org/",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101052353",
+      "id": 93,
+      "categorias_scopus": [
+        {
+          "Categoria": "Arts and Humanities",
+          "Subcategoria": "General Arts and Humanities",
+          "Percentil": "79",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "General Social Sciences",
+          "Percentil": "44",
+          "Cuartil": "Q3"
+        },
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Computer Science Applications",
+          "Percentil": "22",
+          "Cuartil": "Q4"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1lcIB4N_rurkJWmufNoT0yY82bXsMtc3J/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Sin APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Comunicación y cultura digital",
+          "Sublinea": "Comunicación intercultural",
+          "Origen_Scopus": "Arts and Humanities > General Arts and Humanities"
+        },
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Comportamiento social",
+          "Origen_Scopus": "Social Sciences > General Social Sciences"
+        },
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Transformación digital",
+          "Sublinea": "Tecnologías emergentes",
+          "Origen_Scopus": "Computer Science > Computer Science Applications"
+        }
+      ],
+      "enfoque": "Comunicación y cultura digital"
+    },
+    {
+      "journal": "Journal of Open Humanities Data",
+      "issn": "",
+      "eissn": "2059-481X",
+      "publisher": "Ubiquity Press",
+      "disciplinas": [
+        "Arts and Humanities",
+        "Social Sciences",
+        "Computer Science"
+      ],
+      "cobertura": "2019 - 2019",
+      "citeScore": "1.2",
+      "sitioWeb": "https://openhumanitiesdata.metajnl.com/",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101102022",
+      "id": 94,
+      "categorias_scopus": [
+        {
+          "Categoria": "Arts and Humanities",
+          "Subcategoria": "General Arts and Humanities",
+          "Percentil": "76",
+          "Cuartil": "Q1"
+        },
+        {
+          "Categoria": "Social Sciences",
+          "Subcategoria": "Library and Information Sciences",
+          "Percentil": "43",
+          "Cuartil": "Q3"
+        },
+        {
+          "Categoria": "Computer Science",
+          "Subcategoria": "Information Systems",
+          "Percentil": "27",
+          "Cuartil": "Q3"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1lbpFEmtQJEoblkvlyNZ5ihTkvkA2n1Bx/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Comunicación y cultura digital",
+          "Sublinea": "Comunicación intercultural",
+          "Origen_Scopus": "Arts and Humanities > General Arts and Humanities"
+        },
+        {
+          "Categoria_ULima": "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+          "Linea": "Gestión del conocimiento",
+          "Sublinea": "Transferencia de conocimiento",
+          "Origen_Scopus": "Social Sciences > Library and Information Sciences"
+        },
+        {
+          "Categoria_ULima": "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
+          "Linea": "Transformación digital",
+          "Sublinea": "Tecnologías emergentes",
+          "Origen_Scopus": "Computer Science > Information Systems"
+        }
+      ],
+      "enfoque": "Comunicación y cultura digital"
+    },
+    {
+      "journal": "Journal of Open Psychology Data",
+      "issn": "",
+      "eissn": "2050-9863",
+      "publisher": "Ubiquity Press",
+      "disciplinas": [
+        "Psychology"
+      ],
+      "cobertura": "2019 - 2026",
+      "citeScore": "2.5",
+      "sitioWeb": "http://openpsychologydata.metajnl.com",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21101184725",
+      "id": 95,
+      "categorias_scopus": [
+        {
+          "Categoria": "Psychology",
+          "Subcategoria": "Psychology (miscellaneous)",
+          "Percentil": "58",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1iVclol29E5dNHVnF1IbE1T7IFWUkNZ7y/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "SOCIEDAD Y COMPORTAMIENTO HUMANO",
+          "Linea": "Bienestar y desarrollo humano",
+          "Sublinea": "Salud mental y bienestar",
+          "Origen_Scopus": "Psychology > Psychology (miscellaneous)"
+        }
+      ],
+      "enfoque": "Bienestar y desarrollo humano"
+    },
+    {
+      "journal": "Chemical Data Collections",
+      "issn": "",
+      "eissn": "2405-8300",
+      "publisher": "Elsevier",
+      "disciplinas": [
+        "Chemistry"
+      ],
+      "cobertura": "2016 - 2026",
+      "citeScore": "6.8",
+      "sitioWeb": "https://www.sciencedirect.com/journal/chemical-data-collections",
+      "scopusLink": "https://www.scopus.com/source/sourceInfo.url?sourceId=21100464634",
+      "id": 96,
+      "categorias_scopus": [
+        {
+          "Categoria": "Chemistry",
+          "Subcategoria": "General Chemistry",
+          "Percentil": "73",
+          "Cuartil": "Q2"
+        }
+      ],
+      "enlace_informe": "https://drive.google.com/file/d/1qdsmJei3bNArtAAWAjYYBr8pLazhuD3j/view?usp=drivesdk",
+      "tipo": "Data Journal",
+      "tipo_apc": "Con APC",
+      "fecha_emision": "28/08/2026",
+      "clasificacion_ulima": [
+        {
+          "Categoria_ULima": "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+          "Linea": "Tecnología y ecosistemas",
+          "Sublinea": "Tecnologías limpias",
+          "Origen_Scopus": "Chemistry > General Chemistry"
+        }
+      ],
+      "enfoque": "Tecnología y ecosistemas"
     }
   ],
   "facets": {
     "publishers": [
+      "American Chemical Society",
       "American Institute of Mathematical Sciences",
+      "American Institute of Physics",
+      "Asia Pacific Academy of Science Pte Ltd",
+      "Brill",
       "CILIP Information Literacy Group",
       "Cambridge University Press",
       "Centro de Estudios de Promoción de la Lectura y Literatura Infantil, Universidad de Castilla-La Mancha",
       "Cogitatio Press",
+      "Copernicus Publications",
       "Education Society of IEEE (Spanish Chapter)",
       "Elsevier",
       "Elsevier B.V.",
@@ -3814,6 +4707,7 @@
       "Ludomedia EN",
       "OmniaScience",
       "Oxford University Press",
+      "Pensoft Publishers",
       "Poder Judicial del Perú",
       "Polskie Towarzystwo Inzynierii Ekologicznej (PTIE)",
       "Pontificia Universidad Catolica del Peru",
@@ -3821,6 +4715,7 @@
       "SAGE",
       "SAGE Publications Ltd",
       "School of Education, University of Louisiana at Monroe",
+      "Science Press",
       "Sociedad Iberoamericana de Estudios Heideggerianos",
       "Springer London",
       "Springer Nature",
@@ -3831,6 +4726,7 @@
       "Taylor & Francis.",
       "Taylor and Francis Ltd.",
       "Taylor and Francis.",
+      "Ubiquity Press",
       "Universidad Externado de Colombia",
       "Universidad Nacional de Córdoba - Facultad de Psicología",
       "Universidad de Cantabria",
