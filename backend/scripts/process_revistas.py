@@ -49,6 +49,42 @@ else:
 # Filter the DataFrame based on the specified conditions
 filtered_df = df[(df['Estado'] == 'Vigente') & (df['Conclusión'].str.contains('No presenta indicios de malas prácticas', na=False))]
 
+def _journal_key(row):
+    def normalize_identifier(value):
+        if pd.isna(value) or str(value).strip() in ('', '-', 'nan'):
+            return None
+        return str(value).strip()
+
+    e_issn = normalize_identifier(row.get('E-ISSN'))
+    issn = normalize_identifier(row.get('ISSN'))
+    if e_issn:
+        return f'eissn:{e_issn}'
+    if issn:
+        return f'issn:{issn}'
+    name = str(row.get('Nombre de la revista / fuente', '')).strip().casefold()
+    return f'name:{name}'
+
+def deduplicate_reviews(reviews):
+    if reviews.empty:
+        return reviews
+
+    reviews = reviews.copy()
+    reviews['_fecha_emision_sort'] = pd.to_datetime(
+        reviews['Fecha de emisión'], dayfirst=True, errors='coerce'
+    )
+    reviews['_journal_key'] = reviews.apply(_journal_key, axis=1)
+    duplicate_count = len(reviews) - reviews['_journal_key'].nunique()
+    reviews = (
+        reviews.sort_values('_fecha_emision_sort', ascending=False, na_position='last')
+        .drop_duplicates('_journal_key', keep='first')
+        .drop(columns=['_fecha_emision_sort', '_journal_key'])
+    )
+    if duplicate_count:
+        print(f'Se descartaron {duplicate_count} revisiones antiguas de revistas duplicadas.')
+    return reviews
+
+filtered_df = deduplicate_reviews(filtered_df)
+
 # Display the filtered DataFrame
 if not filtered_df.empty:
     print(filtered_df)
@@ -1348,6 +1384,7 @@ try:
         (df['Estado'] == 'Vigente') & 
         (df['Conclusión'].str.contains('Posibles indicios de malas prácticas', na=False))
     ]
+    df_malas = deduplicate_reviews(df_malas)
     
     malas_json_list = []
     

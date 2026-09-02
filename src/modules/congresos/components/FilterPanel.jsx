@@ -9,7 +9,7 @@ const CAT_COLORS = {
     'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO': { color: '#ff5017' },
 }
 
-export default function Filters({ filters, setFilters, countries, lineas, onReset, activeCategoryLabels = [] }) {
+export default function Filters({ filters, setFilters, countries, lineas, onReset, onCategoryRemove, activeCategoryLabels = [] }) {
 
     const toggleLinea = (linea) => {
         const current = filters.lineas || []
@@ -177,6 +177,12 @@ export default function Filters({ filters, setFilters, countries, lineas, onRese
                             <span key={cat} className="filter-chip"
                                 style={{ borderColor: color, color: color, fontWeight: 700 }}>
                                 {cat}
+                                <button
+                                    onClick={() => onCategoryRemove(cat)}
+                                    style={{ background: color }}
+                                >
+                                    <X size={11} />
+                                </button>
                             </span>
                         )
                     })}

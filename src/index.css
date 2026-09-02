@@ -434,14 +434,25 @@ body {
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  position: relative;
   cursor: pointer;
   color: white;
   padding: 0;
+  line-height: 0;
+  box-sizing: border-box;
   flex-shrink: 0;
   transition: background 0.15s;
+}
+
+.filter-chip button svg {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 11px;
+  height: 11px;
 }
 
 .filter-chip button:hover {

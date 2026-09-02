@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalCongresses": 24,
-    "lastUpdated": "2026-06-12 10:39:15",
+    "totalCongresses": 26,
+    "lastUpdated": "2026-08-14 11:35:20",
     "version": "2.2"
   },
   "taxonomy": {
@@ -158,7 +158,7 @@
       "pais": "Ecuador",
       "modalidad": "Presencial",
       "deadline": "2026-06-28",
-      "deadlineStatus": "urgent",
+      "deadlineStatus": "passed",
       "publicacion": "Scopus",
       "enlace": "ticec.cedia.edu.ec",
       "integridad": {
@@ -624,7 +624,7 @@
       "pais": "Brasil",
       "modalidad": "Presencial",
       "deadline": "2026-08-01",
-      "deadlineStatus": "upcoming",
+      "deadlineStatus": "passed",
       "publicacion": "Scopus",
       "enlace": "https://sbgames.org/sbgames2026/",
       "integridad": {
@@ -663,7 +663,7 @@
       "lugar": "Lisboa",
       "ciudad": "Lisboa",
       "pais": "Portugal",
-      "modalidad": "Presencial (opción remota limitada)",
+      "modalidad": "Hibrido",
       "deadline": "2026-05-30",
       "deadlineStatus": "passed",
       "publicacion": "Scopus",
@@ -787,7 +787,7 @@
       "fechaFin": "2026-09-11",
       "lugar": "Centro Citibanamex",
       "ciudad": "Ciudad de México",
-      "pais": "México",
+      "pais": "Mexico",
       "modalidad": "Presencial",
       "deadline": "2026-03-29",
       "deadlineStatus": "passed",
@@ -833,7 +833,7 @@
       "pais": "Argentina",
       "modalidad": "Presencial",
       "deadline": "2026-08-03",
-      "deadlineStatus": "upcoming",
+      "deadlineStatus": "passed",
       "publicacion": "IEEE Xplore, Scopus",
       "enlace": "https://lamc-ieee.org/",
       "integridad": {
@@ -1039,9 +1039,9 @@
       "lugar": "Pontificia Universidad Católica de Chile (UC) - Santiago, Chile",
       "ciudad": "Santiago",
       "pais": "Chile",
-      "modalidad": "Híbrido",
+      "modalidad": "Hibrido",
       "deadline": "2026-06-30",
-      "deadlineStatus": "urgent",
+      "deadlineStatus": "passed",
       "publicacion": "Scopus",
       "enlace": "icacit.org.pe/symposium",
       "integridad": {
@@ -1096,6 +1096,91 @@
         "conflicto_intereses": "No precisa ",
         "observaciones": "-",
         "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas"
+      }
+    },
+    {
+      "id": 25,
+      "evento": "ICAAA ",
+      "nombreCompleto": "14th International Conference on Asia Agriculture and Animal",
+      "disciplina": "",
+      "categoria": [
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
+      ],
+      "linea": [
+        "Bienestar y desarrollo humano",
+        "Innovación empresarial",
+        "Sostenibilidad y cambio climático"
+      ],
+      "sublinea": [
+        "Adaptación al cambio climático",
+        "Emprendimiento tecnológico",
+        "Energías renovables",
+        "Salud mental y bienestar"
+      ],
+      "fechaInicio": "2027-01-08",
+      "fechaFin": "2027-01-10",
+      "lugar": "Centro de Convenciones de Fukuoka",
+      "ciudad": "Fukuoka",
+      "pais": "Japón",
+      "modalidad": "Híbrido",
+      "deadline": "2026-08-15",
+      "deadlineStatus": "urgent",
+      "publicacion": "Scopus, WoS",
+      "enlace": "https://www.icaaa.org/index.html",
+      "integridad": {
+        "organizadores": "ICAAA Organizing Committee\nKasetsart University;\nEAS Environment and Agriculture Society;\nMuroran Institute of Technology.",
+        "comite_cientifico": "El sitio web presenta la composición del Comité Científico y del Comité Técnico de la conferencia, integrado por académicos e investigadores de diversas universidades e instituciones",
+        "programa_temas": "Agricultura\nCiencias Animales\nAgricultura sostenible y climáticamente inteligente\nInnovación agrícola, agronegocios y cadenas de valor",
+        "revision_pares": "Los trabajos son evaluados por comités de programa y revisores internacionales.",
+        "indexacion_bd": "El sitio web indica que los proceedings de ICAAA 2027 están indexados en Scopus, DOAJ y Google Scholar; CPCI (Web of Science) sujeto a aceptación.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "El sitio web indica que existe participación virtual para algunos participantes que no puedan asistir físicamente por razones especiales.",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
+      }
+    },
+    {
+      "id": 26,
+      "evento": "GFSC",
+      "nombreCompleto": "6th Global Food Security Conference",
+      "disciplina": "",
+      "categoria": [
+        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
+        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
+        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
+      ],
+      "linea": [
+        "Economía digital",
+        "Gestión del conocimiento",
+        "Tecnología y ecosistemas",
+        "Ética, gobernanza y responsabilidad social"
+      ],
+      "sublinea": [
+        "Biodiversidad y conservación",
+        "Mercados globales",
+        "Transferencia de conocimiento",
+        "Ética y gobernanza"
+      ],
+      "fechaInicio": "2027-04-19",
+      "fechaFin": "2027-04-22",
+      "lugar": "Wageningen University & Research (WUR)",
+      "ciudad": "Wageningen",
+      "pais": "Países Bajos",
+      "modalidad": "Presencial",
+      "deadline": "2026-09-11",
+      "deadlineStatus": "urgent",
+      "publicacion": "Scopus, WoS",
+      "enlace": "https://www.globalfoodsecurityconference.com/",
+      "integridad": {
+        "organizadores": "Elsevier Conferences y Wageningen University & Research (WUR).",
+        "comite_cientifico": "El sitio web presenta la composición del Comité Científico, integrado por académicos e investigadores de diversas universidades e instituciones de América, Europa, África, Asia y Oceanía",
+        "programa_temas": "Oportunidades e innovación tecnológica.\nDiversidad y cadenas de valor alimentarias.\nEquilibrio entre mercados globales y sistemas alimentarios locales.\nEstabilidad, resiliencia y cambio climático.\nAgencia y equidad en los sistemas alimentarios.\nCiencia reflexiva y gobernanza del conocimiento.",
+        "revision_pares": "El sitio web indica que las propuestas son evaluadas por un comité antes de la aceptación.",
+        "indexacion_bd": "El sitio web señala oportunidades de publicación de contribuciones seleccionadas en revistas indexadas en Scopus y Web of Science.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "Las contribuciones seleccionadas podrán ser consideradas para publicación en números especiales de revistas indexadas en Scopus y Web of Science; la publicación está sujeta a evaluación editorial y no es automática.",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
       }
     }
   ]
