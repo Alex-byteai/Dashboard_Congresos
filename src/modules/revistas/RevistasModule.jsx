@@ -65,6 +65,17 @@ export default function RevistasModule({ onBack }) {
         }))
     }
 
+    const handleCategoryRemove = (category) => {
+        setSelectedCareers(prev => prev.filter(id =>
+            CAREERS.find(career => career.id === id)?.categoria !== category
+        ))
+        setFilters(prev => ({
+            ...prev,
+            categorias: prev.categorias.filter(cat => cat !== category),
+            lineas: []
+        }))
+    }
+
     const [revistasObservadas, setRevistasObservadas] = useState([])
 
     useEffect(() => {
@@ -224,6 +235,7 @@ export default function RevistasModule({ onBack }) {
                     disciplinas={facets.disciplinas || []}
                     categorias={facets.categorias || []}
                     lineas={uniqueLineas}
+                    onCategoryRemove={handleCategoryRemove}
                     onReset={() => { setFilters(initialFilters); setSelectedCareers([]) }}
                 />
 

@@ -8,7 +8,7 @@ const CAT_COLORS = {
     'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO': { color: '#ff5017' },
 }
 
-export default function RevistasFilterPanel({ filters, setFilters, tipos, apcs, disciplinas, categorias, lineas, onReset }) {
+export default function RevistasFilterPanel({ filters, setFilters, tipos, apcs, disciplinas, categorias, lineas, onCategoryRemove, onReset }) {
 
     const toggleLinea = (linea) => {
         const current = filters.lineas || []
@@ -152,7 +152,7 @@ export default function RevistasFilterPanel({ filters, setFilters, tipos, apcs, 
                                 style={{ borderColor: color, color: color, fontWeight: 700 }}>
                                 {cat}
                                 <button 
-                                    onClick={() => setFilters({ ...filters, categorias: filters.categorias.filter(c => c !== cat) })}
+                                    onClick={() => onCategoryRemove(cat)}
                                     style={{ background: color }}
                                 >
                                     <X size={11} />

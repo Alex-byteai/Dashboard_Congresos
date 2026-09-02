@@ -1,13 +1,6 @@
 {
   "revistas_observadas": [
     {
-      "journal": "Frontiers in Education",
-      "issn": "",
-      "eissn": "2504-284X",
-      "enlace_informe": "https://drive.google.com/file/d/1_oAU8DG1CPWOnoRkn85KxKZN3slAWuil/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
       "journal": "Food Bioscience",
       "issn": "2212-4292",
       "eissn": "2212-4306",
@@ -138,6 +131,13 @@
       "issn": "",
       "eissn": "2071-1050",
       "enlace_informe": "https://drive.google.com/file/d/14Py3LWcqqZBWKjjtXaw8rdfgAxXarDFl/view?usp=drivesdk",
+      "conclusion": "Posibles indicios de malas prácticas"
+    },
+    {
+      "journal": "Corporate Board Role Duties and Composition",
+      "issn": "1810-8601",
+      "eissn": "2312-2722",
+      "enlace_informe": "https://drive.google.com/file/d/12i2cNUe61xXHrLFcaC6o0L56ZYztQiH_/view?usp=drivesdk",
       "conclusion": "Posibles indicios de malas prácticas"
     }
   ] 

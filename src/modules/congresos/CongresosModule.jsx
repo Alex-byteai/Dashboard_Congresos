@@ -52,6 +52,18 @@ export default function CongresosModule({ onBack }) {
         }))
     }
 
+    const handleCategoryRemove = (category) => {
+        setSelectedCareers(prev => prev.filter(id =>
+            CAREERS.find(career => career.id === id)?.categoria !== category
+        ))
+        setFilters(prev => ({
+            ...prev,
+            categorias: prev.categorias.filter(cat => cat !== category),
+            lineas: [],
+            sublinea: ''
+        }))
+    }
+
 
     useEffect(() => {
         fetch('/congresses.json')
@@ -193,6 +205,7 @@ export default function CongresosModule({ onBack }) {
                     lineas={uniqueLineas}
                     sublineas={uniqueSublineas}
                     activeCategoryLabels={filters.categorias}
+                    onCategoryRemove={handleCategoryRemove}
                     onReset={() => { setFilters(initialFilters); setSelectedCareers([]) }}
                 />
 
