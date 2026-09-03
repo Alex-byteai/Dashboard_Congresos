@@ -1678,7 +1678,7 @@
       ],
       "enlace_informe": "https://drive.google.com/file/d/1rsqsZdsrSDALz1uxsdmrbIXzf_SGDyzY/view?usp=drivesdk",
       "tipo": "Research Journal",
-      "tipo_apc": "APC opcional",
+      "tipo_apc": "Sin APC",
       "fecha_emision": "19/08/2026",
       "clasificacion_ulima": [
         {
@@ -1842,7 +1842,7 @@
         }
       ],
       "enlace_informe": "https://drive.google.com/file/d/1HI3kWCeOyWTuFSaBl748vrgMzEFEUOBb/view?usp=drivesdk",
-      "tipo_apc": "Con APC",
+      "tipo_apc": "APC opcional",
       "fecha_emision": "18/08/2026",
       "clasificacion_ulima": [
         {
@@ -4743,7 +4743,7 @@
       ],
       "enlace_informe": "https://drive.google.com/file/d/1iioJvsGTEmtjr6Cj_RmOipEPYOrTrL9U/view?usp=drivesdk",
       "tipo": "Research Journal",
-      "tipo_apc": "Con APC",
+      "tipo_apc": "APC opcional",
       "fecha_emision": "22/05/2026",
       "clasificacion_ulima": [
         {
