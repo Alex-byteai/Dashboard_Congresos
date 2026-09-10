@@ -14,16 +14,20 @@ Dashboard profesional e interactivo para la visualización y gestión de congres
 ### Instalación
 
 ```bash
-# 1. Instalar dependencias de Node.js
+# 1. Instalar dependencias del frontend
+cd frontend
 npm install
+cd ..
 
 # 2. Instalar dependencias de Python
 pip3 install openpyxl
 
 # 3. Procesar datos del Excel
-python3 backend/data_processor.py
+python3 backend/scripts/process_congresos.py
+python3 backend/scripts/process_revistas.py
 
 # 4. Iniciar el servidor de desarrollo
+cd frontend
 npm run dev
 ```
 
@@ -80,7 +84,8 @@ El dashboard estará disponible en `http://localhost:3000`
 O manualmente:
 
 ```bash
-python3 backend/data_processor.py
+python3 backend/scripts/process_congresos.py
+python3 backend/scripts/process_revistas.py
 ```
 
 3. Recarga el navegador (F5)
@@ -131,8 +136,8 @@ Simplemente agrega nuevas filas al archivo Excel `List_congreso.xlsx` manteniend
 - Verifica la consola del navegador para errores
 
 ### Los datos no se actualizan
-- Verifica que el archivo `public/congresses.json` existe
-- Ejecuta nuevamente `python3 backend/data_processor.py`
+- Verifica que el archivo `frontend/public/congresses.json` existe
+- Ejecuta nuevamente `python3 backend/scripts/process_congresos.py`
 - Limpia la caché del navegador (Ctrl+Shift+R)
 
 ### Error al instalar dependencias
@@ -143,25 +148,16 @@ Simplemente agrega nuevas filas al archivo Excel `List_congreso.xlsx` manteniend
 
 ```
 dashboard_lcr/
+├── frontend/
+│   ├── public/                # Datos consumidos por la aplicación
+│   ├── src/                   # Código React
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js
 ├── backend/
-│   ├── data_processor.py      # Procesador de Excel a JSON
+│   ├── scripts/                # Procesadores de datos
 │   └── requirements.txt        # Dependencias Python
-├── public/
-│   └── congresses.json         # Datos procesados (generado)
-├── src/
-│   ├── components/             # Componentes React
-│   │   ├── Header.jsx
-│   │   ├── FilterPanel.jsx
-│   │   ├── StatsCards.jsx
-│   │   ├── CongressTable.jsx
-│   │   ├── Charts.jsx
-│   │   └── GlobeVisualization.jsx
-│   ├── App.jsx                 # Componente principal
-│   ├── main.jsx                # Punto de entrada
-│   └── index.css               # Estilos globales
-├── List_congreso.xlsx          # Datos fuente
 ├── update_data.sh              # Script de actualización
-├── package.json                # Dependencias Node.js
 └── README.md                   # Esta guía
 
 ```
@@ -171,6 +167,8 @@ dashboard_lcr/
 Este proyecto incluye un backend opcional para recolectar eventos (page views, filtros, búsquedas, clicks a enlaces externos).
 
 ### Frontend (Vite/React)
+
+En Render, configura `frontend` como **Root Directory**, usa `npm install && npm run build` como **Build Command** y `dist` como **Publish Directory**.
 
 Configura la variable de entorno:
 

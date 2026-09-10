@@ -9,9 +9,10 @@ if ! python3 -c "import pandas" 2>/dev/null; then
     pip3 install -r backend/requirements.txt
 fi
 
-# Run data processor
+# Run data processors
 echo "📊 Processing Excel data..."
-python3 backend/data_processor.py
+python3 backend/scripts/process_congresos.py
+python3 backend/scripts/process_revistas.py
 
 if [ $? -eq 0 ]; then
     echo ""

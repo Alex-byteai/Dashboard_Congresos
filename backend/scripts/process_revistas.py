@@ -1374,7 +1374,7 @@ print(json.dumps(final_output, indent=2, ensure_ascii=False))
 
 # Guardar en archivo
 root_dir = os.path.join(script_dir, '..', '..')
-output_path = os.path.join(root_dir, 'public', 'revistas.json')
+output_path = os.path.join(root_dir, 'frontend', 'public', 'revistas.json')
 with open(output_path, 'w', encoding='utf-8') as f:
     json.dump(final_output, f, indent=2, ensure_ascii=False)
 
@@ -1403,7 +1403,7 @@ try:
         })
 
     # Save to file
-    observadas_output_path = os.path.join(root_dir, 'public', 'revistas_observadas.json')
+    observadas_output_path = os.path.join(root_dir, 'frontend', 'public', 'revistas_observadas.json')
     with open(observadas_output_path, 'w', encoding='utf-8') as f:
         json.dump({"revistas_observadas": malas_json_list}, f, indent=2, ensure_ascii=False)
     

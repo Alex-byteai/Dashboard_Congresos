@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "sync-data": "copy backend\\revistas_processor\\revistas.json public\\revistas.json"
+    "sync-data": "copy ..\\backend\\revistas_processor\\revistas.json public\\revistas.json"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

@@ -366,7 +366,7 @@ def process_google_sheet_to_json(output_path):
 if __name__ == '__main__':
     script_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.join(script_dir, '..', '..')
-    json_file = os.path.join(root_dir, 'public', 'congresses.json')
+    json_file = os.path.join(root_dir, 'frontend', 'public', 'congresses.json')
     
     try:
         process_google_sheet_to_json(json_file)
