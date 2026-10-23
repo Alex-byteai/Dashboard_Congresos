@@ -14,8 +14,8 @@ export default function CongresosFilterPanel({
     filters,
     setFilters,
     countries = [],
-    lineas = [],
-    onCategoryRemove,
+    sublineas = [],
+    onLineRemove,
     onReset
 }) {
     const set = (key, value) => setFilters(prev => ({ ...prev, [key]: value }));
@@ -32,10 +32,10 @@ export default function CongresosFilterPanel({
         <SidebarFilter
             filters={filters}
             setFilters={setFilters}
-            lineas={lineas}
+            sublineas={sublineas}
             applied={applied}
             onRemoveApplied={removeApplied}
-            onCategoryRemove={onCategoryRemove}
+            onLineRemove={onLineRemove}
             onReset={onReset}
         >
             <FilterGroup icon={Clock} label="Estado">

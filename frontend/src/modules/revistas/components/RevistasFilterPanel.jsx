@@ -15,8 +15,8 @@ export default function RevistasFilterPanel({
     setFilters,
     tipos = [],
     disciplinas = [],
-    lineas = [],
-    onCategoryRemove,
+    sublineas = [],
+    onLineRemove,
     onReset
 }) {
     const set = (key, value) => setFilters(prev => ({ ...prev, [key]: value }));
@@ -29,10 +29,10 @@ export default function RevistasFilterPanel({
         <SidebarFilter
             filters={filters}
             setFilters={setFilters}
-            lineas={lineas}
+            sublineas={sublineas}
             applied={applied}
             onRemoveApplied={key => set(key, '')}
-            onCategoryRemove={onCategoryRemove}
+            onLineRemove={onLineRemove}
             onReset={onReset}
         >
             <FilterGroup icon={Target} label="Tipo de Revista">

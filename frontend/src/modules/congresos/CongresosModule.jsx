@@ -4,10 +4,12 @@ import {
 } from '@phosphor-icons/react'
 
 import DashboardLayout from '../../shared/components/DashboardLayout'
-import CategoryFilter from '../../shared/components/CategoryFilter'
+import LineFilter from '../../shared/components/LineFilter'
 import StatsStrip from '../../shared/components/StatsStrip'
 import { InfoPanelItem, InfoPanelSection, ProtocolPanelSection } from '../../shared/components/InfoPanel'
 import useCatalogFilters from '../../shared/hooks/useCatalogFilters'
+import { sublinesFor } from '../../shared/taxonomy'
+import { SHOW_LINE_FILTER } from '../../shared/constants'
 import { loadCongresos } from '../../core/services/data'
 import CongresosFilterPanel from './components/CongresosFilterPanel'
 import CongressList from './components/CongressList'
@@ -23,24 +25,22 @@ const EMPTY_FILTERS = {
     modality: '',
     onlyOpen: false,
     hideFinished: false,
-    categorias: [],
-    lineas: []
+    lineas: [],
+    sublineas: []
 }
 
 export default function CongresosModule({ onNavigate }) {
     const [data, setData] = useState([])
-    const [taxonomy, setTaxonomy] = useState({})
     const [loading, setLoading] = useState(true)
     const [activeTab, setActiveTab] = useState('cards')
     const {
         filters, setFilters, selectedCareers, activeCount,
-        toggleCareer, selectCategory, removeCategory, resetFilters
+        toggleCareer, selectLine, removeLine, resetFilters
     } = useCatalogFilters(EMPTY_FILTERS)
 
     useEffect(() => {
         loadCongresos()
             .then(json => {
-                setTaxonomy(json.taxonomy || {})
                 setData((json.congresses || []).map(prepareCongress))
             })
             .catch(err => console.error('Error loading congresos:', err))
@@ -58,13 +58,13 @@ export default function CongresosModule({ onNavigate }) {
             const matchesModality = !filters.modality || event.modalidad === filters.modality
             const matchesStatus = (!filters.onlyOpen || event.status === 'open') &&
                 (!filters.hideFinished || event.status !== 'finished')
-            const matchesCategoria = filters.categorias.length === 0 ||
-                filters.categorias.some(cat => event.categoria?.includes(cat))
             const matchesLinea = filters.lineas.length === 0 ||
                 filters.lineas.some(l => event.linea?.includes(l))
+            const matchesSublinea = filters.sublineas.length === 0 ||
+                filters.sublineas.some(s => event.sublinea?.includes(s))
 
             return matchesSearch && matchesCountry && matchesModality && matchesStatus &&
-                matchesCategoria && matchesLinea
+                matchesLinea && matchesSublinea
         }).sort(compareByRelevance)
     }, [data, filters])
 
@@ -73,9 +73,10 @@ export default function CongresosModule({ onNavigate }) {
         [data]
     )
 
-    const lineas = useMemo(
-        () => [...new Set(filters.categorias.flatMap(cat => Object.keys(taxonomy[cat] || {})))].sort(),
-        [filters.categorias, taxonomy]
+    // Sublines of the selected lines that some congress actually has
+    const sublineas = useMemo(
+        () => sublinesFor(filters.lineas, new Set(data.flatMap(e => e.sublinea || []))),
+        [filters.lineas, data]
     )
 
     const upcomingDeadlines = useMemo(
@@ -105,8 +106,8 @@ export default function CongresosModule({ onNavigate }) {
                 filters={filters}
                 setFilters={setFilters}
                 countries={countries}
-                lineas={lineas}
-                onCategoryRemove={removeCategory}
+                sublineas={sublineas}
+                onLineRemove={removeLine}
                 onReset={resetFilters}
             />
 
@@ -182,12 +183,14 @@ export default function CongresosModule({ onNavigate }) {
                 </div>
             ) : (
                 <>
-                    <CategoryFilter
-                        categorias={filters.categorias}
-                        selectedCareers={selectedCareers}
-                        onSelectCategory={selectCategory}
-                        onToggleCareer={toggleCareer}
-                    />
+                    {SHOW_LINE_FILTER && (
+                        <LineFilter
+                            lineas={filters.lineas}
+                            selectedCareers={selectedCareers}
+                            onSelectLine={selectLine}
+                            onToggleCareer={toggleCareer}
+                        />
+                    )}
 
                     <StatsStrip items={stats} />
 

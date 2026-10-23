@@ -24,21 +24,21 @@ npm run dev        # http://localhost:3000
 - Acceso al Protocolo de Idoneidad (PDF), al registro de revistas observadas y a la consulta por ISSN.
 
 **Congresos**
-- Filtro rápido por categoría ULima y por carrera (cada carrera equivale a su categoría).
-- Filtros de estado (solo convocatorias abiertas / ocultar finalizados), país, modalidad y líneas de investigación.
+- Filtro rápido por línea prioritaria de investigación ULima y por carrera (cada carrera se asocia a una o más líneas).
+- Filtros de estado (solo convocatorias abiertas / ocultar finalizados), país, modalidad y sublíneas de investigación.
 - Vista de tarjetas agrupadas por estado (los finalizados se muestran bajo demanda) o línea de tiempo por mes.
 - Modal de integridad: revisión por pares, indexación, organizadores, comité científico, programa, conflicto de intereses y dictamen.
 - Panel de próximos cierres.
 
 **Revistas**
-- Los mismos filtros de categoría, carrera y líneas, además de tipo de revista, APC y disciplina.
+- Los mismos filtros de línea, carrera y sublínea, además de tipo de revista, APC y disciplina.
 - Cuartiles Scopus por subcategoría, CiteScore e informe de evaluación.
 - La búsqueda acepta ISSN con o sin guion; si coincide con una revista observada, muestra un aviso con su informe.
 - Consulta por ISSN: indica si la revista está en el catálogo, si está observada o, si no figura, enlaza al formulario de solicitud de evaluación.
 
 **Móvil y tablet**
 - Hasta 1024 px el panel derecho (filtros, próximos cierres, protocolo) se abre desde el botón "Filtros" de la barra superior.
-- Hasta 768 px se usa la barra de navegación inferior, las categorías y carreras se deslizan en una sola fila y los modales se abren como hoja inferior.
+- Hasta 768 px se usa la barra de navegación inferior, las líneas y carreras se deslizan en una sola fila y los modales se abren como hoja inferior.
 
 ## Datos
 
@@ -75,16 +75,25 @@ frontend/src/
 │       └── analytics.js     # Envío de eventos (opcional)
 ├── shared/
 │   ├── constants.js         # URLs del protocolo y del formulario de solicitud
-│   ├── taxonomy.js          # Categorías ULima y carreras
+│   ├── lineas_investigacion.json  # Líneas prioritarias y sublíneas (fuente única)
+│   ├── taxonomy.js          # Líneas (nombre corto, ícono) y carreras asociadas
 │   ├── hooks/               # useCatalogFilters, useBodyScrollLock
-│   └── components/          # DashboardLayout, Modal, CategoryFilter, SidebarFilter,
+│   └── components/          # DashboardLayout, Modal, LineFilter, SidebarFilter,
 │                            # StatsStrip, InfoPanel, EmptyState
 └── modules/
     ├── congresos/           # CongresosModule, utils.js (fechas, urgencia, dictamen) y componentes
     └── revistas/            # RevistasModule, utils.js (APC) y componentes
 ```
 
-Los dos módulos comparten el layout, el panel de filtros, los chips de categoría y carrera, la franja de indicadores y el hook de estado de filtros. La lógica propia de cada módulo vive en su `utils.js`.
+Los dos módulos comparten el layout, el panel de filtros, los chips de línea y carrera, la franja de indicadores y el hook de estado de filtros. La lógica propia de cada módulo vive en su `utils.js`.
+
+## Líneas prioritarias de investigación
+
+Las 9 líneas y sus sublíneas oficiales ([ulima.edu.pe](https://www.ulima.edu.pe/investigacion#lineas-prioritarias-de-investigacion)) están en `frontend/src/shared/lineas_investigacion.json`, que leen tanto el dashboard como los scripts (`backend/scripts/taxonomia_ulima.py`). Si las líneas cambian, se edita ese archivo y se regeneran los datos. Las sublíneas se referencian con el código `línea.sublínea` (p. ej. `3.3`).
+
+- **Carreras**: la asociación carrera → líneas está en `frontend/src/shared/taxonomy.js` (`CAREERS`).
+- **Revistas**: `process_revistas.py` traduce cada subárea Scopus a sublíneas (`AREA_TO_SUBLINEAS` y `SCOPUS_TO_SUBLINEAS`). Las revistas sin equivalente en Scopus se pueden clasificar a mano por ISSN en `CLASIFICACION_MANUAL`.
+- **Congresos**: `process_congresos.py` compara cada temática de la hoja con las sublíneas y sus `DESCRIPTORES`; se asignan hasta 4 sublíneas, las que reúnen más temáticas.
 
 ## Analítica
 

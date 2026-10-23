@@ -1,34 +1,36 @@
 import {
     ArrowCounterClockwise, CaretDown, Check, FadersHorizontal, X
 } from '@phosphor-icons/react';
+import { lineLabel } from '../taxonomy';
 
 // Right-panel filter shared by the catalog modules: header with active count and
-// reset, module-specific groups (`children`), research-line pills and the list of
-// removable applied filters. `applied` holds the module's other active filters
-// as { key, label }; `onRemoveApplied(key)` clears one of them.
+// reset, module-specific groups (`children`), subline pills for the selected priority
+// lines and the list of removable applied filters. `sublineas` are the options to
+// offer; `applied` holds the module's other active filters as { key, label } and
+// `onRemoveApplied(key)` clears one of them.
 export default function SidebarFilter({
     filters,
     setFilters,
-    lineas = [],
+    sublineas = [],
     applied = [],
     onRemoveApplied,
-    onCategoryRemove,
+    onLineRemove,
     onReset,
     children
 }) {
-    const toggleLinea = (linea) => setFilters(prev => ({
+    const toggleSublinea = (sublinea) => setFilters(prev => ({
         ...prev,
-        lineas: prev.lineas.includes(linea)
-            ? prev.lineas.filter(l => l !== linea)
-            : [...prev.lineas, linea]
+        sublineas: prev.sublineas.includes(sublinea)
+            ? prev.sublineas.filter(s => s !== sublinea)
+            : [...prev.sublineas, sublinea]
     }));
 
     const tags = [
         ...(filters.search
             ? [{ key: 'search', label: `Búsqueda: "${filters.search}"`, onRemove: () => setFilters(prev => ({ ...prev, search: '' })) }]
             : []),
-        ...filters.categorias.map(cat => ({ key: cat, label: cat, isCategory: true, onRemove: () => onCategoryRemove(cat) })),
-        ...filters.lineas.map(l => ({ key: l, label: l, onRemove: () => toggleLinea(l) })),
+        ...filters.lineas.map(line => ({ key: line, label: lineLabel(line), title: line, isLine: true, onRemove: () => onLineRemove(line) })),
+        ...filters.sublineas.map(s => ({ key: s, label: s, onRemove: () => toggleSublinea(s) })),
         ...applied.map(f => ({ ...f, onRemove: () => onRemoveApplied(f.key) })),
     ];
 
@@ -59,31 +61,31 @@ export default function SidebarFilter({
             <div className="sidebar-filter__groups">
                 {children}
 
-                {/* Research lines: only once a category is selected */}
-                {filters.categorias.length > 0 && lineas.length > 0 && (
+                {/* Sublines: only once a priority line is selected */}
+                {filters.lineas.length > 0 && sublineas.length > 0 && (
                     <div className="sidebar-filter__group">
                         <div className="sidebar-filter__group-header">
-                            <span className="sidebar-filter__label">Líneas de investigación</span>
-                            {filters.lineas.length > 0 && (
+                            <span className="sidebar-filter__label">Sublíneas de investigación</span>
+                            {filters.sublineas.length > 0 && (
                                 <button
                                     type="button"
                                     className="sidebar-filter__link-clear"
-                                    onClick={() => setFilters(prev => ({ ...prev, lineas: [] }))}
+                                    onClick={() => setFilters(prev => ({ ...prev, sublineas: [] }))}
                                 >
                                     Limpiar
                                 </button>
                             )}
                         </div>
                         <div className="sidebar-filter__pills sidebar-filter__pills--lines">
-                            {lineas.map(linea => (
+                            {sublineas.map(sublinea => (
                                 <button
-                                    key={linea}
+                                    key={sublinea}
                                     type="button"
-                                    className={`sidebar-filter__line-pill ${filters.lineas.includes(linea) ? 'sidebar-filter__line-pill--active' : ''}`}
-                                    onClick={() => toggleLinea(linea)}
-                                    title={linea}
+                                    className={`sidebar-filter__line-pill ${filters.sublineas.includes(sublinea) ? 'sidebar-filter__line-pill--active' : ''}`}
+                                    onClick={() => toggleSublinea(sublinea)}
+                                    title={sublinea}
                                 >
-                                    {linea}
+                                    {sublinea}
                                 </button>
                             ))}
                         </div>
@@ -95,7 +97,7 @@ export default function SidebarFilter({
                         <span className="sidebar-filter__label">Filtros aplicados:</span>
                         <div className="sidebar-filter__applied-tags">
                             {tags.map(tag => (
-                                <span key={tag.key} className={`applied-tag ${tag.isCategory ? 'applied-tag--cat' : ''}`} title={tag.label}>
+                                <span key={tag.key} className={`applied-tag ${tag.isLine ? 'applied-tag--cat' : ''}`} title={tag.title || tag.label}>
                                     <span>{tag.label}</span>
                                     <button type="button" onClick={tag.onRemove} title={`Quitar ${tag.label}`}>
                                         <X size={11} />

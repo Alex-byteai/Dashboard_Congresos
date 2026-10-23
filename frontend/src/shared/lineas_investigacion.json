@@ -1,0 +1,93 @@
+{
+  "fuente": "https://www.ulima.edu.pe/investigacion#lineas-prioritarias-de-investigacion",
+  "lineas": [
+    {
+      "nombre": "Gobernanza, integridad, justicia y seguridad",
+      "corto": "Gobernanza y justicia",
+      "sublineas": [
+        "Gestión pública, calidad regulatoria y evaluación de políticas públicas",
+        "Integridad, control gubernamental y fiscalización",
+        "Justicia accesible, eficiente y digital",
+        "Seguridad ciudadana, crimen organizado e inteligencia"
+      ]
+    },
+    {
+      "nombre": "Economía, finanzas, mercados y regulación",
+      "corto": "Economía y finanzas",
+      "sublineas": [
+        "Política económica, fiscal, tributaria y formalización",
+        "Comercio exterior, mercados y cadenas globales de valor",
+        "Financiamiento, intermediación, inversión e inclusión financiera",
+        "Gestión de riesgos, regulación y protección al consumidor"
+      ]
+    },
+    {
+      "nombre": "Transformación digital, datos e inteligencia tecnológica",
+      "corto": "Transformación digital",
+      "sublineas": [
+        "Inclusión, cultura digital e interacción persona-tecnología",
+        "Plataformas digitales, interoperabilidad y datos abiertos",
+        "Inteligencia artificial: gobernanza y aplicaciones",
+        "Ciberseguridad, protección de datos y tecnologías avanzadas"
+      ]
+    },
+    {
+      "nombre": "Gestión, innovación y competitividad empresarial",
+      "corto": "Gestión empresarial",
+      "sublineas": [
+        "Gestión y administración humanista",
+        "Productividad, innovación, automatización y manufactura avanzada",
+        "Emprendimiento, mipyme, escalamiento y articulación productiva",
+        "Marketing, comportamiento del consumidor, calidad y competitividad",
+        "Cadenas de suministro e infraestructura productiva"
+      ]
+    },
+    {
+      "nombre": "Educación, desarrollo humano e inclusión social",
+      "corto": "Educación e inclusión",
+      "sublineas": [
+        "Desigualdad, vulnerabilidad, inclusión e integración social",
+        "Educación, formación, competencias y desarrollo del talento",
+        "Desarrollo humano, curso de vida, aprendizaje y convivencia",
+        "Neurociencia, cognición y comportamiento"
+      ]
+    },
+    {
+      "nombre": "Salud integral, bienestar e innovación sanitaria",
+      "corto": "Salud y bienestar",
+      "sublineas": [
+        "Prevención, diagnóstico, vigilancia e innovación en salud",
+        "Salud mental, bienestar psicosocial y calidad de vida",
+        "Gestión, acceso, salud digital y transformación de los servicios sanitarios"
+      ]
+    },
+    {
+      "nombre": "Territorio, ciudades, infraestructura y movilidad sostenible",
+      "corto": "Territorio y ciudades",
+      "sublineas": [
+        "Territorio, infraestructura, desarrollo urbano sostenible, movilidad, vivienda y espacio público",
+        "Logística y distribución",
+        "Turismo sostenible"
+      ]
+    },
+    {
+      "nombre": "Ambiente, recursos naturales, energía y cambio climático",
+      "corto": "Ambiente y energía",
+      "sublineas": [
+        "Biodiversidad, calidad ambiental y control de la contaminación",
+        "Agua, saneamiento y seguridad de los recursos hídricos",
+        "Energía, minería y transición hacia sistemas productivos sostenibles",
+        "Economía circular, cambio climático, resiliencia y gestión del riesgo de desastres"
+      ]
+    },
+    {
+      "nombre": "Agroindustria, alimentación y bioeconomía",
+      "corto": "Agroindustria y alimentación",
+      "sublineas": [
+        "Bioeconomía y biotecnología",
+        "Agricultura, agroindustria y productividad rural",
+        "Nutrición y seguridad alimentaria"
+      ]
+    }
+  ]
+}

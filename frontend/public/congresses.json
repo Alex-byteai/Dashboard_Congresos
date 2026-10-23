@@ -1,90 +1,62 @@
 {
   "metadata": {
-    "totalCongresses": 26,
-    "lastUpdated": "2026-08-14 11:35:20",
+    "totalCongresses": 29,
+    "lastUpdated": "2026-10-23 11:20:51",
     "version": "2.2"
   },
   "taxonomy": {
-    "INNOVACIÓN Y TECNOLOGÍA DIGITAL": {
-      "Inteligencia artificial y computación avanzada": [
-        "Machine learning y deep learning",
-        "Procesamiento de lenguaje natural",
-        "Visión computacional",
-        "Sistemas autónomos y robótica"
-      ],
-      "Transformación digital": [
-        "Tecnologías emergentes",
-        "Ciberseguridad y privacidad",
-        "Internet de las cosas (IoT)",
-        "Computación cuántica",
-        "Diseño y construcción virtual"
-      ],
-      "Experiencia digital humana": [
-        "Interacción humano-computadora",
-        "Realidad virtual y aumentada",
-        "Diseño de interfaces adaptativas"
-      ]
-    },
-    "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE": {
-      "Sostenibilidad y cambio climático": [
-        "Energías renovables",
-        "Economía circular",
-        "Gestión sostenible de recursos",
-        "Adaptación al cambio climático"
-      ],
-      "Ciudades inteligentes y sostenibles": [
-        "Urbanismo sostenible",
-        "Movilidad urbana",
-        "Infraestructura sostenible",
-        "Gestión inteligente de recursos"
-      ],
-      "Tecnología y ecosistemas": [
-        "Tecnologías limpias",
-        "Biodiversidad y conservación",
-        "Gestión de residuos",
-        "Materiales avanzados"
-      ]
-    },
-    "SOCIEDAD Y COMPORTAMIENTO HUMANO": {
-      "Bienestar y desarrollo humano": [
-        "Salud mental y bienestar",
-        "Educación, desarrollo cognitivo y socioafectivo",
-        "Comportamiento social",
-        "Mujer, cultura y sociedad",
-        "Pobreza e informalidad"
-      ],
-      "Comunicación y cultura digital": [
-        "Medios digitales y sociedad",
-        "Comunicación intercultural",
-        "Narrativas transmedia",
-        "Comportamiento digital"
-      ],
-      "Ética, gobernanza y responsabilidad social": [
-        "Ética y gobernanza",
-        "Responsabilidad social",
-        "Derechos humanos y tecnología"
-      ]
-    },
-    "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO": {
-      "Innovación empresarial": [
-        "Modelos de negocio digitales",
-        "Emprendimiento tecnológico",
-        "Gestión de la innovación",
-        "Transformación organizacional"
-      ],
-      "Economía digital": [
-        "Fintech y servicios financieros",
-        "Mercados globales",
-        "Análisis de datos económicos",
-        "Economía de plataformas"
-      ],
-      "Gestión del conocimiento": [
-        "Gestión del capital intelectual",
-        "Aprendizaje organizacional",
-        "Transferencia de conocimiento",
-        "Inteligencia de negocios"
-      ]
-    }
+    "Gobernanza, integridad, justicia y seguridad": [
+      "Gestión pública, calidad regulatoria y evaluación de políticas públicas",
+      "Integridad, control gubernamental y fiscalización",
+      "Justicia accesible, eficiente y digital",
+      "Seguridad ciudadana, crimen organizado e inteligencia"
+    ],
+    "Economía, finanzas, mercados y regulación": [
+      "Política económica, fiscal, tributaria y formalización",
+      "Comercio exterior, mercados y cadenas globales de valor",
+      "Financiamiento, intermediación, inversión e inclusión financiera",
+      "Gestión de riesgos, regulación y protección al consumidor"
+    ],
+    "Transformación digital, datos e inteligencia tecnológica": [
+      "Inclusión, cultura digital e interacción persona-tecnología",
+      "Plataformas digitales, interoperabilidad y datos abiertos",
+      "Inteligencia artificial: gobernanza y aplicaciones",
+      "Ciberseguridad, protección de datos y tecnologías avanzadas"
+    ],
+    "Gestión, innovación y competitividad empresarial": [
+      "Gestión y administración humanista",
+      "Productividad, innovación, automatización y manufactura avanzada",
+      "Emprendimiento, mipyme, escalamiento y articulación productiva",
+      "Marketing, comportamiento del consumidor, calidad y competitividad",
+      "Cadenas de suministro e infraestructura productiva"
+    ],
+    "Educación, desarrollo humano e inclusión social": [
+      "Desigualdad, vulnerabilidad, inclusión e integración social",
+      "Educación, formación, competencias y desarrollo del talento",
+      "Desarrollo humano, curso de vida, aprendizaje y convivencia",
+      "Neurociencia, cognición y comportamiento"
+    ],
+    "Salud integral, bienestar e innovación sanitaria": [
+      "Prevención, diagnóstico, vigilancia e innovación en salud",
+      "Salud mental, bienestar psicosocial y calidad de vida",
+      "Gestión, acceso, salud digital y transformación de los servicios sanitarios"
+    ],
+    "Territorio, ciudades, infraestructura y movilidad sostenible": [
+      "Territorio, infraestructura, desarrollo urbano sostenible, movilidad, vivienda y espacio público",
+      "Logística y distribución",
+      "Turismo sostenible"
+    ],
+    "Ambiente, recursos naturales, energía y cambio climático": [
+      "Biodiversidad, calidad ambiental y control de la contaminación",
+      "Agua, saneamiento y seguridad de los recursos hídricos",
+      "Energía, minería y transición hacia sistemas productivos sostenibles",
+      "Economía circular, cambio climático, resiliencia y gestión del riesgo de desastres"
+    ],
+    "Agroindustria, alimentación y bioeconomía": [
+      "Bioeconomía y biotecnología",
+      "Agricultura, agroindustria y productividad rural",
+      "Nutrición y seguridad alimentaria"
+    ]
   },
   "congresses": [
     {
@@ -92,28 +64,24 @@
       "evento": "LACCEI",
       "nombreCompleto": "24th LACCEI International Multi-Conference for Engineering, Education and Technology",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
       "linea": [
-        "Innovación empresarial",
-        "Tecnología y ecosistemas",
-        "Transformación digital"
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Gestión, innovación y competitividad empresarial",
+        "Educación, desarrollo humano e inclusión social",
+        "Territorio, ciudades, infraestructura y movilidad sostenible"
       ],
       "sublinea": [
-        "Ciberseguridad y privacidad",
-        "Emprendimiento tecnológico",
-        "Internet de las cosas (IoT)",
-        "Tecnologías limpias"
+        "Plataformas digitales, interoperabilidad y datos abiertos",
+        "Productividad, innovación, automatización y manufactura avanzada",
+        "Educación, formación, competencias y desarrollo del talento",
+        "Territorio, infraestructura, desarrollo urbano sostenible, movilidad, vivienda y espacio público"
       ],
       "fechaInicio": "2026-07-15",
       "fechaFin": "2026-07-17",
       "lugar": "Santiago de Chile (Hotel InterContinental, híbrido)",
       "ciudad": "Santiago",
       "pais": "Chile",
-      "modalidad": "Hibrido",
+      "modalidad": "Híbrido",
       "deadline": "2026-02-16",
       "deadlineStatus": "passed",
       "publicacion": "Actas LACCEI (Scopus)",
@@ -134,22 +102,17 @@
       "evento": "TICEC",
       "nombreCompleto": "14ª Conferencia Ecuatoriana de Tecnologías de la Información y Comunicación",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
       "linea": [
-        "Ciudades inteligentes y sostenibles",
-        "Gestión del conocimiento",
-        "Sostenibilidad y cambio climático",
-        "Transformación digital"
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Gestión, innovación y competitividad empresarial",
+        "Ambiente, recursos naturales, energía y cambio climático",
+        "Agroindustria, alimentación y bioeconomía"
       ],
       "sublinea": [
-        "Aprendizaje organizacional",
-        "Ciberseguridad y privacidad",
-        "Energías renovables",
-        "Gestión inteligente de recursos"
+        "Ciberseguridad, protección de datos y tecnologías avanzadas",
+        "Productividad, innovación, automatización y manufactura avanzada",
+        "Energía, minería y transición hacia sistemas productivos sostenibles",
+        "Bioeconomía y biotecnología"
       ],
       "fechaInicio": "2026-10-15",
       "fechaFin": "2026-10-16",
@@ -177,29 +140,20 @@
       "evento": "WorldCIST",
       "nombreCompleto": "14th World Conference on Information Systems and Technologies",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
       "linea": [
-        "Experiencia digital humana",
-        "Gestión del conocimiento",
-        "Innovación empresarial",
-        "Tecnología y ecosistemas"
+        "Transformación digital, datos e inteligencia tecnológica"
       ],
       "sublinea": [
-        "Interacción humano-computadora",
-        "Tecnologías limpias",
-        "Transferencia de conocimiento",
-        "Transformación organizacional"
+        "Inclusión, cultura digital e interacción persona-tecnología",
+        "Plataformas digitales, interoperabilidad y datos abiertos",
+        "Inteligencia artificial: gobernanza y aplicaciones"
       ],
       "fechaInicio": "2026-03-31",
       "fechaFin": "2026-04-02",
       "lugar": "University of Madeira",
       "ciudad": "Madeira",
       "pais": "Portugal",
-      "modalidad": "Hibrido",
+      "modalidad": "Híbrido",
       "deadline": "2025-12-16",
       "deadlineStatus": "passed",
       "publicacion": "Scopus",
@@ -217,30 +171,24 @@
     },
     {
       "id": 4,
-      "evento": "BICA",
+      "evento": "BICA ",
       "nombreCompleto": "17th Annual International Conference on Biologically Inspired Cognitive Architectures",
       "disciplina": "",
-      "categoria": [
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
       "linea": [
-        "Gestión del conocimiento",
-        "Inteligencia artificial y computación avanzada",
-        "Transformación digital"
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Educación, desarrollo humano e inclusión social"
       ],
       "sublinea": [
-        "Aprendizaje organizacional",
-        "Ciberseguridad y privacidad",
-        "Procesamiento de lenguaje natural",
-        "Visión computacional"
+        "Inteligencia artificial: gobernanza y aplicaciones",
+        "Desarrollo humano, curso de vida, aprendizaje y convivencia",
+        "Neurociencia, cognición y comportamiento"
       ],
       "fechaInicio": "2026-09-09",
       "fechaFin": "2026-09-12",
       "lugar": "Mérida, México (Universidad Marista de Mérida)",
       "ciudad": "Guadalajara",
       "pais": "Mexico",
-      "modalidad": "Hibrido",
+      "modalidad": "Híbrido",
       "deadline": "2026-04-15",
       "deadlineStatus": "passed",
       "publicacion": "Scopus",
@@ -258,24 +206,14 @@
     },
     {
       "id": 5,
-      "evento": "IBERAMIA",
+      "evento": "IBERAMIA ",
       "nombreCompleto": "19th Ibero-American Conference on Artificial Intelligence",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
-      ],
       "linea": [
-        "Ciudades inteligentes y sostenibles",
-        "Comunicación y cultura digital",
-        "Inteligencia artificial y computación avanzada"
+        "Transformación digital, datos e inteligencia tecnológica"
       ],
       "sublinea": [
-        "Comunicación intercultural",
-        "Gestión inteligente de recursos",
-        "Procesamiento de lenguaje natural",
-        "Visión computacional"
+        "Inteligencia artificial: gobernanza y aplicaciones"
       ],
       "fechaInicio": "2026-11-18",
       "fechaFin": "2026-11-20",
@@ -300,25 +238,19 @@
     },
     {
       "id": 6,
-      "evento": "WS-AI4CCAM",
+      "evento": "WS-AI4CCAM ",
       "nombreCompleto": "World Symposium on Artificial Intelligence for Climate Change Adaptation and Mitigation",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
       "linea": [
-        "Experiencia digital humana",
-        "Gestión del conocimiento",
-        "Sostenibilidad y cambio climático",
-        "Tecnología y ecosistemas"
+        "Gobernanza, integridad, justicia y seguridad",
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Ambiente, recursos naturales, energía y cambio climático"
       ],
       "sublinea": [
-        "Adaptación al cambio climático",
-        "Diseño de interfaces adaptativas",
-        "Gestión del capital intelectual",
-        "Tecnologías limpias"
+        "Gestión pública, calidad regulatoria y evaluación de políticas públicas",
+        "Inteligencia artificial: gobernanza y aplicaciones",
+        "Energía, minería y transición hacia sistemas productivos sostenibles",
+        "Economía circular, cambio climático, resiliencia y gestión del riesgo de desastres"
       ],
       "fechaInicio": "2026-05-07",
       "fechaFin": "2026-05-08",
@@ -343,32 +275,25 @@
     },
     {
       "id": 7,
-      "evento": "IoTBDS",
+      "evento": "IoTBDS ",
       "nombreCompleto": "11th International Conference on Internet of Things and Big Data Systems",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
-      ],
       "linea": [
-        "Ciudades inteligentes y sostenibles",
-        "Comunicación y cultura digital",
-        "Inteligencia artificial y computación avanzada",
-        "Transformación digital"
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Territorio, ciudades, infraestructura y movilidad sostenible"
       ],
       "sublinea": [
-        "Ciberseguridad y privacidad",
-        "Comunicación intercultural",
-        "Infraestructura sostenible",
-        "Machine learning y deep learning"
+        "Plataformas digitales, interoperabilidad y datos abiertos",
+        "Inteligencia artificial: gobernanza y aplicaciones",
+        "Ciberseguridad, protección de datos y tecnologías avanzadas",
+        "Territorio, infraestructura, desarrollo urbano sostenible, movilidad, vivienda y espacio público"
       ],
       "fechaInicio": "2026-05-21",
       "fechaFin": "2026-05-23",
       "lugar": "Benidorm, España",
       "ciudad": "Benidorm",
       "pais": "España",
-      "modalidad": "Hibrido",
+      "modalidad": "Híbrido",
       "deadline": "2026-02-24",
       "deadlineStatus": "passed",
       "publicacion": "Springer CCIS (Scopus, WoS)",
@@ -386,31 +311,21 @@
     },
     {
       "id": 8,
-      "evento": "HCII",
+      "evento": "HCII ",
       "nombreCompleto": "28th International Conference on Human-Computer Interaction",
       "disciplina": "",
-      "categoria": [
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
-      ],
       "linea": [
-        "Experiencia digital humana",
-        "Inteligencia artificial y computación avanzada",
-        "Transformación digital",
-        "Ética, gobernanza y responsabilidad social"
+        "Transformación digital, datos e inteligencia tecnológica"
       ],
       "sublinea": [
-        "Ciberseguridad y privacidad",
-        "Diseño de interfaces adaptativas",
-        "Machine learning y deep learning",
-        "Ética y gobernanza"
+        "Inclusión, cultura digital e interacción persona-tecnología"
       ],
       "fechaInicio": "2026-07-26",
       "fechaFin": "2026-07-31",
       "lugar": "Montreal Convention Centre, Canadá",
       "ciudad": "Montreal",
       "pais": "Canada",
-      "modalidad": "Hibrido",
+      "modalidad": "Híbrido",
       "deadline": "2026-03-30",
       "deadlineStatus": "passed",
       "publicacion": "Springer LNCS (Scopus, WoS)",
@@ -428,22 +343,14 @@
     },
     {
       "id": 9,
-      "evento": "COMIA",
+      "evento": "COMIA ",
       "nombreCompleto": "XVIII Congreso Mexicano de Inteligencia Artificial",
       "disciplina": "",
-      "categoria": [
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
       "linea": [
-        "Gestión del conocimiento",
-        "Inteligencia artificial y computación avanzada"
+        "Transformación digital, datos e inteligencia tecnológica"
       ],
       "sublinea": [
-        "Aprendizaje organizacional",
-        "Procesamiento de lenguaje natural",
-        "Transferencia de conocimiento",
-        "Visión computacional"
+        "Inteligencia artificial: gobernanza y aplicaciones"
       ],
       "fechaInicio": "2026-05-25",
       "fechaFin": "2026-05-29",
@@ -468,25 +375,14 @@
     },
     {
       "id": 10,
-      "evento": "CIbSE",
+      "evento": "CIbSE ",
       "nombreCompleto": "XXIX Ibero-American Conference on Software Engineering",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
       "linea": [
-        "Ciudades inteligentes y sostenibles",
-        "Innovación empresarial",
-        "Sostenibilidad y cambio climático",
-        "Transformación digital"
+        "Transformación digital, datos e inteligencia tecnológica"
       ],
       "sublinea": [
-        "Ciberseguridad y privacidad",
-        "Gestión inteligente de recursos",
-        "Gestión sostenible de recursos",
-        "Modelos de negocio digitales"
+        "Plataformas digitales, interoperabilidad y datos abiertos"
       ],
       "fechaInicio": "2026-05-11",
       "fechaFin": "2026-05-15",
@@ -511,24 +407,19 @@
     },
     {
       "id": 11,
-      "evento": "CONESCAPAN",
+      "evento": "CONESCAPAN ",
       "nombreCompleto": "IEEE Convention of Central America and Panama",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
       "linea": [
-        "Experiencia digital humana",
-        "Inteligencia artificial y computación avanzada",
-        "Sostenibilidad y cambio climático",
-        "Transformación digital"
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Gestión, innovación y competitividad empresarial",
+        "Ambiente, recursos naturales, energía y cambio climático"
       ],
       "sublinea": [
-        "Ciberseguridad y privacidad",
-        "Energías renovables",
-        "Procesamiento de lenguaje natural",
-        "Realidad virtual y aumentada"
+        "Plataformas digitales, interoperabilidad y datos abiertos",
+        "Ciberseguridad, protección de datos y tecnologías avanzadas",
+        "Productividad, innovación, automatización y manufactura avanzada",
+        "Energía, minería y transición hacia sistemas productivos sostenibles"
       ],
       "fechaInicio": "2026-09-23",
       "fechaFin": "2026-09-25",
@@ -553,33 +444,27 @@
     },
     {
       "id": 12,
-      "evento": "CIDIP/ICPME",
+      "evento": "CIDIP/ICPME ",
       "nombreCompleto": "30th International Congress on Project Management and Engineering",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
-      ],
       "linea": [
-        "Bienestar y desarrollo humano",
-        "Innovación empresarial",
-        "Sostenibilidad y cambio climático",
-        "Transformación digital"
+        "Economía, finanzas, mercados y regulación",
+        "Gestión, innovación y competitividad empresarial",
+        "Ambiente, recursos naturales, energía y cambio climático",
+        "Agroindustria, alimentación y bioeconomía"
       ],
       "sublinea": [
-        "Ciberseguridad y privacidad",
-        "Educación, desarrollo cognitivo y socioafectivo",
-        "Energías renovables",
-        "Gestión de la innovación"
+        "Gestión de riesgos, regulación y protección al consumidor",
+        "Gestión y administración humanista",
+        "Energía, minería y transición hacia sistemas productivos sostenibles",
+        "Agricultura, agroindustria y productividad rural"
       ],
       "fechaInicio": "2026-07-07",
       "fechaFin": "2026-07-09",
       "lugar": "Castellón de la Plana, España (Universitat Jaume I, híbrido)",
       "ciudad": "Castellon de la Plana",
       "pais": "España",
-      "modalidad": "Hibrido",
+      "modalidad": "Híbrido",
       "deadline": "2026-01-16",
       "deadlineStatus": "passed",
       "publicacion": "Actas indexadas en Scopus",
@@ -597,25 +482,15 @@
     },
     {
       "id": 13,
-      "evento": "SBGames",
+      "evento": "SBGames ",
       "nombreCompleto": "Simpósio Brasileiro de Jogos e Entretenimento Digital",
       "disciplina": "",
-      "categoria": [
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
-      ],
       "linea": [
-        "Bienestar y desarrollo humano",
-        "Experiencia digital humana",
-        "Innovación empresarial",
-        "Inteligencia artificial y computación avanzada"
+        "Transformación digital, datos e inteligencia tecnológica"
       ],
       "sublinea": [
-        "Emprendimiento tecnológico",
-        "Realidad virtual y aumentada",
-        "Salud mental y bienestar",
-        "Visión computacional"
+        "Inclusión, cultura digital e interacción persona-tecnología",
+        "Inteligencia artificial: gobernanza y aplicaciones"
       ],
       "fechaInicio": "2026-09-29",
       "fechaFin": "2026-10-02",
@@ -643,27 +518,23 @@
       "evento": "eCrime",
       "nombreCompleto": "eCrime Researchers Summit (eCrime 2026)",
       "disciplina": "",
-      "categoria": [
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
       "linea": [
-        "Gestión del conocimiento",
-        "Inteligencia artificial y computación avanzada",
-        "Transformación digital"
+        "Gobernanza, integridad, justicia y seguridad",
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Gestión, innovación y competitividad empresarial"
       ],
       "sublinea": [
-        "Machine learning y deep learning",
-        "Sistemas autónomos y robótica",
-        "Tecnologías emergentes",
-        "Transferencia de conocimiento"
+        "Seguridad ciudadana, crimen organizado e inteligencia",
+        "Inteligencia artificial: gobernanza y aplicaciones",
+        "Ciberseguridad, protección de datos y tecnologías avanzadas",
+        "Productividad, innovación, automatización y manufactura avanzada"
       ],
       "fechaInicio": "2026-11-03",
       "fechaFin": "2026-11-05",
       "lugar": "Lisboa",
       "ciudad": "Lisboa",
       "pais": "Portugal",
-      "modalidad": "Hibrido",
+      "modalidad": "Híbrido",
       "deadline": "2026-05-30",
       "deadlineStatus": "passed",
       "publicacion": "Scopus",
@@ -684,18 +555,11 @@
       "evento": "ECKM",
       "nombreCompleto": "27th European Conference on Knowledge Management (ECKM 2026)",
       "disciplina": "",
-      "categoria": [
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO"
-      ],
       "linea": [
-        "Gestión del conocimiento",
-        "Innovación empresarial"
+        "Gestión, innovación y competitividad empresarial"
       ],
       "sublinea": [
-        "Aprendizaje organizacional",
-        "Gestión de la innovación",
-        "Gestión del capital intelectual",
-        "Transferencia de conocimiento"
+        "Gestión y administración humanista"
       ],
       "fechaInicio": "2026-09-03",
       "fechaFin": "2026-09-04",
@@ -723,22 +587,15 @@
       "evento": "ICSBT",
       "nombreCompleto": "23 rd ICSBT International Conference on Smart Business Technologies (ICSBT 2026)",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
-      ],
       "linea": [
-        "Ciudades inteligentes y sostenibles",
-        "Tecnología y ecosistemas",
-        "Transformación digital",
-        "Ética, gobernanza y responsabilidad social"
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Territorio, ciudades, infraestructura y movilidad sostenible"
       ],
       "sublinea": [
-        "Computación cuántica",
-        "Gestión inteligente de recursos",
-        "Tecnologías limpias",
-        "Ética y gobernanza"
+        "Plataformas digitales, interoperabilidad y datos abiertos",
+        "Inteligencia artificial: gobernanza y aplicaciones",
+        "Ciberseguridad, protección de datos y tecnologías avanzadas",
+        "Territorio, infraestructura, desarrollo urbano sostenible, movilidad, vivienda y espacio público"
       ],
       "fechaInicio": "2026-07-19",
       "fechaFin": "2026-07-20",
@@ -763,25 +620,18 @@
     },
     {
       "id": 17,
-      "evento": "CLEI",
+      "evento": "CLEI ",
       "nombreCompleto": "52nd Latin American Computing Conference",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
       "linea": [
-        "Gestión del conocimiento",
-        "Inteligencia artificial y computación avanzada",
-        "Sostenibilidad y cambio climático",
-        "Transformación digital"
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Gestión, innovación y competitividad empresarial"
       ],
       "sublinea": [
-        "Adaptación al cambio climático",
-        "Internet de las cosas (IoT)",
-        "Procesamiento de lenguaje natural",
-        "Transferencia de conocimiento"
+        "Inclusión, cultura digital e interacción persona-tecnología",
+        "Plataformas digitales, interoperabilidad y datos abiertos",
+        "Ciberseguridad, protección de datos y tecnologías avanzadas",
+        "Productividad, innovación, automatización y manufactura avanzada"
       ],
       "fechaInicio": "2026-09-07",
       "fechaFin": "2026-09-11",
@@ -806,25 +656,19 @@
     },
     {
       "id": 18,
-      "evento": "IEEE LAMC",
+      "evento": "IEEE LAMC ",
       "nombreCompleto": "6th IEEE MTT-S Latin America Microwave Conference",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
-      ],
       "linea": [
-        "Ciudades inteligentes y sostenibles",
-        "Comunicación y cultura digital",
-        "Inteligencia artificial y computación avanzada",
-        "Tecnología y ecosistemas"
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Gestión, innovación y competitividad empresarial",
+        "Salud integral, bienestar e innovación sanitaria"
       ],
       "sublinea": [
-        "Comunicación intercultural",
-        "Gestión inteligente de recursos",
-        "Machine learning y deep learning",
-        "Materiales avanzados"
+        "Plataformas digitales, interoperabilidad y datos abiertos",
+        "Inteligencia artificial: gobernanza y aplicaciones",
+        "Productividad, innovación, automatización y manufactura avanzada",
+        "Prevención, diagnóstico, vigilancia e innovación en salud"
       ],
       "fechaInicio": "2026-12-09",
       "fechaFin": "2026-12-11",
@@ -852,20 +696,13 @@
       "evento": "ACIT",
       "nombreCompleto": "16th International Conference on Advanced Computer Information Technologies (ACIT’2026)",
       "disciplina": "",
-      "categoria": [
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
       "linea": [
-        "Economía digital",
-        "Inteligencia artificial y computación avanzada",
-        "Transformación digital"
+        "Transformación digital, datos e inteligencia tecnológica"
       ],
       "sublinea": [
-        "Ciberseguridad y privacidad",
-        "Economía de plataformas",
-        "Sistemas autónomos y robótica",
-        "Visión computacional"
+        "Plataformas digitales, interoperabilidad y datos abiertos",
+        "Inteligencia artificial: gobernanza y aplicaciones",
+        "Ciberseguridad, protección de datos y tecnologías avanzadas"
       ],
       "fechaInicio": "2026-09-02",
       "fechaFin": "2026-09-04",
@@ -890,32 +727,21 @@
     },
     {
       "id": 20,
-      "evento": "ECMLG",
+      "evento": "ECMLG ",
       "nombreCompleto": "22nd European Conference on Management, Leadership and Governance)",
       "disciplina": "",
-      "categoria": [
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL",
-        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
-      ],
       "linea": [
-        "Comunicación y cultura digital",
-        "Innovación empresarial",
-        "Transformación digital",
-        "Ética, gobernanza y responsabilidad social"
+        "Gestión, innovación y competitividad empresarial"
       ],
       "sublinea": [
-        "Computación cuántica",
-        "Comunicación intercultural",
-        "Responsabilidad social",
-        "Transformación organizacional"
+        "Gestión y administración humanista"
       ],
       "fechaInicio": "2026-11-05",
       "fechaFin": "2026-11-06",
       "lugar": "Universidade Portucalense",
       "ciudad": "Porto",
       "pais": "Portugal",
-      "modalidad": "Hibrido",
+      "modalidad": "Híbrido",
       "deadline": "2026-04-15",
       "deadlineStatus": "passed",
       "publicacion": "Scopus, WoS",
@@ -933,31 +759,21 @@
     },
     {
       "id": 21,
-      "evento": "ECRM",
+      "evento": "ECRM ",
       "nombreCompleto": "ECRM 2026 (European Conference on Research Methods in Business & Management Studies)",
       "disciplina": "",
-      "categoria": [
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
       "linea": [
-        "Economía digital",
-        "Innovación empresarial",
-        "Inteligencia artificial y computación avanzada",
-        "Transformación digital"
+        "Gestión, innovación y competitividad empresarial"
       ],
       "sublinea": [
-        "Análisis de datos económicos",
-        "Emprendimiento tecnológico",
-        "Machine learning y deep learning",
-        "Tecnologías emergentes"
+        "Productividad, innovación, automatización y manufactura avanzada"
       ],
       "fechaInicio": "2026-08-06",
       "fechaFin": "2026-08-07",
       "lugar": "Cape Peninsula University of Technology (CPUT)",
       "ciudad": "Ciudad del Cabo",
       "pais": "Sudáfrica",
-      "modalidad": "Hibrido",
+      "modalidad": "Híbrido",
       "deadline": "2026-03-05",
       "deadlineStatus": "passed",
       "publicacion": "Scopus, WOS",
@@ -975,23 +791,16 @@
     },
     {
       "id": 22,
-      "evento": "CONTROLO",
+      "evento": "CONTROLO ",
       "nombreCompleto": "17th APCA International Conference on Automatic Control and Soft Computing",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-      ],
       "linea": [
-        "Ciudades inteligentes y sostenibles",
-        "Inteligencia artificial y computación avanzada",
-        "Tecnología y ecosistemas"
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Gestión, innovación y competitividad empresarial"
       ],
       "sublinea": [
-        "Gestión inteligente de recursos",
-        "Materiales avanzados",
-        "Sistemas autónomos y robótica",
-        "Visión computacional"
+        "Inteligencia artificial: gobernanza y aplicaciones",
+        "Productividad, innovación, automatización y manufactura avanzada"
       ],
       "fechaInicio": "2026-09-09",
       "fechaFin": "2026-09-11",
@@ -1016,30 +825,27 @@
     },
     {
       "id": 23,
-      "evento": "ICACIT",
+      "evento": "ICACIT ",
       "nombreCompleto": "12th ICACIT Symposium Advancing Quality, Artificial Intelligence, and Applied Innovation in Engineering and Computing Education ",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO"
-      ],
       "linea": [
-        "Ciudades inteligentes y sostenibles",
-        "Innovación empresarial",
-        "Sostenibilidad y cambio climático"
+        "Gobernanza, integridad, justicia y seguridad",
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Gestión, innovación y competitividad empresarial",
+        "Educación, desarrollo humano e inclusión social"
       ],
       "sublinea": [
-        "Adaptación al cambio climático",
-        "Emprendimiento tecnológico",
-        "Gestión de la innovación",
-        "Urbanismo sostenible"
+        "Gestión pública, calidad regulatoria y evaluación de políticas públicas",
+        "Inteligencia artificial: gobernanza y aplicaciones",
+        "Productividad, innovación, automatización y manufactura avanzada",
+        "Educación, formación, competencias y desarrollo del talento"
       ],
       "fechaInicio": "2026-10-21",
       "fechaFin": "2026-10-23",
       "lugar": "Pontificia Universidad Católica de Chile (UC) - Santiago, Chile",
       "ciudad": "Santiago",
       "pais": "Chile",
-      "modalidad": "Hibrido",
+      "modalidad": "Híbrido",
       "deadline": "2026-06-30",
       "deadlineStatus": "passed",
       "publicacion": "Scopus",
@@ -1057,32 +863,24 @@
     },
     {
       "id": 24,
-      "evento": "ICOMTA",
+      "evento": "ICOMTA ",
       "nombreCompleto": "VI International Conference on Communication and Applied Technologies 2026",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
-      ],
       "linea": [
-        "Ciudades inteligentes y sostenibles",
-        "Comunicación y cultura digital",
-        "Economía digital",
-        "Tecnología y ecosistemas"
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Gestión, innovación y competitividad empresarial"
       ],
       "sublinea": [
-        "Análisis de datos económicos",
-        "Comunicación intercultural",
-        "Gestión inteligente de recursos",
-        "Tecnologías limpias"
+        "Inclusión, cultura digital e interacción persona-tecnología",
+        "Inteligencia artificial: gobernanza y aplicaciones",
+        "Productividad, innovación, automatización y manufactura avanzada"
       ],
       "fechaInicio": "2026-09-08",
       "fechaFin": "2026-09-10",
       "lugar": "João Pessoa (Brazil)",
       "ciudad": "João Pessoa",
       "pais": "Brasil",
-      "modalidad": "Hibrido",
+      "modalidad": "Híbrido",
       "deadline": "2026-05-29",
       "deadlineStatus": "passed",
       "publicacion": "Smart Innovation, Systems and Technologies - Springer",
@@ -1103,21 +901,16 @@
       "evento": "ICAAA ",
       "nombreCompleto": "14th International Conference on Asia Agriculture and Animal",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
-      ],
       "linea": [
-        "Bienestar y desarrollo humano",
-        "Innovación empresarial",
-        "Sostenibilidad y cambio climático"
+        "Gestión, innovación y competitividad empresarial",
+        "Ambiente, recursos naturales, energía y cambio climático",
+        "Agroindustria, alimentación y bioeconomía"
       ],
       "sublinea": [
-        "Adaptación al cambio climático",
-        "Emprendimiento tecnológico",
-        "Energías renovables",
-        "Salud mental y bienestar"
+        "Productividad, innovación, automatización y manufactura avanzada",
+        "Economía circular, cambio climático, resiliencia y gestión del riesgo de desastres",
+        "Bioeconomía y biotecnología",
+        "Agricultura, agroindustria y productividad rural"
       ],
       "fechaInicio": "2027-01-08",
       "fechaFin": "2027-01-10",
@@ -1126,7 +919,7 @@
       "pais": "Japón",
       "modalidad": "Híbrido",
       "deadline": "2026-08-15",
-      "deadlineStatus": "urgent",
+      "deadlineStatus": "passed",
       "publicacion": "Scopus, WoS",
       "enlace": "https://www.icaaa.org/index.html",
       "integridad": {
@@ -1142,25 +935,19 @@
     },
     {
       "id": 26,
-      "evento": "GFSC",
+      "evento": "Global Food Security Conference ",
       "nombreCompleto": "6th Global Food Security Conference",
       "disciplina": "",
-      "categoria": [
-        "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE",
-        "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO",
-        "SOCIEDAD Y COMPORTAMIENTO HUMANO"
-      ],
       "linea": [
-        "Economía digital",
-        "Gestión del conocimiento",
-        "Tecnología y ecosistemas",
-        "Ética, gobernanza y responsabilidad social"
+        "Economía, finanzas, mercados y regulación",
+        "Territorio, ciudades, infraestructura y movilidad sostenible",
+        "Agroindustria, alimentación y bioeconomía"
       ],
       "sublinea": [
-        "Biodiversidad y conservación",
-        "Mercados globales",
-        "Transferencia de conocimiento",
-        "Ética y gobernanza"
+        "Financiamiento, intermediación, inversión e inclusión financiera",
+        "Territorio, infraestructura, desarrollo urbano sostenible, movilidad, vivienda y espacio público",
+        "Agricultura, agroindustria y productividad rural",
+        "Nutrición y seguridad alimentaria"
       ],
       "fechaInicio": "2027-04-19",
       "fechaFin": "2027-04-22",
@@ -1169,7 +956,7 @@
       "pais": "Países Bajos",
       "modalidad": "Presencial",
       "deadline": "2026-09-11",
-      "deadlineStatus": "urgent",
+      "deadlineStatus": "passed",
       "publicacion": "Scopus, WoS",
       "enlace": "https://www.globalfoodsecurityconference.com/",
       "integridad": {
@@ -1181,6 +968,100 @@
         "conflicto_intereses": "No precisa",
         "observaciones": "Las contribuciones seleccionadas podrán ser consideradas para publicación en números especiales de revistas indexadas en Scopus y Web of Science; la publicación está sujeta a evaluación editorial y no es automática.",
         "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
+      }
+    },
+    {
+      "id": 27,
+      "evento": "ICOTTS",
+      "nombreCompleto": "8th International Conference on Tourism Technology & Systems ",
+      "disciplina": "",
+      "linea": [
+        "Transformación digital, datos e inteligencia tecnológica",
+        "Gestión, innovación y competitividad empresarial",
+        "Territorio, ciudades, infraestructura y movilidad sostenible",
+        "Ambiente, recursos naturales, energía y cambio climático"
+      ],
+      "sublinea": [
+        "Plataformas digitales, interoperabilidad y datos abiertos",
+        "Marketing, comportamiento del consumidor, calidad y competitividad",
+        "Turismo sostenible",
+        "Economía circular, cambio climático, resiliencia y gestión del riesgo de desastres"
+      ],
+      "fechaInicio": "2026-11-12",
+      "fechaFin": "2026-11-14",
+      "lugar": "Universidad EAFIT",
+      "ciudad": "Medellín ",
+      "pais": "Colombia",
+      "modalidad": "Híbrido",
+      "deadline": "2026-08-17",
+      "deadlineStatus": "passed",
+      "publicacion": "Scopus",
+      "enlace": "https://www.icotts.org/",
+      "integridad": {
+        "organizadores": "Red académica liderada por investigadores vinculados al Polytechnic University of Porto",
+        "comite_cientifico": "El sitio web presenta la composición del Comité Científico, integrado por académicos e investigadores de diversas universidades e instituciones",
+        "programa_temas": "-Tourism research in providing innovative solutions to social problems\n-Information and communication technologies in hospitality and tourism industry\n-Sustainable Tourism\n-Tourism Trends\n-Health and wellness Tourism\n-Tourism Management\n-Marketing strategies in hospitality and tourism industry\n-Hospitality, tourism, and foodservice environment\n-Tourism in the different scientific areas\n-eTourism and Tourism 2.0",
+        "revision_pares": "El sitio web indica que todos los trabajos recibidos son sometidos a un proceso de revisión ciega (blind review) realizado por al menos dos miembros del Comité Científico. ",
+        "indexacion_bd": "El sitio web indica que tras la revisión por pares los artículos en inglés podrán ser publicados en Smart Innovation, Systems and Technologies (Springer), indexada en Scopus.",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
+      }
+    },
+    {
+      "id": 28,
+      "evento": "ICORES",
+      "nombreCompleto": "16th International Conference on Operations Research and Enterprise\r\nSystems",
+      "disciplina": "",
+      "linea": [],
+      "sublinea": [],
+      "fechaInicio": "2027-02-20",
+      "fechaFin": "2027-02-22",
+      "lugar": "Valletta, Malta.",
+      "ciudad": "Valletta",
+      "pais": "Malta",
+      "modalidad": "Híbrido",
+      "deadline": "2026-09-29",
+      "deadlineStatus": "passed",
+      "publicacion": "Scopus/Wos",
+      "enlace": "https://icores.scitevents.org/Home.aspx",
+      "integridad": {
+        "organizadores": "Institute for Systems and Technologies of Information, Control and\r\nCommunication (INSTICC)",
+        "comite_cientifico": "El sitio web presenta la composición del Comité Científico, integrado por académicos e investigadores de diversas universidades e instituciones",
+        "programa_temas": "presentación de trabajos de tipo teórico y práctico del campo de la\r\ninvestigación operativa para la industria y los servicios.",
+        "revision_pares": "revisión doble ciego",
+        "indexacion_bd": "Los artículos completos aceptados y presentados en la conferencia serán publicados por la\r\neditorial Springer en las actas del evento, dentro de la serie Communications in Computer and\r\nInformation Science (CCIS). Esta serie se encuentra indexada en bases de datos especializadas\r\ncomo Scopus,",
+        "conflicto_intereses": "No precisa",
+        "observaciones": "-",
+        "conclusiones": "Con base en el análisis realizado, la conferencia no presenta indicios de malas prácticas."
+      }
+    },
+    {
+      "id": 29,
+      "evento": " IJCIEOM 2027",
+      "nombreCompleto": "33rd International Joint Conference on Industrial Engineering and Operations Management",
+      "disciplina": "",
+      "linea": [],
+      "sublinea": [],
+      "fechaInicio": null,
+      "fechaFin": null,
+      "lugar": "",
+      "ciudad": "",
+      "pais": "",
+      "modalidad": "",
+      "deadline": null,
+      "deadlineStatus": "unknown",
+      "publicacion": "",
+      "enlace": "",
+      "integridad": {
+        "organizadores": "",
+        "comite_cientifico": "",
+        "programa_temas": "",
+        "revision_pares": "",
+        "indexacion_bd": "",
+        "conflicto_intereses": "",
+        "observaciones": "",
+        "conclusiones": ""
       }
     }
   ]

@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import gspread
 import pandas as pd
@@ -71,103 +72,130 @@ def get_deadline_status(deadline_str):
     except:
         return 'unknown'
 
+# ══════════════════════════════════════════════════════════════════════════════
+#  CLASIFICACIÓN EN LÍNEAS PRIORITARIAS ULIMA (ver taxonomia_ulima.py)
+#  Cada temática del congreso se compara (TF-IDF de n-gramas de caracteres) con el
+#  nombre oficial de cada sublínea y con sus DESCRIPTORES: frases cortas tal como
+#  suelen aparecer en los call for papers. Las sublíneas que acumulan más temáticas
+#  son las del congreso.
+# ══════════════════════════════════════════════════════════════════════════════
 
-# Full taxonomy: Categoría → Línea → [Sublíneas]
-FULL_TAXONOMY = {
-    'INNOVACIÓN Y TECNOLOGÍA DIGITAL': {
-        'Inteligencia artificial y computación avanzada': [
-            'Machine learning y deep learning',
-            'Procesamiento de lenguaje natural',
-            'Visión computacional',
-            'Sistemas autónomos y robótica',
-        ],
-        'Transformación digital': [
-            'Tecnologías emergentes',
-            'Ciberseguridad y privacidad',
-            'Internet de las cosas (IoT)',
-            'Computación cuántica',
-            'Diseño y construcción virtual',
-        ],
-        'Experiencia digital humana': [
-            'Interacción humano-computadora',
-            'Realidad virtual y aumentada',
-            'Diseño de interfaces adaptativas',
-        ],
-    },
-    'DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE': {
-        'Sostenibilidad y cambio climático': [
-            'Energías renovables',
-            'Economía circular',
-            'Gestión sostenible de recursos',
-            'Adaptación al cambio climático',
-        ],
-        'Ciudades inteligentes y sostenibles': [
-            'Urbanismo sostenible',
-            'Movilidad urbana',
-            'Infraestructura sostenible',
-            'Gestión inteligente de recursos',
-        ],
-        'Tecnología y ecosistemas': [
-            'Tecnologías limpias',
-            'Biodiversidad y conservación',
-            'Gestión de residuos',
-            'Materiales avanzados',
-        ],
-    },
-    'SOCIEDAD Y COMPORTAMIENTO HUMANO': {
-        'Bienestar y desarrollo humano': [
-            'Salud mental y bienestar',
-            'Educación, desarrollo cognitivo y socioafectivo',
-            'Comportamiento social',
-            'Mujer, cultura y sociedad',
-            'Pobreza e informalidad',
-        ],
-        'Comunicación y cultura digital': [
-            'Medios digitales y sociedad',
-            'Comunicación intercultural',
-            'Narrativas transmedia',
-            'Comportamiento digital',
-        ],
-        'Ética, gobernanza y responsabilidad social': [
-            'Ética y gobernanza',
-            'Responsabilidad social',
-            'Derechos humanos y tecnología',
-        ],
-    },
-    'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO': {
-        'Innovación empresarial': [
-            'Modelos de negocio digitales',
-            'Emprendimiento tecnológico',
-            'Gestión de la innovación',
-            'Transformación organizacional',
-        ],
-        'Economía digital': [
-            'Fintech y servicios financieros',
-            'Mercados globales',
-            'Análisis de datos económicos',
-            'Economía de plataformas',
-        ],
-        'Gestión del conocimiento': [
-            'Gestión del capital intelectual',
-            'Aprendizaje organizacional',
-            'Transferencia de conocimiento',
-            'Inteligencia de negocios',
-        ],
-    },
+from taxonomia_ulima import SUBLINEAS, TAXONOMIA, validar_codigos
+
+DESCRIPTORES = {
+    # 1 Gobernanza, integridad, justicia y seguridad
+    "1.1": ["gestión pública", "administración pública", "políticas públicas", "gobierno digital",
+            "gobierno basado en datos", "gobierno electrónico", "calidad regulatoria",
+            "evaluación de políticas", "instituciones y gobernanza"],
+    "1.2": ["integridad", "transparencia", "anticorrupción", "control gubernamental", "fiscalización",
+            "auditoría", "rendición de cuentas", "ética pública"],
+    "1.3": ["justicia", "derecho", "sistema judicial", "justicia digital", "acceso a la justicia",
+            "derechos humanos", "legislación", "derecho y tecnología"],
+    "1.4": ["seguridad ciudadana", "crimen organizado", "criminología", "cibercrimen", "delito informático",
+            "ciberdelincuencia", "forense digital", "inteligencia criminal", "fraude", "seguridad nacional"],
+
+    # 2 Economía, finanzas, mercados y regulación
+    "2.1": ["política económica", "política fiscal", "tributación", "impuestos", "informalidad",
+            "formalización", "macroeconomía", "desarrollo económico", "economía"],
+    "2.2": ["comercio exterior", "comercio internacional", "mercados", "cadenas globales de valor",
+            "exportaciones", "globalización", "negocios internacionales"],
+    "2.3": ["finanzas", "financiamiento", "inversión", "inclusión financiera", "banca", "fintech",
+            "mercados financieros", "intermediación financiera", "contabilidad"],
+    "2.4": ["gestión de riesgos", "regulación", "protección al consumidor", "competencia económica",
+            "riesgo financiero", "cumplimiento normativo"],
+
+    # 3 Transformación digital, datos e inteligencia tecnológica
+    "3.1": ["cultura digital", "inclusión digital", "interacción humano-computadora", "interacción persona-computadora",
+            "HCI", "experiencia de usuario", "UX y usabilidad", "diseño de interacción", "interfaces de usuario",
+            "accesibilidad", "medios digitales", "realidad virtual", "realidad aumentada", "videojuegos",
+            "juegos serios", "redes sociales", "comunicación digital", "multimedia"],
+    "3.2": ["plataformas digitales", "interoperabilidad", "datos abiertos", "sistemas de información",
+            "ingeniería de software", "arquitectura de software", "desarrollo de software", "computación en la nube",
+            "big data", "bases de datos", "internet de las cosas", "IoT", "gestión de la información",
+            "transformación digital", "blockchain", "redes de comunicaciones", "tecnologías de la información"],
+    "3.3": ["inteligencia artificial", "aprendizaje automático", "machine learning", "aprendizaje profundo",
+            "deep learning", "redes neuronales", "procesamiento del lenguaje natural", "visión por computadora",
+            "visión computacional", "modelos generativos", "agentes inteligentes", "sistemas multiagente",
+            "robótica", "ciencia de datos", "analítica de datos", "minería de datos", "ética en inteligencia artificial",
+            "gobernanza de la inteligencia artificial", "MLOps"],
+    "3.4": ["ciberseguridad", "seguridad informática", "seguridad de la información", "protección de datos",
+            "privacidad", "criptografía", "detección de amenazas", "tecnologías avanzadas", "computación cuántica",
+            "edge computing", "sistemas embebidos", "5G", "identidad digital", "confianza digital",
+            "circuitos y dispositivos electrónicos", "telecomunicaciones"],
+
+    # 4 Gestión, innovación y competitividad empresarial
+    "4.1": ["gestión", "administración de empresas", "gestión del talento", "recursos humanos", "liderazgo",
+            "gestión del conocimiento", "comportamiento organizacional", "responsabilidad social empresarial",
+            "gobierno corporativo", "gestión organizacional", "gestión de proyectos", "dirección de proyectos",
+            "gestión estratégica"],
+    "4.2": ["productividad", "innovación", "automatización", "manufactura avanzada", "industria 4.0",
+            "industria 5.0", "manufactura", "sistemas de control", "control de procesos", "mecatrónica",
+            "ingeniería industrial", "optimización de procesos", "investigación de operaciones",
+            "gestión de la innovación", "gemelos digitales", "materiales", "nuevos materiales", "ciencia de materiales"],
+    "4.3": ["emprendimiento", "mipyme", "pymes", "startups", "escalamiento", "articulación productiva",
+            "modelos de negocio", "innovación empresarial"],
+    "4.4": ["marketing", "comportamiento del consumidor", "calidad", "competitividad", "gestión de la calidad",
+            "marketing digital", "branding"],
+    "4.5": ["cadena de suministro", "cadenas de suministro", "gestión de operaciones", "infraestructura productiva",
+            "abastecimiento"],
+
+    # 5 Educación, desarrollo humano e inclusión social
+    "5.1": ["desigualdad", "vulnerabilidad", "inclusión social", "integración social", "pobreza", "género",
+            "migración", "diversidad", "equidad", "sociedad"],
+    "5.2": ["educación", "formación", "competencias", "desarrollo del talento", "educación en ingeniería",
+            "currículo", "acreditación", "evaluación educativa", "enseñanza", "aprendizaje en línea",
+            "tecnología educativa", "educación superior", "docencia"],
+    "5.3": ["desarrollo humano", "curso de vida", "aprendizaje", "convivencia", "infancia", "adolescencia",
+            "familia", "envejecimiento"],
+    "5.4": ["neurociencia", "cognición", "comportamiento", "ciencias cognitivas", "psicología",
+            "arquitecturas cognitivas", "razonamiento", "percepción"],
+
+    # 6 Salud integral, bienestar e innovación sanitaria
+    "6.1": ["salud", "prevención", "diagnóstico", "vigilancia epidemiológica", "innovación en salud",
+            "salud pública", "medicina", "biomedicina", "dispositivos médicos", "ensayos clínicos", "bioinformática",
+            "bioseñales", "imagenología médica"],
+    "6.2": ["salud mental", "bienestar", "bienestar psicosocial", "calidad de vida", "estrés", "psicología clínica"],
+    "6.3": ["servicios de salud", "salud digital", "telemedicina", "gestión hospitalaria", "acceso a la salud",
+            "informática médica", "interoperabilidad clínica", "sistemas de información en salud",
+            "seguridad del paciente"],
+
+    # 7 Territorio, ciudades, infraestructura y movilidad sostenible
+    "7.1": ["territorio", "infraestructura", "desarrollo urbano", "urbanismo", "ciudades inteligentes",
+            "ciudades sostenibles", "movilidad", "transporte", "vivienda", "espacio público", "ingeniería civil",
+            "construcción", "estructuras", "arquitectura", "planificación urbana", "geotecnia"],
+    "7.2": ["logística", "distribución", "transporte de carga", "última milla"],
+    "7.3": ["turismo", "turismo sostenible", "hospitalidad", "patrimonio"],
+
+    # 8 Ambiente, recursos naturales, energía y cambio climático
+    "8.1": ["biodiversidad", "calidad ambiental", "contaminación", "ecología", "conservación", "medio ambiente",
+            "gestión ambiental", "ingeniería ambiental", "teledetección", "recursos naturales"],
+    "8.2": ["agua", "saneamiento", "recursos hídricos", "hidrología", "tratamiento de aguas", "gestión de cuencas",
+            "riego"],
+    "8.3": ["energía", "energías renovables", "minería", "transición energética", "eficiencia energética",
+            "sistemas productivos sostenibles", "manufactura verde", "energía solar", "redes eléctricas inteligentes",
+            "generación distribuida", "microrredes", "sistemas eléctricos de potencia"],
+    "8.4": ["economía circular", "cambio climático", "resiliencia", "gestión del riesgo de desastres",
+            "adaptación climática", "residuos", "reciclaje", "sostenibilidad", "modelos climáticos"],
+
+    # 9 Agroindustria, alimentación y bioeconomía
+    "9.1": ["bioeconomía", "biotecnología", "bioprocesos", "biomateriales", "genética"],
+    "9.2": ["agricultura", "agroindustria", "productividad rural", "agricultura de precisión", "agronomía",
+            "desarrollo rural"],
+    "9.3": ["nutrición", "seguridad alimentaria", "alimentos", "alimentación", "ciencia de los alimentos"],
 }
 
-# --- ML SETUP ---
-# Flatten taxonomy for embeddings
-TAXONOMY_FLAT = []
-for cat, lineas in FULL_TAXONOMY.items():
-    for linea, sublineas in lineas.items():
-        for sublinea in sublineas:
-            TAXONOMY_FLAT.append({
-                'categoria': cat,
-                'linea': linea,
-                'sublinea': sublinea,
-                'text': f"{linea} {sublinea}"
-            })
+validar_codigos('DESCRIPTORES', DESCRIPTORES)
+
+# Texto de referencia → código de sublínea
+TAXONOMY_FLAT = [
+    {'codigo': codigo, 'text': texto}
+    for codigo, (_, sublinea) in SUBLINEAS.items()
+    for texto in [sublinea, *DESCRIPTORES.get(codigo, [])]
+]
+
+MIN_SCORE = 0.5       # similitud mínima para que una temática cuente
+MAX_SUBLINEAS = 4     # sublíneas por congreso
+MIN_SHARE = 0.25      # una sublínea debe sumar al menos este % del puntaje de la mejor
 
 vectorizer = None
 taxonomy_tfidf = None
@@ -180,61 +208,50 @@ def init_ml_model():
         print("Inicializando modelo de Machine Learning (TF-IDF Ligero)...")
         # Usamos character n-grams para ser robustos ante variaciones de palabras y morfología
         vectorizer = TfidfVectorizer(analyzer='char_wb', ngram_range=(3, 5))
-        
-        taxonomy_texts = [item['text'] for item in TAXONOMY_FLAT]
-        taxonomy_tfidf = vectorizer.fit_transform(taxonomy_texts)
+        taxonomy_tfidf = vectorizer.fit_transform([item['text'].lower() for item in TAXONOMY_FLAT])
+
+def split_tematicas(tematicas_raw):
+    """Separa por ';' o saltos de línea; si queda un solo texto, también por comas."""
+    partes = [t.strip() for t in re.split(r'[;\n]', str(tematicas_raw)) if t.strip()]
+    if len(partes) == 1 and ',' in partes[0]:
+        partes = [t.strip() for t in partes[0].split(',') if t.strip()]
+    # Quita numeraciones del tipo "1. " y el cierre "entre otras."
+    partes = [re.sub(r'^\d+[.)]\s*|\s*(y\s+)?entre otr[oa]s\.?$', '', t, flags=re.IGNORECASE) for t in partes]
+    return [t.lower() for t in partes if t]
 
 def classify_theme_with_ml(tematicas_raw):
     """
-    Toma un string de temáticas (e.g. "Ingeniería de Software; Ciencia de Datos")
-    y devuelve listas únicas de categorias, lineas y sublineas usando TF-IDF + Similitud del Coseno.
+    Toma un string de temáticas (separadas por ';', saltos de línea o comas) y devuelve
+    (lineas, sublineas) en el orden oficial, según las sublíneas que más temáticas acumulan.
     """
     if not tematicas_raw or pd.isna(tematicas_raw) or str(tematicas_raw).strip() in ('', 'nan', 'None'):
-        return [], [], []
-    
-    tematicas = [t.strip() for t in str(tematicas_raw).split(';') if t.strip()]
-    
+        return [], []
+
+    tematicas = split_tematicas(tematicas_raw)
     if not tematicas or not HAS_ML or vectorizer is None:
-        return [], [], []
-        
-    categorias_set = set()
-    lineas_set = set()
-    sublineas_set = set()
-    
-    # Predecir todo el bloque de temáticas juntas
-    tematicas_tfidf = vectorizer.transform(tematicas)
-    cosine_scores = cosine_similarity(tematicas_tfidf, taxonomy_tfidf)
-    
-    matches = []
-    
-    for i in range(len(tematicas)):
-        # Encontrar la mejor coincidencia para la temática actual
-        best_match_idx = cosine_scores[i].argmax()
-        best_score = cosine_scores[i][best_match_idx]
-        
-        # Opcional: solo agregar si el score de similitud es mayor a cierto umbral
-        if best_score > 0.35: # AUMENTADO LA RIGUROSIDAD: de 0.05 a 0.35
-            best_taxonomy = TAXONOMY_FLAT[best_match_idx]
-            matches.append((best_score, best_taxonomy))
-            
-    # Ordenar los matches por score (mayor similitud primero)
-    matches.sort(key=lambda x: x[0], reverse=True)
-    
-    # Limitar el número máximo de sublíneas únicas a asignar (ej. top 4 más relevantes)
-    MAX_CATEGORIES = 4
-    added_sublineas = set()
-    
-    for score, taxonomy in matches:
-        if taxonomy['sublinea'] not in added_sublineas:
-            categorias_set.add(taxonomy['categoria'])
-            lineas_set.add(taxonomy['linea'])
-            sublineas_set.add(taxonomy['sublinea'])
-            added_sublineas.add(taxonomy['sublinea'])
-            
-            if len(added_sublineas) >= MAX_CATEGORIES:
-                break
-        
-    return sorted(list(categorias_set)), sorted(list(lineas_set)), sorted(list(sublineas_set))
+        return [], []
+
+    cosine_scores = cosine_similarity(vectorizer.transform(tematicas), taxonomy_tfidf)
+
+    # Cada temática vota por la sublínea de su mejor coincidencia
+    puntaje = {}
+    for scores in cosine_scores:
+        best = scores.argmax()
+        if scores[best] >= MIN_SCORE:
+            codigo = TAXONOMY_FLAT[best]['codigo']
+            puntaje[codigo] = puntaje.get(codigo, 0) + scores[best]
+
+    if not puntaje:
+        return [], []
+
+    tope = max(puntaje.values())
+    elegidas = [c for c, p in sorted(puntaje.items(), key=lambda x: x[1], reverse=True)
+                if p >= tope * MIN_SHARE][:MAX_SUBLINEAS]
+
+    orden = list(SUBLINEAS)
+    elegidas.sort(key=orden.index)
+    lineas = list(dict.fromkeys(SUBLINEAS[c][0] for c in elegidas))
+    return lineas, [SUBLINEAS[c][1] for c in elegidas]
 
 
 def get_named(row, col_name):
@@ -300,7 +317,7 @@ def process_google_sheet_to_json(output_path):
         if not tematica_text:
              tematica_text = get_named(row, 'Temática')
 
-        categorias, lineas, sublineas = classify_theme_with_ml(tematica_text)
+        lineas, sublineas = classify_theme_with_ml(tematica_text)
 
         # Integrity Parameters
         integridad = {
@@ -319,7 +336,6 @@ def process_google_sheet_to_json(output_path):
             'evento': str(evento or ''),
             'nombreCompleto': str(nombre or ''),
             'disciplina': str(get_named(row, 'Disciplina') or ''),
-            'categoria': categorias,
             'linea': lineas,
             'sublinea': sublineas,
             'fechaInicio': fecha_inicio,
@@ -347,7 +363,7 @@ def process_google_sheet_to_json(output_path):
             'lastUpdated': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             'version': '2.2'
         },
-        'taxonomy': FULL_TAXONOMY,
+        'taxonomy': TAXONOMIA,
         'congresses': congresses
     }
     

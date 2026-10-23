@@ -93,462 +93,207 @@ else:
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-#  MAPEO SCOPUS → TAXONOMÍA UNIVERSIDAD DE LIMA
-#  Clave: (Categoria_Scopus, Subcategoria_Scopus)
-#  Valor: (Categoría_ULima, Línea, Sublínea)
+#  MAPEO SCOPUS → LÍNEAS PRIORITARIAS ULIMA
+#  Cada subárea Scopus (ASJC) se traduce a uno o más códigos de sublínea
+#  "línea.sublínea" (ver taxonomia_ulima.py):
+#    1 Gobernanza, integridad, justicia y seguridad
+#    2 Economía, finanzas, mercados y regulación
+#    3 Transformación digital, datos e inteligencia tecnológica
+#    4 Gestión, innovación y competitividad empresarial
+#    5 Educación, desarrollo humano e inclusión social
+#    6 Salud integral, bienestar e innovación sanitaria
+#    7 Territorio, ciudades, infraestructura y movilidad sostenible
+#    8 Ambiente, recursos naturales, energía y cambio climático
+#    9 Agroindustria, alimentación y bioeconomía
+#  AREA_TO_SUBLINEAS da el valor por defecto de cada área; SCOPUS_TO_SUBLINEAS
+#  lo reemplaza para subáreas concretas ([] = sin línea). Humanidades, Química,
+#  Física y Multidisciplinary no tienen equivalente: esas revistas solo quedan
+#  clasificadas si alguna otra de sus subáreas sí lo tiene.
 # ══════════════════════════════════════════════════════════════════════════════
 
-CAT1 = "INNOVACIÓN Y TECNOLOGÍA DIGITAL"
-CAT2 = "DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE"
-CAT3 = "SOCIEDAD Y COMPORTAMIENTO HUMANO"
-CAT4 = "GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO"
+from taxonomia_ulima import SUBLINEAS, TAXONOMIA, validar_codigos
 
-SCOPUS_TO_ULIMA = {
-
-    # ══════════════════════════════════════════════════════════════════════════
-    # 1. INNOVACIÓN Y TECNOLOGÍA DIGITAL
-    # ══════════════════════════════════════════════════════════════════════════
-
-    # ── Línea: Inteligencia artificial y computación avanzada ─────────────────
-    ("Computer Science", "Artificial Intelligence"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Computer Science", "Computational Theory and Mathematics"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Computer Science", "Computer Vision and Pattern Recognition"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Visión computacional"),
-    ("Computer Science", "Signal Processing"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Computer Science", "General Computer Science"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Computer Science", "Computer Science (miscellaneous)"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "General Mathematics"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Mathematics (miscellaneous)"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Applied Mathematics"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Analysis"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Algebra and Number Theory"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Computational Mathematics"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Discrete Mathematics and Combinatorics"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Geometry and Topology"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Logic"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Modelling and Simulation"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Numerical Analysis"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Statistics and Probability"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Theoretical Computer Science"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Mathematical Physics"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-    ("Mathematics", "Control and Optimization"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Sistemas autónomos y robótica"),
-    ("Engineering", "Control and Systems Engineering"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Sistemas autónomos y robótica"),
-    ("Decision Sciences", "Statistics, Probability and Uncertainty"):
-        (CAT1, "Inteligencia artificial y computación avanzada", "Machine learning y deep learning"),
-
-    # ── Línea: Transformación digital ────────────────────────────────────────
-    ("Computer Science", "Software"):
-        (CAT1, "Transformación digital", "Tecnologías emergentes"),
-    ("Computer Science", "Information Systems"):
-        (CAT1, "Transformación digital", "Tecnologías emergentes"),
-    ("Computer Science", "Computer Science Applications"):
-        (CAT1, "Transformación digital", "Tecnologías emergentes"),
-    ("Computer Science", "Hardware and Architecture"):
-        (CAT1, "Transformación digital", "Tecnologías emergentes"),
-    ("Computer Science", "Computer Networks and Communications"):
-        (CAT1, "Transformación digital", "Internet de las cosas (IoT)"),
-    ("Engineering", "Electrical and Electronic Engineering"):
-        (CAT1, "Transformación digital", "Tecnologías emergentes"),
-    ("Engineering", "Media Technology"):
-        (CAT1, "Transformación digital", "Diseño y construcción virtual"),
-    ("Physics and Astronomy", "Statistical and Nonlinear Physics"):
-        (CAT1, "Transformación digital", "Computación cuántica"),
-    ("Physics and Astronomy", "Condensed Matter Physics"):
-        (CAT1, "Transformación digital", "Computación cuántica"),
-
-    # ── Línea: Experiencia digital humana ────────────────────────────────────
-    ("Computer Science", "Human-Computer Interaction"):
-        (CAT1, "Experiencia digital humana", "Interacción humano-computadora"),
-    ("Computer Science", "Computer Graphics and Computer-Aided Design"):
-        (CAT1, "Experiencia digital humana", "Realidad virtual y aumentada"),
-    ("Social Sciences", "Human Factors and Ergonomics"):
-        (CAT1, "Experiencia digital humana", "Diseño de interfases adaptativas"),
-
-    # ══════════════════════════════════════════════════════════════════════════
-    # 2. DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE
-    # ══════════════════════════════════════════════════════════════════════════
-
-    # ── Línea: Sostenibilidad y cambio climático ───────────────────────────────
-    ("Energy", "General Energy"):
-        (CAT2, "Sostenibilidad y cambio climático", "Gestión sostenible de recursos"),
-    ("Energy", "Energy (miscellaneous)"):
-        (CAT2, "Sostenibilidad y cambio climático", "Gestión sostenible de recursos"),
-    ("Energy", "Energy Engineering and Power Technology"):
-        (CAT2, "Sostenibilidad y cambio climático", "Energías renovables"),
-    ("Energy", "Fuel Technology"):
-        (CAT2, "Sostenibilidad y cambio climático", "Gestión sostenible de recursos"),
-    ("Energy", "Nuclear Energy and Engineering"):
-        (CAT2, "Sostenibilidad y cambio climático", "Energías renovables"),
-    ("Energy", "Renewable Energy, Sustainability and the Environment"):
-        (CAT2, "Sostenibilidad y cambio climático", "Energías renovables"),
-    ("Environmental Science", "General Environmental Science"):
-        (CAT2, "Sostenibilidad y cambio climático", "Gestión sostenible de recursos"),
-    ("Environmental Science", "Environmental Science (miscellaneous)"):
-        (CAT2, "Sostenibilidad y cambio climático", "Gestión sostenible de recursos"),
-    ("Environmental Science", "Global and Planetary Change"):
-        (CAT2, "Sostenibilidad y cambio climático", "Adaptación al cambio climático"),
-    ("Environmental Science", "Atmospheric Science"):
-        (CAT2, "Sostenibilidad y cambio climático", "Adaptación al cambio climático"),
-    ("Earth and Planetary Sciences", "Atmospheric Science"):
-        (CAT2, "Sostenibilidad y cambio climático", "Adaptación al cambio climático"),
-    ("Earth and Planetary Sciences", "General Earth and Planetary Sciences"):
-        (CAT2, "Sostenibilidad y cambio climático", "Adaptación al cambio climático"),
-    ("Agricultural and Biological Sciences", "Ecology, Evolution, Behavior and Systematics"):
-        (CAT2, "Sostenibilidad y cambio climático", "Gestión sostenible de recursos"),
-    ("Agricultural and Biological Sciences", "Agronomy and Crop Science"):
-        (CAT2, "Sostenibilidad y cambio climático", "Gestión sostenible de recursos"),
-    ("Agricultural and Biological Sciences", "Soil Science"):
-        (CAT2, "Sostenibilidad y cambio climático", "Gestión sostenible de recursos"),
-    ("Agricultural and Biological Sciences", "Aquatic Science"):
-        (CAT2, "Sostenibilidad y cambio climático", "Gestión sostenible de recursos"),
-    ("Agricultural and Biological Sciences", "Food Science"):
-        (CAT2, "Sostenibilidad y cambio climático", "Economía circular"),
-
-    # ── Línea: Ciudades inteligentes y sostenibles ────────────────────────────
-    ("Engineering", "General Engineering"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Infraestructura sostenible"),
-    ("Engineering", "Engineering (miscellaneous)"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Infraestructura sostenible"),
-    ("Engineering", "Civil and Structural Engineering"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Infraestructura sostenible"),
-    ("Engineering", "Building and Construction"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Infraestructura sostenible"),
-    ("Engineering", "Architecture"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Urbanismo sostenible"),
-    ("Engineering", "Automotive Engineering"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Movilidad urbana"),
-    ("Engineering", "Safety, Risk, Reliability and Quality"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Infraestructura sostenible"),
-    ("Engineering", "Ocean Engineering"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Infraestructura sostenible"),
-    ("Social Sciences", "Geography, Planning and Development"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Urbanismo sostenible"),
-    ("Social Sciences", "Urban Studies"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Urbanismo sostenible"),
-    ("Social Sciences", "Transportation"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Movilidad urbana"),
-    ("Environmental Science", "Water Science and Technology"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Gestión inteligente de recursos"),
-    ("Environmental Science", "Management, Monitoring, Policy and Law"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Gestión inteligente de recursos"),
-    ("Earth and Planetary Sciences", "Geotechnical Engineering and Engineering Geology"):
-        (CAT2, "Ciudades inteligentes y sostenibles", "Infraestructura sostenible"),
-
-    # ── Línea: Tecnología y ecosistemas ──────────────────────────────────────
-    ("Environmental Science", "Ecology"):
-        (CAT2, "Tecnología y ecosistemas", "Biodiversidad y conservación"),
-    ("Environmental Science", "Ecological Modeling"):
-        (CAT2, "Tecnología y ecosistemas", "Biodiversidad y conservación"),
-    ("Environmental Science", "Nature and Landscape Conservation"):
-        (CAT2, "Tecnología y ecosistemas", "Biodiversidad y conservación"),
-    ("Environmental Science", "Waste Management and Disposal"):
-        (CAT2, "Tecnología y ecosistemas", "Gestión de residuos"),
-    ("Environmental Science", "Pollution"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Environmental Science", "Environmental Engineering"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Environmental Science", "Environmental Chemistry"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Environmental Science", "Health, Toxicology and Mutagenesis"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Agricultural and Biological Sciences", "General Agricultural and Biological Sciences"):
-        (CAT2, "Tecnología y ecosistemas", "Biodiversidad y conservación"),
-    ("Agricultural and Biological Sciences", "Agricultural and Biological Sciences (miscellaneous)"):
-        (CAT2, "Tecnología y ecosistemas", "Biodiversidad y conservación"),
-    ("Agricultural and Biological Sciences", "Animal Science and Zoology"):
-        (CAT2, "Tecnología y ecosistemas", "Biodiversidad y conservación"),
-    ("Agricultural and Biological Sciences", "Plant Science"):
-        (CAT2, "Tecnología y ecosistemas", "Biodiversidad y conservación"),
-    ("Agricultural and Biological Sciences", "Forestry"):
-        (CAT2, "Tecnología y ecosistemas", "Biodiversidad y conservación"),
-    ("Agricultural and Biological Sciences", "Horticulture"):
-        (CAT2, "Tecnología y ecosistemas", "Biodiversidad y conservación"),
-    ("Agricultural and Biological Sciences", "Insect Science"):
-        (CAT2, "Tecnología y ecosistemas", "Biodiversidad y conservación"),
-    ("Biochemistry, Genetics and Molecular Biology", "Biotechnology"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemical Engineering", "Bioengineering"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemical Engineering", "General Chemical Engineering"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemical Engineering", "Chemical Engineering (miscellaneous)"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemical Engineering", "Process Chemistry and Technology"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemical Engineering", "Catalysis"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemical Engineering", "Fluid Flow and Transfer Processes"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Materials Science", "General Materials Science"):
-        (CAT2, "Tecnología y ecosistemas", "Materiales avanzados"),
-    ("Materials Science", "Materials Science (miscellaneous)"):
-        (CAT2, "Tecnología y ecosistemas", "Materiales avanzados"),
-    ("Materials Science", "Biomaterials"):
-        (CAT2, "Tecnología y ecosistemas", "Materiales avanzados"),
-    ("Materials Science", "Ceramics and Composites"):
-        (CAT2, "Tecnología y ecosistemas", "Materiales avanzados"),
-    ("Materials Science", "Electronic, Optical and Magnetic Materials"):
-        (CAT2, "Tecnología y ecosistemas", "Materiales avanzados"),
-    ("Materials Science", "Materials Chemistry"):
-        (CAT2, "Tecnología y ecosistemas", "Materiales avanzados"),
-    ("Materials Science", "Metals and Alloys"):
-        (CAT2, "Tecnología y ecosistemas", "Materiales avanzados"),
-    ("Materials Science", "Polymers and Plastics"):
-        (CAT2, "Tecnología y ecosistemas", "Materiales avanzados"),
-    ("Materials Science", "Surfaces, Coatings and Films"):
-        (CAT2, "Tecnología y ecosistemas", "Materiales avanzados"),
-    ("Engineering", "Mechanics of Materials"):
-        (CAT2, "Tecnología y ecosistemas", "Materiales avanzados"),
-    ("Engineering", "Computational Mechanics"):
-        (CAT2, "Tecnología y ecosistemas", "Materiales avanzados"),
-    ("Engineering", "Mechanical Engineering"):
-        (CAT2, "Tecnología y ecosistemas", "Materiales avanzados"),
-    ("Engineering", "Biomedical Engineering"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Engineering", "Industrial and Manufacturing Engineering"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemistry", "General Chemistry"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemistry", "Chemistry (miscellaneous)"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemistry", "Organic Chemistry"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemistry", "Inorganic Chemistry"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemistry", "Electrochemistry"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemistry", "Analytical Chemistry"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemistry", "Physical and Theoretical Chemistry"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-    ("Chemistry", "Spectroscopy"):
-        (CAT2, "Tecnología y ecosistemas", "Tecnologías limpias"),
-
-    # ══════════════════════════════════════════════════════════════════════════
-    # 3. SOCIEDAD Y COMPORTAMIENTO HUMANO
-    # ══════════════════════════════════════════════════════════════════════════
-
-    # ── Línea: Bienestar y desarrollo humano ──────────────────────────────────
-    ("Social Sciences", "Education"):
-        (CAT3, "Bienestar y desarrollo humano", "Educación, desarrollo cognitivo y socioafectivo"),
-    ("Social Sciences", "Gender Studies"):
-        (CAT3, "Bienestar y desarrollo humano", "Mujer, cultura y sociedad"),
-    ("Social Sciences", "Health (social science)"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Social Sciences", "Sociology and Political Science"):
-        (CAT3, "Bienestar y desarrollo humano", "Comportamiento social"),
-    ("Social Sciences", "Social Sciences (miscellaneous)"):
-        (CAT3, "Bienestar y desarrollo humano", "Comportamiento social"),
-    ("Social Sciences", "General Social Sciences"):
-        (CAT3, "Bienestar y desarrollo humano", "Comportamiento social"),
-    ("Social Sciences", "Development"):
-        (CAT3, "Bienestar y desarrollo humano", "Pobreza e informalidad"),
-    ("Social Sciences", "Anthropology"):
-        (CAT3, "Bienestar y desarrollo humano", "Comportamiento social"),
-    ("Social Sciences", "Demography"):
-        (CAT3, "Bienestar y desarrollo humano", "Comportamiento social"),
-    ("Social Sciences", "Life-span and Life-course Studies"):
-        (CAT3, "Bienestar y desarrollo humano", "Comportamiento social"),
-    ("Social Sciences", "Safety Research"):
-        (CAT3, "Bienestar y desarrollo humano", "Comportamiento social"),
-    ("Psychology", "General Psychology"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Psychology", "Psychology (miscellaneous)"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Psychology", "Clinical Psychology"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Psychology", "Applied Psychology"):
-        (CAT3, "Bienestar y desarrollo humano", "Comportamiento social"),
-    ("Psychology", "Social Psychology"):
-        (CAT3, "Bienestar y desarrollo humano", "Comportamiento social"),
-    ("Psychology", "Developmental and Educational Psychology"):
-        (CAT3, "Bienestar y desarrollo humano", "Educación, desarrollo cognitivo y socioafectivo"),
-    ("Psychology", "Experimental and Cognitive Psychology"):
-        (CAT3, "Bienestar y desarrollo humano", "Educación, desarrollo cognitivo y socioafectivo"),
-    ("Psychology", "Neuropsychology and Physiological Psychology"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Medicine", "General Medicine"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Medicine", "Medicine (miscellaneous)"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Medicine", "Psychiatry and Mental health"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Medicine", "Public Health, Environmental and Occupational Health"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Medicine", "Health Policy"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Medicine", "Health Informatics"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Medicine", "Epidemiology"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Medicine", "Pediatrics, Perinatology, and Child Health"):
-        (CAT3, "Bienestar y desarrollo humano", "Educación, desarrollo cognitivo y socioafectivo"),
-    ("Medicine", "Geriatrics and Gerontology"):
-        (CAT3, "Bienestar y desarrollo humano", "Comportamiento social"),
-    ("Medicine", "Rehabilitation"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Neuroscience", "General Neuroscience"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Neuroscience", "Neuroscience (miscellaneous)"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Neuroscience", "Cognitive Neuroscience"):
-        (CAT3, "Bienestar y desarrollo humano", "Educación, desarrollo cognitivo y socioafectivo"),
-    ("Neuroscience", "Behavioral Neuroscience"):
-        (CAT3, "Bienestar y desarrollo humano", "Comportamiento social"),
-    ("Neuroscience", "Biological Psychiatry"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Neuroscience", "Neurology"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Neuroscience", "Developmental Neuroscience"):
-        (CAT3, "Bienestar y desarrollo humano", "Educación, desarrollo cognitivo y socioafectivo"),
-    ("Nursing", "General Nursing"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Nursing", "Nursing (miscellaneous)"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Health Professions", "General Health Professions"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Health Professions", "Health Professions (miscellaneous)"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Health Professions", "Occupational Therapy"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Health Professions", "Physical Therapy, Sports Therapy and Rehabilitation"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-    ("Health Professions", "Speech and Hearing"):
-        (CAT3, "Bienestar y desarrollo humano", "Salud mental y bienestar"),
-
-    # ── Línea: Comunicación y cultura digital ────────────────────────────────
-    ("Social Sciences", "Communication"):
-        (CAT3, "Comunicación y cultura digital", "Medios digitales y sociedad"),
-    ("Social Sciences", "Cultural Studies"):
-        (CAT3, "Comunicación y cultura digital", "Comunicación intercultural"),
-    ("Social Sciences", "Linguistics and Language"):
-        (CAT3, "Comunicación y cultura digital", "Comunicación intercultural"),
-    ("Arts and Humanities", "Literature and Literary Theory"):
-        (CAT3, "Comunicación y cultura digital", "Narrativas transmedia"),
-    ("Arts and Humanities", "Arts and Humanities (miscellaneous)"):
-        (CAT3, "Comunicación y cultura digital", "Comunicación intercultural"),
-    ("Arts and Humanities", "General Arts and Humanities"):
-        (CAT3, "Comunicación y cultura digital", "Comunicación intercultural"),
-    ("Arts and Humanities", "Language and Linguistics"):
-        (CAT3, "Comunicación y cultura digital", "Comunicación intercultural"),
-    ("Arts and Humanities", "Visual Arts and Performing Arts"):
-        (CAT3, "Comunicación y cultura digital", "Narrativas transmedia"),
-    ("Arts and Humanities", "Music"):
-        (CAT3, "Comunicación y cultura digital", "Narrativas transmedia"),
-    ("Arts and Humanities", "History"):
-        (CAT3, "Comunicación y cultura digital", "Comunicación intercultural"),
-    ("Arts and Humanities", "History and Philosophy of Science"):
-        (CAT3, "Comunicación y cultura digital", "Comunicación intercultural"),
-
-    # ── Línea: Ética, gobernanza y responsabilidad social ─────────────────────
-    ("Social Sciences", "Law"):
-        (CAT3, "Ética, gobernanza y responsabilidad social", "Derechos humanos y tecnología"),
-    ("Social Sciences", "Political Science and International Relations"):
-        (CAT3, "Ética, gobernanza y responsabilidad social", "Ética y gobernanza"),
-    ("Social Sciences", "Public Administration"):
-        (CAT3, "Ética, gobernanza y responsabilidad social", "Ética y gobernanza"),
-    ("Arts and Humanities", "Philosophy"):
-        (CAT3, "Ética, gobernanza y responsabilidad social", "Ética y gobernanza"),
-
-    # ══════════════════════════════════════════════════════════════════════════
-    # 4. GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO
-    # ══════════════════════════════════════════════════════════════════════════
-
-    # ── Línea: Innovación empresarial ─────────────────────────────────────────
-    ("Business, Management and Accounting", "General Business, Management and Accounting"):
-        (CAT4, "Innovación empresarial", "Gestión de la innovación"),
-    ("Business, Management and Accounting", "Business, Management and Accounting (miscellaneous)"):
-        (CAT4, "Innovación empresarial", "Gestión de la innovación"),
-    ("Business, Management and Accounting", "Business and International Management"):
-        (CAT4, "Innovación empresarial", "Modelos de negocio digitales"),
-    ("Business, Management and Accounting", "Strategy and Management"):
-        (CAT4, "Innovación empresarial", "Transformación organizacional"),
-    ("Business, Management and Accounting", "Organizational Behavior and Human Resource Management"):
-        (CAT4, "Innovación empresarial", "Transformación organizacional"),
-    ("Business, Management and Accounting", "Marketing"):
-        (CAT4, "Innovación empresarial", "Modelos de negocio digitales"),
-    ("Business, Management and Accounting", "Tourism, Leisure and Hospitality Management"):
-        (CAT4, "Innovación empresarial", "Modelos de negocio digitales"),
-    ("Business, Management and Accounting", "Industrial Relations"):
-        (CAT4, "Innovación empresarial", "Transformación organizacional"),
-    # ("Social Sciences", "Development") ya mapeado arriba como Pobreza e informalidad
-
-    # ── Línea: Economía digital ───────────────────────────────────────────────
-    ("Economics, Econometrics and Finance", "General Economics, Econometrics and Finance"):
-        (CAT4, "Economía digital", "Mercados globales"),
-    ("Economics, Econometrics and Finance", "Economics, Econometrics and Finance (miscellaneous)"):
-        (CAT4, "Economía digital", "Mercados globales"),
-    ("Economics, Econometrics and Finance", "Economics and Econometrics"):
-        (CAT4, "Economía digital", "Análisis de datos económicos"),
-    ("Economics, Econometrics and Finance", "Finance"):
-        (CAT4, "Economía digital", "Fintech y servicios financieros"),
-    ("Business, Management and Accounting", "Accounting"):
-        (CAT4, "Economía digital", "Fintech y servicios financieros"),
-
-    # ── Línea: Gestión del conocimiento ──────────────────────────────────────
-    ("Business, Management and Accounting", "Management of Technology and Innovation"):
-        (CAT4, "Gestión del conocimiento", "Gestión del capital intelectual"),
-    ("Business, Management and Accounting", "Management Information Systems"):
-        (CAT4, "Gestión del conocimiento", "Inteligencia de negocios"),
-    ("Decision Sciences", "General Decision Sciences"):
-        (CAT4, "Gestión del conocimiento", "Inteligencia de negocios"),
-    ("Decision Sciences", "Decision Sciences (miscellaneous)"):
-        (CAT4, "Gestión del conocimiento", "Inteligencia de negocios"),
-    ("Decision Sciences", "Management Science and Operations Research"):
-        (CAT4, "Gestión del conocimiento", "Inteligencia de negocios"),
-    ("Decision Sciences", "Information Systems and Management"):
-        (CAT4, "Gestión del conocimiento", "Inteligencia de negocios"),
-    ("Social Sciences", "Library and Information Sciences"):
-        (CAT4, "Gestión del conocimiento", "Transferencia de conocimiento"),
+AREA_TO_SUBLINEAS = {
+    "Agricultural and Biological Sciences":          ["9.2"],
+    "Biochemistry, Genetics and Molecular Biology":  ["9.1"],
+    "Business, Management and Accounting":           ["4.1"],
+    "Chemical Engineering":                          ["4.2"],
+    "Computer Science":                              ["3.2"],
+    "Decision Sciences":                             ["4.2"],
+    "Dentistry":                                     ["6.1"],
+    "Earth and Planetary Sciences":                  ["8.4"],
+    "Economics, Econometrics and Finance":           ["2.1"],
+    "Energy":                                        ["8.3"],
+    "Engineering":                                   ["4.2"],
+    "Environmental Science":                         ["8.1"],
+    "Health Professions":                            ["6.1"],
+    "Immunology and Microbiology":                   ["6.1"],
+    "Materials Science":                             ["4.2"],
+    "Mathematics":                                   ["3.3"],
+    "Medicine":                                      ["6.1"],
+    "Neuroscience":                                  ["5.4"],
+    "Nursing":                                       ["6.1"],
+    "Pharmacology, Toxicology and Pharmaceutics":    ["6.1"],
+    "Psychology":                                    ["5.4"],
+    "Social Sciences":                               ["5.1"],
+    "Veterinary":                                    ["9.2"],
 }
+
+SCOPUS_TO_SUBLINEAS = {
+    # ── Agricultural and Biological Sciences ──────────────────────────────────
+    "Aquatic Science":                                    ["8.1"],
+    "Ecology, Evolution, Behavior and Systematics":       ["8.1"],
+    "Food Science":                                       ["9.3"],
+    "Forestry":                                           ["8.1"],
+
+    # ── Arts and Humanities ───────────────────────────────────────────────────
+    "Language and Linguistics":                           ["5.2"],
+
+    # ── Biochemistry, Genetics and Molecular Biology ──────────────────────────
+    "Ageing":                                             ["6.1"],
+    "Cancer Research":                                    ["6.1"],
+    "Clinical Biochemistry":                              ["6.1"],
+    "Endocrinology":                                      ["6.1"],
+    "Molecular Medicine":                                 ["6.1"],
+    "Physiology":                                         ["6.1"],
+
+    # ── Business, Management and Accounting ───────────────────────────────────
+    "Accounting":                                         ["2.3"],
+    "Business and International Management":              ["4.1", "2.2"],
+    "Management Information Systems":                     ["3.2"],
+    "Management of Technology and Innovation":            ["4.2"],
+    "Marketing":                                          ["4.4"],
+    "Tourism, Leisure and Hospitality Management":        ["7.3"],
+
+    # ── Chemical Engineering ──────────────────────────────────────────────────
+    "Bioengineering":                                     ["9.1"],
+
+    # ── Computer Science ──────────────────────────────────────────────────────
+    "Artificial Intelligence":                            ["3.3"],
+    "Computational Theory and Mathematics":               ["3.3"],
+    "Computer Graphics and Computer-Aided Design":        ["3.1"],
+    "Computer Vision and Pattern Recognition":            ["3.3"],
+    "Hardware and Architecture":                          ["3.4"],
+    "Human-Computer Interaction":                         ["3.1"],
+    "Signal Processing":                                  ["3.4"],
+
+    # ── Decision Sciences ─────────────────────────────────────────────────────
+    "Information Systems and Management":                 ["3.2"],
+    "Management Science and Operations Research":         ["4.5"],
+    "Statistics, Probability and Uncertainty":            ["3.3"],
+
+    # ── Earth and Planetary Sciences ──────────────────────────────────────────
+    "Economic Geology":                                   ["8.3"],
+    "Geotechnical Engineering and Engineering Geology":   ["7.1"],
+    "Oceanography":                                       ["8.1"],
+    "Paleontology":                                       [],
+    "Space and Planetary Science":                        [],
+
+    # ── Economics, Econometrics and Finance ───────────────────────────────────
+    "Finance":                                            ["2.3"],
+
+    # ── Engineering ───────────────────────────────────────────────────────────
+    "Architecture":                                       ["7.1"],
+    "Automotive Engineering":                             ["7.1"],
+    "Biomedical Engineering":                             ["6.1"],
+    "Building and Construction":                          ["7.1"],
+    "Civil and Structural Engineering":                   ["7.1"],
+    "Electrical and Electronic Engineering":              ["3.4"],
+    "Media Technology":                                   ["3.1"],
+    "Ocean Engineering":                                  ["7.1"],
+    "Safety, Risk, Reliability and Quality":              ["4.4"],
+
+    # ── Environmental Science ─────────────────────────────────────────────────
+    "Global and Planetary Change":                        ["8.4"],
+    "Waste Management and Disposal":                      ["8.4"],
+    "Water Science and Technology":                       ["8.2"],
+
+    # ── Health Professions ────────────────────────────────────────────────────
+    "Health Information Management":                      ["6.3"],
+
+    # ── Materials Science ─────────────────────────────────────────────────────
+    "Biomaterials":                                       ["9.1"],
+
+    # ── Mathematics ───────────────────────────────────────────────────────────
+    "Control and Optimization":                           ["4.2"],
+    "Mathematical Physics":                               [],
+
+    # ── Medicine ──────────────────────────────────────────────────────────────
+    "Health Informatics":                                 ["6.3"],
+    "Health Policy":                                      ["6.3"],
+    "Psychiatry and Mental health":                       ["6.2"],
+
+    # ── Neuroscience ──────────────────────────────────────────────────────────
+    "Biological Psychiatry":                              ["6.2"],
+
+    # ── Nursing ───────────────────────────────────────────────────────────────
+    "Leadership and Management":                          ["6.3"],
+    "Nutrition and Dietetics":                            ["9.3"],
+    "Psychiatric Mental Health":                          ["6.2"],
+
+    # ── Psychology ────────────────────────────────────────────────────────────
+    "Clinical Psychology":                                ["6.2"],
+    "Developmental and Educational Psychology":           ["5.3", "5.2"],
+
+    # ── Social Sciences ───────────────────────────────────────────────────────
+    "Communication":                                      ["3.1"],
+    "Education":                                          ["5.2"],
+    "Geography, Planning and Development":                ["7.1"],
+    "Health (social science)":                            ["6.1"],
+    "Human Factors and Ergonomics":                       ["3.1"],
+    "Law":                                                ["1.3"],
+    "Library and Information Sciences":                   ["3.2"],
+    "Life-span and Life-course Studies":                  ["5.3"],
+    "Linguistics and Language":                           ["5.2"],
+    "Political Science and International Relations":      ["1.1"],
+    "Public Administration":                              ["1.1"],
+    "Safety Research":                                    ["1.4"],
+    "Transportation":                                     ["7.1", "7.2"],
+    "Urban Studies":                                      ["7.1"],
+}
+
+# Clasificación a mano, por ISSN o E-ISSN, para revistas que Scopus no clasifica
+# (p. ej. indexadas solo en WoS). Solo se usa si la revista quedó sin línea.
+CLASIFICACION_MANUAL = {
+    "2221-4135": ["1.1"],  # Revista Andina de Estudios Políticos (RAEP)
+}
+
+validar_codigos('AREA_TO_SUBLINEAS', [c for cs in AREA_TO_SUBLINEAS.values() for c in cs])
+validar_codigos('SCOPUS_TO_SUBLINEAS', [c for cs in SCOPUS_TO_SUBLINEAS.values() for c in cs])
+validar_codigos('CLASIFICACION_MANUAL', [c for cs in CLASIFICACION_MANUAL.values() for c in cs])
+
+
+def classify_manual(issn, e_issn) -> list:
+    codigos = CLASIFICACION_MANUAL.get(issn or "") or CLASIFICACION_MANUAL.get(e_issn or "") or []
+    return [
+        {"Linea": SUBLINEAS[c][0], "Sublinea": SUBLINEAS[c][1], "Origen_Scopus": "Clasificación manual"}
+        for c in codigos
+    ]
 
 
 def classify_journal_ulima(categorias_scopus: list) -> list:
     """
-    Clasifica una revista en la taxonomía ULima basándose en sus categorías Scopus.
-    Retorna lista de clasificaciones únicas, deduplicadas por (Categoría, Línea, Sublínea).
+    Clasifica una revista en las líneas prioritarias ULima según sus subáreas Scopus.
+    Retorna [{Linea, Sublinea, Origen_Scopus}] sin repetir sublíneas, en el orden de
+    las subáreas (la primera define el enfoque de la revista).
     """
-    seen   = set()
-    result = []
-
+    seen, result = set(), []
     for cat in categorias_scopus:
-        key = (cat.get("Categoria", ""), cat.get("Subcategoria", ""))
-        mapping = SCOPUS_TO_ULIMA.get(key)
-
-        if mapping:
-            cat_ulima, linea, sublinea = mapping
-            entry_key = (cat_ulima, linea, sublinea)
-            if entry_key not in seen:
-                seen.add(entry_key)
-                result.append({
-                    "Categoria_ULima": cat_ulima,
-                    "Linea":           linea,
-                    "Sublinea":        sublinea,
-                    # Referencia a qué subcategoría Scopus originó esta clasificación
-                    "Origen_Scopus":   f"{key[0]} > {key[1]}"
-                })
-
+        area, subarea = cat.get("Categoria", ""), cat.get("Subcategoria", "")
+        codigos = SCOPUS_TO_SUBLINEAS.get(subarea)
+        if codigos is None:
+            codigos = AREA_TO_SUBLINEAS.get(area, [])
+        for codigo in codigos:
+            if codigo in seen:
+                continue
+            seen.add(codigo)
+            linea, sublinea = SUBLINEAS[codigo]
+            result.append({
+                "Linea":         linea,
+                "Sublinea":      sublinea,
+                # Subárea Scopus que originó esta clasificación
+                "Origen_Scopus": f"{area} > {subarea}",
+            })
     return result
 
 
@@ -1356,9 +1101,9 @@ for index, row in filtered_df.iterrows():
             # ── CLASIFICACIÓN TAXONOMÍA ULIMA ─────────────────────────────
             base_data["clasificacion_ulima"] = classify_journal_ulima(
                 base_data.get("categorias_scopus", [])
-            )
+            ) or classify_manual(issn, e_issn)
 
-            # Enfoque: usar la primera categoría de ULima como enfoque general
+            # Enfoque: la primera línea prioritaria de la revista
             if base_data["clasificacion_ulima"]:
                 base_data["enfoque"] = base_data["clasificacion_ulima"][0]["Linea"]
             else:
@@ -1383,33 +1128,33 @@ publishers_facets = sorted(list(set(r['publisher'] for r in journal_json_list if
 disciplinas_facets = sorted(list(set(d for r in journal_json_list for d in r.get('disciplinas', []))))
 tipos_facets = ["Data Journal", "Research Journal"]
 
-# Categorías Ulima (Thematic Categories)
-categorias_ulima_facets = sorted(list(set(
-    c['Categoria_ULima'] 
-    for r in journal_json_list 
-    for c in r.get('clasificacion_ulima', [])
-    if c.get('Categoria_ULima')
-)))
+# Líneas prioritarias presentes en el catálogo, en el orden oficial
+lineas_presentes = {c['Linea'] for r in journal_json_list for c in r.get('clasificacion_ulima', [])}
+lineas_facets = [linea for linea in TAXONOMIA if linea in lineas_presentes]
 
 final_output = {
     "metadata": {
         "totalRevistas": len(journal_json_list),
         "publishers": len(publishers_facets),
         "disciplinas": len(disciplinas_facets),
-        "categorias": len(categorias_ulima_facets),
+        "lineas": len(lineas_facets),
         "lastUpdated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "version": "1.0"
+        "version": "2.0"
     },
+    "taxonomy": TAXONOMIA,
     "revistas": journal_json_list,
     "facets": {
         "publishers": publishers_facets,
         "tipos": tipos_facets,
         "disciplinas": disciplinas_facets,
-        "categorias": categorias_ulima_facets
+        "lineas": lineas_facets
     }
 }
 
-print(json.dumps(final_output, indent=2, ensure_ascii=False))
+sin_linea = [r['journal'] for r in journal_json_list if not r.get('clasificacion_ulima')]
+print(f"\nRevistas publicadas: {len(journal_json_list)} | sin línea prioritaria: {len(sin_linea)}")
+for journal in sin_linea:
+    print(f"  · {journal}")
 
 # Guardar en archivo
 root_dir = os.path.join(script_dir, '..', '..')

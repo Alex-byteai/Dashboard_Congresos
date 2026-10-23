@@ -4,10 +4,12 @@ import {
 } from '@phosphor-icons/react'
 
 import DashboardLayout from '../../shared/components/DashboardLayout'
-import CategoryFilter from '../../shared/components/CategoryFilter'
+import LineFilter from '../../shared/components/LineFilter'
 import StatsStrip from '../../shared/components/StatsStrip'
 import { InfoPanelItem, InfoPanelSection, ProtocolPanelSection } from '../../shared/components/InfoPanel'
 import useCatalogFilters from '../../shared/hooks/useCatalogFilters'
+import { sublinesFor } from '../../shared/taxonomy'
+import { SHOW_LINE_FILTER } from '../../shared/constants'
 import { loadRevistas, loadRevistasObservadas } from '../../core/services/data'
 import RevistasFilterPanel from './components/RevistasFilterPanel'
 import RevistasList from './components/RevistasList'
@@ -24,8 +26,8 @@ const EMPTY_FILTERS = {
     tipo: '',
     apc: '',
     disciplina: '',
-    categorias: [],
-    lineas: []
+    lineas: [],
+    sublineas: []
 }
 
 // `params.search` comes from the hub's ISSN lookup ("Ver en el Catálogo").
@@ -38,7 +40,7 @@ export default function RevistasModule({ onNavigate, params }) {
     const [showBadPractices, setShowBadPractices] = useState(false)
     const {
         filters, setFilters, selectedCareers, activeCount,
-        toggleCareer, selectCategory, removeCategory, resetFilters
+        toggleCareer, selectLine, removeLine, resetFilters
     } = useCatalogFilters(EMPTY_FILTERS, { search: params?.search || '' })
 
     useEffect(() => {
@@ -55,22 +57,10 @@ export default function RevistasModule({ onNavigate, params }) {
             .finally(() => setLoading(false))
     }, [])
 
-    // Research lines per ULima category, derived from the journals' classification
-    const taxonomy = useMemo(() => {
-        const tax = {}
-        revistas.forEach(r => {
-            (r.clasificacion_ulima || []).forEach(({ Categoria_ULima: cat, Linea: line }) => {
-                if (!cat || !line) return
-                if (!tax[cat]) tax[cat] = new Set()
-                tax[cat].add(line)
-            })
-        })
-        return tax
-    }, [revistas])
-
-    const lineas = useMemo(
-        () => [...new Set(filters.categorias.flatMap(cat => [...(taxonomy[cat] || [])]))].sort(),
-        [filters.categorias, taxonomy]
+    // Sublines of the selected lines that some journal actually has
+    const sublineas = useMemo(
+        () => sublinesFor(filters.lineas, new Set(revistas.flatMap(r => (r.clasificacion_ulima || []).map(c => c.Sublinea)))),
+        [filters.lineas, revistas]
     )
 
     const filtered = useMemo(() => {
@@ -86,12 +76,12 @@ export default function RevistasModule({ onNavigate, params }) {
             const matchesDisciplina = !filters.disciplina || (r.disciplinas || []).includes(filters.disciplina)
 
             const classification = r.clasificacion_ulima || []
-            const matchesCategoria = filters.categorias.length === 0 ||
-                filters.categorias.some(cat => classification.some(c => c.Categoria_ULima === cat))
             const matchesLinea = filters.lineas.length === 0 ||
                 filters.lineas.some(l => classification.some(c => c.Linea === l))
+            const matchesSublinea = filters.sublineas.length === 0 ||
+                filters.sublineas.some(s => classification.some(c => c.Sublinea === s))
 
-            return matchesSearch && matchesTipo && matchesApc && matchesDisciplina && matchesCategoria && matchesLinea
+            return matchesSearch && matchesTipo && matchesApc && matchesDisciplina && matchesLinea && matchesSublinea
         })
     }, [filters, revistas])
 
@@ -129,8 +119,8 @@ export default function RevistasModule({ onNavigate, params }) {
                 setFilters={setFilters}
                 tipos={facets.tipos}
                 disciplinas={facets.disciplinas}
-                lineas={lineas}
-                onCategoryRemove={removeCategory}
+                sublineas={sublineas}
+                onLineRemove={removeLine}
                 onReset={resetFilters}
             />
 
@@ -181,13 +171,15 @@ export default function RevistasModule({ onNavigate, params }) {
                 </div>
             ) : (
                 <>
-                    <CategoryFilter
-                        categorias={filters.categorias}
-                        selectedCareers={selectedCareers}
-                        onSelectCategory={selectCategory}
-                        onToggleCareer={toggleCareer}
-                        allLabel="Todas"
-                    />
+                    {SHOW_LINE_FILTER && (
+                        <LineFilter
+                            lineas={filters.lineas}
+                            selectedCareers={selectedCareers}
+                            onSelectLine={selectLine}
+                            onToggleCareer={toggleCareer}
+                            allLabel="Todas"
+                        />
+                    )}
 
                     <StatsStrip items={stats} />
 

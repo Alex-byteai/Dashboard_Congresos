@@ -4,6 +4,7 @@ import {
 } from '@phosphor-icons/react';
 import EmptyState from '../../../shared/components/EmptyState';
 import IssnTags from './IssnTags';
+import { lineLabel } from '../../../shared/taxonomy';
 import { getApcBadgeClass, getWosCollections, isInWos } from '../utils';
 
 function RevistaCard({ r }) {
@@ -31,10 +32,10 @@ function RevistaCard({ r }) {
                             <span>{r.publisher}</span>
                         </span>
                     )}
-                    {r.enfoque && (
-                        <span className="card-event__cat-tag" title={`Enfoque: ${r.enfoque}`}>
+                    {lineLabel(r.enfoque) && (
+                        <span className="card-event__cat-tag" title={`Línea prioritaria: ${r.enfoque}`}>
                             <Layout size={12} />
-                            <span>{r.enfoque}</span>
+                            <span>{lineLabel(r.enfoque)}</span>
                         </span>
                     )}
                 </div>

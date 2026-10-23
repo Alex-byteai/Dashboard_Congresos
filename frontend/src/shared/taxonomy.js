@@ -1,36 +1,56 @@
 import {
-    ChartBar, Cpu, Leaf, Users,
-    Briefcase, Buildings, Radio, Calculator, Scales, TrendUp,
-    HardHat, Factory, Monitor, Megaphone, Globe, Brain
+    Scales, ChartLineUp, Cpu, Briefcase, GraduationCap, Heartbeat, City, Leaf, Plant,
+    Buildings, Radio, Calculator, TrendUp, HardHat, Factory, Monitor, Megaphone, Globe, Brain
 } from '@phosphor-icons/react';
+import LINEAS from './lineas_investigacion.json';
 
-// ULima research categories. Each `id` is the exact string used in
-// congresses.json (`categoria`) and revistas.json (`Categoria_ULima`).
-export const CATEGORIES = [
-    { id: 'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO', icon: ChartBar },
-    { id: 'INNOVACIÓN Y TECNOLOGÍA DIGITAL', icon: Cpu },
-    { id: 'DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE', icon: Leaf },
-    { id: 'SOCIEDAD Y COMPORTAMIENTO HUMANO', icon: Users },
-];
+// Icon for each priority line, in the official order of lineas_investigacion.json
+const LINE_ICONS = [Scales, ChartLineUp, Cpu, Briefcase, GraduationCap, Heartbeat, City, Leaf, Plant];
 
+// ULima priority research lines. `id` is the official name used in congresses.json
+// (`linea`) and revistas.json (`clasificacion_ulima[].Linea`); `label` is the short chip text.
+export const LINES = LINEAS.lineas.map((linea, i) => ({
+    id: linea.nombre,
+    label: linea.corto,
+    icon: LINE_ICONS[i],
+    sublineas: linea.sublineas,
+}));
+
+// Official line numbers (1–9) → ids
+const lines = (...numbers) => numbers.map(n => LINES[n - 1].id);
+
+// Lines each career works on (a career may belong to several)
 export const CAREERS = [
-    { id: 'administracion', label: 'Administración', icon: Briefcase, categoria: 'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO' },
-    { id: 'arquitectura', label: 'Arquitectura', icon: Buildings, categoria: 'DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE' },
-    { id: 'comunicacion', label: 'Comunicación', icon: Radio, categoria: 'SOCIEDAD Y COMPORTAMIENTO HUMANO' },
-    { id: 'contabilidad', label: 'Contabilidad y Finanzas', icon: Calculator, categoria: 'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO' },
-    { id: 'derecho', label: 'Derecho', icon: Scales, categoria: 'SOCIEDAD Y COMPORTAMIENTO HUMANO' },
-    { id: 'economia', label: 'Economía', icon: TrendUp, categoria: 'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO' },
-    { id: 'ing-ambiental', label: 'Ing. Ambiental', icon: Leaf, categoria: 'DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE' },
-    { id: 'ing-civil', label: 'Ing. Civil', icon: HardHat, categoria: 'DESARROLLO SOSTENIBLE Y MEDIOAMBIENTE' },
-    { id: 'ing-industrial', label: 'Ing. Industrial', icon: Factory, categoria: 'INNOVACIÓN Y TECNOLOGÍA DIGITAL' },
-    { id: 'ing-sistemas', label: 'Ing. de Sistemas', icon: Monitor, categoria: 'INNOVACIÓN Y TECNOLOGÍA DIGITAL' },
-    { id: 'ing-mecatronica', label: 'Ing. Mecatrónica', icon: Cpu, categoria: 'INNOVACIÓN Y TECNOLOGÍA DIGITAL' },
-    { id: 'marketing', label: 'Marketing', icon: Megaphone, categoria: 'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO' },
-    { id: 'negocios-internac', label: 'Negocios Internacionales', icon: Globe, categoria: 'GESTIÓN Y ECONOMÍA DEL CONOCIMIENTO' },
-    { id: 'psicologia', label: 'Psicología', icon: Brain, categoria: 'SOCIEDAD Y COMPORTAMIENTO HUMANO' },
+    { id: 'administracion', label: 'Administración', icon: Briefcase, lineas: lines(1, 2, 4) },
+    { id: 'arquitectura', label: 'Arquitectura', icon: Buildings, lineas: lines(7, 8) },
+    { id: 'comunicacion', label: 'Comunicación', icon: Radio, lineas: lines(3, 5) },
+    { id: 'contabilidad', label: 'Contabilidad y Finanzas', icon: Calculator, lineas: lines(1, 2) },
+    { id: 'derecho', label: 'Derecho', icon: Scales, lineas: lines(1, 2) },
+    { id: 'economia', label: 'Economía', icon: TrendUp, lineas: lines(1, 2, 5) },
+    { id: 'ing-ambiental', label: 'Ing. Ambiental', icon: Leaf, lineas: lines(8, 9) },
+    { id: 'ing-civil', label: 'Ing. Civil', icon: HardHat, lineas: lines(7, 8) },
+    { id: 'ing-industrial', label: 'Ing. Industrial', icon: Factory, lineas: lines(4, 7, 9) },
+    { id: 'ing-sistemas', label: 'Ing. de Sistemas', icon: Monitor, lineas: lines(3, 4) },
+    { id: 'ing-mecatronica', label: 'Ing. Mecatrónica', icon: Cpu, lineas: lines(3, 4) },
+    { id: 'marketing', label: 'Marketing', icon: Megaphone, lineas: lines(3, 4) },
+    { id: 'negocios-internac', label: 'Negocios Internacionales', icon: Globe, lineas: lines(2, 4) },
+    { id: 'psicologia', label: 'Psicología', icon: Brain, lineas: lines(5, 6) },
 ];
 
-export const categoryOfCareer = (careerId) => CAREERS.find(c => c.id === careerId)?.categoria;
+export const lineLabel = (lineId) => LINES.find(l => l.id === lineId)?.label;
 
-export const categoriesForCareers = (careerIds) =>
-    [...new Set(careerIds.map(categoryOfCareer).filter(Boolean))];
+export const linesOfCareer = (careerId) => CAREERS.find(c => c.id === careerId)?.lineas || [];
+
+// Lines covered by the given careers, in the official order
+export const linesForCareers = (careerIds) => {
+    const covered = new Set(careerIds.flatMap(linesOfCareer));
+    return LINES.map(l => l.id).filter(id => covered.has(id));
+};
+
+export const careersForLine = (lineId) => CAREERS.filter(c => c.lineas.includes(lineId));
+
+// Sublines of the given lines that actually occur in the data, in the official order
+export const sublinesFor = (lineIds, presentSublines) =>
+    LINES.filter(l => lineIds.includes(l.id))
+        .flatMap(l => l.sublineas)
+        .filter(s => presentSublines.has(s));

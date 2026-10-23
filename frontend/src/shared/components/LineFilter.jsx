@@ -1,37 +1,32 @@
 import { Rows, X } from '@phosphor-icons/react';
-import { CATEGORIES, CAREERS } from '../taxonomy';
+import { LINES, CAREERS, careersForLine } from '../taxonomy';
 
-// Quick category chips plus the contextual career chips below them.
-// State and handlers come from useCatalogFilters.
-export default function CategoryFilter({
-    categorias,
+// Priority-line chips (short label; official name as tooltip) plus the career
+// chips below them. State and handlers come from useCatalogFilters.
+export default function LineFilter({
+    lineas,
     selectedCareers,
-    onSelectCategory,
+    onSelectLine,
     onToggleCareer,
     allLabel = 'Todos'
 }) {
-    const activeCategory = categorias.length === 1 ? categorias[0] : null;
-    const careers = activeCategory
-        ? CAREERS.filter(c => c.categoria === activeCategory)
-        : CAREERS;
-    const chips = [
-        { id: null, label: allLabel, icon: Rows },
-        ...CATEGORIES.map(c => ({ ...c, label: c.id }))
-    ];
+    const activeLine = lineas.length === 1 ? lineas[0] : null;
+    const careers = activeLine ? careersForLine(activeLine) : CAREERS;
+    const chips = [{ id: null, label: allLabel, icon: Rows }, ...LINES];
 
     return (
         <>
             <div className="category-chips-row">
                 {chips.map(({ id, label, icon: Icon }) => {
-                    const isActive = id ? categorias.includes(id) : categorias.length === 0;
-                    const isFaded = id && categorias.length > 0 && !isActive;
+                    const isActive = id ? lineas.includes(id) : lineas.length === 0;
+                    const isFaded = id && lineas.length > 0 && !isActive;
                     return (
                         <button
                             key={label}
                             type="button"
                             className={`category-chip-card ${isActive ? 'category-chip-card--active' : ''} ${isFaded ? 'category-chip-card--faded' : ''}`}
-                            onClick={() => onSelectCategory(id)}
-                            title={id ? `Filtrar por ${label}` : 'Mostrar todas las categorías'}
+                            onClick={() => onSelectLine(id)}
+                            title={id || 'Mostrar todas las líneas de investigación'}
                         >
                             <Icon size={20} className="category-chip-card__icon" />
                             <span>{label}</span>
@@ -43,11 +38,11 @@ export default function CategoryFilter({
             <div className="career-subbar">
                 <div className="career-subbar__header">
                     <span className="career-subbar__label">
-                        {activeCategory ? 'Carreras vinculadas:' : 'Filtrar por carrera:'}
+                        {activeLine ? 'Carreras vinculadas:' : 'Filtrar por carrera:'}
                     </span>
 
                     {selectedCareers.length > 0 && (
-                        <button type="button" className="career-subbar__clear" onClick={() => onSelectCategory(null)}>
+                        <button type="button" className="career-subbar__clear" onClick={() => onSelectLine(null)}>
                             <X size={12} />
                             Limpiar carreras ({selectedCareers.length})
                         </button>

@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { categoriesForCareers, categoryOfCareer } from '../taxonomy';
+import { linesForCareers, linesOfCareer } from '../taxonomy';
 
 // Filter state shared by the catalog modules (congresos, revistas).
-// A career is an alias for its ULima category, so every career change
-// re-derives `categorias`; any category change clears the dependent `lineas`.
+// Careers are a shortcut for their priority lines, so every career change
+// re-derives `lineas`; any line change clears the dependent `sublineas`.
 // `emptyFilters` must be a stable object (defined at module level); it is also
 // what `resetFilters` returns to. `overrides` only seed the first render.
 export default function useCatalogFilters(emptyFilters, overrides) {
@@ -15,19 +15,20 @@ export default function useCatalogFilters(emptyFilters, overrides) {
             ? selectedCareers.filter(id => id !== careerId)
             : [...selectedCareers, careerId];
         setSelectedCareers(next);
-        setFilters(prev => ({ ...prev, categorias: categoriesForCareers(next), lineas: [] }));
+        setFilters(prev => ({ ...prev, lineas: linesForCareers(next), sublineas: [] }));
     };
 
-    // `null` ("Todos") or clicking the only active category clears the selection.
-    const selectCategory = (category) => {
-        const isOnlyActive = filters.categorias.length === 1 && filters.categorias[0] === category;
+    // `null` ("Todos") or clicking the only active line clears the selection.
+    const selectLine = (line) => {
+        const isOnlyActive = filters.lineas.length === 1 && filters.lineas[0] === line;
         setSelectedCareers([]);
-        setFilters(prev => ({ ...prev, categorias: category && !isOnlyActive ? [category] : [], lineas: [] }));
+        setFilters(prev => ({ ...prev, lineas: line && !isOnlyActive ? [line] : [], sublineas: [] }));
     };
 
-    const removeCategory = (category) => {
-        setSelectedCareers(prev => prev.filter(id => categoryOfCareer(id) !== category));
-        setFilters(prev => ({ ...prev, categorias: prev.categorias.filter(c => c !== category), lineas: [] }));
+    // Removing a line also drops the careers that brought it in
+    const removeLine = (line) => {
+        setSelectedCareers(prev => prev.filter(id => !linesOfCareer(id).includes(line)));
+        setFilters(prev => ({ ...prev, lineas: prev.lineas.filter(l => l !== line), sublineas: [] }));
     };
 
     const resetFilters = () => {
@@ -43,6 +44,6 @@ export default function useCatalogFilters(emptyFilters, overrides) {
 
     return {
         filters, setFilters, selectedCareers, activeCount,
-        toggleCareer, selectCategory, removeCategory, resetFilters
+        toggleCareer, selectLine, removeLine, resetFilters
     };
 }
