@@ -21,7 +21,7 @@ def check_and_send_alerts():
         print("⚠️ Credenciales de correo no encontradas en el archivo .env. No se mandarán alertas.")
         return
 
-    json_path = os.path.join(script_dir, '..', '..', 'public', 'revistas.json')
+    json_path = os.path.join(script_dir, '..', '..', 'frontend', 'public', 'revistas.json')
     if not os.path.exists(json_path):
         print("⚠️ Archivo revistas.json no encontrado.")
         return

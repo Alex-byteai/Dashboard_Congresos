@@ -1,117 +1,147 @@
-import React, { useState } from 'react';
-import { Calendar, MapPin, Clock, GraduationCap, ArrowSquareOut as ExternalLink, WarningCircle as AlertCircle, MagnifyingGlassMinus as SearchX, ShieldCheck } from '@phosphor-icons/react';
-import { trackEvent } from '../../../core/services/analytics'
+import { useState } from 'react';
+import { MapPin, ArrowUpRight, CaretDown, CaretUp } from '@phosphor-icons/react';
+import { trackEvent } from '../../../core/services/analytics';
+import EmptyState from '../../../shared/components/EmptyState';
 import CongressIntegrityModal from './CongressIntegrityModal';
+import { VERDICTS } from '../verdicts';
+import {
+    STATUSES, STATUS_ORDER, getStatusBadge, formatLocation, formatDate, formatDateRange, toExternalUrl
+} from '../utils';
 
-export default function CongressList({ events, getUrgencyClass, getUrgencyText }) {
-    const [integrityEvent, setIntegrityEvent] = useState(null);
-
-    if (events.length === 0) {
-        return (
-            <div className="empty-state">
-                <SearchX size={64} className="empty-icon" />
-                <h3>No se encontraron eventos</h3>
-                <p>Intenta ajustar los filtros de búsqueda</p>
-            </div>
-        );
-    }
+function CongressCard({ event, onOpenIntegrity }) {
+    const status = getStatusBadge(event);
+    const verdict = VERDICTS[event.verdict];
+    const VerdictIcon = verdict.icon;
+    const url = toExternalUrl(event.enlace);
+    const indexes = [
+        event.isScopus && { label: 'Scopus', className: 'badge--scopus' },
+        event.isIEEE && { label: 'IEEE', className: 'badge--ieee' },
+        event.isWoS && { label: 'Web of Science', className: 'badge--wos' },
+    ].filter(Boolean);
 
     return (
-        <div className="cards-grid">
-            {events.map(event => (
-                <div key={event.id} className={`event-card ${event.isPast ? 'event-card--past' : ''}`}>
-                    <div className="event-header">
-                        <div className="event-acronym">{event.evento || 'N/A'}</div>
-                        {event.isPast && (
-                            <div className="event-status event-status--past">Finalizado</div>
-                        )}
-                        {event.deadlineDays !== null && (
-                            <div className={`urgency-badge ${getUrgencyClass(event.deadlineDays)}`}>
-                                <AlertCircle size={14} />
-                                {getUrgencyText(event.deadlineDays)}
-                            </div>
-                        )}
-                    </div>
+        <article className={`card-event card-event--${event.status}`}>
+            <div className="card-event__header">
+                <span className="card-event__acronym" title={event.nombreCompleto}>
+                    {event.evento || 'CONGRESO'}
+                </span>
+                <span className={`urgency-badge ${status.className}`}>{status.label}</span>
+            </div>
 
-                    <h3 className="event-title">{event.nombreCompleto}</h3>
+            <div className="card-event__body">
+                <h3 className="card-event__title" title={event.nombreCompleto}>
+                    {event.nombreCompleto}
+                </h3>
+                <p className="card-event__subline">
+                    <MapPin size={14} />
+                    <span>
+                        {formatLocation(event)}
+                        {event.modalidad && ` · ${event.modalidad}`}
+                    </span>
+                </p>
+            </div>
 
-                    <div className="event-meta">
-                        <div className="meta-item">
-                            <Calendar size={18} className="meta-icon" />
-                            <span className={event.isPast ? 'event-dates--past' : ''}>
-                                {event.fechaInicio} - {event.fechaFin}
-                            </span>
-                        </div>
-                        <div className="meta-item">
-                            <MapPin size={18} className="meta-icon" />
-                            <span>{event.ciudad}, {event.pais}</span>
-                        </div>
-                        <div className="meta-item">
-                            <Clock size={18} className="meta-icon" />
-                            <span>Deadline: {event.deadline || 'Por definir'}</span>
-                        </div>
-                        <div className="meta-item" style={{ alignItems: 'flex-start' }}>
-                            <GraduationCap size={18} className="meta-icon" style={{ marginTop: '4px', flexShrink: 0 }} />
-
-                            <div className="tags-carousel" style={{ marginTop: '0' }}>
-                                <div className="tags-track">
-                                    {event.categoria && event.categoria.length > 0
-                                        ? event.categoria.map((cat, index) => (
-                                            <span key={`a-${index}`} className="badge badge-area">{cat}</span>
-                                        ))
-                                        : <span className="badge badge-area">{event.disciplina || 'Sin categoría'}</span>
-                                    }
-                                    {event.categoria && event.categoria.length > 0 && (
-                                        event.categoria.map((cat, index) => (
-                                            <span key={`b-${index}`} className="badge badge-area">{cat}</span>
-                                        ))
-                                    )}
-                                    {(!event.categoria || event.categoria.length === 0) && (
-                                        <span className="badge badge-area">{event.disciplina || 'Sin categoría'}</span>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="badges">
-                        {event.isScopus && <span className="badge badge-scopus">Scopus</span>}
-                        {event.isIEEE && <span className="badge badge-ieee">IEEE</span>}
-                        {event.isWoS && <span className="badge badge-wos">WoS</span>}
-                        {event.modalidad && (
-                            <span className={`badge badge-${event.modalidad.toLowerCase()}`}>
-                                {event.modalidad}
-                            </span>
-                        )}
-                    </div>
-
-                    <div className="event-actions">
-                        {event.enlace && (
-                            <a
-                                href={`https://${event.enlace.replace(/^https?:\/\//, '')}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="event-link event-link--primary"
-                                onClick={() => {
-                                    const url = `https://${event.enlace.replace(/^https?:\/\//, '')}`
-                                    trackEvent('outbound_click', { event_id: event.id, url })
-                                }}
-                            >
-                                Explorar
-                                <ExternalLink size={16} />
-                            </a>
-                        )}
-                        <button
-                            type="button"
-                            className="event-link event-link--secondary"
-                            onClick={() => setIntegrityEvent(event)}
-                        >
-                            Integridad
-                            <ShieldCheck size={16} />
-                        </button>
-                    </div>
+            <dl className="card-event__facts">
+                <div>
+                    <dt>Evento</dt>
+                    <dd>{formatDateRange(event)}</dd>
                 </div>
-            ))}
+                <div>
+                    <dt>Cierre de envíos</dt>
+                    <dd>{formatDate(event.deadline)}</dd>
+                </div>
+            </dl>
+
+            {indexes.length > 0 && (
+                <div className="card-event__badges">
+                    {indexes.map(({ label, className }) => (
+                        <span key={label} className={`badge ${className}`}>{label}</span>
+                    ))}
+                </div>
+            )}
+
+            <div className="card-event__footer">
+                <button
+                    type="button"
+                    className={`card-action card-action--${event.verdict}`}
+                    onClick={() => onOpenIntegrity(event)}
+                    title={`Integridad: ${verdict.label}`}
+                >
+                    <VerdictIcon size={15} weight="fill" />
+                    <span>Integridad</span>
+                </button>
+
+                {url && (
+                    <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="card-link"
+                        onClick={() => trackEvent('outbound_click', { event_id: event.id, url })}
+                    >
+                        Sitio web
+                        <ArrowUpRight size={14} />
+                    </a>
+                )}
+            </div>
+        </article>
+    );
+}
+
+// Cards grouped by status (see STATUSES). `events` arrive sorted by compareByRelevance.
+export default function CongressList({ events }) {
+    const [integrityEvent, setIntegrityEvent] = useState(null);
+    const [showFinished, setShowFinished] = useState(false);
+
+    if (events.length === 0) {
+        return <EmptyState title="No se encontraron congresos" />;
+    }
+
+    const sections = STATUS_ORDER
+        .map(key => ({ key, events: events.filter(e => e.status === key) }))
+        .filter(section => section.events.length > 0);
+
+    return (
+        <div className="status-sections">
+            {sections.map(({ key, events: sectionEvents }) => {
+                // Finished events start collapsed, unless they are all there is to show
+                const isCollapsible = key === 'finished' && sections.length > 1;
+                const isExpanded = !isCollapsible || showFinished;
+
+                return (
+                    <section key={key} className={`status-section status-section--${key}`}>
+                        <div className="status-section__header">
+                            <div>
+                                <h2 className="status-section__title">
+                                    {STATUSES[key].heading}
+                                    <span className="status-section__count">{sectionEvents.length}</span>
+                                </h2>
+                                <p className="status-section__hint">{STATUSES[key].hint}</p>
+                            </div>
+
+                            {isCollapsible && (
+                                <button
+                                    type="button"
+                                    className="status-section__toggle"
+                                    onClick={() => setShowFinished(!showFinished)}
+                                    aria-expanded={isExpanded}
+                                >
+                                    {isExpanded ? 'Ocultar' : `Ver ${sectionEvents.length} finalizados`}
+                                    {isExpanded ? <CaretUp size={13} /> : <CaretDown size={13} />}
+                                </button>
+                            )}
+                        </div>
+
+                        {isExpanded && (
+                            <div className="cards-grid">
+                                {sectionEvents.map(event => (
+                                    <CongressCard key={event.id} event={event} onOpenIntegrity={setIntegrityEvent} />
+                                ))}
+                            </div>
+                        )}
+                    </section>
+                );
+            })}
 
             <CongressIntegrityModal event={integrityEvent} onClose={() => setIntegrityEvent(null)} />
         </div>

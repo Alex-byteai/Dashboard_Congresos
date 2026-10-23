@@ -1,6 +1,34 @@
 {
   "revistas_observadas": [
     {
+      "journal": "International Journal of Evaluation and Research in Education",
+      "issn": "2252-8822",
+      "eissn": "2620-5440",
+      "enlace_informe": "https://drive.google.com/file/d/141H05i-TJhnarGE95VA16pnoRT3M3Joo/view?usp=drivesdk",
+      "conclusion": "Posibles indicios de malas prácticas"
+    },
+    {
+      "journal": "Results in Engineering",
+      "issn": "",
+      "eissn": "2590-1230",
+      "enlace_informe": "https://drive.google.com/file/d/1TDgaxiJu1kus6dDOtl3z9Ie2Q4KYdSDh/view?usp=drivesdk",
+      "conclusion": "Posibles indicios de malas prácticas"
+    },
+    {
+      "journal": "Structures",
+      "issn": "",
+      "eissn": "2352-0124",
+      "enlace_informe": "https://drive.google.com/file/d/1tYuk8VHmR5uNA_oKvWXXjeZBl422ny4o/view?usp=drivesdk",
+      "conclusion": "Posibles indicios de malas prácticas"
+    },
+    {
+      "journal": "C Journal of Carbon Research",
+      "issn": "",
+      "eissn": "2311-5629",
+      "enlace_informe": "https://drive.google.com/file/d/1v2z39cTsvrlT7U0vSYSr1pMtHyiUuNW0/view?usp=drivesdk",
+      "conclusion": "Posibles indicios de malas prácticas"
+    },
+    {
       "journal": "Corporate Board Role Duties and Composition",
       "issn": "1810-8601",
       "eissn": "2312-2722",
@@ -50,10 +78,10 @@
       "conclusion": "Posibles indicios de malas prácticas"
     },
     {
-      "journal": "C Journal of Carbon Research",
+      "journal": "Agriculture Switzerland",
       "issn": "",
-      "eissn": "2311-5629",
-      "enlace_informe": "https://drive.google.com/file/d/1v2z39cTsvrlT7U0vSYSr1pMtHyiUuNW0/view?usp=drivesdk",
+      "eissn": "2077-0472",
+      "enlace_informe": "https://drive.google.com/file/d/1DMeBa1YhqcbQBS46pyLMfx6W4WuNm4EL/view?usp=drivesdk",
       "conclusion": "Posibles indicios de malas prácticas"
     },
     {
@@ -61,13 +89,6 @@
       "issn": "",
       "eissn": "1664-1078",
       "enlace_informe": "https://drive.google.com/file/d/1zKc8uH0__VsD4SZTBQsgDZ1q9BXyV6GT/view?usp=drivesdk",
-      "conclusion": "Posibles indicios de malas prácticas"
-    },
-    {
-      "journal": "Agriculture Switzerland",
-      "issn": "",
-      "eissn": "2077-0472",
-      "enlace_informe": "https://drive.google.com/file/d/1DMeBa1YhqcbQBS46pyLMfx6W4WuNm4EL/view?usp=drivesdk",
       "conclusion": "Posibles indicios de malas prácticas"
     },
     {

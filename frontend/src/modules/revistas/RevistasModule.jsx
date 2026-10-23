@@ -1,27 +1,119 @@
 import { useEffect, useMemo, useState } from 'react'
-import { FilePlus } from '@phosphor-icons/react'
+import {
+    BookOpen, Barcode, ShieldWarning, CurrencyCircleDollar, Medal, Star
+} from '@phosphor-icons/react'
 
-import Header from '../../shared/components/Header'
-import CareerFilter, { CAREERS } from '../../shared/components/CareerFilter'
-import RevistasStatsCards from './components/RevistasStatsCards'
+import DashboardLayout from '../../shared/components/DashboardLayout'
+import CategoryFilter from '../../shared/components/CategoryFilter'
+import StatsStrip from '../../shared/components/StatsStrip'
+import { InfoPanelItem, InfoPanelSection, ProtocolPanelSection } from '../../shared/components/InfoPanel'
+import useCatalogFilters from '../../shared/hooks/useCatalogFilters'
+import { loadRevistas, loadRevistasObservadas } from '../../core/services/data'
 import RevistasFilterPanel from './components/RevistasFilterPanel'
 import RevistasList from './components/RevistasList'
 import ReviewRequestModal from './components/ReviewRequestModal'
 import BadPracticesModal from './components/BadPracticesModal'
-import { WarningOctagon as AlertOctagon } from '@phosphor-icons/react'
+import ObservedAlert from './components/ObservedAlert'
+import { getBestQuartile, matchesIssn } from './utils'
 
-export default function RevistasModule({ onBack }) {
+// Titles shorter than this don't trigger the observed-journal alert
+const MIN_TITLE_QUERY = 4
+
+const EMPTY_FILTERS = {
+    search: '',
+    tipo: '',
+    apc: '',
+    disciplina: '',
+    categorias: [],
+    lineas: []
+}
+
+// `params.search` comes from the hub's ISSN lookup ("Ver en el Catálogo").
+export default function RevistasModule({ onNavigate, params }) {
     const [loading, setLoading] = useState(true)
     const [revistas, setRevistas] = useState([])
-    const [facets, setFacets] = useState({ tipos: [], disciplinas: [], categorias: [] })
-    const [selectedCareers, setSelectedCareers] = useState([])
+    const [revistasObservadas, setRevistasObservadas] = useState([])
+    const [facets, setFacets] = useState({ tipos: [], disciplinas: [] })
     const [showReviewModal, setShowReviewModal] = useState(false)
     const [showBadPractices, setShowBadPractices] = useState(false)
+    const {
+        filters, setFilters, selectedCareers, activeCount,
+        toggleCareer, selectCategory, removeCategory, resetFilters
+    } = useCatalogFilters(EMPTY_FILTERS, { search: params?.search || '' })
+
+    useEffect(() => {
+        Promise.all([
+            loadRevistas(),
+            loadRevistasObservadas().catch(() => ({ revistas_observadas: [] }))
+        ])
+            .then(([revData, obsData]) => {
+                setRevistas((revData.revistas || []).map(r => ({ ...r, bestQuartile: getBestQuartile(r) })))
+                setFacets({ tipos: revData.facets?.tipos || [], disciplinas: revData.facets?.disciplinas || [] })
+                setRevistasObservadas(obsData.revistas_observadas || [])
+            })
+            .catch(err => console.error('Error loading revistas:', err))
+            .finally(() => setLoading(false))
+    }, [])
+
+    // Research lines per ULima category, derived from the journals' classification
+    const taxonomy = useMemo(() => {
+        const tax = {}
+        revistas.forEach(r => {
+            (r.clasificacion_ulima || []).forEach(({ Categoria_ULima: cat, Linea: line }) => {
+                if (!cat || !line) return
+                if (!tax[cat]) tax[cat] = new Set()
+                tax[cat].add(line)
+            })
+        })
+        return tax
+    }, [revistas])
+
+    const lineas = useMemo(
+        () => [...new Set(filters.categorias.flatMap(cat => [...(taxonomy[cat] || [])]))].sort(),
+        [filters.categorias, taxonomy]
+    )
+
+    const filtered = useMemo(() => {
+        const q = filters.search.toLowerCase().trim()
+        return revistas.filter(r => {
+            const matchesSearch = !q ||
+                r.journal?.toLowerCase().includes(q) ||
+                r.publisher?.toLowerCase().includes(q) ||
+                r.enfoque?.toLowerCase().includes(q) ||
+                matchesIssn(r, q)
+            const matchesTipo = !filters.tipo || r.tipo === filters.tipo
+            const matchesApc = !filters.apc || r.tipo_apc === filters.apc
+            const matchesDisciplina = !filters.disciplina || (r.disciplinas || []).includes(filters.disciplina)
+
+            const classification = r.clasificacion_ulima || []
+            const matchesCategoria = filters.categorias.length === 0 ||
+                filters.categorias.some(cat => classification.some(c => c.Categoria_ULima === cat))
+            const matchesLinea = filters.lineas.length === 0 ||
+                filters.lineas.some(l => classification.some(c => c.Linea === l))
+
+            return matchesSearch && matchesTipo && matchesApc && matchesDisciplina && matchesCategoria && matchesLinea
+        })
+    }, [filters, revistas])
+
+    // Observed journals aren't in the catalog, so a search for one would otherwise
+    // just come back empty; they are matched by ISSN/E-ISSN or title.
+    const observedMatches = useMemo(() => {
+        const q = filters.search.toLowerCase().trim()
+        if (!q) return []
+        return revistasObservadas.filter(r =>
+            matchesIssn(r, q) ||
+            (q.length >= MIN_TITLE_QUERY && r.journal?.toLowerCase().includes(q))
+        )
+    }, [filters.search, revistasObservadas])
+
+    const isQ1 = (r) => r.bestQuartile === 'Q1'
+    const isFree = (r) => r.tipo_apc === 'Sin APC'
+    const stats = [
+        { icon: BookOpen, value: filtered.length, label: 'Revistas encontradas' }
+    ]
 
     const handleViewJournal = (journal) => {
         setFilters(prev => ({ ...prev, search: journal.journal }))
-        setShowReviewModal(false)
-
         window.setTimeout(() => {
             document.querySelector(`[data-journal-id="${journal.id}"]`)?.scrollIntoView({
                 behavior: 'smooth',
@@ -30,219 +122,93 @@ export default function RevistasModule({ onBack }) {
         }, 250)
     }
 
-    const initialFilters = {
-        search: '',
-        tipo: '',
-        apc: '',
-        disciplina: '',
-        categorias: [],
-        lineas: []
-    }
-    const [filters, setFilters] = useState(initialFilters)
-    const [taxonomy, setTaxonomy] = useState({})
+    const rightPanel = !loading && (
+        <>
+            <RevistasFilterPanel
+                filters={filters}
+                setFilters={setFilters}
+                tipos={facets.tipos}
+                disciplinas={facets.disciplinas}
+                lineas={lineas}
+                onCategoryRemove={removeCategory}
+                onReset={resetFilters}
+            />
 
-    const handleCareerSelect = (careerId) => {
-        let newCareers = []
-        if (!careerId) {
-            newCareers = []
-        } else {
-            newCareers = selectedCareers.includes(careerId)
-                ? selectedCareers.filter(id => id !== careerId)
-                : [...selectedCareers, careerId]
-        }
+            <InfoPanelSection title="Alertas Editoriales">
+                <InfoPanelItem
+                    avatar={<ShieldWarning size={18} />}
+                    tone="danger"
+                    name="Revistas Observadas"
+                    sub="Títulos con alerta de mala práctica"
+                    aside={<span className="info-panel__badge info-panel__badge--danger">{revistasObservadas.length}</span>}
+                    onClick={() => setShowBadPractices(true)}
+                />
+                <InfoPanelItem
+                    avatar={<Barcode size={18} />}
+                    name="Consulta de ISSN"
+                    sub="Verificar o solicitar evaluación de una revista"
+                    onClick={() => setShowReviewModal(true)}
+                />
+            </InfoPanelSection>
 
-        setSelectedCareers(newCareers)
-
-        // Sync categories based on selected careers
-        const derivedCats = [...new Set(newCareers
-            .map(id => CAREERS.find(c => c.id === id)?.categoria)
-            .filter(Boolean))]
-
-        setFilters(prev => ({
-            ...prev,
-            categorias: derivedCats,
-            lineas: [] // Reset lines when changing careers/categories
-        }))
-    }
-
-    const handleCategoryRemove = (category) => {
-        setSelectedCareers(prev => prev.filter(id =>
-            CAREERS.find(career => career.id === id)?.categoria !== category
-        ))
-        setFilters(prev => ({
-            ...prev,
-            categorias: prev.categorias.filter(cat => cat !== category),
-            lineas: []
-        }))
-    }
-
-    const [revistasObservadas, setRevistasObservadas] = useState([])
-
-    useEffect(() => {
-        Promise.all([
-            fetch('/revistas.json').then(res => res.json()),
-            fetch('/revistas_observadas.json').then(res => res.json()).catch(() => ({ revistas_observadas: [] }))
-        ])
-            .then(([jsonData, observadasData]) => {
-                const fetchedRevistas = jsonData.revistas || []
-                setRevistas(fetchedRevistas)
-                setRevistasObservadas(observadasData.revistas_observadas || [])
-                setFacets(jsonData.facets || { tipos: [], disciplinas: [], categorias: [] })
-                
-                // Build dynamic taxonomy: { Category: [Lines] }
-                const tax = {}
-                fetchedRevistas.forEach(r => {
-                    (r.clasificacion_ulima || []).forEach(item => {
-                        const cat = item.Categoria_ULima
-                        const line = item.Linea
-                        if (cat && line) {
-                            if (!tax[cat]) tax[cat] = new Set()
-                            tax[cat].add(line)
-                        }
-                    })
-                })
-                // Convert Sets to sorted Arrays
-                const finalTax = {}
-                Object.keys(tax).forEach(cat => {
-                    finalTax[cat] = [...tax[cat]].sort()
-                })
-                setTaxonomy(finalTax)
-                
-                setLoading(false)
-            })
-            .catch(err => {
-                console.error('Error loading revistas:', err)
-                setLoading(false)
-            })
-    }, [])
-
-    const uniqueLineas = useMemo(() => {
-        if (filters.categorias.length === 0) return []
-        const lines = new Set()
-        filters.categorias.forEach(cat => {
-            (taxonomy[cat] || []).forEach(l => lines.add(l))
-        })
-        return [...lines].sort()
-    }, [filters.categorias, taxonomy])
-
-    const filtered = useMemo(() => {
-        const q = filters.search.toLowerCase().trim()
-        return revistas.filter(r => {
-            const matchesSearch = !q ||
-                r.journal?.toLowerCase().includes(q) ||
-                r.publisher?.toLowerCase().includes(q) ||
-                r.issn?.toLowerCase().includes(q) ||
-                r.eissn?.toLowerCase().includes(q) ||
-                r.enfoque?.toLowerCase().includes(q)
-
-            const matchesTipo = !filters.tipo || r.tipo === filters.tipo
-            const matchesApc = !filters.apc || r.tipo_apc === filters.apc
-            const matchesDisciplina = !filters.disciplina || (r.disciplinas || []).includes(filters.disciplina)
-
-            const journalClassification = r.clasificacion_ulima || []
-            const journalCategories = journalClassification.map(c => c.Categoria_ULima)
-            const journalLines = journalClassification.map(c => c.Linea)
-
-            const matchesCategoria = filters.categorias.length === 0 ||
-                filters.categorias.some(cat => journalCategories.includes(cat))
-            
-            const matchesLinea = filters.lineas.length === 0 ||
-                filters.lineas.some(l => journalLines.includes(l))
-
-            const selectedCareerCats = selectedCareers
-                .map(id => CAREERS.find(c => c.id === id)?.categoria)
-                .filter(Boolean)
-            const matchesCareer = selectedCareerCats.length === 0 ||
-                selectedCareerCats.some(cat => journalCategories.includes(cat))
-
-            return matchesSearch && matchesTipo && matchesApc && matchesDisciplina && matchesCategoria && matchesLinea && matchesCareer
-        })
-    }, [filters, revistas, selectedCareers])
-
-    const stats = useMemo(() => {
-        return {
-            total: filtered.length
-        }
-    }, [filtered])
-
-    if (loading) return <div className="loader"><div className="spinner"></div></div>
+            <ProtocolPanelSection />
+        </>
+    )
 
     return (
-        <>
-            <Header onBack={onBack} moduleName="Revistas Científicas" />
-            <RevistasStatsCards stats={stats} />
-
-            <div className="container">
-                <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '1.5rem', gap: '1rem', flexWrap: 'wrap' }}>
-                    <button
-                        onClick={() => setShowBadPractices(true)}
-                        style={{
-                            display: 'flex', alignItems: 'center', gap: '0.5rem',
-                            background: 'var(--pastel-red-bg)', color: 'var(--pastel-red-text)',
-                            border: '1.5px solid var(--pastel-red-bg)', borderRadius: 'var(--radius-md)',
-                            padding: '0.6rem 1.25rem', fontWeight: 600, cursor: 'pointer',
-                            transition: 'background 0.2s var(--ease-out), transform 0.1s var(--ease-out)', fontSize: '0.875rem'
-                        }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.background = '#fbdcde';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.background = 'var(--pastel-red-bg)';
-                        }}
-                        onMouseDown={(e) => { e.currentTarget.style.transform = 'scale(0.97)'; }}
-                        onMouseUp={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
-                    >
-                        <AlertOctagon size={18} />
-                        Revistas Observadas
-                    </button>
-
-                    <button
-                        onClick={() => setShowReviewModal(true)}
-                        style={{
-                            display: 'flex', alignItems: 'center', gap: '0.5rem',
-                            background: 'white', color: 'var(--text)',
-                            border: '1.5px solid var(--border)', borderRadius: 'var(--radius-md)',
-                            padding: '0.6rem 1.25rem', fontWeight: 600, cursor: 'pointer',
-                            transition: 'border-color 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.1s var(--ease-out)', fontSize: '0.875rem',
-                            boxShadow: 'none'
-                        }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.borderColor = 'var(--primary)';
-                            e.currentTarget.style.color = 'var(--primary)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.borderColor = 'var(--border)';
-                            e.currentTarget.style.color = 'var(--text)';
-                        }}
-                        onMouseDown={(e) => { e.currentTarget.style.transform = 'scale(0.97)'; }}
-                        onMouseUp={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
-                    >
-                        <FilePlus size={18} />
-                        ¿No encuentras tu revista? Solicitar Revisión
-                    </button>
+        <DashboardLayout
+            activeModule="revistas"
+            onNavigate={onNavigate}
+            searchValue={filters.search}
+            onSearchChange={(val) => setFilters(prev => ({ ...prev, search: val }))}
+            searchPlaceholder="Buscar por título, editorial, ISSN o enfoque..."
+            rightPanel={rightPanel}
+            panelBadge={activeCount}
+            panelDoneLabel={`Ver ${filtered.length} ${filtered.length === 1 ? 'revista' : 'revistas'}`}
+        >
+            <div className="section-header">
+                <div>
+                    <h1 className="section-title">Revistas Científicas</h1>
+                    <p className="section-subtitle">
+                        Base de revistas evaluadas para la toma de decisiones informada
+                    </p>
                 </div>
-
-                <CareerFilter
-                    selectedCareers={selectedCareers}
-                    onSelect={handleCareerSelect}
-                />
-
-                <RevistasFilterPanel
-                    filters={filters}
-                    setFilters={setFilters}
-                    tipos={facets.tipos || []}
-                    apcs={['Sin APC', 'Con APC', 'APC opcional']}
-                    disciplinas={facets.disciplinas || []}
-                    categorias={facets.categorias || []}
-                    lineas={uniqueLineas}
-                    onCategoryRemove={handleCategoryRemove}
-                    onReset={() => { setFilters(initialFilters); setSelectedCareers([]) }}
-                />
-
-                <RevistasList revistas={filtered} onRequestReview={() => setShowReviewModal(true)} />
             </div>
 
-            <ReviewRequestModal 
+            {loading ? (
+                <div className="loader">
+                    <div className="spinner"></div>
+                </div>
+            ) : (
+                <>
+                    <CategoryFilter
+                        categorias={filters.categorias}
+                        selectedCareers={selectedCareers}
+                        onSelectCategory={selectCategory}
+                        onToggleCareer={toggleCareer}
+                        allLabel="Todas"
+                    />
+
+                    <StatsStrip items={stats} />
+
+                    {observedMatches.length > 0 && (
+                        <ObservedAlert
+                            journals={observedMatches}
+                            onShowRegistry={() => setShowBadPractices(true)}
+                        />
+                    )}
+
+                    {/* When the search only matches observed journals, the alert is the answer */}
+                    {(filtered.length > 0 || observedMatches.length === 0) && (
+                        <RevistasList
+                            revistas={filtered}
+                            onRequestReview={() => setShowReviewModal(true)}
+                        />
+                    )}
+                </>
+            )}
+
+            <ReviewRequestModal
                 isOpen={showReviewModal}
                 onClose={() => setShowReviewModal(false)}
                 revistas={revistas}
@@ -255,6 +221,6 @@ export default function RevistasModule({ onBack }) {
                 onClose={() => setShowBadPractices(false)}
                 revistasMalas={revistasObservadas}
             />
-        </>
+        </DashboardLayout>
     )
 }

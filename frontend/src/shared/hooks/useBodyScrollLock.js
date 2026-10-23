@@ -1,33 +1,39 @@
 import { useEffect } from 'react';
 
-// Locks page scroll while `locked` is true, restoring the previous state on
-// unlock/unmount. `<html>` is the element that actually scrolls in standards
-// mode, so both it and `<body>` need the lock for this to work cross-browser.
-// Compensates for the vanished scrollbar width so the page doesn't shift
-// when the lock engages.
-export default function useBodyScrollLock(locked) {
+// Locks page/main-content scroll without modifying <html> or <body> overflow.
+// Modifying html/body overflow or injecting body.paddingRight breaks `position: sticky`
+// on sidebars (.sidebar and .info-panel) and shifts the dashboard layout horizontally,
+// causing the sidebars to collapse, glitch, or disappear.
+// `allowSelector` is the overlay that may still scroll (a modal, the mobile panel).
+export default function useBodyScrollLock(locked, allowSelector = '.modal-content') {
     useEffect(() => {
         if (!locked) return;
 
-        const { documentElement: html, body } = document;
-        const scrollbarWidth = window.innerWidth - html.clientWidth;
+        // In this dashboard layout, vertical scrolling is handled inside `.main-content`
+        const mainContent = document.querySelector('.main-content');
+        let prevMainOverflow = '';
 
-        const previous = {
-            htmlOverflow: html.style.overflow,
-            bodyOverflow: body.style.overflow,
-            bodyPaddingRight: body.style.paddingRight,
-        };
-
-        html.style.overflow = 'hidden';
-        body.style.overflow = 'hidden';
-        if (scrollbarWidth > 0) {
-            body.style.paddingRight = `${scrollbarWidth}px`;
+        if (mainContent) {
+            prevMainOverflow = mainContent.style.overflow;
+            mainContent.style.overflow = 'hidden';
         }
 
-        return () => {
-            html.style.overflow = previous.htmlOverflow;
-            body.style.overflow = previous.bodyOverflow;
-            body.style.paddingRight = previous.bodyPaddingRight;
+        // Prevent wheel / touchmove scrolling on the background while the overlay is open
+        const preventBgScroll = (e) => {
+            if (!e.target.closest(allowSelector)) {
+                e.preventDefault();
+            }
         };
-    }, [locked]);
+
+        window.addEventListener('wheel', preventBgScroll, { passive: false });
+        window.addEventListener('touchmove', preventBgScroll, { passive: false });
+
+        return () => {
+            if (mainContent) {
+                mainContent.style.overflow = prevMainOverflow;
+            }
+            window.removeEventListener('wheel', preventBgScroll);
+            window.removeEventListener('touchmove', preventBgScroll);
+        };
+    }, [locked, allowSelector]);
 }

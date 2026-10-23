@@ -1,20 +1,25 @@
-import React from 'react';
-import { ShieldCheck } from '@phosphor-icons/react';
 import Modal from '../../../shared/components/Modal';
 import CongressIntegrityDetail from './CongressIntegrityDetail';
+import { VERDICTS } from '../verdicts';
 
 export default function CongressIntegrityModal({ event, onClose }) {
+    if (!event) return null;
+
+    const { icon, variant } = VERDICTS[event.verdict];
+
     return (
         <Modal
-            isOpen={!!event}
+            isOpen
             onClose={onClose}
-            icon={ShieldCheck}
-            title={event?.evento || 'Integridad del congreso'}
-            subtitle={event?.nombreCompleto}
+            icon={icon}
+            iconVariant={variant}
+            badge="Protocolo IDIC"
+            badgeVariant={event.verdict === 'danger' ? 'danger' : 'default'}
+            title={event.evento || 'Integridad del Congreso'}
+            subtitle={event.nombreCompleto}
+            maxWidth="820px"
         >
-            <div style={{ padding: '1.5rem 2rem 2rem', overflowY: 'auto', background: 'var(--card-bg-alt)' }}>
-                {event && <CongressIntegrityDetail event={event} />}
-            </div>
+            <CongressIntegrityDetail event={event} />
         </Modal>
     );
 }

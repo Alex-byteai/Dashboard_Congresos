@@ -1,33 +1,44 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { IconContext } from '@phosphor-icons/react'
 
 import ModuleSelector from './core/components/ModuleSelector'
 import CongresosModule from './modules/congresos/CongresosModule'
 import RevistasModule from './modules/revistas/RevistasModule'
 
-// ─── App Root: Hub de Módulos ─────────────────────────────────────────────────
-function App() {
-    const [activeModule, setActiveModule] = useState(null) // null = Hub selector
+const MODULES = {
+    congresos: CongresosModule,
+    revistas: RevistasModule,
+}
 
-    // Para añadir un nuevo módulo en el futuro:
-    // 1. Crea su componente (ej: RevistasModule)
-    // 2. Agrega un objeto a MODULES en ModuleSelector.jsx
-    // 3. Agrega un case aquí abajo
-    const renderModule = () => {
-        const handleBack = () => setActiveModule(null)
-        switch (activeModule) {
-            case 'congresos':
-                return <CongresosModule onBack={handleBack} />
-            case 'revistas':
-                return <RevistasModule onBack={handleBack} />
-            default:
-                return <ModuleSelector onSelectModule={setActiveModule} />
-        }
+function App() {
+    // `route` is what is rendered; it only changes once the fade-out finishes.
+    const [route, setRoute] = useState({ module: null, params: null })
+    const [transitioning, setTransitioning] = useState(false)
+    const timeoutRef = useRef(null)
+
+    useEffect(() => () => clearTimeout(timeoutRef.current), [])
+
+    // `params` lets a page open a module pre-filtered, e.g. { search } for revistas.
+    const navigateTo = (module, params = null) => {
+        if (module === route.module && !params) return
+        setTransitioning(true)
+        clearTimeout(timeoutRef.current)
+        timeoutRef.current = setTimeout(() => {
+            setRoute({ module, params })
+            setTransitioning(false)
+        }, 180)
     }
+
+    const ActivePage = MODULES[route.module] || ModuleSelector
 
     return (
         <IconContext.Provider value={{ weight: 'bold' }}>
-            {renderModule()}
+            <div
+                className="app-transition"
+                style={{ opacity: transitioning ? 0 : 1 }}
+            >
+                <ActivePage onNavigate={navigateTo} params={route.params} />
+            </div>
         </IconContext.Provider>
     )
 }

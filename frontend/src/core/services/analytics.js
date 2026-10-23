@@ -67,19 +67,6 @@ const postEvent = (payload) => {
     }).catch(() => {})
 }
 
-export const trackPageView = (extra = {}) => {
-    const session_id = getOrCreateSession()
-    postEvent({
-        type: 'page_view',
-        path: window.location.pathname,
-        title: document.title,
-        referrer: document.referrer || null,
-        session_id,
-        ...getUtmParams(),
-        ...extra,
-    })
-}
-
 export const trackEvent = (name, extra = {}) => {
     const session_id = getOrCreateSession()
     postEvent({

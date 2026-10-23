@@ -1,245 +1,101 @@
-# Dashboard de Congresos - Guía de Usuario
+# Portal de Integridad Científica — IDIC
 
-## 📋 Descripción
+Dashboard del Instituto de Investigación Científica (Universidad de Lima) para la postulación informada de ponencias y publicaciones. Tiene una página de inicio y dos módulos:
 
-Dashboard profesional e interactivo para la visualización y gestión de congresos académicos. Incluye filtros avanzados, visualizaciones de datos, y una innovadora vista de globo 3D interactivo.
+- **Congresos Científicos**: directorio de congresos con fechas límite, modalidad, indexación prevista y el dictamen de integridad del IDIC para cada evento.
+- **Revistas Científicas**: catálogo de revistas evaluadas con política de APC, cuartiles Scopus, líneas de investigación ULima e informes de idoneidad, además del registro de revistas observadas.
 
-## 🚀 Inicio Rápido
+## Inicio rápido
 
-### Requisitos Previos
-- Node.js (v16 o superior)
-- Python 3.x
-- npm o yarn
-
-### Instalación
+Requisitos: Node.js 18 o superior y Python 3 (solo para regenerar los datos).
 
 ```bash
-# 1. Instalar dependencias del frontend
 cd frontend
 npm install
-cd ..
-
-# 2. Instalar dependencias de Python
-pip3 install openpyxl
-
-# 3. Procesar datos del Excel
-python3 backend/scripts/process_congresos.py
-python3 backend/scripts/process_revistas.py
-
-# 4. Iniciar el servidor de desarrollo
-cd frontend
-npm run dev
+npm run dev        # http://localhost:3000
 ```
 
-El dashboard estará disponible en `http://localhost:3000`
+`npm run build` genera la versión de producción en `frontend/dist/` y `npm run preview` la sirve localmente.
 
-## 📊 Características Principales
+## Funcionalidades
 
-### 1. **Filtros Interactivos**
-- **Búsqueda por texto**: Busca por nombre, ciudad, país, o disciplina
-- **Filtro por país**: Selecciona uno o múltiples países
-- **Filtro por modalidad**: Presencial, Híbrido, o Virtual
-- Los filtros se pueden combinar y limpiar fácilmente
+**Inicio**
+- Indicadores: congresos evaluados, revistas en catálogo y revistas observadas (se calculan a partir de los JSON).
+- Acceso al Protocolo de Idoneidad (PDF), al registro de revistas observadas y a la consulta por ISSN.
 
-### 2. **Tarjetas de Estadísticas**
-- Total de congresos
-- Deadlines urgentes (<30 días)
-- Próximos deadlines (30-90 días)
-- Número de países
-- Distribución por modalidad
+**Congresos**
+- Filtro rápido por categoría ULima y por carrera (cada carrera equivale a su categoría).
+- Filtros de estado (solo convocatorias abiertas / ocultar finalizados), país, modalidad y líneas de investigación.
+- Vista de tarjetas agrupadas por estado (los finalizados se muestran bajo demanda) o línea de tiempo por mes.
+- Modal de integridad: revisión por pares, indexación, organizadores, comité científico, programa, conflicto de intereses y dictamen.
+- Panel de próximos cierres.
 
-### 3. **Globo 3D Interactivo** 🌍 (WOW Feature)
-- Visualización geográfica de todos los congresos
-- Marcadores interactivos con código de colores:
-  - 🔴 Rojo: Deadline urgente
-  - 🟡 Amarillo: Deadline próximo
-  - 🟢 Verde: Deadline futuro
-- Rotación automática
-- Zoom y navegación con el mouse
-- Tooltips al pasar el cursor
-- Panel de detalles al hacer clic en un marcador
+**Revistas**
+- Los mismos filtros de categoría, carrera y líneas, además de tipo de revista, APC y disciplina.
+- Cuartiles Scopus por subcategoría, CiteScore e informe de evaluación.
+- La búsqueda acepta ISSN con o sin guion; si coincide con una revista observada, muestra un aviso con su informe.
+- Consulta por ISSN: indica si la revista está en el catálogo, si está observada o, si no figura, enlaza al formulario de solicitud de evaluación.
 
-### 4. **Gráficos Analíticos**
-- **Top 10 Países**: Gráfico de barras con los países con más congresos
-- **Distribución por Modalidad**: Gráfico circular
-- **Estado de Deadlines**: Gráfico circular con urgencia de deadlines
+**Móvil y tablet**
+- Hasta 1024 px el panel derecho (filtros, próximos cierres, protocolo) se abre desde el botón "Filtros" de la barra superior.
+- Hasta 768 px se usa la barra de navegación inferior, las categorías y carreras se deslizan en una sola fila y los modales se abren como hoja inferior.
 
-### 5. **Tabla de Congresos**
-- Ordenamiento por columnas (clic en encabezados)
-- Filas expandibles con información detallada
-- Enlaces directos a sitios web de congresos
-- Badges de estado visual
+## Datos
 
-## 🔄 Actualización de Datos
+La aplicación lee tres archivos estáticos de `frontend/public/`:
 
-### Método Simple (Recomendado)
+| Archivo | Generado por | Fuente |
+|---|---|---|
+| `congresses.json` | `backend/scripts/process_congresos.py` | Google Sheets |
+| `revistas.json` | `backend/scripts/process_revistas.py` | Google Sheets + Scopus |
+| `revistas_observadas.json` | `backend/scripts/process_revistas.py` | Google Sheets |
 
-1. Reemplaza el archivo `List_congreso.xlsx` con tu nueva versión
-2. Ejecuta el script de actualización:
+Para regenerarlos se necesita la clave de la cuenta de servicio de Google en `backend/key/google_key.json` (esta carpeta no se versiona).
 
 ```bash
-./update_data.sh
+pip install -r backend/requirements.txt
+python backend/scripts/process_congresos.py
+python backend/scripts/process_revistas.py
 ```
 
-O manualmente:
+También se puede usar `./update_data.sh` (Linux/macOS) o `backend/automation/run_automation.bat` (Windows). Este último, además, revisa los vencimientos de las revistas y envía alertas por correo; las credenciales se configuran en `backend/config/.env` a partir de `backend/config/.env.example`.
 
-```bash
-python3 backend/scripts/process_congresos.py
-python3 backend/scripts/process_revistas.py
-```
+Los días restantes, el estado "Finalizado" y los contadores de convocatorias abiertas se calculan en el navegador con la fecha del día, así que no hace falta regenerar los datos para que se actualicen.
 
-3. Recarga el navegador (F5)
-
-### Agregar Nuevos Congresos
-
-Simplemente agrega nuevas filas al archivo Excel `List_congreso.xlsx` manteniendo el mismo formato:
-
-- **Evento**: Nombre corto del congreso
-- **Nombre Completo**: Nombre completo del evento
-- **Disciplina**: Área de conocimiento
-- **Area**: Área específica
-- **Subarea**: Subárea
-- **Etiquetas**: Palabras clave separadas por comas
-- **Fecha inicio**: Formato DD/MM/YYYY
-- **Fecha fin**: Formato DD/MM/YYYY
-- **Lugar**: Ubicación completa
-- **Ciudad**: Ciudad
-- **Pais**: País
-- **Modalidad**: Presencial, Hibrido, o Virtual
-- **Deadline**: Fecha límite de envío
-- **Publicación**: Tipo de publicación
-- **Enlace**: URL del congreso
-
-## 🎨 Características de Diseño
-
-- **Tema oscuro premium** con efectos glassmorphic
-- **Animaciones suaves** en todas las interacciones
-- **Diseño responsive** para presentaciones en diferentes pantallas
-- **Gradientes vibrantes** y efectos de iluminación
-- **Tipografía moderna** (Inter y Outfit)
-
-## 💡 Consejos para Presentaciones
-
-1. **Modo pantalla completa**: Presiona F11 en el navegador
-2. **Interacción con el globo**: 
-   - Arrastra para rotar
-   - Scroll para zoom
-   - Clic en marcadores para ver detalles
-3. **Demostración de filtros**: Muestra cómo los filtros actualizan todas las visualizaciones en tiempo real
-4. **Tabla expandible**: Haz clic en cualquier fila para mostrar información detallada
-
-## 🛠️ Solución de Problemas
-
-### El globo 3D no se muestra
-- Asegúrate de que tu navegador soporte WebGL
-- Prueba en Chrome o Firefox (recomendado)
-- Verifica la consola del navegador para errores
-
-### Los datos no se actualizan
-- Verifica que el archivo `frontend/public/congresses.json` existe
-- Ejecuta nuevamente `python3 backend/scripts/process_congresos.py`
-- Limpia la caché del navegador (Ctrl+Shift+R)
-
-### Error al instalar dependencias
-- Verifica que tienes Node.js v16 o superior: `node --version`
-- Intenta eliminar `node_modules` y ejecutar `npm install` nuevamente
-
-## 📁 Estructura del Proyecto
+## Estructura del frontend
 
 ```
-dashboard_lcr/
-├── frontend/
-│   ├── public/                # Datos consumidos por la aplicación
-│   ├── src/                   # Código React
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.js
-├── backend/
-│   ├── scripts/                # Procesadores de datos
-│   └── requirements.txt        # Dependencias Python
-├── update_data.sh              # Script de actualización
-└── README.md                   # Esta guía
-
+frontend/src/
+├── App.jsx                  # Navegación entre el inicio y los módulos
+├── index.css                # Estilos y design tokens
+├── core/
+│   ├── components/ModuleSelector.jsx   # Página de inicio
+│   └── services/
+│       ├── data.js          # Carga (con caché) de los JSON de /public
+│       └── analytics.js     # Envío de eventos (opcional)
+├── shared/
+│   ├── constants.js         # URLs del protocolo y del formulario de solicitud
+│   ├── taxonomy.js          # Categorías ULima y carreras
+│   ├── hooks/               # useCatalogFilters, useBodyScrollLock
+│   └── components/          # DashboardLayout, Modal, CategoryFilter, SidebarFilter,
+│                            # StatsStrip, InfoPanel, EmptyState
+└── modules/
+    ├── congresos/           # CongresosModule, utils.js (fechas, urgencia, dictamen) y componentes
+    └── revistas/            # RevistasModule, utils.js (APC) y componentes
 ```
 
-## 📈 Analítica (visitas + eventos)
+Los dos módulos comparten el layout, el panel de filtros, los chips de categoría y carrera, la franja de indicadores y el hook de estado de filtros. La lógica propia de cada módulo vive en su `utils.js`.
 
-Este proyecto incluye un backend opcional para recolectar eventos (page views, filtros, búsquedas, clicks a enlaces externos).
+## Analítica
 
-### Frontend (Vite/React)
-
-En Render, configura `frontend` como **Root Directory**, usa `npm install && npm run build` como **Build Command** y `dist` como **Publish Directory**.
-
-Configura la variable de entorno:
+`index.html` incluye la etiqueta de Google Analytics. Además, los clics a sitios de congresos se envían a un servicio propio si se define la variable:
 
 ```
 VITE_ANALYTICS_URL=https://TU-SERVICIO-ANALYTICS.onrender.com
 ```
 
-Si `VITE_ANALYTICS_URL` no está definida, el tracking no envía datos (no rompe el dashboard).
+Los eventos se envían por `POST` a `<VITE_ANALYTICS_URL>/collect`. Si la variable no está definida no se envía nada. El servicio receptor no forma parte de este repositorio.
 
-### Backend (Render)
+## Despliegue (Render)
 
-El backend vive en `analytics-backend/` y expone:
-
-- `POST /collect`
-- `GET /health`
-- `GET /stats/overview`
-- `GET /stats/timeseries`
-- `GET /stats/top-events`
-
-Variables de entorno requeridas en Render:
-
-```
-DATABASE_URL=postgres://...
-CORS_ORIGIN=https://TU-DOMINIO-DEL-DASHBOARD
-PGSSL=true
-```
-
-Opcional (recomendado) para proteger las rutas `/stats/*`:
-
-```
-STATS_TOKEN=un-token-largo
-```
-
-Si defines `STATS_TOKEN`, llama a `/stats/*` con:
-
-- Header `Authorization: Bearer <token>`
-- o header `x-api-key: <token>`
-
-Notas:
-
-- `CORS_ORIGIN` puede ser una lista separada por comas si tienes varios dominios.
-- En Render, crea una base de datos Postgres y usa su `DATABASE_URL`.
-
-### Dashboard de métricas (React separado)
-
-Existe una app React independiente en `metrics-dashboard/` para visualizar las métricas consumiendo `/stats/*` del backend.
-
-Variables de entorno (Render / build):
-
-```
-VITE_ANALYTICS_URL=https://TU-SERVICIO-ANALYTICS.onrender.com
-VITE_STATS_TOKEN=un-token-largo
-```
-
-`VITE_STATS_TOKEN` es opcional (solo si configuraste `STATS_TOKEN` en el backend).
-
-## 🎯 Próximos Pasos
-
-Para mejorar aún más el dashboard, considera:
-
-1. **Exportar datos**: Agregar botón para exportar datos filtrados a Excel/PDF
-2. **Notificaciones**: Alertas para deadlines próximos
-3. **Favoritos**: Marcar congresos de interés
-4. **Calendario**: Vista de calendario con todos los eventos
-5. **Comparación**: Comparar múltiples congresos lado a lado
-
-## 📞 Soporte
-
-Para cualquier problema o sugerencia, contacta al equipo de desarrollo.
-
----
-
-**Versión**: 1.0  
-**Última actualización**: Febrero 2026
+Configura `frontend` como **Root Directory**, `npm install && npm run build` como **Build Command** y `dist` como **Publish Directory**.

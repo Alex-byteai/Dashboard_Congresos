@@ -1,15 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import { MagnifyingGlass as Search, CheckCircle, WarningCircle as AlertCircle, ArrowSquareOut as ExternalLink, FileMagnifyingGlass as FileSearch, ShieldWarning as ShieldAlert } from '@phosphor-icons/react';
+import { useState, useEffect } from 'react';
+import {
+    MagnifyingGlass,
+    CheckCircle,
+    FileMagnifyingGlass,
+    ShieldWarning,
+    ArrowSquareOut,
+    Barcode,
+    X,
+    Buildings
+} from '@phosphor-icons/react';
 import Modal from '../../../shared/components/Modal';
+import { REVIEW_FORM_URL } from '../../../shared/constants';
+import IssnTags from './IssnTags';
+import { getApcBadgeClass, matchesIssn, normalizeIssn } from '../utils';
 
-export default function ReviewRequestModal({ isOpen, onClose, revistas = [], revistasObservadas = [], onViewJournal }) {
+const MIN_ISSN_CHARS = 5;
+
+export default function ReviewRequestModal({
+    isOpen,
+    onClose,
+    revistas = [],
+    revistasObservadas = [],
+    onViewJournal
+}) {
     const [issn, setIssn] = useState('');
-    const [status, setStatus] = useState('idle'); // 'idle' | 'found' | 'bad_practice' | 'not_found'
+    const [status, setStatus] = useState('idle'); // 'idle' | 'invalid' | 'found' | 'bad_practice' | 'not_found'
     const [foundJournal, setFoundJournal] = useState(null);
 
-    const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSee2dW_AWE-0e-p1p-sApvKxKRD9hp4FNXYCjwIWpWnsg1KSA/viewform";
-
-    // Reset the form whenever the modal closes.
     useEffect(() => {
         if (!isOpen) {
             setIssn('');
@@ -18,200 +35,222 @@ export default function ReviewRequestModal({ isOpen, onClose, revistas = [], rev
         }
     }, [isOpen]);
 
-    const cleanString = (str) => {
-        if (!str) return '';
-        return String(str).replace(/[-\s.,]/g, '').toLowerCase();
-    };
-
     const handleCheck = (e) => {
         e.preventDefault();
-
-        if (!issn.trim()) return;
-
-        const searchTarget = cleanString(issn);
-
-        // Prevent false positives on very short inputs (ISSN is usually 8 chars)
-        if (searchTarget.length < 6) {
-            alert("Por favor, ingresa un ISSN más completo (mínimo 6 caracteres).");
+        if (normalizeIssn(issn).length < MIN_ISSN_CHARS) {
+            setStatus('invalid');
             return;
         }
 
-        const findByIssn = (list) => list.find(rev => {
-            const cIssn = cleanString(rev.issn);
-            const cEissn = cleanString(rev.eissn || rev.e_issn);
-            return (cIssn && cIssn.includes(searchTarget)) || (cEissn && cEissn.includes(searchTarget));
-        });
-
-        const matchBad = findByIssn(revistasObservadas);
-        if (matchBad) {
-            setFoundJournal(matchBad);
-            setStatus('bad_practice');
-            return;
-        }
-
-        const matchGood = findByIssn(revistas);
-        if (matchGood) {
-            setFoundJournal(matchGood);
-            setStatus('found');
-        } else {
-            setStatus('not_found');
-            setFoundJournal(null);
-        }
+        // Observed journals take precedence over the approved catalog
+        const matchBad = revistasObservadas.find(rev => matchesIssn(rev, issn));
+        const matchGood = !matchBad && revistas.find(rev => matchesIssn(rev, issn));
+        setFoundJournal(matchBad || matchGood || null);
+        setStatus(matchBad ? 'bad_practice' : matchGood ? 'found' : 'not_found');
     };
 
     return (
         <Modal
             isOpen={isOpen}
             onClose={onClose}
-            icon={FileSearch}
-            title="Consulta de Revista"
-            subtitle="Verifica si ya fue evaluada por ISSN o E-ISSN."
-            maxWidth="540px"
+            icon={FileMagnifyingGlass}
+            title="Consulta de ISSN"
+            subtitle="Verifica la idoneidad de una revista o solicita su evaluación al equipo IDIC."
+            maxWidth="620px"
         >
             {(close) => (
-                <>
-                    <div style={{ padding: '1.5rem 2rem 2rem' }}>
-                        <form onSubmit={handleCheck} style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                               <input
+                <div className="review-modal__body">
+                    <p className="review-modal__prompt">
+                        Ingresa el código ISSN (impreso u online) para consultar si la revista ya fue evaluada institucionalmente.
+                    </p>
+
+                    <form onSubmit={handleCheck} className="review-modal__form">
+                        <div className="review-modal__input-row">
+                            <div className="review-modal__input-wrap">
+                                <Barcode size={18} className="review-modal__input-icon" />
+                                <input
                                     type="text"
                                     required
-                                    minLength={6}
                                     value={issn}
                                     onChange={e => {
                                         setIssn(e.target.value);
-                                        if (status !== 'idle') setStatus('idle');
+                                        setStatus('idle');
                                     }}
-                                    style={{
-                                        flex: 1, padding: '1rem 1.25rem', borderRadius: 'var(--radius-md)', border: '1.5px solid var(--border)',
-                                        fontSize: '1rem', fontFamily: 'var(--font-mono)', boxSizing: 'border-box',
-                                        outline: 'none', transition: 'border-color 0.2s var(--ease-out)', background: 'var(--card-bg-alt)',
-                                        color: 'var(--text)', letterSpacing: '0.5px'
-                                    }}
-                                    placeholder="ISSN / E-ISSN (Ej. 1234-5678)"
-                                    onFocus={e => e.target.style.borderColor = 'var(--accent)'}
-                                    onBlur={e => e.target.style.borderColor = 'var(--border)'}
+                                    placeholder="ISSN o E-ISSN (ej. 2045-2322)"
+                                    className="review-modal__input"
+                                    autoFocus
                                 />
+                                {issn && (
+                                    <button
+                                        type="button"
+                                        className="modal-search-bar__clear"
+                                        onClick={() => {
+                                            setIssn('');
+                                            setStatus('idle');
+                                        }}
+                                        title="Limpiar código"
+                                    >
+                                        <X size={12} />
+                                    </button>
+                                )}
+                            </div>
+                            <button type="submit" className="review-modal__submit">
+                                <MagnifyingGlass size={16} />
+                                <span>Consultar</span>
+                            </button>
+                        </div>
+                        {status === 'invalid' ? (
+                            <p className="review-modal__hint review-modal__hint--error">
+                                Ingresa un ISSN válido (mínimo {MIN_ISSN_CHARS} caracteres).
+                            </p>
+                        ) : (
+                            <p className="review-modal__hint">
+                                El ISSN consta habitualmente de 8 caracteres alfanuméricos divididos por un guion.
+                            </p>
+                        )}
+                    </form>
+
+                    {status === 'found' && (
+                        <div className="review-result-card review-result-card--found">
+                            <div className="review-result-card__header">
+                                <div className="review-result-card__icon-box">
+                                    <CheckCircle size={22} weight="fill" />
+                                </div>
+                                <div>
+                                    <h4 className="review-result-card__badge-title">Revista Evaluada e Idónea</h4>
+                                    <p className="review-result-card__badge-sub">Este título forma parte del catálogo verificado IDIC</p>
+                                </div>
+                            </div>
+
+                            <div className="review-result-card__content">
+                                <h3 className="review-result-card__journal-title">{foundJournal.journal}</h3>
+                                <div className="review-result-card__meta-tags">
+                                    {foundJournal.publisher && (
+                                        <span className="card-event__cat-tag" title="Editorial">
+                                            <Buildings size={12} />
+                                            <span>{foundJournal.publisher}</span>
+                                        </span>
+                                    )}
+                                    {foundJournal.tipo_apc && (
+                                        <span className={`badge ${getApcBadgeClass(foundJournal.tipo_apc)}`}>
+                                            {foundJournal.tipo_apc}
+                                        </span>
+                                    )}
+                                    <IssnTags journal={foundJournal} />
+                                </div>
+                                <p className="review-result-card__desc">
+                                    La revista cumple con los criterios de idoneidad institucional. Puedes explorar sus líneas de investigación, cuartiles y detalles en el catálogo.
+                                </p>
+                            </div>
+
+                            <div className="review-result-card__actions">
                                 <button
-                                    type="submit"
-                                    style={{
-                                        padding: '1rem 1.5rem', background: 'var(--accent)', border: 'none',
-                                        borderRadius: 'var(--radius-md)', fontWeight: 700, color: 'white', cursor: 'pointer',
-                                        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
-                                        fontSize: '1rem', transition: 'transform 0.1s var(--ease-out), background 0.2s var(--ease-out)',
-                                        whiteSpace: 'nowrap'
+                                    type="button"
+                                    className="review-result-card__btn-primary"
+                                    onClick={() => {
+                                        onViewJournal(foundJournal);
+                                        close();
                                     }}
-                                    onMouseDown={e => e.currentTarget.style.transform = 'scale(0.97)'}
-                                    onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
-                                    onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                                 >
-                                    <Search size={20} />
-                                    Verificar
+                                    <span>Ver en el Catálogo</span>
+                                    <ArrowSquareOut size={15} />
+                                </button>
+                                <button
+                                    type="button"
+                                    className="review-result-card__btn-secondary"
+                                    onClick={close}
+                                >
+                                    Cerrar
                                 </button>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    )}
 
-                    {/* Status Animated Area */}
-                    <div style={{
-                        maxHeight: status === 'idle' ? '0' : '500px',
-                        opacity: status === 'idle' ? 0 : 1,
-                        overflow: 'hidden',
-                        transition: 'max-height 0.4s var(--ease-in-out), opacity 0.3s var(--ease-out)',
-                        background: status === 'found' ? 'var(--pastel-green-bg)' : status === 'not_found' ? 'var(--card-bg-alt)' : 'transparent',
-                    }}>
-
-                        {status === 'found' && foundJournal && (
-                            <div style={{ padding: '2rem 2.5rem', borderTop: '1px solid var(--pastel-green-bg)' }}>
-                                <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
-                                    <div style={{ background: 'var(--card-bg)', padding: '0.5rem', borderRadius: '50%' }}>
-                                        <CheckCircle size={28} color="var(--pastel-green-text)" style={{ flexShrink: 0 }} />
-                                    </div>
-                                    <div>
-                                        <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--pastel-green-text)', fontSize: '1.1rem', fontWeight: 700 }}>¡Revista Evaluada!</h4>
-                                        <p style={{ margin: '0 0 1rem 0', color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.5' }}>
-                                            La revista <strong style={{ color: 'var(--text)' }}>{foundJournal.journal}</strong> se encuentra en nuestra base de datos. Puedes encontrar su ficha de integridad y cuartiles usando el buscador principal de revistas.
-                                        </p>
-                                        <button onClick={() => {
-                                            onViewJournal?.(foundJournal);
-                                            close();
-                                        }} style={{
-                                            background: 'var(--pastel-green-text)', border: '1.5px solid var(--pastel-green-text)', color: 'white',
-                                            padding: '0.5rem 1rem', borderRadius: 'var(--radius-sm)', fontWeight: 600, cursor: 'pointer',
-                                            fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem'
-                                        }}>
-                                            Ver revista en el Dashboard
-                                            <ExternalLink size={15} />
-                                        </button>
-                                    </div>
+                    {status === 'bad_practice' && (
+                        <div className="review-result-card review-result-card--bad">
+                            <div className="review-result-card__header">
+                                <div className="review-result-card__icon-box">
+                                    <ShieldWarning size={22} weight="fill" />
+                                </div>
+                                <div>
+                                    <h4 className="review-result-card__badge-title">Alerta de Integridad Editorial</h4>
+                                    <p className="review-result-card__badge-sub">Revista incluida en el registro de medios observados</p>
                                 </div>
                             </div>
-                        )}
 
-                        {status === 'not_found' && (
-                            <div style={{ padding: '2rem 2.5rem', borderTop: '1px solid var(--border)' }}>
-                                <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
-                                    <div style={{ background: 'var(--card-bg)', padding: '0.5rem', borderRadius: '50%' }}>
-                                        <AlertCircle size={28} color="var(--text-muted)" style={{ flexShrink: 0 }} />
-                                    </div>
-                                    <div>
-                                        <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--text)', fontSize: '1.1rem', fontWeight: 700 }}>Revista No Encontrada</h4>
-                                        <p style={{ margin: '0 0 1.25rem 0', color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.5' }}>
-                                            No tenemos registros de esta revista en el sistema actual. Si consideras que debería ser evaluada, por favor envía una solicitud formal a nuestro equipo de integridad científica.
-                                        </p>
-                                        <a
-                                            href={GOOGLE_FORM_URL}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            onClick={close}
-                                            style={{
-                                                display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
-                                                padding: '0.8rem 1.5rem', background: 'var(--primary)', color: 'white',
-                                                textDecoration: 'none', borderRadius: 'var(--radius-md)', fontWeight: 600,
-                                                fontSize: '0.9rem', width: '100%', boxSizing: 'border-box',
-                                                boxShadow: 'none', transition: 'background 0.2s var(--ease-out)'
-                                            }}
-                                            onMouseEnter={e => e.currentTarget.style.background = 'var(--primary-light)'}
-                                            onMouseLeave={e => e.currentTarget.style.background = 'var(--primary)'}
-                                        >
-                                            Ir al Formulario
-                                            <ExternalLink size={18} />
-                                        </a>
-                                    </div>
+                            <div className="review-result-card__content">
+                                <h3 className="review-result-card__journal-title">{foundJournal.journal}</h3>
+                                <div className="review-result-card__meta-tags">
+                                    <IssnTags journal={foundJournal} />
+                                </div>
+                                <p className="review-result-card__desc">
+                                    Esta revista presenta indicios de malas prácticas o métricas descalificadas bajo los criterios del IDIC. Su uso <strong>no está admitido</strong> como medio de publicación institucional.
+                                </p>
+                            </div>
+
+                            <div className="review-result-card__actions">
+                                {foundJournal.enlace_informe && (
+                                    <a
+                                        href={foundJournal.enlace_informe}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="review-result-card__btn-primary"
+                                    >
+                                        <span>Ver Informe de Idoneidad</span>
+                                        <ArrowSquareOut size={15} />
+                                    </a>
+                                )}
+                                <button
+                                    type="button"
+                                    className="review-result-card__btn-secondary"
+                                    onClick={close}
+                                >
+                                    Entendido
+                                </button>
+                            </div>
+                        </div>
+                    )}
+
+                    {status === 'not_found' && (
+                        <div className="review-result-card review-result-card--not-found">
+                            <div className="review-result-card__header">
+                                <div className="review-result-card__icon-box">
+                                    <FileMagnifyingGlass size={22} />
+                                </div>
+                                <div>
+                                    <h4 className="review-result-card__badge-title">Revista No Registrada</h4>
+                                    <p className="review-result-card__badge-sub">El código consultado no figura en las bases institucionales</p>
                                 </div>
                             </div>
-                        )}
 
-                        {status === 'bad_practice' && foundJournal && (
-                            <div style={{ padding: '2rem 2.5rem', borderTop: '1px solid var(--pastel-red-bg)', background: 'var(--pastel-red-bg)' }}>
-                                <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
-                                    <div style={{ background: 'var(--card-bg)', padding: '0.5rem', borderRadius: '50%' }}>
-                                        <ShieldAlert size={28} color="var(--pastel-red-text)" style={{ flexShrink: 0 }} />
-                                    </div>
-                                    <div>
-                                        <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--pastel-red-text)', fontSize: '1.1rem', fontWeight: 700 }}>Alerta de Integridad</h4>
-                                        <p style={{ margin: '0 0 1rem 0', color: 'var(--pastel-red-text)', fontSize: '0.9rem', lineHeight: '1.4' }}>
-                                            Esta revista ha sido descalificada por presentar indicios de malas prácticas. <strong>NO</strong> se recomienda su uso institucional.
-                                        </p>
-                                        <div style={{ background: 'var(--card-bg)', padding: '1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--pastel-red-bg)' }}>
-                                            <strong style={{ display: 'block', color: 'var(--text)', marginBottom: '0.25rem', fontSize: '0.9rem' }}>{foundJournal.journal}</strong>
-                                            <span style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', display: 'block', fontFamily: 'var(--font-mono)' }}>
-                                                ISSN: {foundJournal.issn || '-'} | E-ISSN: {foundJournal.eissn || foundJournal.e_issn || '-'}
-                                            </span>
-                                        </div>
-                                        <button onClick={close} style={{
-                                            background: 'transparent', border: '1.5px solid var(--pastel-red-text)', color: 'var(--pastel-red-text)',
-                                            padding: '0.5rem 1rem', borderRadius: 'var(--radius-sm)', fontWeight: 600, cursor: 'pointer',
-                                            fontSize: '0.85rem', marginTop: '1rem', width: '100%'
-                                        }}>
-                                            Cerrar Alerta
-                                        </button>
-                                    </div>
-                                </div>
+                            <div className="review-result-card__content">
+                                <p className="review-result-card__desc">
+                                    No se encontraron antecedentes de evaluación para el ISSN <strong>{issn}</strong>. Si tienes previsto postular un manuscrito a este medio, puedes solicitar su evaluación formal de idoneidad ante la Dirección de Investigación (IDIC).
+                                </p>
                             </div>
-                        )}
-                    </div>
-                </>
+
+                            <div className="review-result-card__actions">
+                                <a
+                                    href={REVIEW_FORM_URL}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="review-result-card__btn-primary review-result-card__btn-accent"
+                                    onClick={close}
+                                >
+                                    <span>Completar Solicitud de Evaluación</span>
+                                    <ArrowSquareOut size={16} />
+                                </a>
+                                <button
+                                    type="button"
+                                    className="review-result-card__btn-secondary"
+                                    onClick={close}
+                                >
+                                    Cerrar
+                                </button>
+                            </div>
+                        </div>
+                    )}
+                </div>
             )}
         </Modal>
     );

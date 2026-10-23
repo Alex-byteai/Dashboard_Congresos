@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X } from '@phosphor-icons/react';
 import useBodyScrollLock from '../hooks/useBodyScrollLock';
 
@@ -6,7 +7,18 @@ import useBodyScrollLock from '../hooks/useBodyScrollLock';
 // button) + enter/exit animation + body scroll lock. Content goes in `children`;
 // pass a function as children to receive the animated `close` handler for
 // internal close buttons.
-export default function Modal({ isOpen, onClose, icon: Icon, title, subtitle, maxWidth = '640px', children }) {
+export default function Modal({
+    isOpen,
+    onClose,
+    icon: Icon,
+    iconVariant = 'default', // 'default' | 'danger' | 'success'
+    badge,
+    badgeVariant = 'default', // 'default' | 'danger'
+    title,
+    subtitle,
+    maxWidth = '640px',
+    children
+}) {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -26,50 +38,46 @@ export default function Modal({ isOpen, onClose, icon: Icon, title, subtitle, ma
         setTimeout(() => onClose(), 200);
     };
 
-    return (
-        <div className="modal-overlay" onClick={handleClose} style={{
-            position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-            backgroundColor: 'rgba(17, 17, 17, 0.65)', display: 'flex',
-            alignItems: 'center', justifyContent: 'center', zIndex: 1000,
-            backdropFilter: 'blur(4px)',
-            opacity: isVisible ? 1 : 0,
-            transition: 'opacity 0.2s ease-out',
-            padding: '1rem'
-        }}>
-            <div className="modal-content" onClick={e => e.stopPropagation()} style={{
-                background: 'var(--card-bg)', borderRadius: 'var(--radius-lg)',
-                padding: '0', width: '100%', maxWidth,
-                maxHeight: '90vh', display: 'flex', flexDirection: 'column',
-                boxShadow: '0 20px 48px rgba(17, 17, 17, 0.14)',
-                position: 'relative', overflow: 'hidden',
-                transform: isVisible ? 'scale(1) translateY(0)' : 'scale(0.95) translateY(20px)',
-                transition: isVisible ? 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)' : 'transform 0.2s ease-out'
-            }}>
-                <div style={{ padding: '2rem', borderBottom: '1px solid var(--border)', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '1rem' }}>
-                    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+    const iconBoxClass = `modal-header__icon-box ${iconVariant !== 'default' ? `modal-header__icon-box--${iconVariant}` : ''}`;
+    const badgeClass = `modal-header__badge ${badgeVariant !== 'default' ? `modal-header__badge--${badgeVariant}` : ''}`;
+
+    const modalElement = (
+        <div
+            className={`modal-overlay ${isVisible ? 'modal-overlay--visible' : ''}`}
+            onClick={handleClose}
+        >
+            <div
+                className={`modal-content ${isVisible ? 'modal-content--visible' : ''}`}
+                onClick={e => e.stopPropagation()}
+                style={{ maxWidth }}
+            >
+                <div className="modal-header">
+                    <div className="modal-header__main">
                         {Icon && (
-                            <div style={{ padding: '0.75rem', background: 'var(--card-bg-alt)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', color: 'var(--text)', flexShrink: 0 }}>
-                                <Icon size={28} />
+                            <div className={iconBoxClass}>
+                                <Icon size={24} />
                             </div>
                         )}
-                        <div>
-                            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.4rem', fontWeight: 500, margin: subtitle ? '0 0 0.25rem 0' : 0, color: 'var(--text)' }}>{title}</h2>
+                        <div className="modal-header__titles">
+                            <div className="modal-header__title-row">
+                                <h2 className="modal-header__title">{title}</h2>
+                                {badge && (
+                                    <span className={badgeClass}>{badge}</span>
+                                )}
+                            </div>
                             {subtitle && (
-                                <p style={{ margin: 0, color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: '1.4' }}>{subtitle}</p>
+                                <p className="modal-header__subtitle">{subtitle}</p>
                             )}
                         </div>
                     </div>
-                    <button onClick={handleClose} style={{
-                        background: 'transparent', border: 'none', cursor: 'pointer',
-                        color: 'var(--text-muted)', padding: '0.4rem', borderRadius: '50%',
-                        transition: 'background 0.15s ease-out, color 0.15s ease-out, transform 0.1s ease-out', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
-                    }}
-                    onMouseEnter={e => { e.currentTarget.style.background = 'var(--card-bg-alt)'; e.currentTarget.style.color = 'var(--text)'; }}
-                    onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--text-muted)'; }}
-                    onMouseDown={e => { e.currentTarget.style.transform = 'scale(0.9)'; }}
-                    onMouseUp={e => { e.currentTarget.style.transform = 'scale(1)'; }}
+                    <button
+                        type="button"
+                        onClick={handleClose}
+                        className="modal-close-btn"
+                        title="Cerrar ventana"
+                        aria-label="Cerrar ventana"
                     >
-                        <X size={22} />
+                        <X size={18} />
                     </button>
                 </div>
 
@@ -77,4 +85,6 @@ export default function Modal({ isOpen, onClose, icon: Icon, title, subtitle, ma
             </div>
         </div>
     );
+
+    return createPortal(modalElement, document.body);
 }

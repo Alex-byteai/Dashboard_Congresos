@@ -4,3 +4,4 @@ backend/key/
 dist/
 build/
 node_modules/
+*.timestamp-*.mjs

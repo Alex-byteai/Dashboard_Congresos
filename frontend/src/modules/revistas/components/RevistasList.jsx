@@ -1,159 +1,165 @@
-import React from 'react';
-import { ArrowSquareOut as ExternalLink, Stack as Layers, MagnifyingGlassMinus as SearchX, Layout, CaretDown as ChevronDown, CaretUp as ChevronUp, ShieldCheck, FilePlus } from '@phosphor-icons/react';
+import { useState } from 'react';
+import {
+    ArrowUpRight, Stack, Layout, CaretDown, CaretUp, ShieldCheck, FilePlus, Buildings
+} from '@phosphor-icons/react';
+import EmptyState from '../../../shared/components/EmptyState';
+import IssnTags from './IssnTags';
+import { getApcBadgeClass, getWosCollections, isInWos } from '../utils';
 
 function RevistaCard({ r }) {
-    const [isOpen, setIsOpen] = React.useState(false);
-    const hasQuartiles = (r.categorias_scopus || []).length > 0;
-    const apcStyles = {
-        'Sin APC': { background: 'var(--pastel-green-bg)', color: 'var(--pastel-green-text)' },
-        'Con APC': { background: 'var(--accent-pale)', color: 'var(--accent-hover)' },
-        'APC opcional': { background: 'var(--pastel-yellow-bg)', color: 'var(--pastel-yellow-text)' }
-    };
+    const [isOpen, setIsOpen] = useState(false);
+    const quartiles = r.categorias_scopus || [];
+    const wosCollections = getWosCollections(r);
 
     return (
-        <div key={r.id} data-journal-id={r.id} className="event-card event-card--revistas">
-            <div className="event-header">
-                <div className="event-tech-header">
-                    {r.issn && (
-                        <div className="tech-tag" title="ISSN Internacional">
-                            <b>ISSN</b> {r.issn}
-                        </div>
+        <article data-journal-id={r.id} className="card-event">
+            <div className="card-event__header">
+                <div className="card-event__tech-group">
+                    <IssnTags journal={r} />
+                </div>
+            </div>
+
+            <div className="card-event__body">
+                <h3 className="card-event__title" title={r.journal}>
+                    {r.journal}
+                </h3>
+                {/* Editorial and Enfoque */}
+                <div className="card-event__categories">
+                    {r.publisher && (
+                        <span className="card-event__cat-tag" title={`Editorial: ${r.publisher}`}>
+                            <Buildings size={12} />
+                            <span>{r.publisher}</span>
+                        </span>
                     )}
-                    {r.eissn && (
-                        <div className="tech-tag" title="Electronic ISSN">
-                            <b>E-ISSN</b> {r.eissn}
-                        </div>
+                    {r.enfoque && (
+                        <span className="card-event__cat-tag" title={`Enfoque: ${r.enfoque}`}>
+                            <Layout size={12} />
+                            <span>{r.enfoque}</span>
+                        </span>
                     )}
                 </div>
             </div>
 
-            <h3 className="event-title">{r.journal}</h3>
+            {/* Scopus quartiles; journals outside Scopus (e.g. only in WoS) say so instead */}
+            <div className="card-event__quartiles">
+                {quartiles.length > 0 ? (
+                    <div className="quartiles-box">
+                        <button
+                            type="button"
+                            className="quartiles-box__toggle"
+                            onClick={() => setIsOpen(!isOpen)}
+                            title="Desplegar cuartiles Scopus por subcategoría"
+                        >
+                            <span className="quartiles-box__label">
+                                <Stack size={14} />
+                                <span>Scopus: {quartiles.length} {quartiles.length === 1 ? 'Categoría' : 'Categorías'}</span>
+                            </span>
+                            {isOpen ? <CaretUp size={13} /> : <CaretDown size={13} />}
+                        </button>
 
-            <div className="event-meta">
-                <div className="meta-item">
-                    <Layout size={18} className="meta-icon" />
-                    <span style={{ fontWeight: 500, color: 'var(--text)' }}>{r.enfoque || 'General'}</span>
-                </div>
-
-                <div className="meta-item" style={{ alignItems: 'flex-start', minWidth: 0 }}>
-                    <Layers size={18} className="meta-icon" style={{ marginTop: '6px', flexShrink: 0 }} />
-                    <div className="quartile-list">
-                        {hasQuartiles ? (
-                            <>
-                                <button 
-                                    className="quartile-toggle-btn"
-                                    onClick={() => setIsOpen(!isOpen)}
-                                >
-                                    {isOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-                                    Scopus: {r.categorias_scopus.length} {(r.categorias_scopus.length === 1 ? 'Categoría' : 'Categorías')}
-                                </button>
-                                <div className={`quartile-content-wrapper ${isOpen ? 'is-open' : ''}`}>
-                                    <div className="quartile-content-inner">
-                                        {(r.categorias_scopus || []).map((cat, idx) => {
-                                            const qClass = `q-rank-${(cat.Cuartil || 'NA').toLowerCase()}`;
-                                            return (
-                                                <div key={idx} className="quartile-row">
-                                                    <span className={`quartile-indicator ${qClass}`}>
-                                                        {cat.Cuartil || 'N/A'}
-                                                    </span>
-                                                    <span className="quartile-name" title={cat.Subcategoria}>
-                                                        {cat.Subcategoria}
-                                                    </span>
-                                                </div>
-                                            );
-                                        })}
+                        <div className={`quartiles-box__dropdown ${isOpen ? 'is-open' : ''}`}>
+                            <div className="quartiles-box__list">
+                                {quartiles.map((cat, idx) => (
+                                    <div key={idx} className="quartiles-row">
+                                        <span className={`quartile-pill q-${(cat.Cuartil || 'NA').toLowerCase()}`}>
+                                            {cat.Cuartil || 'N/A'}
+                                        </span>
+                                        <span className="quartiles-row__name" title={cat.Subcategoria}>
+                                            {cat.Subcategoria}
+                                        </span>
+                                        {cat.Percentil && (
+                                            <span className="quartiles-row__percentile">P{cat.Percentil}</span>
+                                        )}
                                     </div>
-                                </div>
-                            </>
-                        ) : (
-                            <div className="tags-grid" style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                                {(r.disciplinas || []).map((d) => (
-                                    <span key={d} className="badge badge-area">{d}</span>
                                 ))}
                             </div>
-                        )}
+                        </div>
                     </div>
-                </div>
+                ) : r.disciplinas?.length > 0 ? (
+                    <div className="card-event__disciplines">
+                        {r.disciplinas.map(d => (
+                            <span key={d} className="badge badge--discipline">{d}</span>
+                        ))}
+                    </div>
+                ) : (
+                    <p className="card-event__no-scopus">
+                        <Stack size={14} />
+                        <span>
+                            Sin cuartiles Scopus
+                            {isInWos(r) && ` · Web of Science${wosCollections ? ` (${wosCollections})` : ''}`}
+                        </span>
+                    </p>
+                )}
             </div>
 
-            <div className="badges">
-                <span className={`badge ${r.tipo === 'Data Journal' ? 'badge-virtual' : 'badge-area'}`} style={{
-                    background: r.tipo === 'Data Journal' ? 'var(--pastel-green-bg)' : 'var(--pastel-blue-bg)',
-                    color: r.tipo === 'Data Journal' ? 'var(--pastel-green-text)' : 'var(--pastel-blue-text)',
-                    fontWeight: 700
-                }}>
-                    {r.tipo || 'Journal'}
-                </span>
+            <div className="card-event__badges">
+                {r.tipo && (
+                    <span className="badge badge--journal-type">{r.tipo}</span>
+                )}
                 {r.tipo_apc && (
-                    <span className="badge badge-apc" style={{
-                        ...(apcStyles[r.tipo_apc] || { background: 'var(--card-bg-alt)', color: 'var(--text-secondary)' }),
-                        fontWeight: 700
-                    }}>
-                        {r.tipo_apc}
+                    <span className={`badge ${getApcBadgeClass(r.tipo_apc)}`}>{r.tipo_apc}</span>
+                )}
+                {r.citeScore && (
+                    <span className="badge badge--citescore" title="Scopus CiteScore">
+                        CiteScore {r.citeScore}
                     </span>
                 )}
             </div>
 
             {(r.sitioWeb || r.enlace_informe) && (
-                <div className="event-actions">
-                    {r.sitioWeb && (
-                        <a
-                            href={r.sitioWeb}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="event-link event-link--primary"
-                        >
-                            Explorar
-                            <ExternalLink size={16} />
-                        </a>
-                    )}
+                <div className="card-event__footer">
                     {r.enlace_informe && (
                         <a
                             href={r.enlace_informe}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="event-link event-link--secondary"
+                            className="card-action card-action--good"
+                            title="Ver informe de integridad de la revista"
                         >
-                            Informe
-                            <ShieldCheck size={16} />
+                            <ShieldCheck size={15} weight="fill" />
+                            <span>Integridad</span>
+                        </a>
+                    )}
+                    {r.sitioWeb && (
+                        <a
+                            href={r.sitioWeb}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="card-link"
+                        >
+                            Sitio web
+                            <ArrowUpRight size={14} />
                         </a>
                     )}
                 </div>
             )}
-        </div>
+        </article>
     );
 }
 
 export default function RevistasList({ revistas, onRequestReview }) {
-    if (!revistas || revistas.length === 0) {
+    if (revistas.length === 0) {
         return (
-            <div className="empty-state" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '4rem 1rem', background: 'var(--card-bg)', borderRadius: 'var(--radius-lg)', border: '1px dashed var(--border)', textAlign: 'center' }}>
-                <SearchX size={64} className="empty-icon" style={{ color: 'var(--text-muted)', marginBottom: '1rem' }} />
-                <h3 style={{ fontSize: '1.25rem', color: 'var(--text)', marginBottom: '0.5rem' }}>No se encontraron revistas</h3>
-                <p style={{ color: 'var(--text-muted)', marginBottom: onRequestReview ? '2rem' : 0 }}>Intenta ajustar los filtros de búsqueda o ingresa otros términos.</p>
-                
-                {onRequestReview && (
-                    <div style={{ background: 'white', padding: '1.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border)', maxWidth: '400px', width: '100%', boxShadow: 'var(--shadow-sm)' }}>
-                        <FilePlus size={32} style={{ color: 'var(--primary)', marginBottom: '1rem' }} />
-                        <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--text)' }}>¿No encuentras la revista que buscas?</h4>
-                        <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>Solicita la evaluación de una revista que aún no ha sido indexada.</p>
-                        <button 
-                            onClick={onRequestReview}
-                            style={{ padding: '0.6rem 1.25rem', background: 'var(--card-bg)', color: 'var(--text)', border: '1.5px solid var(--border)', borderRadius: 'var(--radius-md)', fontWeight: 600, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', transition: 'border-color 0.2s var(--ease-out), color 0.2s var(--ease-out)', width: '100%', justifyContent: 'center' }}
-                            onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--primary)'; e.currentTarget.style.color = 'var(--primary)' }}
-                            onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text)' }}
-                        >
-                            Solicitar Inclusión
-                        </button>
-                    </div>
-                )}
-            </div>
+            <EmptyState title="No se encontraron revistas">
+                <div className="empty-state__action-box">
+                    <FilePlus size={28} className="empty-state__action-icon" />
+                    <h4>¿No encuentras la revista que buscas?</h4>
+                    <p>Solicita la evaluación de una revista para su revisión por el equipo IDIC.</p>
+                    <button
+                        type="button"
+                        onClick={onRequestReview}
+                        className="btn-action btn-action--primary"
+                    >
+                        Solicitar Inclusión
+                    </button>
+                </div>
+            </EmptyState>
         );
     }
 
     return (
         <div className="cards-grid">
-            {revistas.map((r) => <RevistaCard key={r.id} r={r} />)}
+            {revistas.map(r => <RevistaCard key={r.id} r={r} />)}
         </div>
     );
 }

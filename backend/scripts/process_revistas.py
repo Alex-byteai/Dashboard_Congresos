@@ -1123,6 +1123,11 @@ def enrich_with_excel(journal_entry: dict, excel_row) -> dict:
     if excel_fecha_emision:
         journal_entry['fecha_emision'] = excel_fecha_emision
 
+    # Indexación declarada en la hoja ('Scopus, WoS' → ['Scopus', 'WoS']) y colección WoS
+    excel_indexacion = _safe_val(excel_row.get('Base de datos (Indexación)'))
+    journal_entry['indexacion'] = [b.strip() for b in excel_indexacion.split(',')] if excel_indexacion else []
+    journal_entry['coleccion_wos'] = _safe_val(excel_row.get('Colección WoS'))
+
     # Agregamos categorías adicionales que podrían ser útiles
     # pero filtramos lo que NO es relevante para el dashboard final
     return journal_entry
@@ -1134,13 +1139,32 @@ def enrich_with_excel(journal_entry: dict, excel_row) -> dict:
 
 import time
 
-def get_journal_metadata(eissn: str, max_retries: int = 3) -> tuple:
+NOT_IN_SCOPUS = "ISSN no encontrado en Scopus"
+
+def sheet_only_entry(nombre: str, issn, e_issn) -> dict:
     """
-    Consulta Scopus Serial Title API (view=CITESCORE).
+    Ficha base para una revista aprobada que no está indexada en Scopus (p. ej. solo
+    en WoS). Sin cuartiles ni CiteScore; enrich_with_excel completa el resto.
+    """
+    return {
+        "journal":     nombre,
+        "issn":        issn or "",
+        "eissn":       e_issn or "",
+        "publisher":   "N/A",
+        "disciplinas": [],
+        "cobertura":   "N/A",
+        "citeScore":   None,
+        "sitioWeb":    "",
+        "scopusLink":  "",
+    }
+
+def get_journal_metadata(issn_query: str, max_retries: int = 3) -> tuple:
+    """
+    Consulta Scopus Serial Title API (view=CITESCORE) por ISSN o E-ISSN.
     Reintenta automáticamente hasta max_retries veces ante timeouts o errores 5xx.
     Retorna (base_dict, subject_ranks_list) o (None, error_msg).
     """
-    url    = f"https://api.elsevier.com/content/serial/title/issn/{eissn}"
+    url    = f"https://api.elsevier.com/content/serial/title/issn/{issn_query}"
     params = {"view": "CITESCORE"}
 
     for attempt in range(1, max_retries + 1):
@@ -1185,7 +1209,7 @@ def get_journal_metadata(eissn: str, max_retries: int = 3) -> tuple:
             return None, f"Error servidor HTTP {resp.status_code}"
 
         if resp.status_code == 404:
-            return None, "ISSN no encontrado en Scopus"
+            return None, NOT_IN_SCOPUS
 
         if resp.status_code != 200:
             return None, f"HTTP {resp.status_code}"
@@ -1265,7 +1289,8 @@ def get_journal_metadata(eissn: str, max_retries: int = 3) -> tuple:
         base_dict = {
             "journal":          entry.get("dc:title", "N/A"),
             "issn":             issn_print,
-            "eissn":            eissn,
+            # El identificador consultado puede ser el ISSN impreso: no usarlo como E-ISSN
+            "eissn":            entry.get("prism:eIssn") or "",
             "publisher":        entry.get("publisher", "N/A"),
             "disciplinas":      cat_names, # Lista de disciplinas
             "cobertura":        cobertura,
@@ -1301,7 +1326,21 @@ for index, row in filtered_df.iterrows():
         print(f"Fetching: {nombre} (ISSN: {target_issn})")
         base_data, scopus_categories = get_journal_metadata(target_issn)
 
+        # Scopus a veces solo reconoce el ISSN impreso (p. ej. EURASIP JASMP)
+        if not base_data and e_issn and issn and issn != e_issn:
+            print(f"  ↻ Reintentando con el ISSN impreso: {issn}")
+            base_data, scopus_categories = get_journal_metadata(issn)
+
+        # Aprobada pero no indexada en Scopus: se publica con los datos de la hoja.
+        # Solo ante un 404; un timeout o error del servidor no debe degradar la ficha.
+        if not base_data and scopus_categories == NOT_IN_SCOPUS:
+            print(f"  ↳ No está en Scopus: se publica con los datos de la hoja")
+            base_data, scopus_categories = sheet_only_entry(nombre, issn, e_issn), []
+
         if base_data:
+            # El E-ISSN registrado en la hoja tiene prioridad sobre el de Scopus
+            if e_issn:
+                base_data["eissn"] = e_issn
             base_data["id"] = id_counter
             id_counter += 1
             base_data["categorias_scopus"] = scopus_categories

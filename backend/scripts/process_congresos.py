@@ -288,7 +288,9 @@ def process_google_sheet_to_json(output_path):
 
         ciudad    = str(get_named(row, 'Ciudad') or '')
         pais      = str(get_named(row, 'Pais') or '')
-        modalidad = str(get_named(row, 'Modalidad') or '')
+        modalidad = str(get_named(row, 'Modalidad') or '').strip()
+        if modalidad.lower() in ('hibrido', 'híbrido'):
+            modalidad = 'Híbrido'
 
         if pais: countries.add(pais)
         if modalidad: modalities[modalidad] = modalities.get(modalidad, 0) + 1
